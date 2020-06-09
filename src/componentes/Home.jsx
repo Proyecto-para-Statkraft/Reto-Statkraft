@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     return (
 
-        <div className="r">
+        <div>
             <Header />
             <div className="d-flex justify-content-center ">
                 <div class="jumbotron col-sm-4 text-center">
