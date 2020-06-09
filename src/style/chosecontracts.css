@@ -1,0 +1,14 @@
+@media (max-width: 592) {
+  h5 {
+    font-size: 1em;
+  }
+  .radio {
+    font-size: 0em;
+    margin: 0em;
+  }
+}
+
+.fondo {
+  background-color: #daf4fc;
+}
+/*# sourceMappingURL=chosecontracts.css.map */

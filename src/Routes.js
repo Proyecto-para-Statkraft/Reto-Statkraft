@@ -1,9 +1,11 @@
 import React from "react";
 import { HashRouter, Switch, Route } from "react-router-dom";
 import Home from "./componentes/Home";
-import ReviewContracts from "./componentes/choosecontract/ReviewContracts";
+import ReviewContracts from "./componentes/choosecontract/ChooseContracts";
 import ConsolidatedContracts from "./componentes/ConsolidatedContracts";
 import AdendaComplete from "./componentes/contratos/adenda/AdendaComplete";
+import QuestionsOne from "./componentes/choosecontract/Questions";
+import ContrractsGoods from "./componentes/choosecontract/ContractsGoods";
 
 const Routes = () => {
   return (
@@ -16,6 +18,8 @@ const Routes = () => {
           component={ConsolidatedContracts}
         />
         <Route path="/adenda" component={AdendaComplete} />
+        <Route path="/questions" component={QuestionsOne} />
+        <Route path="/contractsgoods" component={ContrractsGoods} />
       </Switch>
     </HashRouter>
   );
