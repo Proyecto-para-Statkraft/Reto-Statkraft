@@ -3,14 +3,16 @@ import AdendaIntroduction from "./AdendaIntroduction"
 import FirstSection from "./FirstSection"
 import SecondSection from "./SecondSection"
 import ThirdSection from "./ThirdSection"
+import Header from '../../Header'
 
 const AdendaComplete = () => {
     return (
         <div>
-            <AdendaIntroduction/>
-            <FirstSection/>
-            <SecondSection/>
-            <ThirdSection/> 
+            <Header />
+            <AdendaIntroduction />
+            <FirstSection />
+            <SecondSection />
+            <ThirdSection />
         </div>
     )
 }

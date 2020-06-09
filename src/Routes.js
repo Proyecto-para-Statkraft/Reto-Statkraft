@@ -1,8 +1,9 @@
 import React from "react";
 import { HashRouter, Switch, Route } from "react-router-dom";
 import Home from "./componentes/Home";
-import ReviewContracts from "./componentes/ReviewContracts";
+import ReviewContracts from "./componentes/contratos/choosecontract/ReviewContracts";
 import ConsolidatedContracts from "./componentes/ConsolidatedContracts";
+import AdendaComplete from "./componentes/contratos/adenda/AdendaComplete";
 
 const Routes = () => {
   return (
@@ -14,6 +15,7 @@ const Routes = () => {
           path="/consolidatedcontracts"
           component={ConsolidatedContracts}
         />
+        <Route path="/adenda" component={AdendaComplete} />
       </Switch>
     </HashRouter>
   );
