@@ -1,3 +1,7 @@
+header {
+  border-bottom: 3px solid #00b0dc;
+}
+
 header div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8,7 +12,7 @@ header div {
 }
 
 header img {
-  width: 150px;
-  height: 80px;
+  width: 140px;
+  height: 70px;
 }
 /*# sourceMappingURL=header.css.map */

@@ -5,7 +5,7 @@ import '../style/header.css'
 
 const Header = () => {
     return (
-        <header >
+        <header className="">
             <nav className="navbar navbar-expand-lg navbar-light ">
                 <img src={img} alt="imagen" />
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,7 +19,6 @@ const Header = () => {
                         <Link className="nav-item nav-link active m-3 btn-yellow text-center font " to="/adenda">Adendas</Link>
                     </div>
                 </div>
-                <hr class="my-4"></hr>
             </nav>
         </header>
     )
