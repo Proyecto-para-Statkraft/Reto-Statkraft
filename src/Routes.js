@@ -1,7 +1,7 @@
 import React from "react";
 import { HashRouter, Switch, Route } from "react-router-dom";
 import Home from "./componentes/Home";
-import ReviewContracts from "./componentes/contratos/choosecontract/ReviewContracts";
+import ReviewContracts from "./componentes/choosecontract/ReviewContracts";
 import ConsolidatedContracts from "./componentes/ConsolidatedContracts";
 import AdendaComplete from "./componentes/contratos/adenda/AdendaComplete";
 
