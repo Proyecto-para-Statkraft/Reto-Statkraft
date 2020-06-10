@@ -11,8 +11,7 @@ header div {
           justify-content: space-between;
 }
 
-header img {
-  width: 140px;
-  height: 70px;
+header div div a {
+  color: #7A6F69 !important;
 }
 /*# sourceMappingURL=header.css.map */

@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Header from "../componentes/Header";
-import { Link } from 'react-router-dom';
 
-const ContractData = () => {
+const ContractData = ({ search }) => {
 
 
     const [companyData, setCompanyData] = useState({});
@@ -104,7 +102,6 @@ const ContractData = () => {
 
     return (
         <div>
-            <Header />
             <div className="row m-5">
                 <div className="m-3 d-flex flex-column bd-highlight">
                     <p>Datos de la empresa Slatkraft</p>
@@ -129,11 +126,7 @@ const ContractData = () => {
                     <label htmlFor=""> Nombre Representante <input type="text" onChange={representativeNumberRegistryProvider} /> </label>
                 </div>
             </div>
-            <Link className="btn btn-primary m-3 "
-                to={{
-                    pathname: "/introduccion",
-                    companyData, providerData
-                }}>Siguiente</Link>
+            <button onClick={() => { search(companyData, providerData) }}> Siguiente</button>
 
         </div>
     )

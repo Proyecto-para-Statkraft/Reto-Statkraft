@@ -14,12 +14,12 @@ const Home = () => {
                         <h3 className="m-5">Empieza a crear tu contrato</h3>
                     </div>
                     <div className=" d-flex justify-content-center ">
-                        <Link className="col-sm-6 mb-5 btn btn-primary btn-md btn-block" to="/contractdata">Empezar</Link>
+                        <Link className="col-sm-6 mb-5 btn btn-primary btn-md btn-block" to="/makecontract">Empezar</Link>
                     </div>
                 </div>
             </div>
             <div>
-                <p className="text-center">Conoce nuestros 6 tipos de contratos</p>
+                <p className="text-center contract-subtitle">Conoce nuestros 6 tipos de contratos</p>
                 <div className="m-3 d-flex justify-content-center ">
                     <div className="card-deck">
                         <div className="borde card style">
