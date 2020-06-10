@@ -26,7 +26,7 @@ import ThirdSection from "./ThirdSection";
 
 function AdendaComplete({ data }) {
 
-    console.log('recibe', data)
+    // console.log('recibe', data)
 
     return (
         <div>

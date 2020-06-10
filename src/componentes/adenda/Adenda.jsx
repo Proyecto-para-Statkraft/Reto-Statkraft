@@ -18,7 +18,7 @@ const Adenda = (props) => {
                     snapShots => {
                         setSpells(snapShots.docs.map(doc => ({ ...doc.data(), id: doc.id })))
                     })
-            console.log(data)
+            // console.log(data)
         };
         fetchData();
     }, []);
@@ -33,7 +33,7 @@ const Adenda = (props) => {
             <Header />
             {spells.filter(doc => doc.codeContract === number)
                 .map(doc =>
-                    <AdendaComplete data={doc} />
+                    <AdendaComplete key={doc.id} data={doc} />
                 )
             }
 
