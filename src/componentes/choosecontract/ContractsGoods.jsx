@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../Header';
 import { Link } from 'react-router-dom';
-import '/home/lizbethj/Desktop/Slatkratf/Reto-Statkraft/src/style/chosecontracts.css'
+import '../style/chosecontracts.css'
 
 const ContrractsGoods = (prosp) => {
 
@@ -82,7 +82,7 @@ const ContrractsGoods = (prosp) => {
                             <div className="borde fondo col-sm-5">
                                 <div className="row mt-5 mb-4 ml-5">
                                     <h4 class=" col-sm-6">Consulta con el Área Legal</h4>
-                                    <img src="https://img.icons8.com/ios/100/000000/home-automation.png" class=" col-sm-6 card-img-top" alt="..." />
+                                    <img src="https://img.icons8.com/ios/100/000000/scales--v1.png" class=" col-sm-6 card-img-top" alt="..." />
                                 </div>
                             </div>
                         </div>

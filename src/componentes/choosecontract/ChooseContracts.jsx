@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "../Header";
 import { Link } from 'react-router-dom';
-import '/home/lizbethj/Desktop/Slatkratf/Reto-Statkraft/src/style/chosecontracts.css'
+import '../style/chosecontracts.css'
 
 const ReviewContracts = () => {
     const [selectedOption, setSelectedOption] = useState('');
