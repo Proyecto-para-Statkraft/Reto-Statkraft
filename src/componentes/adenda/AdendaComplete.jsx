@@ -29,22 +29,21 @@ function AdendaComplete({ data }) {
     // console.log('recibe', data)
 
     return (
-        <div>
-            <div key={data.id}>
-                <AdendaIntroduction key={data.id} numberAdenda={data.numberAdenda} nameContract={data.nameContract}
-                    representativeOne={data.representativeOne} dniOne={data.dniOne}
-                    representativeTwo={data.representativeTwo} dniTwo={data.dniTwo}
-                    business={data.business} rucBusiness={data.rucBusiness} directionBusiness={data.directionBusiness}
-                    representativeBusiness={data.representativeBusiness} dniBusiness={data.dniBusiness}
-                    partidaElectronica={data.partidaElectronica} nameX={data.nameX} />
-                <FirstSection />
-                <SecondSection />
-                <ThirdSection />
-            </div>
-
-
-
-        </div >
+        <div key={data.id}>
+            <AdendaIntroduction key={data.id} numberAdenda={data.numberAdenda} typeContract={data.typeContract} codeContract={data.codeContract}
+                representativeOne={data.representativeOne} dniOne={data.dniOne}
+                representativeTwo={data.representativeTwo} dniTwo={data.dniTwo}
+                business={data.business} rucBusiness={data.rucBusiness} directionBusiness={data.directionBusiness}
+                representativeBusiness={data.representativeBusiness} dniBusiness={data.dniBusiness}
+                partidaElectronica={data.partidaElectronica} nameX={data.nameX} />
+            <FirstSection dayContract={data.dayContract} monthContract={data.monthContract}
+                yearContract={data.yearContract} detailObject={data.detailObject}
+                dayAdenda={data.dayAdenda} monthAdenda={data.monthAdenda}
+                yearAdenda={data.yearAdenda} detailObject2={data.detailObject2}
+                />
+            <SecondSection/>
+            <ThirdSection/> 
+        </div>
     )
 }
 
