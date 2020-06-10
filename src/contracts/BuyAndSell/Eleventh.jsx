@@ -9,7 +9,7 @@ const Eleventh = ({ companyData, administratorCompany, administratorProvider }) 
             Administradores de Contrato, quedando designado para ello:
         </p>
         <ul>
-            <li>De parte de STATKRAFT: {administratorCompany}</li>
+            <li>De parte de {companyData.name}: {administratorCompany}</li>
             <li>De parte de LOCADOR: {administratorProvider}</li>
         </ul>
         <p>
@@ -17,7 +17,7 @@ const Eleventh = ({ companyData, administratorCompany, administratorProvider }) 
             Contrato sin que ello constituya motivo de reclamación por parte del LOCADOR.
             Cualquier cambio constará en comunicación suscrita por un representante de las
             partes dirigida a la otra parte. El Administrador del Contrato por parte de
-            STATKRAFT será el encargado de exigir el fiel cumplimiento del Contrato y la
+            {companyData.name} será el encargado de exigir el fiel cumplimiento del Contrato y la
             buena ejecución del mismo de acuerdo con las especificaciones y demás documentos
             de este Contrato. Los administradores del contrato de ambas partes podrán suscribir
             los documentos que se generen de acuerdo a los modelos que obran en los Anexos N° 3,

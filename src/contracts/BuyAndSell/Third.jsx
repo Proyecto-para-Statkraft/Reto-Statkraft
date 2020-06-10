@@ -1,8 +1,8 @@
 import React from 'react';
-import Clause3i5 from './OptionalClauses/Clause3-5';
+import Clause from './OptionalClauses/Clause3-5-A';
 
 
-const Third = ({ companyData, money, additionalGoods }) => (
+const Third = ({ companyData, money, additionalGoods, clauseVoid }) => (
     <section>
         <h3>TERCERA:         PRECIO</h3>
         <p>
@@ -36,7 +36,8 @@ const Third = ({ companyData, money, additionalGoods }) => (
             del presente Contrato, así como a los plazos para invocarlo; pues declara que en su
             celebración no ha mediado vicio alguno que limite la libre expresión de voluntad.
         </p>
-        {(additionalGoods) && <Clause3i5 companyData={companyData} />}
+        {(additionalGoods) && <Clause companyData={companyData} />}
+        {(clauseVoid) && <p>(Cláusula Intencionalmente dejada en blanco por las partes)</p>}
     </section>
 );
 

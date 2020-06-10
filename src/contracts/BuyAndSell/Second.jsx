@@ -1,5 +1,5 @@
 import React from 'react';
-import Clause2i4 from './OptionalClauses/Clause2-4';
+import Clause from './OptionalClauses/Clause2-3-A';
 
 
 const sell = {
@@ -8,7 +8,7 @@ const sell = {
 }
 
 
-const Second = ({ companyData, sell, scopeVariation }) => (
+const Second = ({ companyData, sell, scopeVariation, clauseVoid }) => (
     <section>
         <h3>SEGUNDA:         OBJETO</h3>
         <p>
@@ -26,13 +26,8 @@ const Second = ({ companyData, sell, scopeVariation }) => (
             2.2 El detalle y especificaciones técnicas de los Bienes constan en las Especificaciones
             Técnicas, que se encuentran en el Anexo N° 1.
         </p>
-        <p>
-            2.3 El <span>PROVEEDOR</span> declara expresamente que cuenta con la capacidad técnica, financiera
-            y legal, así como con las autorizaciones, licencias y permisos requeridos para ejecutar el presente
-            Contrato de manera autónoma, eficiente y oportuna, siendo esta declaración esencial a efectos
-            de que <span>{companyData.name}</span> haya decidido celebrar este Contrato.
-        </p>
-        {(scopeVariation) && <Clause2i4 />}
+        {(scopeVariation) && <Clause />}
+        {(clauseVoid) && <p>(Cláusula Intencionalmente dejada en blanco por las partes)</p>}
         <p>
             El <span>PROVEEDOR</span> declara haber estudiado cuidadosamente y conocer todo lo concerniente
             a la naturaleza del Contrato y a los lugares en donde se efectuará la entrega de los Bienes; las
