@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Header from '../Header';
 import { Link } from 'react-router-dom';
 
-const Questions = (prosp) => {
+const Questions = (props) => {
 
     const [goods, setGoods] = useState('');
 
@@ -12,10 +12,10 @@ const Questions = (prosp) => {
     };
 
 
-    console.log('contrato selecionado', prosp.location.selectedOption)
-    console.log('respuesta', goods)
+    // console.log('contrato selecionado', props.location.selectedOption)
+    // console.log('respuesta', goods)
 
-    if (prosp.location.selectedOption === 'bienes') {
+    if (props.location.selectedOption === 'bienes') {
         return (
             <div>
                 <Header />
@@ -38,7 +38,7 @@ const Questions = (prosp) => {
             </div>
         )
     }
-    if (prosp.location.selectedOption === 'transporte') {
+    if (props.location.selectedOption === 'transporte') {
 
         return (
             <div>
@@ -69,7 +69,7 @@ const Questions = (prosp) => {
             </div >
         )
     }
-    if (prosp.location.selectedOption === 'vigilancia' || prosp.location.selectedOption === 'personas') {
+    if (props.location.selectedOption === 'vigilancia' || props.location.selectedOption === 'personas') {
 
         return (
             <div>
@@ -100,7 +100,7 @@ const Questions = (prosp) => {
             </div >
         )
     }
-    if (prosp.location.selectedOption === 'construccion') {
+    if (props.location.selectedOption === 'construccion') {
 
         return (
             <div>

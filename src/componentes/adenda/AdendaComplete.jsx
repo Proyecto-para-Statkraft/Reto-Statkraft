@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import AdendaIntroduction from "./AdendaIntroduction";
-import firebase from '../firebase.js';
 
 import FirstSection from "./FirstSection";
 import SecondSection from "./SecondSection";
@@ -25,40 +24,25 @@ import ThirdSection from "./ThirdSection";
 // }
 
 
-function AdendaComplete() {
+function AdendaComplete({ data }) {
 
-    const [spells, setSpells] = useState([]);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            const db = firebase.firestore();
-            const data = await db.collection("adendaData")
-                .onSnapshot(
-                    snapShots => {
-                        setSpells(snapShots.docs.map(doc => ({ ...doc.data(), id: doc.id })))
-                    })
-            console.log(data)
-        };
-        fetchData();
-    }, []);
-
-    console.log(spells)
+    console.log('recibe', data)
 
     return (
         <div>
-        {spells.map((spell) => 
-            <AdendaIntroduction key={spell.id} numberAdenda={spell.numberAdenda} nameContract={spell.nameContract}
-                representativeOne={spell.representativeOne} dniOne={spell.dniOne}
-                representativeTwo={spell.representativeTwo} dniTwo={spell.dniTwo}
-                business={spell.business} rucBusiness={spell.rucBusiness} directionBusiness={spell.directionBusiness}
-                representativeBusiness={spell.representativeBusiness} dniBusiness={spell.dniBusiness}
-                partidaElectronica={spell.partidaElectronica} nameX={spell.nameX} />
-           
-        )}
-            <FirstSection/>
-            <SecondSection/>
-            <ThirdSection/> 
-          
+            <div key={data.id}>
+                <AdendaIntroduction key={data.id} numberAdenda={data.numberAdenda} nameContract={data.nameContract}
+                    representativeOne={data.representativeOne} dniOne={data.dniOne}
+                    representativeTwo={data.representativeTwo} dniTwo={data.dniTwo}
+                    business={data.business} rucBusiness={data.rucBusiness} directionBusiness={data.directionBusiness}
+                    representativeBusiness={data.representativeBusiness} dniBusiness={data.dniBusiness}
+                    partidaElectronica={data.partidaElectronica} nameX={data.nameX} />
+                <FirstSection />
+                <SecondSection />
+                <ThirdSection />
+            </div>
+
+
 
         </div >
     )
