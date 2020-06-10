@@ -8,14 +8,11 @@
   border: none;
 }
 
-p {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
 .card {
   min-width: 150px;
   max-width: 200px;
   margin: 2em;
+  padding: 1em 0;
 }
 
 .style {
@@ -33,5 +30,9 @@ p {
 
 .card-img-top {
   max-width: 100px;
+}
+
+.contract-subtitle {
+  font-size: 20px;
 }
 /*# sourceMappingURL=home.css.map */

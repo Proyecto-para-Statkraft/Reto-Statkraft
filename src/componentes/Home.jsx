@@ -19,7 +19,7 @@ const Home = () => {
                 </div>
             </div>
             <div>
-                <p className="text-center">Conoce nuestros 6 tipos de contratos</p>
+                <p className="text-center contract-subtitle">Conoce nuestros 6 tipos de contratos</p>
                 <div className="m-3 d-flex justify-content-center ">
                     <div className="card-deck">
                         <div className="borde card style">
