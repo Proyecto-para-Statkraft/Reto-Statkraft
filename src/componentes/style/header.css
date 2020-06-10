@@ -1,0 +1,18 @@
+header {
+  border-bottom: 3px solid #00b0dc;
+}
+
+header div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header img {
+  width: 140px;
+  height: 70px;
+}
+/*# sourceMappingURL=header.css.map */
