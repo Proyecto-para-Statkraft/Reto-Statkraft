@@ -40,10 +40,7 @@ function AdendaComplete({ data }) {
                 <FirstSection />
                 <SecondSection />
                 <ThirdSection />
-            </div>
-
-
-
+         
         </div >
     )
 }
