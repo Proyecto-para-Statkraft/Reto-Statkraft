@@ -3,7 +3,7 @@ import AdendaIntroduction from "./AdendaIntroduction"
 import FirstSection from "./FirstSection"
 import SecondSection from "./SecondSection"
 import ThirdSection from "./ThirdSection"
-import Header from '../../Header'
+import Header from "../Header"
 
 const AdendaComplete = () => {
     return (
