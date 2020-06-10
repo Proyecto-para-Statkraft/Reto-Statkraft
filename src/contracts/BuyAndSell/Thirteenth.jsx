@@ -1,10 +1,9 @@
 import React from 'react';
 import ClauseA from './OptionalClauses/Clause13-2-A';
 import ClauseB from './OptionalClauses/Clause13-2-B';
-import ClauseC from './OptionalClauses/Clause13-2-C';
 
 
-const Thirteenth = ({ companyData, clauseA, clauseB, clauseC }) => (
+const Thirteenth = ({ companyData, clauseA, clauseB }) => (
     <section>
         <h3>DÉCIMA TERCERA:         PENALIDADES</h3>
         <p>
@@ -23,7 +22,6 @@ const Thirteenth = ({ companyData, clauseA, clauseB, clauseC }) => (
         <p>
             {(clauseA) && <ClauseA />}
             {(clauseB) && <ClauseB />}
-            {(clauseC) && <ClauseC />}
         </p>
         <p>
             13.3 Por resolución del Contrato:

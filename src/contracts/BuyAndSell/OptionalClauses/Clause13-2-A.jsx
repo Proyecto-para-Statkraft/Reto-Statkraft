@@ -12,8 +12,8 @@ const Clause = ({ companyData }) => (
             de las obligaciones en materia de seguridad y salud, y/o en materia ambiental 
             y/o por no contar o contar con equipos de protección personal incompletos, 
             inadecuados y/o en mal estado; el <span>LOCADOR</span> deberá pagar a 
-            <span>{companyData.name}</span> una penalidad ascendente a [S/. 1000.00 (Un mil y 
-            00/100 Nuevos Soles)] por cada caso detectado.
+            <span>{companyData.name}</span> una penalidad ascendente a S/. 1000.00 (Un mil y 
+            00/100 Nuevos Soles) por cada caso detectado.
         </p>
     </div>
 );
