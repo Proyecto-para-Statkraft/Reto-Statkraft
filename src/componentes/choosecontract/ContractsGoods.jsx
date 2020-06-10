@@ -3,12 +3,12 @@ import Header from '../Header';
 import { Link } from 'react-router-dom';
 import '../style/chosecontracts.css'
 
-const ContrractsGoods = (prosp) => {
+const ContrractsGoods = (props) => {
 
 
-    console.log('contrato selecionado', prosp.location.goods)
+    // console.log('contrato selecionado', props.location.goods)
 
-    if (prosp.location.goods === 'si') {
+    if (props.location.goods === 'si') {
         return (
             <div>
                 <Header />
@@ -38,7 +38,7 @@ const ContrractsGoods = (prosp) => {
             </div >
         )
     }
-    if (prosp.location.goods === 'no') {
+    if (props.location.goods === 'no') {
         return (
             <div>
                 <Header />
@@ -68,7 +68,7 @@ const ContrractsGoods = (prosp) => {
             </div >
         )
     }
-    if (prosp.location.goods === 'sii') {
+    if (props.location.goods === 'sii') {
         return (
             <div>
                 <Header />
@@ -82,7 +82,7 @@ const ContrractsGoods = (prosp) => {
                             <div className="borde fondo col-sm-5">
                                 <div className="row mt-5 mb-4 ml-5">
                                     <h4 class=" col-sm-6">Consulta con el Área Legal</h4>
-                                    <img src="https://img.icons8.com/ios/100/000000/home-automation.png" class=" col-sm-6 card-img-top" alt="..." />
+                                    <img src="https://img.icons8.com/ios/100/000000/scales--v1.png" class=" col-sm-6 card-img-top" alt="..." />
                                 </div>
                             </div>
                         </div>
