@@ -7,6 +7,8 @@ import Adenda from "./componentes/adenda/Adenda";
 import QuestionsOne from "./componentes/choosecontract/Questions";
 import ContrractsGoods from "./componentes/choosecontract/ContractsGoods";
 import NumberContracts from "./componentes/adenda/NumberContracts";
+import ContractData from "./contracts/ContractData";
+import Introduction from "./contracts/BuyAndSell/Introduction";
 
 const Routes = () => {
   return (
@@ -22,6 +24,8 @@ const Routes = () => {
         <Route path="/questions" component={QuestionsOne} />
         <Route path="/contractsgoods" component={ContrractsGoods} />
         <Route path="/numbercontracts" component={NumberContracts} />
+        <Route path="/contractdata" component={ContractData} />
+        <Route path="/introduccion" component={Introduction} />
       </Switch>
     </HashRouter>
   );
