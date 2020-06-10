@@ -5,24 +5,6 @@ import FirstSection from "./FirstSection";
 import SecondSection from "./SecondSection";
 import ThirdSection from "./ThirdSection";
 
-// const adendaData = {
-//     numberAdenda: 'PRIMERA',
-//     nameContract: 'COMPRAVENTA E INSTALACIÓN SKP-450026438',
-//     representativeOne: 'Álvaro Antonio PorturasIngunza,',
-//     dniOne: '09340737',
-//     representativeTwo: 'Miguel Antonio Castro Peña,',
-//     dniTwo: '40286317',
-//     business: 'IBM DEL PERÚ S.A.C.,',
-//     rucBusiness: ' 20100075009,',
-//     directionBusiness: 'n Av. Javier Prado Este 6230, LaRiviera de Monterrico, La Molina',
-//     representativeBusiness: ' María Eugenia Basauri Parra',
-//     dniBusiness: '10613966',
-//     partidaElectronica: '11013475',
-//     nameX: '“LOCADOR”',
-
-
-// }
-
 
 function AdendaComplete({ data }) {
 
@@ -41,8 +23,12 @@ function AdendaComplete({ data }) {
                 dayAdenda={data.dayAdenda} monthAdenda={data.monthAdenda}
                 yearAdenda={data.yearAdenda} detailObject2={data.detailObject2}
                 />
-            <SecondSection/>
-            <ThirdSection/> 
+            <SecondSection numberAdenda= {data.numberAdenda} numeralOne= {data.numeralOne} numberClausula={data.numberClausula}
+                 numCardinal={data.numCardinal} clausulaModificar={data.clausulaModificar}
+                numeralTwo= {data.numeralTwo} numberClausulaTwo={data.numberClausulaTwo} clausulaAgregar={data.clausulaAgregar}
+                numeral3={data.numeral3} numberClausulaTree={data.numberClausulaTree}/>
+            <ThirdSection  numberAdenda={data.numberAdenda} daysThirdSection= {data.numberAdenda} 
+                 monthThirdSection = {data.monthThirdSection} yearThirdSection = {data.yearThirdSection}/> 
         </div>
     )
 }
