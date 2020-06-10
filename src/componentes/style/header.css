@@ -10,4 +10,8 @@ header div {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+
+header div div a {
+  color: #7A6F69 !important;
+}
 /*# sourceMappingURL=header.css.map */
