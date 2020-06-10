@@ -3,12 +3,12 @@ import Header from '../Header';
 import { Link } from 'react-router-dom';
 import '../style/chosecontracts.css'
 
-const ContrractsGoods = (prosp) => {
+const ContrractsGoods = (props) => {
 
 
-    console.log('contrato selecionado', prosp.location.goods)
+    // console.log('contrato selecionado', props.location.goods)
 
-    if (prosp.location.goods === 'si') {
+    if (props.location.goods === 'si') {
         return (
             <div>
                 <Header />
@@ -38,7 +38,7 @@ const ContrractsGoods = (prosp) => {
             </div >
         )
     }
-    if (prosp.location.goods === 'no') {
+    if (props.location.goods === 'no') {
         return (
             <div>
                 <Header />
@@ -68,7 +68,7 @@ const ContrractsGoods = (prosp) => {
             </div >
         )
     }
-    if (prosp.location.goods === 'sii') {
+    if (props.location.goods === 'sii') {
         return (
             <div>
                 <Header />

@@ -3,7 +3,7 @@ import React from 'react'
 const AdendaIntroduction = (props) => {
     return (
         <div>
-            <h4>{props.numberAdenda} ADENDA AL CONTRATO DE {props.nameContract}</h4>
+            <h4>{props.numberAdenda} ADENDA AL CONTRATO DE {props.typeContract} {props.codeContract}</h4>
             <p>
                 Conste por el presente documento la {props.numberAdenda} Adenda al Contrato de
                 {props.nameContract} (la “{props.numberAdenda} Adenda”) que celebran:

@@ -3,9 +3,10 @@ import { HashRouter, Switch, Route } from "react-router-dom";
 import Home from "./componentes/Home";
 import ReviewContracts from "./componentes/choosecontract/ChooseContracts";
 import ConsolidatedContracts from "./componentes/ConsolidatedContracts";
-import AdendaComplete from "./componentes/adenda/AdendaComplete";
+import Adenda from "./componentes/adenda/Adenda";
 import QuestionsOne from "./componentes/choosecontract/Questions";
 import ContrractsGoods from "./componentes/choosecontract/ContractsGoods";
+import NumberContracts from "./componentes/adenda/NumberContracts";
 
 const Routes = () => {
   return (
@@ -17,9 +18,10 @@ const Routes = () => {
           path="/consolidatedcontracts"
           component={ConsolidatedContracts}
         />
-        <Route path="/adenda" component={AdendaComplete} />
+        <Route path="/adenda" component={Adenda} />
         <Route path="/questions" component={QuestionsOne} />
         <Route path="/contractsgoods" component={ContrractsGoods} />
+        <Route path="/numbercontracts" component={NumberContracts} />
       </Switch>
     </HashRouter>
   );
