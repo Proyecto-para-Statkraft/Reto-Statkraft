@@ -335,6 +335,8 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     <button
                         onClick={() => {
                             searchRepresentative(representativeCompany, representativeSupplier);
+                            setQuestionEighth(true);
+                            setQuestionSeventh(false);
                         }}
                     >
                         Siguiente
@@ -367,6 +369,8 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                                 numberHoursRepairProvincia,
                                 timeAfterDeliveryFechayHora
                             );
+                            setQuestionNineth(true);
+                            setQuestionEighth(false);
                         }}
                     >
                         Siguiente
@@ -388,37 +392,34 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                                 Alto 13.2 (opcion2)
                                  <input className="m-3 radio" type="radio" value="false" name="gender" />
                             </label>
-                            
-                            13.2 wawawa <br />
-                           
-                            2.3 wiwiwiwiwiw
-                </div>
+                        </div>
                     </div>
                     <button
                         onClick={() => {
                             searchoClauseThirteenth(optionClauseThirteenth);
+                            setQuestionNineth(false);
+                            setQuestionQuarter(true);
                         }}
                     >
                         Siguiente
-                </button>
+                    </button>
                 </div>
             }
             {
                 (questionQuarter) &&
                 <div className="row m-5">
                     <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>14- Garantias</p>
-
-                        <h1>ESCOGE CLAUSULA</h1>
+                        <p>14. Garantias</p>
+                        <p>¿Los bienes van a ser entregados en una de las centrales?</p>
                         <div className="m-3" onChange={optionClausesFourteenth}>
                             <input className="m-3 radio" type="radio" value="true" name="gender" />
                             14.2 clasura14 <br />
                             <input className="m-3 radio" type="radio" value="false" name="gender" />
                             14.2  vacio
-          </div>
+                        </div>
                         <label htmlFor="">
                             14.1.2 Póliza de Responsabilidad Civil Extracontractual por un monto no menor a US$
-            <input type="text" onChange={moneyPoliza} />
+                            <input type="text" onChange={moneyPoliza} />
                         </label>
                     </div>
                     <button
