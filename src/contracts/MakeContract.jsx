@@ -11,6 +11,29 @@ import Sixth from './BuyAndSell/Sixth';
 import Tenth from './BuyAndSell/Tenth';
 import Eleventh from './BuyAndSell/Eleventh';
 import Twelfth from './BuyAndSell/Twelfth';
+import Thirteenth from './BuyAndSell/Thirteenth';
+import Fourteenth from './BuyAndSell/Fourteenth';
+import Fifteenth from './BuyAndSell/Fifteenth';
+import Sixteenth from './BuyAndSell/Sixteenth';
+import Twentieth from './BuyAndSell/Twentieth';
+
+
+// function exportHTML(){
+//     var header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' "+
+//          "xmlns:w='urn:schemas-microsoft-com:office:word' "+
+//          "xmlns='http://www.w3.org/TR/REC-html40'>"+
+//          "<head><meta charset='utf-8'><title>Export HTML to Word Document with JavaScript</title></head><body>";
+//     var footer = "</body></html>";
+//     var sourceHTML = header+document.getElementById("source-html").innerHTML+footer;
+
+//     var source = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(sourceHTML);
+//     var fileDownload = document.createElement("a");
+//     document.body.appendChild(fileDownload);
+//     fileDownload.href = source;
+//     fileDownload.download = 'document.doc';
+//     fileDownload.click();
+//     document.body.removeChild(fileDownload);
+// }
 
 const MakeContract = () => {
 
@@ -21,8 +44,8 @@ const MakeContract = () => {
     }
 
     const [antecedente, setAntecedente] = useState('');
-    const searchAntecedente = (product, place) => {
-        setAntecedente({ product, place })
+    const searchAntecedente = (product) => {
+        setAntecedente({ product })
     }
 
     const [sectionSecond, setSectionSecond] = useState('');
@@ -65,8 +88,33 @@ const MakeContract = () => {
         setSectionTwelfth({ numberHoursRepairLima, numberHoursRepairProvincia, timeAfterDeliveryFechayHora })
     }
 
+    const [sectionThirteenth, setSectionThirteenth] = useState('');
+    const searchoClauseThirteenth = (numberHoursRepairLima, numberHoursRepairProvincia, timeAfterDeliveryFechayHora) => {
+        setSectionThirteenth({ numberHoursRepairLima, numberHoursRepairProvincia, timeAfterDeliveryFechayHora })
+    }
+
+    const [sectionFourteenth, setSectionFourteenth] = useState('');
+    const searchClauseFourteenth = (optionClauseFourteenth, moneysPoliza) => {
+        setSectionFourteenth({ optionClauseFourteenth, moneysPoliza })
+    }
+
+    const [sectionFifteenth, setSectionFifteenth] = useState('');
+    const searchTimeDayFifteenth = (timeDay) => {
+        setSectionFifteenth({ timeDay })
+    }
+
+    const [sectionSixteenth, setSectionSixteenth] = useState('');
+    const searchClauseSixteenth = (optionClausesSixteenth, name, ruc, servicio) => {
+        setSectionSixteenth({ optionClausesSixteenth, name, ruc, servicio })
+    }
+
+    const [sectionTwentienth, setSectionTwentienth] = useState('');
+    const searchClauseTwentieth = (optionClausesTwentieth) => {
+        setSectionTwentienth({ optionClausesTwentieth })
+    }
+
     return (
-        <div className="">
+        <div id="source-html" className="">
             <Header />
             <div className="">
                 <div className="row">
@@ -74,7 +122,9 @@ const MakeContract = () => {
                         <ContractData search={searchData} searchDataAntecedentes={searchAntecedente} searchSellOption={searchObjeto}
                             searchPrice={searchPrice} searchPaymentMethod={searchPaymentMethod} searchTermPay={searchTermPay}
                             searchSite={searchSite} searchAnexoTench={searchAnexoTench} searchRepresentative={searchRepresentative}
-                            searchHoursTime={searchHoursTime}
+                            searchHoursTime={searchHoursTime} searchoClauseThirteenth={searchoClauseThirteenth}
+                            searchClauseFourteenth={searchClauseFourteenth} searchTimeDayFifteenth={searchTimeDayFifteenth}
+                            searchClauseSixteenth={searchClauseSixteenth} searchClauseTwentienth={searchClauseTwentieth}
                         />
                     </section>
                     <section className="col-sm-12 col-md-6 bg-secondary">
@@ -88,9 +138,18 @@ const MakeContract = () => {
                         <Tenth data={data} Tenth={sectionTenth} />
                         <Eleventh data={data} Eleventh={sectionEleventh} />
                         <Twelfth data={data} Twelfth={sectionTwelfth} />
+                        <Thirteenth data={data} Thirteenth={sectionThirteenth} />
+                        <Fourteenth data={data} Fourteenth={sectionFourteenth} />
+                        <Fifteenth Fifteenth={sectionFifteenth} />
+                        <Sixteenth data={data} Sixteenth={sectionSixteenth} />
+                        {/* <Twentieth Thirteenth={sectionTwentienth} /> */}
+
+
                     </section>
                 </div>
             </div>
+            {/* <button id="btn-export" onClick={exportHTML}>Export to
+              word doc</button> */}
         </div>
     )
 };
