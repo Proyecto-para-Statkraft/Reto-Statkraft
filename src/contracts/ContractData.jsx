@@ -178,386 +178,417 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
     return (
         <div>
             {
-            (questionIntro) &&  
-            <div className="row m-5 clause-question question-intro">
-                <div className="m-3 d-flex flex-column bd-highlight">
-                    <p>Datos de la Empresa</p>
-                    <label htmlFor="">
-                        Nombre de la empresa Stakraft
+                (questionIntro) &&
+                <div className="row m-5 clause-question question-intro">
+                    <div className="m-3 d-flex flex-column bd-highlight">
+                        <p>Datos de la Empresa</p>
+                        <label htmlFor="">
+                            Nombre de la empresa Stakraft
                         <input type="text" onChange={nameCompany} />
-                    </label>
-                    <label htmlFor="">
-                        RUC <input type="text" onChange={rucCompany} />
-                    </label>
-                    <label htmlFor="">
-                        Direccion <input type="text" onChange={addressCompany} />
-                    </label>
-                    <p>¿Por quién está representada la empresa?</p>
-                    <label htmlFor="">
-                        Nombre Completo
+                        </label>
+                        <label htmlFor="">
+                            RUC <input type="text" onChange={rucCompany} />
+                        </label>
+                        <label htmlFor="">
+                            Direccion <input type="text" onChange={addressCompany} />
+                        </label>
+                        <p>¿Por quién está representada la empresa?</p>
+                        <label htmlFor="">
+                            Nombre Completo
                         <input type="text" placeholder="Ej: Juan Antonio Rozas Mory"
-                            onChange={representativeOneNameCompany} />
-                    </label>
-                    <label htmlFor="">
-                        DNI
+                                onChange={representativeOneNameCompany} />
+                        </label>
+                        <label htmlFor="">
+                            DNI
                         <input type="text" placeholder="Ej: 07867123" onChange={representativeOneDniCompany} />
-                    </label>
-                    <p>Datos de representante dos</p>
-                    <label htmlFor="">
-                        Nombre Completo
+                        </label>
+                        <p>Datos de representante dos</p>
+                        <label htmlFor="">
+                            Nombre Completo
                         <input type="text" placeholder="Ej: Álvaro Antonio Porturas Ingunza" onChange={representativeTwoNameCompany} />
-                    </label>
-                    <label htmlFor="">
-                        DNI
+                        </label>
+                        <label htmlFor="">
+                            DNI
                         <input type="text" placeholder="Ej: 09340737" onChange={representativeTwoDniCompany} />
-                    </label>
-                </div>
-                <div className="m-3 d-flex flex-column bd-highlight">
-                    <p>Datos de la empresa con la que estás contratando</p>
-                    <label htmlFor="">
-                        Nombre de la empresa <input
-                            type="text"
-                            onChange={nameProvider} />
-                    </label>
-                    <label htmlFor="">
-                        RUC <input type="text" onChange={rucProvider} />
-                    </label>
-                    <label htmlFor="">
-                        Domicilio <input type="text" onChange={addressProvider} />
-                    </label>
-                    <label htmlFor="">
-                        Nombre Representante de la Empresa
+                        </label>
+                    </div>
+                    <div className="m-3 d-flex flex-column bd-highlight">
+                        <p>Datos de la empresa con la que estás contratando</p>
+                        <label htmlFor="">
+                            Nombre de la empresa <input
+                                type="text"
+                                onChange={nameProvider} />
+                        </label>
+                        <label htmlFor="">
+                            RUC <input type="text" onChange={rucProvider} />
+                        </label>
+                        <label htmlFor="">
+                            Domicilio <input type="text" onChange={addressProvider} />
+                        </label>
+                        <label htmlFor="">
+                            Nombre Representante de la Empresa
                     <input type="text" onChange={representativeNameProvider} />
-                    </label>
-                    <label htmlFor="">
-                        DNI
+                        </label>
+                        <label htmlFor="">
+                            DNI
                         <input type="text" onChange={representativeDniProvider} />
-                    </label>
-                    <label htmlFor="">
-                        Partida Electrónica N° (SUNARP)
+                        </label>
+                        <label htmlFor="">
+                            Partida Electrónica N° (SUNARP)
                         <input
-                            type="text"
-                            onChange={representativeNumberRegistryProvider}
-                        />
-                    </label>
-                </div>
-                <button
-                    onClick={() => {
-                        search(companyData, providerData);
-                        setQuestionIntro(false);
-                        setQuestionFirst(true);
-                    }}
-                >
-                    CONTINUAR
+                                type="text"
+                                onChange={representativeNumberRegistryProvider}
+                            />
+                        </label>
+                    </div>
+                    <button
+                        onClick={() => {
+                            search(companyData, providerData);
+                            setQuestionIntro(false);
+                            setQuestionFirst(true);
+                        }}
+                    >
+                        CONTINUAR
                 </button>
-            </div>
+                </div>
             }
             {
-            (questionFirst) && 
-            <div className="row m-5 clause-question" id="question-1">
-                <div className="m-3 d-flex flex-column bd-highlight">
-                    <p>1. Antecendente</p>
-                    <label htmlFor="">
-                        Nuestra empresa esta dedicada a la generación y comercialización de
-                        energía eléctrica, que requiere:
+                (questionFirst) &&
+                <div className="row m-5 clause-question" id="question-1">
+                    <div className="m-3 d-flex flex-column bd-highlight">
+                        <p>1. Antecendente</p>
+                        <label htmlFor="">
+                            Nuestra empresa esta dedicada a la generación y comercialización de
+                            energía eléctrica, que requiere:
                         <textarea placeholder="Detallar Servicio..."
-                            onChange={product}></textarea>
-                    </label>
-                </div>
-                <button
-                    onClick={() => {
-                        searchDataAntecedentes(inputRequieres, inputRequieresen);
-                        setQuestionSecond(true);
-                        setQuestionFirst(false);
-                    }}
-                >
+                                onChange={product}></textarea>
+                        </label>
+                    </div>
+                    <button
+                        onClick={() => {
+                            searchDataAntecedentes(inputRequieres, inputRequieresen);
+                            setQuestionSecond(true);
+                            setQuestionFirst(false);
+                        }}
+                    >
 
-                    Siguiente
+                        Siguiente
                 </button>
-            </div>
+                </div>
             }
             {
-               (questionSecond) &&  
-               <div className="row m-5 clause-question" id="question-2">
-               <div className="m-3 d-flex flex-column bd-highlight">
-                   <p>2-Objeto</p>
-                   <label htmlFor="">
-                       Por el Contrato, el <span>PROVEEDOR</span> vende a{" "}
-                       <span>EMPRESA</span> el conjunto de bienes que se mencionan en el
+                (questionSecond) &&
+                <div className="row m-5 clause-question" id="question-2">
+                    <div className="m-3 d-flex flex-column bd-highlight">
+                        <p>2-Objeto</p>
+                        <label htmlFor="">
+                            Por el Contrato, el <span>PROVEEDOR</span> vende a{" "}
+                            <span>EMPRESA</span> el conjunto de bienes que se mencionan en el
                        Anexo N° 2(en adelante, el conjunto, los “Bienes”), libres de carga
                        y gravámenes, los cuales serán destinados a <br />
-                       <textarea type="text" onChange={sell} />{" "}
-                   </label>
-               </div>
-               <button
-                   onClick={() => {
-                       searchSellOption(sells);
-                   }}
-               >
-                   Siguiente
-               </button>
-            </div>
-            }
-            
-            {
-                (questionThird) && 
-                <div className="row m-5 clause-question" id="question-3">
-                <div className="m-3 d-flex flex-column bd-highlight">
-                    <p>3- Precio</p>
-                    <textarea type="text" placeholder="Ejm: US$ 67,274.36 (Sesenta y Siete Mil Doscientos Setenta y Cuatro con 36/100 Dólares de los Estados Unidos de América) " onChange={money} />
-                </div>
-                <button
-                    onClick={() => {
-                        searchPrice(moneys);
-                    }}
-                >
-                    Siguiente
-                </button>
-                </div> 
-            }
-
-            <div className="row m-5 clause-question" id="question-4">
-                <div className="m-3 d-flex flex-column bd-highlight">
-                    <p>4. Formas y Condiciones de pago</p>
-                    <div className="m-3" onChange={TypeMoney}>
-                        <p>La moneda pactada para el precio es : </p>
-                        <input className="m-3 radio" type="radio" value="dolares" name="gender" />Dolares <br />
-                        <input className="m-3 radio" type="radio" value="soles" name="gender" />Soles
+                            <textarea type="text" onChange={sell} />{" "}
+                        </label>
                     </div>
+                    <button
+                        onClick={() => {
+                            searchSellOption(sells);
+                            setQuestionThird(true);
+                            setQuestionSecond(false);
+                        }}
+                    >
+                        Siguiente
+               </button>
                 </div>
-                <button
-                    onClick={() => {
-                        searchPaymentMethod(typeMoneys);
-                    }}
-                >
-                    Siguiente
-                </button>
-            </div>
+            }
 
-            <div className="row m-5 clause-question" id="question-5">
-                <div className="m-3 d-flex flex-column bd-highlight">
-                    <p>5. Plazo de entrega de los bienes</p>
-                    <label htmlFor="">
-                        El plazo de entrega de los bienes adquiridos es:
+            {
+                (questionThird) &&
+                <div className="row m-5 clause-question" id="question-3">
+                    <div className="m-3 d-flex flex-column bd-highlight">
+                        <p>3- Precio</p>
+                        <textarea type="text" placeholder="Ejm: US$ 67,274.36 (Sesenta y Siete Mil Doscientos Setenta y Cuatro con 36/100 Dólares de los Estados Unidos de América) " onChange={money} />
+                    </div>
+                    <button
+                        onClick={() => {
+                            searchPrice(moneys);
+                            setQuestionQuarter(true);
+                            setQuestionThird(false);
+                        }}
+                    >
+                        Siguiente
+                </button>
+                </div>
+            }
+            {
+                (questionQuarter) &&
+                <div className="row m-5 clause-question" id="question-4">
+                    <div className="m-3 d-flex flex-column bd-highlight">
+                        <p>4. Formas y Condiciones de pago</p>
+                        <div className="m-3" onChange={TypeMoney}>
+                            <p>La moneda pactada para el precio es : </p>
+                            <input className="m-3 radio" type="radio" value="dolares" name="gender" />Dolares <br />
+                            <input className="m-3 radio" type="radio" value="soles" name="gender" />Soles
+                    </div>
+                    </div>
+                    <button
+                        onClick={() => {
+                            searchPaymentMethod(typeMoneys);
+                            setQuestionFifth(true);
+                            setQuestionQuarter(false);
+                        }}
+                    >
+                        Siguiente
+                </button>
+                </div>
+            }
+            {
+                (questionFifth) &&
+                <div className="row m-5 clause-question" id="question-5">
+                    <div className="m-3 d-flex flex-column bd-highlight">
+                        <p>5. Plazo de entrega de los bienes</p>
+                        <label htmlFor="">
+                            El plazo de entrega de los bienes adquiridos es:
                         <input type="text" onChange={deadlineDays} placeholder="Ejm: 10 semanas" />
 
-                    </label>
-                </div>
-                <button
-                    onClick={() => {
-                        searchTermPay(deadlineDay);
-                    }}
-                >
-                    Siguiente
+                        </label>
+                    </div>
+                    <button
+                        onClick={() => {
+                            searchTermPay(deadlineDay);
+                            setQuestionSixth(true);
+                            setQuestionFifth(false);
+                        }}
+                    >
+                        Siguiente
                 </button>
-            </div>
-
-            <div className="row m-5">
-                <div className="m-3 d-flex flex-column bd-highlight">
-                    <p>6. Gastos, transporte y entrega</p>
-                    <label htmlFor="">
-                        El lugar de entrega de los bienes adquiridos es:
+                </div>
+            }
+            {
+                (questionSixth) &&
+                <div className="row m-5">
+                    <div className="m-3 d-flex flex-column bd-highlight">
+                        <p>6. Gastos, transporte y entrega</p>
+                        <label htmlFor="">
+                            El lugar de entrega de los bienes adquiridos es:
                         <input type="text" onChange={site} placeholder="Escribir aquí" />
-                    </label>
-                </div>
-                <button
-                    onClick={() => {
-                        searchSite(deliveryPlace);
-                    }}
-                >
-                    Siguiente
+                        </label>
+                    </div>
+                    <button
+                        onClick={() => {
+                            searchSite(deliveryPlace);
+                            setQuestionSeventh(true);
+                            setQuestionSixth(false);
+                        }}
+                    >
+                        Siguiente
                 </button>
-            </div>
-
-            <div className="row m-5">
-                <div className="m-3 d-flex flex-column bd-highlight">
-                    <p>10- Liquidacion del Contrato</p>
-                    <label htmlFor="">
-                        numero de anexo
-            <input type="text" onChange={numAnexoTenth} />
-                    </label>
                 </div>
-                <button
-                    onClick={() => {
-                        searchAnexoTench(numberAnexoTenth);
-                    }}
-                >
-                    Siguiente
+            }
+            {
+                (questionQuarter) &&
+                <div className="row m-5">
+                    <div className="m-3 d-flex flex-column bd-highlight">
+                        <p>10- Liquidacion del Contrato</p>
+                        <label htmlFor="">
+                            numero de anexo
+                            <input type="text" onChange={numAnexoTenth} />
+                        </label>
+                    </div>
+                    <button
+                        onClick={() => {
+                            searchAnexoTench(numberAnexoTenth);
+                        }}
+                    >
+                        Siguiente
                 </button>
-            </div>
+                </div>
+            }
+            {
+                (questionQuarter) &&
+                <div className="row m-5 clause-question" id="question-6">
+                    <div className="m-3 d-flex flex-column bd-highlight">
+                        <p>11- Representantes </p>
 
-            <div className="row m-5 clause-question" id="question-6">
-                <div className="m-3 d-flex flex-column bd-highlight">
-                    <p>11- Representantes </p>
-
-                    <label htmlFor="">
-                        Representante Compañia
+                        <label htmlFor="">
+                            Representante Compañia
             <input type="text" onChange={companyRepresentative} />
-                    </label>
-                    <label htmlFor="">
-                        Representante Proveedor
+                        </label>
+                        <label htmlFor="">
+                            Representante Proveedor
             <input type="text" onChange={supplierRepresentative} />
-                    </label>
-                </div>
-                <button
-                    onClick={() => {
-                        searchRepresentative(representativeCompany, representativeSupplier);
-                    }}
-                >
-                    Siguiente
+                        </label>
+                    </div>
+                    <button
+                        onClick={() => {
+                            searchRepresentative(representativeCompany, representativeSupplier);
+                        }}
+                    >
+                        Siguiente
                 </button>
-            </div>
-
-            <div className="row m-5">
-                <div className="m-3 d-flex flex-column bd-highlight">
-                    <p>12- Exclusion de daño Existentess </p>
-
-                    <label htmlFor="">
-                        Será responsable de reparar cualquier error en el funcionamiento de
-                        los Bienes en un plazo no mayor
-            <input type="text" onChange={numberHoursRepairLim} />
-                    </label>
-                    <label htmlFor="">
-                        horas para Lima y a
-            <input type="text" onChange={numberHoursRepairProv} />
-                    </label>
-
-                    <label htmlFor="">
-                        aun cuando no sea el fabricante de los mismos, durante el plazo de
-                        vigencia de este Contrato, así como durante los
-            <input type="text" onChange={timeAfterDeliveryFecha} />
-                    </label>
                 </div>
-                <button
-                    onClick={() => {
-                        searchHoursTime(
-                            numberHoursRepairLima,
-                            numberHoursRepairProvincia,
-                            timeAfterDeliveryFechayHora
-                        );
-                    }}
-                >
-                    Siguiente
-        </button>
+            }
+            {
+                (questionQuarter) &&
+                <div className="row m-5">
+                    <div className="m-3 d-flex flex-column bd-highlight">
+                        <p>12- Exclusion de daño Existentess </p>
 
-            </div>
+                        <label htmlFor="">
+                            Será responsable de reparar cualquier error en el funcionamiento de
+                            los Bienes en un plazo no mayor
+            <input type="text" onChange={numberHoursRepairLim} />
+                        </label>
+                        <label htmlFor="">
+                            horas para Lima y a
+            <input type="text" onChange={numberHoursRepairProv} />
+                        </label>
 
-            <div className="row m-5">
-                <div className="m-3 d-flex flex-column bd-highlight">
-                    <p>13- Penalidades</p>
-                    <p>una penalidad
+                        <label htmlFor="">
+                            aun cuando no sea el fabricante de los mismos, durante el plazo de
+                            vigencia de este Contrato, así como durante los
+                    <input type="text" onChange={timeAfterDeliveryFecha} />
+                        </label>
+                    </div>
+                    <button
+                        onClick={() => {
+                            searchHoursTime(
+                                numberHoursRepairLima,
+                                numberHoursRepairProvincia,
+                                timeAfterDeliveryFechayHora
+                            );
+                        }}
+                    >
+                        Siguiente
+                </button>
+                </div>
+            }
+            {
+                (questionQuarter) &&
+                <div className="row m-5">
+                    <div className="m-3 d-flex flex-column bd-highlight">
+                        <p>13- Penalidades</p>
+                        <p>una penalidad
                     ascendente a uno por ciento (1%) del valor del Contrato por cada día de atraso</p>
 
-                    <h1>ESCOGE CLAUSULA</h1>
-                    <div className="m-3" onChange={optionClausesThirteenth}>
-                        <input className="m-3 radio" type="radio" value="true" name="gender" />
+                        <h1>ESCOGE CLAUSULA</h1>
+                        <div className="m-3" onChange={optionClausesThirteenth}>
+                            <input className="m-3 radio" type="radio" value="true" name="gender" />
                         13.2 wawawa <br />
-                        <input className="m-3 radio" type="radio" value="false" name="gender" />
+                            <input className="m-3 radio" type="radio" value="false" name="gender" />
                         2.3 wiwiwiwiwiw
-          </div>
                 </div>
-                <button
-                    onClick={() => {
-                        searchoClauseThirteenth(optionClauseThirteenth);
-                    }}
-                >
-                    Siguiente
-        </button>
-            </div>
+                    </div>
+                    <button
+                        onClick={() => {
+                            searchoClauseThirteenth(optionClauseThirteenth);
+                        }}
+                    >
+                        Siguiente
+                </button>
+                </div>
+            }
+            {
+                (questionQuarter) &&
+                <div className="row m-5">
+                    <div className="m-3 d-flex flex-column bd-highlight">
+                        <p>14- Garantias</p>
 
-            <div className="row m-5">
-                <div className="m-3 d-flex flex-column bd-highlight">
-                    <p>14- Garantias</p>
-
-                    <h1>ESCOGE CLAUSULA</h1>
-                    <div className="m-3" onChange={optionClausesFourteenth}>
-                        <input className="m-3 radio" type="radio" value="true" name="gender" />
+                        <h1>ESCOGE CLAUSULA</h1>
+                        <div className="m-3" onChange={optionClausesFourteenth}>
+                            <input className="m-3 radio" type="radio" value="true" name="gender" />
                         14.2 clasura14 <br />
-                        <input className="m-3 radio" type="radio" value="false" name="gender" />
+                            <input className="m-3 radio" type="radio" value="false" name="gender" />
                         14.2  vacio
           </div>
-                    <label htmlFor="">
-                        14.1.2 Póliza de Responsabilidad Civil Extracontractual por un monto no menor a US$
+                        <label htmlFor="">
+                            14.1.2 Póliza de Responsabilidad Civil Extracontractual por un monto no menor a US$
             <input type="text" onChange={moneyPoliza} />
-                    </label>
-                </div>
-                <button
-                    onClick={() => {
-                        searchClauseFourteenth(optionClauseFourteenth, moneysPoliza);
-                    }}
-                >
-                    Siguiente
-        </button>
-            </div>
-
-            <div className="row m-5">
-                <div className="m-3 d-flex flex-column bd-highlight">
-                    <p>15- Caso Fortuito</p>
-                    <label htmlFor="">
-                        cualquiera de las Partes podrá dar por
-                resuelto el Contrato mediante comunicación cursada con
-            <input type="text" onChange={timeDays} />
-                    </label>
-                </div>
-                <button
-                    onClick={() => {
-                        searchTimeDayFifteenth(timeDay);
-                    }}
-                >
-                    Siguiente
-        </button>
-            </div>
-
-            <div className="row m-5">
-                <div className="m-3 d-flex flex-column bd-highlight">
-                    <p>16- Subcontratacion y cesion</p>
-
-                    <h1>ESCOGE CLAUSULA</h1>
-                    <div className="m-3" onChange={optionClauseSixteenth}>
-                        <input className="m-3 radio" type="radio" value="true" name="gender" />
-                        16.1 clasuraASixteenth <br />
-                        <input className="m-3 radio" type="radio" value="false" name="gender" />
-                        16.1 clasuraBSixteenth
-          </div>
-                    <p>si escoges clauseB completar campo</p>
-                    <label htmlFor="">
-                        salvo el
-                      servicio de
-            <input type="text" placeholder="servicio" onChange={clauseServicio} />
-                        <input type="text" placeholder="nombre" onChange={clauseName} />
-                        <input type="text" placeholder="ruc" onChange={clauseRuc} />
-                    </label>
-
-
-                </div>
-                <button
-                    onClick={() => {
-                        searchClauseSixteenth(optionClausesSixteenth, name, ruc, servicio);
-                    }}
-                >
-                    Siguiente
-        </button>
-            </div>
-
-            <div className="row m-5">
-                <div className="m-3 d-flex flex-column bd-highlight">
-                    <p>20- Regulacion Anticorrupcion</p>
-
-                    <h1>ESCOGE CLAUSULA</h1>
-                    <div className="m-3" onChange={optionClauseTwentieth}>
-                        <input className="m-3 radio" type="radio" value="clausulaA" name="gender" />
-                        16.1 clasuraATwentient <br />
-                        <input className="m-3 radio" type="radio" value="clausulaB" name="gender" />
-                        16.1 clasurabTwentient <br />
-                        <input className="m-3 radio" type="radio" value="clausulaC" name="gender" />
-                        16.1 clasuraCTwentient <br />
+                        </label>
                     </div>
-                    <p>FALTA UN PARAMETRO PARA UNA CLAUSULA revisar como llamarlo</p>
-                    <button onClick={() => { searchClauseTwentienth(optionClausesTwentieth); }}>
+                    <button
+                        onClick={() => {
+                            searchClauseFourteenth(optionClauseFourteenth, moneysPoliza);
+                        }}
+                    >
                         Siguiente
-                     </button>
+        </button>
                 </div>
-            </div>
+            }
+            {
+                (questionQuarter) &&
+                <div className="row m-5">
+                    <div className="m-3 d-flex flex-column bd-highlight">
+                        <p>15- Caso Fortuito</p>
+                        <label htmlFor="">
+                            cualquiera de las Partes podrá dar por
+                            resuelto el Contrato mediante comunicación cursada con
+            <input type="text" onChange={timeDays} />
+                        </label>
+                    </div>
+                    <button
+                        onClick={() => {
+                            searchTimeDayFifteenth(timeDay);
+                        }}
+                    >
+                        Siguiente
+        </button>
+                </div>
+            }
+            {
+                (questionQuarter) &&
+                <div className="row m-5">
+                    <div className="m-3 d-flex flex-column bd-highlight">
+                        <p>16- Subcontratacion y cesion</p>
+
+                        <h1>ESCOGE CLAUSULA</h1>
+                        <div className="m-3" onChange={optionClauseSixteenth}>
+                            <input className="m-3 radio" type="radio" value="true" name="gender" />
+                        16.1 clasuraASixteenth <br />
+                            <input className="m-3 radio" type="radio" value="false" name="gender" />
+                        16.1 clasuraBSixteenth
+                    </div>
+                        <p>si escoges clauseB completar campo</p>
+                        <label htmlFor="">
+                            salvo el
+                            servicio de
+            <input type="text" placeholder="servicio" onChange={clauseServicio} />
+                            <input type="text" placeholder="nombre" onChange={clauseName} />
+                            <input type="text" placeholder="ruc" onChange={clauseRuc} />
+                        </label>
+
+
+                    </div>
+                    <button
+                        onClick={() => {
+                            searchClauseSixteenth(optionClausesSixteenth, name, ruc, servicio);
+                        }}
+                    >
+                        Siguiente
+                </button>
+                </div>
+            }
+            {
+                (questionQuarter) &&
+                <div className="row m-5">
+                    <div className="m-3 d-flex flex-column bd-highlight">
+                        <p>20- Regulacion Anticorrupcion</p>
+
+                        <h1>ESCOGE CLAUSULA</h1>
+                        <div className="m-3" onChange={optionClauseTwentieth}>
+                            <input className="m-3 radio" type="radio" value="clausulaA" name="gender" />
+                        16.1 clasuraATwentient <br />
+                            <input className="m-3 radio" type="radio" value="clausulaB" name="gender" />
+                        16.1 clasurabTwentient <br />
+                            <input className="m-3 radio" type="radio" value="clausulaC" name="gender" />
+                        16.1 clasuraCTwentient <br />
+                        </div>
+                        <p>FALTA UN PARAMETRO PARA UNA CLAUSULA revisar como llamarlo</p>
+                        <button onClick={() => { searchClauseTwentienth(optionClausesTwentieth); }}>
+                            Siguiente
+                     </button>
+                    </div>
+                </div>
+            }
         </div>
     );
 };
