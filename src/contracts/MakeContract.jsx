@@ -16,8 +16,6 @@ const MakeContract = () => {
 
     const searchData = (companyData, providerData) => {
         setData({ companyData, providerData });
-        document.getElementById('question-intro').classList.add('hide');
-        document.getElementById('question-1').classList.delete('hide');
     }
 
     const searchAntecedente = (product, place) => {
@@ -41,10 +39,12 @@ const MakeContract = () => {
                         searchSellOption={searchObjeto} searchPrice={searchPrice} />
                 </section>
                 <section className="section-create-contract col-sm-12 col-md-6" >
-                    <Introduction data={data} />
-                    <First data={data} First={antecedente} />
-                    <Second data={data} Second={sectionSecond} />
-                    <Third data={data} Third={sectionThird} />
+                    <frame>
+                        <Introduction data={data} />
+                        <First data={data} First={antecedente} />
+                        <Second data={data} Second={sectionSecond} />
+                        <Third data={data} Third={sectionThird} />
+                    </frame>
                 </section>
             </div>
         </div>

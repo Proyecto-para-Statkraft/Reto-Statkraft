@@ -3,6 +3,32 @@ import React, { useState, useEffect } from "react";
 const ContractData = ({ search, searchDataAntecedentes, searchSellOption, searchPrice,
     searchPaymentMethod, searchTermPay, searchSite }) => {
 
+    const [questionIntro, setQuestionIntro] = useState(true);
+    const [questionFirst, setQuestionFirst] = useState(false);
+    const [questionSecond, setQuestionSecond] = useState(false);
+    const [questionThird, setQuestionThird] = useState(false);
+    const [questionQuarter, setQuestionQuarter] = useState(false);
+    const [questionFifth, setQuestionFifth] = useState(false);
+    const [questionSixth, setQuestionSixth] = useState(false);
+    const [questionSeventh, setQuestionSeventh] = useState(false);
+    const [questionEighth, setQuestionEighth] = useState(false);
+    const [questionNineth, setQuestionNineth] = useState(false);
+    const [questionTenth, setQuestionTenth] = useState(false);
+    const [questionEleventh, setQuestionEleventh] = useState(false);
+    const [questionTwelfth, setQuestionTwelfth] = useState(false);
+    const [questionThirteenth, setQuestionThirteenth] = useState(false);
+    const [questionFourteenth, setQuestionFourteenth] = useState(false);
+    const [questionFifteenth, setQuestionFifteenth] = useState(false);
+    const [questionSixteenth, setQuestionSixteenth] = useState(false);
+    const [questionSeventeenth, setQuestionSeventeenth] = useState(false);
+    const [questionEighteenth, setQuestionEighteenth] = useState(false);
+    const [questionNineteenth, setQuestionNineteenth] = useState(false);
+    const [questionTwentieth, setQuestionTwentieth] = useState(false);
+    const [questionTwentyFirst, setQuestionTwentyFirst] = useState(false);
+    const [questionTwentySecond, setQuestionTwentySecond] = useState(false);
+    const [questionTwentyThird, setQuestionTwentyThird] = useState(false);
+
+
     const [companyData, setCompanyData] = useState({});
     const [providerData, setProviderData] = useState({});
     const [nameCompanyData, setNameCompanyData] = useState("");
@@ -160,6 +186,8 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
 
     return (
         <div>
+            {
+            (questionIntro) &&  
             <div className="row m-5 clause-question question-intro">
                 <div className="m-3 d-flex flex-column bd-highlight">
                     <p>Datos de la empresa Slatkraft</p>
@@ -239,13 +267,17 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 <button
                     onClick={() => {
                         search(companyData, providerData);
+                        setQuestionIntro(false);
+                        setQuestionFirst(true);
                     }}
                 >
                     Siguiente
-        </button>
+            </button>
             </div>
-
-            <div className="row m-5 clause-question hide" id="question-1">
+            }
+            {
+            (questionFirst) && 
+            <div className="row m-5 clause-question" id="question-1">
                 <div className="m-3 d-flex flex-column bd-highlight">
                     <p>1-Antecendente</p>
                     <label htmlFor="">
@@ -262,34 +294,41 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 <button
                     onClick={() => {
                         searchDataAntecedentes(inputRequieres, inputRequieresen);
+                        setQuestionSecond(true);
+                        setQuestionFirst(false);
                     }}
                 >
                     {" "}
                     Siguiente
                 </button>
             </div>
-        
-            <div className="row m-5 clause-question hide" id="question-2">
-                <div className="m-3 d-flex flex-column bd-highlight">
-                    <p>2-Objeto</p>
-                    <label htmlFor="">
-                        Por el Contrato, el <span>PROVEEDOR</span> vende a{" "}
-                        <span>EMPRESA</span> el conjunto de bienes que se mencionan en el
-                        Anexo N° 2(en adelante, el conjunto, los “Bienes”), libres de carga
-                        y gravámenes, los cuales serán destinados a <br />
-                        <textarea type="text" onChange={sell} />{" "}
-                    </label>
-                </div>
-                <button
-                    onClick={() => {
-                        searchSellOption(sells)
-                    }}
-                >
-                    Siguiente
-                </button>
+            }
+            {
+               (questionSecond) &&  
+               <div className="row m-5 clause-question" id="question-2">
+               <div className="m-3 d-flex flex-column bd-highlight">
+                   <p>2-Objeto</p>
+                   <label htmlFor="">
+                       Por el Contrato, el <span>PROVEEDOR</span> vende a{" "}
+                       <span>EMPRESA</span> el conjunto de bienes que se mencionan en el
+                       Anexo N° 2(en adelante, el conjunto, los “Bienes”), libres de carga
+                       y gravámenes, los cuales serán destinados a <br />
+                       <textarea type="text" onChange={sell} />{" "}
+                   </label>
+               </div>
+               <button
+                   onClick={() => {
+                       searchSellOption(sells);
+                   }}
+               >
+                   Siguiente
+               </button>
             </div>
-
-            <div className="row m-5 clause-question hide" id="question-3">
+            }
+            
+            {
+                (questionThird) && 
+                <div className="row m-5 clause-question" id="question-3">
                 <div className="m-3 d-flex flex-column bd-highlight">
                     <p>3- Precio</p>
                     <textarea type="text" placeholder="Ejm: US$ 67,274.36 (Sesenta y Siete Mil Doscientos Setenta y Cuatro con 36/100 Dólares de los Estados Unidos de América) " onChange={money} />
@@ -301,9 +340,10 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 >
                     Siguiente
                 </button>
-            </div>
+                </div> 
+            }
 
-            <div className="row m-5 clause-question hide" id="question-4">
+            <div className="row m-5 clause-question" id="question-4">
                 <div className="m-3 d-flex flex-column bd-highlight">
                     <p>4- Forma y Condiciones de pago</p>
                     <div className="m-3" onChange={TypeMoney}>
@@ -319,7 +359,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
         </button>
             </div>
 
-            <div className="row m-5 clause-question hide" id="question-5">
+            <div className="row m-5 clause-question" id="question-5">
                 <div className="m-3 d-flex flex-column bd-highlight">
                     <p>5- Palzo de entrega de los Bienes</p>
 
@@ -336,7 +376,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
         </button>
             </div>
 
-            <div className="row m-5 clause-question hide" id="question-6">
+            <div className="row m-5 clause-question" id="question-6">
                 <div className="m-3 d-flex flex-column bd-highlight">
                     <p>6- Gasto, Transporte y Entrega</p>
 
