@@ -280,13 +280,10 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                (questionSecond) &&  
                <div className="row m-5 clause-question" id="question-2">
                <div className="m-3 d-flex flex-column bd-highlight">
-                   <p>2-Objeto</p>
+                   <p>2. Objeto</p>
                    <label htmlFor="">
-                       Por el Contrato, el <span>PROVEEDOR</span> vende a{" "}
-                       <span>EMPRESA</span> el conjunto de bienes que se mencionan en el
-                       Anexo N° 2(en adelante, el conjunto, los “Bienes”), libres de carga
-                       y gravámenes, los cuales serán destinados a <br />
-                       <textarea type="text" onChange={sell} />{" "}
+                       Los bienes adquiridos se van a usar en:
+                       <textarea type="text" onChange={sell} />
                    </label>
                </div>
                <button
