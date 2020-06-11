@@ -3,11 +3,16 @@ header {
   div {
     display: flex;
     justify-content: space-between;
+    
+    div a{
+      color:#7A6F69 !important;
+      font-weight: 600;
+    }
   }
-  img {
-    width: 140px;
-    height: 70px;
-  }
+  // img {
+  //   width: 140px;
+  //   height: 70px;
+  // }
 
   //   @include media(xs) {
   //     width: 160px;
