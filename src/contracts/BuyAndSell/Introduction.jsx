@@ -7,12 +7,12 @@ const Introduction = ({ data }) => {
 
     if (data !== '') {
         return (
-            <section className="m-5">
+            <section className="m-5 clause-question">
                 <h2 className="text-center">CONTRATO DE COMPRAVENTA</h2>
                 <p>
                     Conste por el presente documento el Contrato de Compraventa (en adelante
                     el “Contrato”), que celebran:
-            </p>
+                </p>
                 <p>
                     <span>{companyData.name}</span>, con RUC N° {companyData.ruc}, con domicilio en 
                     {companyData.address}, debidamente representada por los señores

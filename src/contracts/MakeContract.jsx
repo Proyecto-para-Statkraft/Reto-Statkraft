@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../style/makecontract.css';
 import ContractData from './ContractData';
 import Introduction from './BuyAndSell/Introduction';
 import Header from "../componentes/Header";
@@ -14,7 +15,9 @@ const MakeContract = () => {
     const [sectionThird, setSectionThird] = useState('');
 
     const searchData = (companyData, providerData) => {
-        setData({ companyData, providerData })
+        setData({ companyData, providerData });
+        document.getElementById('question-intro').classList.add('hide');
+        document.getElementById('question-1').classList.delete('hide');
     }
 
     const searchAntecedente = (product, place) => {
@@ -30,21 +33,19 @@ const MakeContract = () => {
     }
 
     return (
-        <div className="">
+        <div className="view-contract">
             <Header />
-            <div className="">
-                <div className="row">
-                    <section className="col-sm-12 col-md-6">
-                        <ContractData search={searchData} searchDataAntecedentes={searchAntecedente}
-                            searchSellOption={searchObjeto} searchPrice={searchPrice} />
-                    </section>
-                    <section className="col-sm-12 col-md-6">
-                        <Introduction data={data} />
-                        <First data={data} First={antecedente} />
-                        <Second data={data} Second={sectionSecond} />
-                        <Third data={data} Third={sectionThird} />
-                    </section>
-                </div>
+            <div className="row">
+                <section className="section-question col-sm-12 col-md-6" >
+                    <ContractData search={searchData} searchDataAntecedentes={searchAntecedente}
+                        searchSellOption={searchObjeto} searchPrice={searchPrice} />
+                </section>
+                <section className="section-create-contract col-sm-12 col-md-6" >
+                    <Introduction data={data} />
+                    <First data={data} First={antecedente} />
+                    <Second data={data} Second={sectionSecond} />
+                    <Third data={data} Third={sectionThird} />
+                </section>
             </div>
         </div>
     )
