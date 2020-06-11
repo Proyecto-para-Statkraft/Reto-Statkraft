@@ -13,6 +13,7 @@
   max-width: 200px;
   margin: 2em;
   padding: 1em 0;
+  height: 230px;
 }
 
 .style {
@@ -45,24 +46,24 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .view-home .banner-contract {
+  width: 80%;
+}
+
+.view-home .banner-contract .banner-text {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #80daf3;
 }
 
 .view-home .section-types-contracts {
-  width: 90%;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -70,71 +71,27 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: yellowgreen;
+  margin-bottom: 50px;
 }
 
-@media (max-width: 320px) {
-  .view-home .banner-contract {
-    width: 80%;
-    height: auto;
-  }
-  .view-home .section-types-contracts {
-    width: 80%;
-    height: auto;
-  }
+.view-home .section-types-contracts .cards-type-contract {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-  .view-home .banner-contract {
-    width: 75%;
-    height: auto;
-  }
-  .view-home .section-types-contracts {
-    width: 75%;
-    height: auto;
-  }
-}
-
-@media (min-width: 480px) and (max-width: 768px) {
-  .view-home .banner-contract {
-    width: 70%;
-    height: auto;
-  }
-  .view-home .section-types-contracts {
-    width: 50%;
-    height: auto;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .view-home .banner-contract {
-    width: 55%;
-    height: auto;
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1200px) {
-  .view-home .banner-contract {
-    width: 60%;
-    height: auto;
-  }
-  .view-home .section-types-contracts {
-    width: 65%;
-    height: auto;
-  }
-}
-
-@media (min-width: 1200px) {
-  .view-home .banner-contract {
-    width: 65%;
-    height: auto;
-  }
-  .view-home .section-types-contracts {
-    width: 70%;
-    height: auto;
-  }
+.view-home .section-types-contracts .cards-type-contract .card-deck {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=home.css.map */
