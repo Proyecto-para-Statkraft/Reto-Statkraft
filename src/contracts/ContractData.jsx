@@ -212,13 +212,10 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 (questionSecond) &&
                 <div className="row m-5 clause-question" id="question-2">
                     <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>2-Objeto</p>
+                        <p>2. Objeto</p>
                         <label htmlFor="">
-                            Por el Contrato, el <span>PROVEEDOR</span> vende a{" "}
-                            <span>EMPRESA</span> el conjunto de bienes que se mencionan en el
-                       Anexo N° 2(en adelante, el conjunto, los “Bienes”), libres de carga
-                       y gravámenes, los cuales serán destinados a <br />
-                            <textarea type="text" onChange={sell} />{" "}
+                            Los bienes adquiridos se van a usar en:
+                            <textarea type="text" onChange={sell} />
                         </label>
                     </div>
                     <button
@@ -237,8 +234,12 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 (questionThird) &&
                 <div className="row m-5 clause-question" id="question-3">
                     <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>3- Precio</p>
-                        <textarea type="text" placeholder="Ejm: US$ 67,274.36 (Sesenta y Siete Mil Doscientos Setenta y Cuatro con 36/100 Dólares de los Estados Unidos de América) " onChange={money} />
+                        <p>3. Precio</p>
+                        <label htmlFor="">
+                            El precio a pagar por los bienes adquiridos es :
+                            <textarea type="text" placeholder="Ejm: US$ 67,274.36 (Sesenta y Siete Mil Doscientos Setenta y Cuatro con 36/100 Dólares de los Estados Unidos de América) " onChange={money} />
+                        </label>
+                        
                     </div>
                     <button
                         onClick={() => {
@@ -258,8 +259,8 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         <p>4. Formas y Condiciones de pago</p>
                         <div className="m-3" onChange={TypeMoney}>
                             <p>La moneda pactada para el precio es : </p>
-                            <input className="m-3 radio" type="radio" value="dolares" name="gender" />Dolares <br />
-                            <input className="m-3 radio" type="radio" value="soles" name="gender" />Soles
+                            <input className="m-3 radio" type="radio" value="soles" name="gender" />Nuevos Soles <br />
+                            <input className="m-3 radio" type="radio" value="dolares" name="gender" />Dólares de los Estados Unidos de América                
                     </div>
                     </div>
                     <button
@@ -317,18 +318,18 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 </div>
             }
             {
-                (questionQuarter) &&
+                (questionSeventh) &&
                 <div className="row m-5 clause-question" id="question-6">
                     <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>11- Representantes </p>
-
+                        <p>7. Administradores del Contrato </p>
+                        <p>Los administradores del Contrato son:</p>
                         <label htmlFor="">
-                            Representante Compañia
-            <input type="text" onChange={companyRepresentative} />
+                        De Statkraft
+                            <input type="text" onChange={companyRepresentative} />
                         </label>
                         <label htmlFor="">
-                            Representante Proveedor
-            <input type="text" onChange={supplierRepresentative} />
+                        De la empresa contratada
+                            <input type="text" onChange={supplierRepresentative} />
                         </label>
                     </div>
                     <button
@@ -341,25 +342,22 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 </div>
             }
             {
-                (questionQuarter) &&
+                (questionEighth) &&
                 <div className="row m-5">
                     <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>12- Exclusion de daño Existentess </p>
-
+                        <p>8. Exclusión de daños indirectos y responsabilidad</p>
+                        <p>En caso de mal funcionamiento de los bienes adquiridos, el Proveedor deberá repararlos en un plazo no mayor a:</p>
                         <label htmlFor="">
-                            Será responsable de reparar cualquier error en el funcionamiento de
-                            los Bienes en un plazo no mayor
-            <input type="text" onChange={numberHoursRepairLim} />
+                        Horas para Lima
+                            <input type="text" onChange={numberHoursRepairLim} />
                         </label>
                         <label htmlFor="">
-                            horas para Lima y a
-            <input type="text" onChange={numberHoursRepairProv} />
+                        Horas para Provincia
+                            <input type="text" onChange={numberHoursRepairProv} />
                         </label>
-
                         <label htmlFor="">
-                            aun cuando no sea el fabricante de los mismos, durante el plazo de
-                            vigencia de este Contrato, así como durante los
-                    <input type="text" onChange={timeAfterDeliveryFecha} />
+                        El plazo de garantía de los bienes es de:
+                        <input type="text" onChange={timeAfterDeliveryFecha} />
                         </label>
                     </div>
                     <button
@@ -376,7 +374,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 </div>
             }
             {
-                (questionQuarter) &&
+                (questionNineth) &&
                 <div className="row m-5">
                     <div className="m-3 d-flex flex-column bd-highlight">
                         <p>13- Penalidades</p>
