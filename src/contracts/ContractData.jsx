@@ -288,7 +288,10 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                </div>
                <button
                    onClick={() => {
+                       searchSellOption(sells)
                        searchSellOption(sells);
+                        // setQuestionSecond(false);
+                        // questionThird(true);
                    }}
                >
                    Siguiente
