@@ -296,14 +296,42 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     <textarea type="text" onChange={sell} placeholder="Escribir aquí" />
                 </label>
                 <button
-                    onClick={() => {
-                        searchSellOption(sells, options)
-                        setOption('');
-                    }}
+                    // onClick={() => {
+                        
+                    // }}
                 >
                     Siguiente
                 </button>
-            </div>        
+            </div>
+            <div className="row m-5">
+                <div className="m-3 d-flex flex-column bd-highlight">
+                    <h1>ESCOGE CLAUSULA</h1>
+                    <div className="m-3" onChange={option}>
+                        <input
+                            className="m-3 radio"
+                            type="radio"
+                            value="true"
+                            name="gender"
+                        />
+                        2.3 Las partes podrán acordar la variación del alcance del objeto
+                        del contrato hasta en un 15% del monto señalado en la Cláusula 3.1
+                        con un tope máximo de USD 30,000.00 (Treinta mil y 00/100 Dólares de
+                        Estados Unidos de América) mediante la suscripción de una Orden de
+                        Variación, de acuerdo al formato que obra en el Anexo N° 3. En caso
+                        la variación sea por un monto mayor, las partes suscribirán la
+                        adenda correspondiente. <br />
+                        <input
+                            className="m-3 radio"
+                            type="radio"
+                            value="false"
+                            name="gender"
+                        />
+                        2.3 (Cláusula Intencionalmente dejada en blanco por las partes)
+                    </div>
+                </div>
+               
+            </div>
+
             <div className="row m-5">
                 <div className="m-3 d-flex flex-column bd-highlight">
                     <p>3. Precio</p>

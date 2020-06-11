@@ -1,14 +1,8 @@
 import React from "react";
 
-// const sell = {
-//   product: '',
-//   place: ''
-// }
 
 const First = ({ data, First }) => {
   const { companyData } = data;
-
-  // console.log(sell);
 
   if (First !== "") {
     return (
