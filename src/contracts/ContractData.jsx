@@ -388,15 +388,15 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
 
             <div className="row m-5 clause-question" id="question-6">
                 <div className="m-3 d-flex flex-column bd-highlight">
-                    <p>11- Representantes </p>
+                    <p>7. Administradores del Contrato</p>
 
                     <label htmlFor="">
-                        Representante Compañia
-            <input type="text" onChange={companyRepresentative} />
+                    De Statkraft:
+                    <input type="text" onChange={companyRepresentative} />
                     </label>
                     <label htmlFor="">
-                        Representante Proveedor
-            <input type="text" onChange={supplierRepresentative} />
+                    De la empresa contratada:
+                    <input type="text" onChange={supplierRepresentative} />
                     </label>
                 </div>
                 <button
