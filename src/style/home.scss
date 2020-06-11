@@ -1,6 +1,12 @@
-// * {
-//   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-// }
+@import '_meassures.scss';
+
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+
 .borde {
   border: 2px solid #80daf3;
   border-radius: 10px;
@@ -10,17 +16,20 @@
   background-color: #00b0dc;
   border: none;
 }
+
 .card {
   min-width: 150px;
   max-width: 200px;
   margin: 2em;
   padding:1em 0;
 }
+
 .style {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
+
 .card-img-top {
   max-width: 100px;
 }
@@ -28,3 +37,5 @@
 .contract-subtitle{
   font-size:20px;
 }
+
+
