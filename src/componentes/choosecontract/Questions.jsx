@@ -12,9 +12,6 @@ const Questions = (props) => {
     };
 
 
-    // console.log('contrato selecionado', props.location.selectedOption)
-    // console.log('respuesta', goods)
-
     if (props.location.selectedOption === 'bienes') {
         return (
             <div>

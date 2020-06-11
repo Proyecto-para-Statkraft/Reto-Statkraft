@@ -5,7 +5,8 @@ import Introduction from './BuyAndSell/Introduction';
 import Header from "../componentes/Header";
 import First from './BuyAndSell/First';
 import Second from './BuyAndSell/Second';
-import Third from './BuyAndSell/Third'
+import Third from './BuyAndSell/Third';
+
 
 const MakeContract = () => {
 
@@ -16,8 +17,6 @@ const MakeContract = () => {
 
     const searchData = (companyData, providerData) => {
         setData({ companyData, providerData });
-        document.getElementById('question-intro').classList.add('hide');
-        document.getElementById('question-1').classList.delete('hide');
     }
 
     const searchAntecedente = (product, place) => {
@@ -50,5 +49,6 @@ const MakeContract = () => {
         </div>
     )
 };
+
 
 export default MakeContract;

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
+
 
 const ContractData = ({ search, searchDataAntecedentes, searchSellOption, searchPrice,
     searchPaymentMethod, searchTermPay, searchSite }) => {
@@ -239,13 +241,14 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 <button
                     onClick={() => {
                         search(companyData, providerData);
+                        window.location.pathname = '/makecontract/question-first';
                     }}
                 >
-                    Siguiente
-        </button>
+                Siguiente
+                </button>
             </div>
 
-            <div className="row m-5 clause-question hide" id="question-1">
+            <div className="row m-5 clause-question" id="question-1">
                 <div className="m-3 d-flex flex-column bd-highlight">
                     <p>1-Antecendente</p>
                     <label htmlFor="">
@@ -269,7 +272,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 </button>
             </div>
         
-            <div className="row m-5 clause-question hide" id="question-2">
+            <div className="row m-5 clause-question" id="question-2">
                 <div className="m-3 d-flex flex-column bd-highlight">
                     <p>2-Objeto</p>
                     <label htmlFor="">
@@ -289,7 +292,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 </button>
             </div>
 
-            <div className="row m-5 clause-question hide" id="question-3">
+            <div className="row m-5 clause-question" id="question-3">
                 <div className="m-3 d-flex flex-column bd-highlight">
                     <p>3- Precio</p>
                     <textarea type="text" placeholder="Ejm: US$ 67,274.36 (Sesenta y Siete Mil Doscientos Setenta y Cuatro con 36/100 Dólares de los Estados Unidos de América) " onChange={money} />
@@ -303,7 +306,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 </button>
             </div>
 
-            <div className="row m-5 clause-question hide" id="question-4">
+            <div className="row m-5 clause-question" id="question-4">
                 <div className="m-3 d-flex flex-column bd-highlight">
                     <p>4- Forma y Condiciones de pago</p>
                     <div className="m-3" onChange={TypeMoney}>
@@ -319,7 +322,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
         </button>
             </div>
 
-            <div className="row m-5 clause-question hide" id="question-5">
+            <div className="row m-5 clause-question" id="question-5">
                 <div className="m-3 d-flex flex-column bd-highlight">
                     <p>5- Palzo de entrega de los Bienes</p>
 
@@ -336,7 +339,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
         </button>
             </div>
 
-            <div className="row m-5 clause-question hide" id="question-6">
+            <div className="row m-5 clause-question" id="question-6">
                 <div className="m-3 d-flex flex-column bd-highlight">
                     <p>6- Gasto, Transporte y Entrega</p>
 
