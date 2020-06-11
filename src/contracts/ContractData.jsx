@@ -175,6 +175,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
 
     const [optionClausesTwentieth, setOptionClauseTwentieth] = useState("");
     const optionClauseTwentieth = e => { setOptionClauseTwentieth(e.target.value) };
+    
     return (
         <div>
             {
