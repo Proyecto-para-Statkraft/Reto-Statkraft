@@ -398,7 +398,34 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         onClick={() => {
                             searchoClauseThirteenth(optionClauseThirteenth);
                             setQuestionNineth(false);
-                            setQuestionQuarter(true);
+                            setQuestionTenth(true);
+                        }}
+                    >
+                        Siguiente
+                    </button>
+                </div>
+            }
+            {
+                (questionTenth) &&
+                <div className="row m-5">
+                    <div className="m-3 d-flex flex-column bd-highlight">
+                        <p>10. Garantías</p>
+                        <p>¿Los bienes van a ser entregados en una de las centrales?</p>
+                        <div className="m-3" onChange={optionClausesFourteenth}>
+                            <input className="m-3 radio" type="radio" value="true" name="gender" />
+                            Si<br />
+                            <input className="m-3 radio" type="radio" value="false" name="gender" />
+                            No
+                        </div>
+                        <label htmlFor="">
+                             El monto de la póliza de responsabilidad civil extra contractual es:
+                             <textarea name="" onChange={moneyPoliza}></textarea>
+                           
+                        </label>
+                    </div>
+                    <button
+                        onClick={() => {
+                            searchClauseFourteenth(optionClauseFourteenth, moneysPoliza);
                         }}
                     >
                         Siguiente
@@ -409,37 +436,11 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 (questionQuarter) &&
                 <div className="row m-5">
                     <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>14. Garantias</p>
-                        <p>¿Los bienes van a ser entregados en una de las centrales?</p>
-                        <div className="m-3" onChange={optionClausesFourteenth}>
-                            <input className="m-3 radio" type="radio" value="true" name="gender" />
-                            14.2 clasura14 <br />
-                            <input className="m-3 radio" type="radio" value="false" name="gender" />
-                            14.2  vacio
-                        </div>
-                        <label htmlFor="">
-                            14.1.2 Póliza de Responsabilidad Civil Extracontractual por un monto no menor a US$
-                            <input type="text" onChange={moneyPoliza} />
-                        </label>
-                    </div>
-                    <button
-                        onClick={() => {
-                            searchClauseFourteenth(optionClauseFourteenth, moneysPoliza);
-                        }}
-                    >
-                        Siguiente
-        </button>
-                </div>
-            }
-            {
-                (questionQuarter) &&
-                <div className="row m-5">
-                    <div className="m-3 d-flex flex-column bd-highlight">
                         <p>15- Caso Fortuito</p>
                         <label htmlFor="">
                             cualquiera de las Partes podrá dar por
                             resuelto el Contrato mediante comunicación cursada con
-            <input type="text" onChange={timeDays} />
+                            <input type="text" onChange={timeDays} />
                         </label>
                     </div>
                     <button
@@ -448,7 +449,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         }}
                     >
                         Siguiente
-        </button>
+                    </button>
                 </div>
             }
             {
@@ -468,7 +469,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         <label htmlFor="">
                             salvo el
                             servicio de
-            <input type="text" placeholder="servicio" onChange={clauseServicio} />
+                            <input type="text" placeholder="servicio" onChange={clauseServicio} />
                             <input type="text" placeholder="nombre" onChange={clauseName} />
                             <input type="text" placeholder="ruc" onChange={clauseRuc} />
                         </label>
