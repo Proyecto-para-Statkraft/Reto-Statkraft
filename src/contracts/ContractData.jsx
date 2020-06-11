@@ -377,15 +377,20 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 (questionNineth) &&
                 <div className="row m-5">
                     <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>13- Penalidades</p>
-                        <p>una penalidad
-                    ascendente a uno por ciento (1%) del valor del Contrato por cada día de atraso</p>
-
-                        <h1>ESCOGE CLAUSULA</h1>
-                        <div className="m-3" onChange={optionClausesThirteenth}>
-                            <input className="m-3 radio" type="radio" value="true" name="gender" />
+                        <p>9. Penalidades</p>
+                        <p>El nivel de riesgo de seguridad es:</p>
+                        <div className="m-3" onChange={optionClausesThirteenth}> 
+                            <label htmlFor="">
+                                Bajo 13.2 (opcion1)
+                                <input className="m-3 radio" type="radio" value="true" name="gender" />
+                            </label>
+                            <label htmlFor="">
+                                Alto 13.2 (opcion2)
+                                 <input className="m-3 radio" type="radio" value="false" name="gender" />
+                            </label>
+                            
                             13.2 wawawa <br />
-                            <input className="m-3 radio" type="radio" value="false" name="gender" />
+                           
                             2.3 wiwiwiwiwiw
                 </div>
                     </div>
