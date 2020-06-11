@@ -124,10 +124,10 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
     const product = e => {
         setInputRequiere(e.target.value);
     };
-    const [inputRequieresen, setInputRequiereEn] = useState("");
-    const place = e => {
-        setInputRequiereEn(e.target.value);
-    };
+    // const [inputRequieresen, setInputRequiereEn] = useState("");
+    // const place = e => {
+    //     setInputRequiereEn(e.target.value);
+    // };
 
     const [options, setOption] = useState("");
     const option = e => {
@@ -200,78 +200,64 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
         <div>
             <div className="row m-5 ">
                 <div className="m-3 d-flex flex-column bd-highlight">
-                    <p>Datos de la empresa Slatkraft</p>
+                    <p>Datos de la Empresa</p>
                     <label htmlFor="">
-                        {" "}
-                        Nombre de la empresa Stalkraft jeje{" "}
-                        <input type="text" onChange={nameCompany} />{" "}
+                        Nombre de la empresa Stakraft
+                        <input type="text" onChange={nameCompany} />
                     </label>
                     <label htmlFor="">
-                        {" "}
-                        RUC <input type="text" onChange={rucCompany} />{" "}
+                        RUC <input type="text" onChange={rucCompany} />
                     </label>
                     <label htmlFor="">
-                        {" "}
-                        Direccion <input type="text" onChange={addressCompany} />{" "}
+                        Direccion <input type="text" onChange={addressCompany} />
                     </label>
-                    <p>Datos de representante uno</p>
+                    <p>¿Por quién está representada la empresa?</p>
                     <label htmlFor="">
-                        {" "}
-                        Nombre Representante
-            <input type="text" onChange={representativeOneNameCompany} />{" "}
+                        Nombre Completo
+                        <input type="text" placeholder="Ej: Juan Antonio Rozas Mory" 
+                               onChange={representativeOneNameCompany} />
                     </label>
                     <label htmlFor="">
-                        {" "}
-                        Dni representante{" "}
-                        <input type="text" onChange={representativeOneDniCompany} />{" "}
+                        DNI
+                        <input type="text" placeholder="Ej: 07867123" onChange={representativeOneDniCompany} />
                     </label>
                     <p>Datos de representante dos</p>
                     <label htmlFor="">
-                        {" "}
-                        Nombre Representante{" "}
-                        <input type="text" onChange={representativeTwoNameCompany} />{" "}
+                        Nombre Completo
+                        <input type="text" placeholder="Ej: Álvaro Antonio Porturas Ingunza" onChange={representativeTwoNameCompany} />
                     </label>
                     <label htmlFor="">
-                        {" "}
-                        Dni representante{" "}
-                        <input type="text" onChange={representativeTwoDniCompany} />{" "}
+                        DNI
+                        <input type="text" placeholder="Ej: 09340737" onChange={representativeTwoDniCompany} />
                     </label>
                 </div>
                 <div className="m-3 d-flex flex-column bd-highlight">
-                    <p>Datos de la empresa Proveedor</p>
+                    <p>Datos de la empresa con la que estás contratando</p>
                     <label htmlFor="">
-                        {" "}
                         Nombre de la empresa <input
                             type="text"
-                            onChange={nameProvider}
-                        />{" "}
+                            onChange={nameProvider}/>
                     </label>
                     <label htmlFor="">
-                        {" "}
-                        RUC <input type="text" onChange={rucProvider} />{" "}
+                        RUC <input type="text" onChange={rucProvider} />
                     </label>
                     <label htmlFor="">
-                        {" "}
-                        Direccion <input type="text" onChange={addressProvider} />{" "}
-                    </label>
-                    <p>Datos de representante uno</p>
-                    <label htmlFor="">
-                        {" "}
-                        Nombre Representante
-            <input type="text" onChange={representativeNameProvider} />{" "}
+                        Domicilio <input type="text" onChange={addressProvider} />
                     </label>
                     <label htmlFor="">
-                        {" "}
-                        Dni representante{" "}
-                        <input type="text" onChange={representativeDniProvider} />{" "}
+                        Nombre Representante de la Empresa
+                    <input type="text" onChange={representativeNameProvider} />
                     </label>
                     <label htmlFor="">
-                        {" "}
-                        Nombre Representante{" "}
+                        DNI
+                        <input type="text" onChange={representativeDniProvider} />
+                    </label>
+                    <label htmlFor="">
+                        Partida Electrónica N° (SUNARP)
                         <input
                             type="text"
                             onChange={representativeNumberRegistryProvider}
-                        />{" "}
+                        />
                     </label>
                 </div>
                 <button
@@ -279,46 +265,46 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         search(companyData, providerData);
                     }}
                 >
-                    {" "}
-                    Siguiente
-        </button>
+                    CONTINUAR
+                </button>
             </div>
 
             <div className="row m-5">
                 <div className="m-3 d-flex flex-column bd-highlight">
-                    <p>1-Antecendente</p>
+                    <p>1. Antecendente</p>
                     <label htmlFor="">
-                        {" "}
                         Nuestra empresa esta dedicada a la generación y comercialización de
-            energía eléctrica, que requiere{" "}
-                        <input type="text" onChange={product} />{" "}
-                    </label>
-                    <label htmlFor="">
-                        {" "}
-                        en la direccion <input type="text" onChange={place} />{" "}
+                        energía eléctrica, que requiere:
+                        <textarea placeholder="Detallar Servicio..."
+                                  onChange={product}></textarea>
                     </label>
                 </div>
                 <button
                     onClick={() => {
-                        searchDataAntecedentes(inputRequieres, inputRequieresen);
+                        searchDataAntecedentes(inputRequieres);
                     }}
                 >
-                    {" "}
+                    
                     Siguiente
-        </button>
+                </button>
             </div>
-
+            
+            <div className="row m-5">
+                <p>2. Objeto</p>
+                <label htmlFor="">
+                    Los bienes adquiridos se van a usar en:
+                    <textarea type="text" onChange={sell} placeholder="Escribir aquí" />
+                </label>
+                <button
+                    // onClick={() => {
+                        
+                    // }}
+                >
+                    Siguiente
+                </button>
+            </div>
             <div className="row m-5">
                 <div className="m-3 d-flex flex-column bd-highlight">
-                    <p>2-Objeto</p>
-                    <label htmlFor="">
-                        Por el Contrato, el <span>PROVEEDOR</span> vende a{" "}
-                        <span>EMPRESA</span> el conjunto de bienes que se mencionan en el
-                        Anexo N° 2(en adelante, el conjunto, los “Bienes”), libres de carga
-            y gravámenes, los cuales serán destinados a <br />
-                        <textarea type="text" onChange={sell} />{" "}
-                    </label>
-
                     <h1>ESCOGE CLAUSULA</h1>
                     <div className="m-3" onChange={option}>
                         <input
@@ -333,7 +319,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         Estados Unidos de América) mediante la suscripción de una Orden de
                         Variación, de acuerdo al formato que obra en el Anexo N° 3. En caso
                         la variación sea por un monto mayor, las partes suscribirán la
-            adenda correspondiente. <br />
+                        adenda correspondiente. <br />
                         <input
                             className="m-3 radio"
                             type="radio"
@@ -341,7 +327,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             name="gender"
                         />
                         2.3 (Cláusula Intencionalmente dejada en blanco por las partes)
-          </div>
+                    </div>
                 </div>
                 <button
                     onClick={() => {
@@ -350,14 +336,18 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     }}
                 >
                     Siguiente
-        </button>
+                </button>
             </div>
 
             <div className="row m-5">
                 <div className="m-3 d-flex flex-column bd-highlight">
-                    <p>3- Precio</p>
-
-                    <textarea type="text" placeholder="Ejm: US$ 67,274.36 (Sesenta y Siete Mil Doscientos Setenta y Cuatro con 36/100 Dólares de los Estados Unidos de América) " onChange={money} />
+                    <p>3. Precio</p>
+                    <label htmlFor="">
+                        El precio a pagar por los bienes adquiridos es :
+                        <textarea type="text" 
+                                    placeholder="Ejm: US$ 67,274.36 (Sesenta y Siete Mil Doscientos Setenta y Cuatro con 36/100 Dólares de los Estados Unidos de América) " 
+                                    onChange={money} />
+                    </label>
 
                     <h1>ESCOGE CLAUSULA</h1>
                     <div className="m-3" onChange={clausePrice}>
@@ -368,9 +358,9 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             name="gender"
                         />
                         3.5 Las partes acuerdan que en caso sea necesaria la adquisición de bienes adicionales
-       estos se facturarán de acuerdo a lo señalado en el Anexo N° 2, para ello COMPAÑIA>
-        deberá enviar al <span>LOCADOR</span> una Orden de Variación de acuerdo al formato y
-        condiciones señaladas en el Anexo N° 3. <br />
+                            estos se facturarán de acuerdo a lo señalado en el Anexo N° 2, para ello COMPAÑIA>
+                            deberá enviar al <span>LOCADOR</span> una Orden de Variación de acuerdo al formato y
+                            condiciones señaladas en el Anexo N° 3. <br />
                         <input
                             className="m-3 radio"
                             type="radio"
@@ -378,7 +368,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             name="gender"
                         />
                         3.5 (Cláusula Intencionalmente dejada en blanco por las partes)
-          </div>
+                    </div>
                 </div>
                 <button
                     onClick={() => {
@@ -386,63 +376,58 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     }}
                 >
                     Siguiente
-        </button>
+                </button>
             </div>
 
             <div className="row m-5">
                 <div className="m-3 d-flex flex-column bd-highlight">
-                    <p>4- Forma y Condiciones de pago</p>
+                    <p>4. Formas y Condiciones de pago</p>
                     <div className="m-3" onChange={TypeMoney}>
+                        <p>La moneda pactada para el precio es : </p>
                         <input className="m-3 radio" type="radio" value="dolares" name="gender" />Dolares <br />
                         <input className="m-3 radio" type="radio" value="soles" name="gender" />Soles
-                  </div>
-
+                    </div>
                 </div>
                 <button
                     onClick={() => { searchPaymentMethod(typeMoneys); }}
                 >
                     Siguiente
-        </button>
+                </button>
             </div>
 
             <div className="row m-5">
                 <div className="m-3 d-flex flex-column bd-highlight">
-                    <p>5- Palzo de entrega de los Bienes</p>
-
+                    <p>5. Plazo de entrega de los bienes</p>
                     <label htmlFor="">
-                        dias de plazo
-                        <input type="text" onChange={deadlineDays} />
+                        El plazo de entrega de los bienes adquiridos es:
+                        <input type="text" onChange={deadlineDays} placeholder="Ejm: 10 semanas"/>
                     </label>
-
                 </div>
                 <button
                     onClick={() => { searchTermPay(deadlineDay); }}
                 >
                     Siguiente
-        </button>
+                </button>
             </div>
 
             <div className="row m-5">
                 <div className="m-3 d-flex flex-column bd-highlight">
-                    <p>6- Gasto, Transporte y Entrega</p>
-
+                    <p>6. Gastos, transporte y entrega</p>
                     <label htmlFor="">
-                        lugar de entrega
-                        <input type="text" onChange={site} />
+                        El lugar de entrega de los bienes adquiridos es:
+                        <input type="text" onChange={site} placeholder="Escribir aquí"/>
                     </label>
-
                 </div>
                 <button
                     onClick={() => { searchSite(deliveryPlace); }}
                 >
                     Siguiente
-        </button>
+                </button>
             </div>
 
             <div className="row m-5">
                 <div className="m-3 d-flex flex-column bd-highlight">
                     <p>10- Liquidacion del Contrato</p>
-
                     <label htmlFor="">
                         numero de anexo
                         <input type="text" onChange={numAnexoTenth} />
@@ -453,7 +438,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     onClick={() => { searchAnexoTench(numberAnexoTenth); }}
                 >
                     Siguiente
-        </button>
+                </button>
             </div>
 
             <div className="row m-5">

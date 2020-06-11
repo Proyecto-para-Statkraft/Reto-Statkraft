@@ -39,8 +39,8 @@ const MakeContract = () => {
     }
 
     const [antecedente, setAntecedente] = useState('');
-    const searchAntecedente = (product, place) => {
-        setAntecedente({ product, place })
+    const searchAntecedente = (product) => {
+        setAntecedente({ product})
     }
 
     const [sectionSecond, setSectionSecond] = useState('');
