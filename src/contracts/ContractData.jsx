@@ -1,100 +1,50 @@
 import React, { useState, useEffect } from "react";
 
-const ContractData = ({
-    search,
-    searchDataAntecedentes,
-    searchSellOption,
-    searchPrice,
-    searchPaymentMethod,
-    searchTermPay,
-    searchSite,
-    searchAnexoTench,
-    searchRepresentative,
-    searchHoursTime,
-    searchoClauseThirteenth,
-    searchClauseFourteenth,
-    searchTimeDayFifteenth,
-    searchClauseSixteenth,
-    searchClauseTwentienth
+const ContractData = ({ search, searchDataAntecedentes, searchSellOption, searchPrice, searchPaymentMethod,
+    searchTermPay, searchSite, searchAnexoTench, searchRepresentative, searchHoursTime, searchoClauseThirteenth,
+    searchClauseFourteenth, searchTimeDayFifteenth, searchClauseSixteenth, searchClauseTwentienth }) => {
 
-}) => {
     const [companyData, setCompanyData] = useState({});
     const [providerData, setProviderData] = useState({});
+
     const [nameCompanyData, setNameCompanyData] = useState("");
-    const nameCompany = e => {
-        setNameCompanyData(e.target.value);
-    };
+    const nameCompany = e => { setNameCompanyData(e.target.value) };
+
     const [rucCompanyData, setRucCompanyData] = useState("");
+    const rucCompany = e => { setRucCompanyData(e.target.value) };
 
-    const rucCompany = e => {
-        setRucCompanyData(e.target.value);
-    };
     const [addressCompanyData, setAddressCompanyData] = useState("");
-    const addressCompany = e => {
-        setAddressCompanyData(e.target.value);
-    };
-    const [
-        representativesOneNameCompanyData,
-        setRepresentativesOneNameCompanyData
-    ] = useState("");
-    const representativeOneNameCompany = e => {
-        setRepresentativesOneNameCompanyData(e.target.value);
-    };
-    const [
-        representativesOneDniCompanyData,
-        setRepresentativesOneDniCompanyData
-    ] = useState("");
-    const representativeOneDniCompany = e => {
-        setRepresentativesOneDniCompanyData(e.target.value);
-    };
+    const addressCompany = e => { setAddressCompanyData(e.target.value) };
 
-    const [
-        representativesTwoNameCompanyData,
-        setRepresentativesTwoNameCompanyData
-    ] = useState("");
-    const representativeTwoNameCompany = e => {
-        setRepresentativesTwoNameCompanyData(e.target.value);
-    };
-    const [
-        representativesTwoDniCompanyData,
-        setRepresentativesTwoDniCompanyData
-    ] = useState("");
-    const representativeTwoDniCompany = e => {
-        setRepresentativesTwoDniCompanyData(e.target.value);
-    };
+    const [representativesOneNameCompanyData, setRepresentativesOneNameCompanyData] = useState("");
+    const representativeOneNameCompany = e => { setRepresentativesOneNameCompanyData(e.target.value) };
+
+    const [representativesOneDniCompanyData, setRepresentativesOneDniCompanyData] = useState("");
+    const representativeOneDniCompany = e => { setRepresentativesOneDniCompanyData(e.target.value) };
+
+    const [representativesTwoNameCompanyData, setRepresentativesTwoNameCompanyData] = useState("");
+    const representativeTwoNameCompany = e => { setRepresentativesTwoNameCompanyData(e.target.value) };
+
+    const [representativesTwoDniCompanyData, setRepresentativesTwoDniCompanyData] = useState("");
+    const representativeTwoDniCompany = e => { setRepresentativesTwoDniCompanyData(e.target.value) };
+
     const [nameProviderData, setNameProviderData] = useState("");
-    const nameProvider = e => {
-        setNameProviderData(e.target.value);
-    };
+    const nameProvider = e => { setNameProviderData(e.target.value) };
+
     const [rucProviderData, setRucProviderData] = useState("");
-    const rucProvider = e => {
-        setRucProviderData(e.target.value);
-    };
+    const rucProvider = e => { setRucProviderData(e.target.value) };
+
     const [addressProviderData, setAddressProviderData] = useState("");
-    const addressProvider = e => {
-        setAddressProviderData(e.target.value);
-    };
-    const [
-        representativesNameProviderData,
-        setRepresentativesNameProviderData
-    ] = useState("");
-    const representativeNameProvider = e => {
-        setRepresentativesNameProviderData(e.target.value);
-    };
-    const [
-        representativesDniProviderData,
-        setRepresentativesDniProviderData
-    ] = useState("");
-    const representativeDniProvider = e => {
-        setRepresentativesDniProviderData(e.target.value);
-    };
-    const [
-        representativesNumberRegistryProviderData,
-        setRepresentativesNumberRegistryProviderData
-    ] = useState("");
-    const representativeNumberRegistryProvider = e => {
-        setRepresentativesNumberRegistryProviderData(e.target.value);
-    };
+    const addressProvider = e => { setAddressProviderData(e.target.value) };
+
+    const [representativesNameProviderData, setRepresentativesNameProviderData] = useState("");
+    const representativeNameProvider = e => { setRepresentativesNameProviderData(e.target.value) };
+
+    const [representativesDniProviderData, setRepresentativesDniProviderData] = useState("");
+    const representativeDniProvider = e => { setRepresentativesDniProviderData(e.target.value) };
+
+    const [representativesNumberRegistryProviderData, setRepresentativesNumberRegistryProviderData] = useState("");
+    const representativeNumberRegistryProvider = e => { setRepresentativesNumberRegistryProviderData(e.target.value) };
 
     useEffect(() => {
         const data = () => {
@@ -118,145 +68,84 @@ const ContractData = ({
             });
         };
         data();
-    }, [
-        addressCompanyData,
-        addressProviderData,
-        nameCompanyData,
-        nameProviderData,
-        representativesDniProviderData,
-        representativesNameProviderData,
-        representativesNumberRegistryProviderData,
-        representativesOneDniCompanyData,
-        representativesOneNameCompanyData,
-        representativesTwoDniCompanyData,
-        representativesTwoNameCompanyData,
-        rucCompanyData,
-        rucProviderData
+    }, [addressCompanyData, addressProviderData, nameCompanyData, nameProviderData,
+        representativesDniProviderData, representativesNameProviderData, representativesNumberRegistryProviderData,
+        representativesOneDniCompanyData, representativesOneNameCompanyData, representativesTwoDniCompanyData,
+        representativesTwoNameCompanyData, rucCompanyData, rucProviderData
     ]);
 
     const [inputRequieres, setInputRequiere] = useState("");
-    const product = e => {
-        setInputRequiere(e.target.value);
-    };
+    const product = e => { setInputRequiere(e.target.value) };
     // const [inputRequieresen, setInputRequiereEn] = useState("");
     // const place = e => {
     //     setInputRequiereEn(e.target.value);
     // };
 
     const [options, setOption] = useState("");
-    const option = e => {
-        setOption(e.target.value);
-    };
+    const option = e => { setOption(e.target.value) };
 
     const [sells, setSells] = useState("");
-    const sell = e => {
-        setSells(e.target.value);
-    };
+    const sell = e => { setSells(e.target.value) };
 
     const [clause35, setClause35] = useState("");
-    const clausePrice = e => {
-        setClause35(e.target.value);
-    };
+    const clausePrice = e => { setClause35(e.target.value) };
 
     const [moneys, setMoneys] = useState("");
-    const money = e => {
-        setMoneys(e.target.value);
-    };
+    const money = e => { setMoneys(e.target.value) };
 
     const [typeMoneys, setTypeMoneys] = useState("");
-    const TypeMoney = e => {
-        setTypeMoneys(e.target.value);
-    };
+    const TypeMoney = e => { setTypeMoneys(e.target.value) };
 
     const [deadlineDay, SetDeadlineDay] = useState("");
-    const deadlineDays = e => {
-        SetDeadlineDay(e.target.value);
-    };
+    const deadlineDays = e => { SetDeadlineDay(e.target.value) };
 
     const [deliveryPlace, setDeliveryPlace] = useState("");
-    const site = e => {
-        setDeliveryPlace(e.target.value);
-    };
+    const site = e => { setDeliveryPlace(e.target.value) };
 
     const [numberAnexoTenth, setNumberAnexoTent] = useState("");
-    const numAnexoTenth = e => {
-        setNumberAnexoTent(e.target.value);
-    };
+    const numAnexoTenth = e => { setNumberAnexoTent(e.target.value) };
 
     const [representativeCompany, setRepresentativeCompany] = useState("");
-    const companyRepresentative = e => {
-        setRepresentativeCompany(e.target.value);
-    };
+    const companyRepresentative = e => { setRepresentativeCompany(e.target.value) };
 
     const [representativeSupplier, setRepresentativeSupplier] = useState("");
-    const supplierRepresentative = e => {
-        setRepresentativeSupplier(e.target.value);
-    };
+    const supplierRepresentative = e => { setRepresentativeSupplier(e.target.value) };
 
     const [numberHoursRepairLima, setNumberHoursRepairLima] = useState("");
-    const numberHoursRepairLim = e => {
-        setNumberHoursRepairLima(e.target.value);
-    };
+    const numberHoursRepairLim = e => { setNumberHoursRepairLima(e.target.value) };
 
-    const [numberHoursRepairProvincia, setNumberHoursRepairProvincia] = useState(
-        ""
-    );
-    const numberHoursRepairProv = e => {
-        setNumberHoursRepairProvincia(e.target.value);
-    };
+    const [numberHoursRepairProvincia, setNumberHoursRepairProvincia] = useState("");
+    const numberHoursRepairProv = e => { setNumberHoursRepairProvincia(e.target.value) };
 
-    const [
-        timeAfterDeliveryFechayHora,
-        settimeAfterDeliveryFechayHora
-    ] = useState("");
-    const timeAfterDeliveryFecha = e => {
-        settimeAfterDeliveryFechayHora(e.target.value);
-    };
+    const [timeAfterDeliveryFechayHora, settimeAfterDeliveryFechayHora] = useState("");
+    const timeAfterDeliveryFecha = e => { settimeAfterDeliveryFechayHora(e.target.value) };
 
     const [optionClauseThirteenth, setOptionClauseThirteenth] = useState("");
-    const optionClausesThirteenth = e => {
-        setOptionClauseThirteenth(e.target.value);
-    };
+    const optionClausesThirteenth = e => { setOptionClauseThirteenth(e.target.value) };
 
     const [optionClauseFourteenth, setOptionClauseFourteenth] = useState("");
-    const optionClausesFourteenth = e => {
-        setOptionClauseFourteenth(e.target.value);
-    };
+    const optionClausesFourteenth = e => { setOptionClauseFourteenth(e.target.value) };
 
     const [moneysPoliza, setMoneysPoliza] = useState("");
-    const moneyPoliza = e => {
-        setMoneysPoliza(e.target.value)
-    }
+    const moneyPoliza = e => { setMoneysPoliza(e.target.value) }
 
     const [timeDay, settimeDay] = useState("");
-    const timeDays = e => {
-        settimeDay(e.target.value)
-    }
+    const timeDays = e => { settimeDay(e.target.value) }
 
     const [optionClausesSixteenth, setOptionClauseSixteenth] = useState("");
-    const optionClauseSixteenth = e => {
-        setOptionClauseSixteenth(e.target.value);
-    };
+    const optionClauseSixteenth = e => { setOptionClauseSixteenth(e.target.value) };
 
     const [name, setname] = useState("");
-    const clauseName = e => {
-        setname(e.target.value);
-    };
+    const clauseName = e => { setname(e.target.value) };
 
     const [ruc, setRuc] = useState("");
-    const clauseRuc = e => {
-        setRuc(e.target.value);
-    };
+    const clauseRuc = e => { setRuc(e.target.value) };
 
     const [servicio, setServicio] = useState("");
-    const clauseServicio = e => {
-        setServicio(e.target.value);
-    };
+    const clauseServicio = e => { setServicio(e.target.value) };
 
     const [optionClausesTwentieth, setOptionClauseTwentieth] = useState("");
-    const optionClauseTwentieth = e => {
-        setOptionClauseTwentieth(e.target.value);
-    };
+    const optionClauseTwentieth = e => { setOptionClauseTwentieth(e.target.value) };
     return (
         <div>
             <div className="row m-5 ">
@@ -348,7 +237,6 @@ const ContractData = ({
                     Siguiente
                 </button>
             </div>
-
             <div className="row m-5">
                 <p>2. Objeto</p>
                 <label htmlFor="">
@@ -398,7 +286,6 @@ const ContractData = ({
                     Siguiente
                 </button>
             </div>
-
             <div className="row m-5">
                 <div className="m-3 d-flex flex-column bd-highlight">
                     <p>3. Precio</p>
@@ -575,12 +462,7 @@ const ContractData = ({
                     <div className="m-3" onChange={optionClausesThirteenth}>
                         <input className="m-3 radio" type="radio" value="true" name="gender" />
                         13.2 wawawa <br />
-                        <input
-                            className="m-3 radio"
-                            type="radio"
-                            value="false"
-                            name="gender"
-                        />
+                        <input className="m-3 radio" type="radio" value="false" name="gender" />
                         2.3 wiwiwiwiwiw
           </div>
                 </div>
@@ -602,12 +484,7 @@ const ContractData = ({
                     <div className="m-3" onChange={optionClausesFourteenth}>
                         <input className="m-3 radio" type="radio" value="true" name="gender" />
                         14.2 clasura14 <br />
-                        <input
-                            className="m-3 radio"
-                            type="radio"
-                            value="false"
-                            name="gender"
-                        />
+                        <input className="m-3 radio" type="radio" value="false" name="gender" />
                         14.2  vacio
           </div>
                     <label htmlFor="">
@@ -651,12 +528,7 @@ const ContractData = ({
                     <div className="m-3" onChange={optionClauseSixteenth}>
                         <input className="m-3 radio" type="radio" value="true" name="gender" />
                         16.1 clasuraASixteenth <br />
-                        <input
-                            className="m-3 radio"
-                            type="radio"
-                            value="false"
-                            name="gender"
-                        />
+                        <input className="m-3 radio" type="radio" value="false" name="gender" />
                         16.1 clasuraBSixteenth
           </div>
                     <p>si escoges clauseB completar campo</p>
