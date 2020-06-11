@@ -23,7 +23,7 @@ const Home = () => {
                         <h3 className="m-5">Empieza a crear tu contrato</h3>
                     </div>
                     <div className=" d-flex justify-content-center ">
-                        <Link className="col-sm-6 mb-5 btn btn-primary btn-md btn-block" to="/makecontract">Empezar</Link>
+                        <Link className="col-sm-6 mb-5 btn btn-primary " to="/welcomecontract">Empezar</Link>
                     </div>
                 </div>
             </div>

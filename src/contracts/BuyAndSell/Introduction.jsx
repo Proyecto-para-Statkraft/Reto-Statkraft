@@ -1,11 +1,13 @@
 import React from 'react';
 
 
-const Introduction = ({ data }) => {
+const Introduction = ({ data, provider }) => {
 
-    const { companyData, providerData } = data;
 
-    if (data !== '') {
+    const { companyData } = data;
+    const { providerData } = provider;
+
+    if (provider !== '') {
         return (
             <section className="m-5 clause-question">
                 <h2 className="text-center">CONTRATO DE COMPRAVENTA</h2>
@@ -14,7 +16,7 @@ const Introduction = ({ data }) => {
                     el “Contrato”), que celebran:
                 </p>
                 <p>
-                    <span>{companyData.name}</span>, con RUC N° {companyData.ruc}, con domicilio en 
+                    <span>{companyData.name}</span>, con RUC N° {companyData.ruc}, con domicilio en
                     {companyData.address}, debidamente representada por los señores
                     {companyData.representativeOneName}, identificado con DNI N° {companyData.representativeOneDni}
                     y {companyData.representativeTwoName}, identificado con DNI N° {companyData.representativeTwoDni},

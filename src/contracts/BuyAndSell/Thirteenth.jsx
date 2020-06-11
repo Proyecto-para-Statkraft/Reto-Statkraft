@@ -6,7 +6,7 @@ const Thirteenth = ({ data, Thirteenth }) => {
     const { companyData } = data;
     const { sectionThirteenth } = Thirteenth;
 
-    if (data !== "") {
+    if (Thirteenth !== "") {
         return (
             <section>
                 <h3>DÉCIMA TERCERA: PENALIDADES</h3>
