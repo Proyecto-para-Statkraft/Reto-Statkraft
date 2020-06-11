@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-const ContractData = ({ search, searchDataAntecedentes, searchSellOption, searchPrice }) => {
+const ContractData = ({ search, searchDataAntecedentes, searchSellOption, searchPrice,
+    searchPaymentMethod, searchTermPay, searchSite }) => {
+
     const [companyData, setCompanyData] = useState({});
     const [providerData, setProviderData] = useState({});
     const [nameCompanyData, setNameCompanyData] = useState("");
@@ -79,36 +81,6 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
         setRepresentativesNumberRegistryProviderData(e.target.value);
     };
 
-    const [inputRequieres, setInputRequiere] = useState("");
-    const product = e => {
-        setInputRequiere(e.target.value);
-    };
-    const [inputRequieresen, setInputRequiereEn] = useState("");
-    const place = e => {
-        setInputRequiereEn(e.target.value);
-    };
-
-    const [options, setOption] = useState("");
-    const option = e => {
-        setOption(e.target.value);
-    };
-
-    const [sells, setSells] = useState("");
-    const sell = e => {
-        setSells(e.target.value);
-    };
-
-    const [clause35, setClause35] = useState("");
-    const clausePrice = e => {
-        setClause35(e.target.value);
-    };
-
-    const [moneys, setMoneys] = useState("");
-    const money = e => {
-        setMoneys(e.target.value);
-    };
-
-
     useEffect(() => {
         const data = () => {
             setCompanyData({
@@ -146,6 +118,51 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
         rucCompanyData,
         rucProviderData
     ]);
+
+    const [inputRequieres, setInputRequiere] = useState("");
+    const product = e => {
+        setInputRequiere(e.target.value);
+    };
+    const [inputRequieresen, setInputRequiereEn] = useState("");
+    const place = e => {
+        setInputRequiereEn(e.target.value);
+    };
+
+    const [options, setOption] = useState("");
+    const option = e => {
+        setOption(e.target.value);
+    };
+
+    const [sells, setSells] = useState("");
+    const sell = e => {
+        setSells(e.target.value);
+    };
+
+    const [clause35, setClause35] = useState("");
+    const clausePrice = e => {
+        setClause35(e.target.value);
+    };
+
+    const [moneys, setMoneys] = useState("");
+    const money = e => {
+        setMoneys(e.target.value);
+    };
+
+    const [typeMoneys, setTypeMoneys] = useState("");
+    const TypeMoney = e => {
+        setTypeMoneys(e.target.value);
+    };
+
+    const [deadlineDay, SetDeadlineDay] = useState("");
+    const deadlineDays = e => {
+        SetDeadlineDay(e.target.value);
+    };
+
+    const [deliveryPlace, setDeliveryPlace] = useState("");
+    const site = e => {
+        setDeliveryPlace(e.target.value);
+    };
+
 
     return (
         <div>
@@ -296,7 +313,8 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 </div>
                 <button
                     onClick={() => {
-                        searchSellOption(sells, options);
+                        searchSellOption(sells, options)
+                        setOption('');
                     }}
                 >
                     Siguiente
@@ -338,6 +356,61 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     Siguiente
         </button>
             </div>
+
+            <div className="row m-5">
+                <div className="m-3 d-flex flex-column bd-highlight">
+                    <p>4- Forma y Condiciones de pago</p>
+                    <div className="m-3" onChange={TypeMoney}>
+                        <input className="m-3 radio" type="radio" value="dolares" name="gender" />Dolares <br />
+                        <input className="m-3 radio" type="radio" value="soles" name="gender" />Soles
+                  </div>
+
+                </div>
+                <button
+                    onClick={() => { searchPaymentMethod(typeMoneys); }}
+                >
+                    Siguiente
+        </button>
+            </div>
+
+            <div className="row m-5">
+                <div className="m-3 d-flex flex-column bd-highlight">
+                    <p>5- Palzo de entrega de los Bienes</p>
+
+                    <label htmlFor="">
+                        dias de plazo
+                        <input type="text" onChange={deadlineDays} />
+                    </label>
+
+                </div>
+                <button
+                    onClick={() => { searchTermPay(deadlineDay); }}
+                >
+                    Siguiente
+        </button>
+            </div>
+
+            <div className="row m-5">
+                <div className="m-3 d-flex flex-column bd-highlight">
+                    <p>6- Gasto, Transporte y Entrega</p>
+
+                    <label htmlFor="">
+                        lugar de entrega
+                        <input type="text" onChange={site} />
+                    </label>
+
+                </div>
+                <button
+                    onClick={() => { searchSite(deliveryPlace); }}
+                >
+                    Siguiente
+        </button>
+            </div>
+
+
+
+
+
         </div>
     );
 };
