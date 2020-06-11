@@ -2,9 +2,9 @@ import React from "react";
 import Header from "./Header";
 import Table from 'react-bootstrap/Table';
 
+
 const ConsolidatedContracts = () => {
     return (
-
         <div>
             <Header />
             <p>Consolidados Contratos</p>
@@ -40,5 +40,6 @@ const ConsolidatedContracts = () => {
         </div>
     )
 }
+
 
 export default ConsolidatedContracts;

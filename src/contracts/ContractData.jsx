@@ -88,20 +88,11 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
         setInputRequiereEn(e.target.value);
     };
 
-    const [options, setOption] = useState("");
-    const option = e => {
-        setOption(e.target.value);
-    };
-
     const [sells, setSells] = useState("");
     const sell = e => {
         setSells(e.target.value);
     };
 
-    const [clause35, setClause35] = useState("");
-    const clausePrice = e => {
-        setClause35(e.target.value);
-    };
 
     const [moneys, setMoneys] = useState("");
     const money = e => {
@@ -269,34 +260,10 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
             y gravámenes, los cuales serán destinados a <br />
                         <textarea type="text" onChange={sell} />{" "}
                     </label>
-
-                    <h1>ESCOGE CLAUSULA</h1>
-                    <div className="m-3" onChange={option}>
-                        <input
-                            className="m-3 radio"
-                            type="radio"
-                            value="true"
-                            name="gender"
-                        />
-                        2.3 Las partes podrán acordar la variación del alcance del objeto
-                        del contrato hasta en un 15% del monto señalado en la Cláusula 3.1
-                        con un tope máximo de USD 30,000.00 (Treinta mil y 00/100 Dólares de
-                        Estados Unidos de América) mediante la suscripción de una Orden de
-                        Variación, de acuerdo al formato que obra en el Anexo N° 3. En caso
-                        la variación sea por un monto mayor, las partes suscribirán la
-            adenda correspondiente. <br />
-                        <input
-                            className="m-3 radio"
-                            type="radio"
-                            value="false"
-                            name="gender"
-                        />
-                        2.3 (Cláusula Intencionalmente dejada en blanco por las partes)
-          </div>
                 </div>
                 <button
                     onClick={() => {
-                        searchSellOption(sells, options);
+                        searchSellOption(sells);
                     }}
                 >
                     Siguiente
@@ -306,37 +273,15 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
             <div className="row m-5">
                 <div className="m-3 d-flex flex-column bd-highlight">
                     <p>3- Precio</p>
-
                     <textarea type="text" placeholder="Ejm: US$ 67,274.36 (Sesenta y Siete Mil Doscientos Setenta y Cuatro con 36/100 Dólares de los Estados Unidos de América) " onChange={money} />
-
-                    <h1>ESCOGE CLAUSULA</h1>
-                    <div className="m-3" onChange={clausePrice}>
-                        <input
-                            className="m-3 radio"
-                            type="radio"
-                            value="true"
-                            name="gender"
-                        />
-                        3.5 Las partes acuerdan que en caso sea necesaria la adquisición de bienes adicionales
-       estos se facturarán de acuerdo a lo señalado en el Anexo N° 2, para ello COMPAÑIA>
-        deberá enviar al <span>LOCADOR</span> una Orden de Variación de acuerdo al formato y
-        condiciones señaladas en el Anexo N° 3. <br />
-                        <input
-                            className="m-3 radio"
-                            type="radio"
-                            value="false"
-                            name="gender"
-                        />
-                        3.5 (Cláusula Intencionalmente dejada en blanco por las partes)
-          </div>
                 </div>
                 <button
                     onClick={() => {
-                        searchPrice(clause35, moneys);
+                        searchPrice(moneys);
                     }}
                 >
                     Siguiente
-        </button>
+                </button>
             </div>
         </div>
     );

@@ -21,12 +21,12 @@ const MakeContract = () => {
         setAntecedente({ product, place })
     }
 
-    const searchObjeto = (sell, option) => {
-        setSectionSecond({ sell, option })
+    const searchObjeto = (sell) => {
+        setSectionSecond({ sell })
     }
 
-    const searchPrice = (clause35, moneys) => {
-        setSectionThird({ clause35, moneys })
+    const searchPrice = (moneys) => {
+        setSectionThird({ moneys })
     }
 
     return (

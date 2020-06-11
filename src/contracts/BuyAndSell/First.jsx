@@ -8,15 +8,13 @@ import React from "react";
 const First = ({ data, First }) => {
   const { companyData } = data;
 
-  // console.log(sell);
-
   if (First !== "") {
     return (
       <section>
         <h3>PRIMERA: ANTECEDENTES</h3>
         <p>
           1.1 {companyData.name} es una empresa dedicada a la generación y
-          comercialización de energía eléctrica, que requiere {First.product} en
+          comercialización de energía eléctrica, que requiere {First.product} en 
           {First.place}.
         </p>
         <p>
