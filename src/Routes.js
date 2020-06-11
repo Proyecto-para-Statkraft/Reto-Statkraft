@@ -11,6 +11,7 @@ import MakeContract from "./contracts/MakeContract";
 import Company from "./componentes/escogerempresa/Company";
 import OptionCompany from "./componentes/escogerempresa/ChooseCompany";
 import SelectCompany from "./componentes/escogerempresa/SelectCompany";
+import Welcome from "./componentes/escogerempresa/Welcome";
 
 const Routes = () => {
   return (
@@ -30,6 +31,7 @@ const Routes = () => {
         <Route path="/empresa" component={Company} />
         <Route path="/optioncompany" component={OptionCompany} />
         <Route path="/selectcompany" component={SelectCompany} />
+        <Route path="/welcomecontract" component={Welcome} />
       </Switch>
     </HashRouter>
   );
