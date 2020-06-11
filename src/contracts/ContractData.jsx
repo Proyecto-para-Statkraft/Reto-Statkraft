@@ -420,7 +420,6 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         <label htmlFor="">
                              El monto de la póliza de responsabilidad civil extra contractual es:
                              <textarea name="" onChange={moneyPoliza}></textarea>
-                           
                         </label>
                     </div>
                     <button
