@@ -22,9 +22,11 @@
             width: 30%;
             background: yellow;
 
-            frame {
-                width: 600px;
-                height: 700px;
+            div {
+                width: 90%;
+                height: 500px;
+                background: yellowgreen;
+                overflow: scroll;
             }
         }
 

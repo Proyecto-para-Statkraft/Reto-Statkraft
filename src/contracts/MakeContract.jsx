@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { printWord } from '../PrintWord';
 import '../style/makecontract.css';
 import ContractData from './ContractData';
 import Introduction from './BuyAndSell/Introduction';
@@ -30,6 +31,16 @@ const MakeContract = () => {
         setSectionThird({ moneys })
     }
 
+    const DocumentGenerate = () => (
+        <div id="document-word">
+            <Introduction data={data} />
+            <First data={data} First={antecedente} />
+            <Second data={data} Second={sectionSecond} />
+            <Third data={data} Third={sectionThird} />
+        </div>
+    );
+    
+
     return (
         <div className="view-contract">
             <Header />
@@ -39,12 +50,8 @@ const MakeContract = () => {
                         searchSellOption={searchObjeto} searchPrice={searchPrice} />
                 </section>
                 <section className="section-create-contract col-sm-12 col-md-6" >
-                    <frame>
-                        <Introduction data={data} />
-                        <First data={data} First={antecedente} />
-                        <Second data={data} Second={sectionSecond} />
-                        <Third data={data} Third={sectionThird} />
-                    </frame>
+                    <DocumentGenerate />
+                    <button><a href="./MakeContract.jsx" download="docsgg.doc" target="_blank">Descargar en Word</a></button>
                 </section>
             </div>
         </div>

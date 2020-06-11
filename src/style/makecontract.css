@@ -36,9 +36,11 @@
   background: yellow;
 }
 
-.view-contract .row .section-create-contract frame {
-  width: 600px;
-  height: 700px;
+.view-contract .row .section-create-contract div {
+  width: 90%;
+  height: 500px;
+  background: yellowgreen;
+  overflow: scroll;
 }
 
 .view-contract .row .hide {
