@@ -10,8 +10,7 @@ const First = ({ data, First }) => {
         <h3>PRIMERA: ANTECEDENTES</h3>
         <p>
           1.1 {companyData.name} es una empresa dedicada a la generación y
-          comercialización de energía eléctrica, que requiere {First.product} en 
-          {First.place}.
+          comercialización de energía eléctrica, que requiere {First.product}
         </p>
         <p>
           1.2 El <span>PROVEEDOR</span> es una empresa contratista independiente
