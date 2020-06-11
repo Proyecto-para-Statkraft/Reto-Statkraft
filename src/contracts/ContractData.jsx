@@ -4,29 +4,8 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
     searchTermPay, searchSite, searchAnexoTench, searchRepresentative, searchHoursTime, searchoClauseThirteenth,
     searchClauseFourteenth, searchTimeDayFifteenth, searchClauseSixteenth, searchClauseTwentienth }) => {
 
-    const [companyData, setCompanyData] = useState({});
+
     const [providerData, setProviderData] = useState({});
-
-    const [nameCompanyData, setNameCompanyData] = useState("");
-    const nameCompany = e => { setNameCompanyData(e.target.value) };
-
-    const [rucCompanyData, setRucCompanyData] = useState("");
-    const rucCompany = e => { setRucCompanyData(e.target.value) };
-
-    const [addressCompanyData, setAddressCompanyData] = useState("");
-    const addressCompany = e => { setAddressCompanyData(e.target.value) };
-
-    const [representativesOneNameCompanyData, setRepresentativesOneNameCompanyData] = useState("");
-    const representativeOneNameCompany = e => { setRepresentativesOneNameCompanyData(e.target.value) };
-
-    const [representativesOneDniCompanyData, setRepresentativesOneDniCompanyData] = useState("");
-    const representativeOneDniCompany = e => { setRepresentativesOneDniCompanyData(e.target.value) };
-
-    const [representativesTwoNameCompanyData, setRepresentativesTwoNameCompanyData] = useState("");
-    const representativeTwoNameCompany = e => { setRepresentativesTwoNameCompanyData(e.target.value) };
-
-    const [representativesTwoDniCompanyData, setRepresentativesTwoDniCompanyData] = useState("");
-    const representativeTwoDniCompany = e => { setRepresentativesTwoDniCompanyData(e.target.value) };
 
     const [nameProviderData, setNameProviderData] = useState("");
     const nameProvider = e => { setNameProviderData(e.target.value) };
@@ -48,16 +27,6 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
 
     useEffect(() => {
         const data = () => {
-            setCompanyData({
-                name: nameCompanyData,
-                ruc: rucCompanyData,
-                address: addressCompanyData,
-                representativeOneName: representativesOneNameCompanyData,
-                representativeOneDni: representativesOneDniCompanyData,
-                representativeTwoName: representativesTwoNameCompanyData,
-                representativeTwoDni: representativesTwoDniCompanyData
-            });
-
             setProviderData({
                 name: nameProviderData,
                 ruc: rucProviderData,
@@ -68,11 +37,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
             });
         };
         data();
-    }, [addressCompanyData, addressProviderData, nameCompanyData, nameProviderData,
-        representativesDniProviderData, representativesNameProviderData, representativesNumberRegistryProviderData,
-        representativesOneDniCompanyData, representativesOneNameCompanyData, representativesTwoDniCompanyData,
-        representativesTwoNameCompanyData, rucCompanyData, rucProviderData
-    ]);
+    }, [addressProviderData, nameProviderData, representativesDniProviderData, representativesNameProviderData, representativesNumberRegistryProviderData, rucProviderData]);
 
     const [inputRequieres, setInputRequiere] = useState("");
     const product = e => { setInputRequiere(e.target.value) };
@@ -101,9 +66,6 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
 
     const [deliveryPlace, setDeliveryPlace] = useState("");
     const site = e => { setDeliveryPlace(e.target.value) };
-
-    const [numberAnexoTenth, setNumberAnexoTent] = useState("");
-    const numAnexoTenth = e => { setNumberAnexoTent(e.target.value) };
 
     const [representativeCompany, setRepresentativeCompany] = useState("");
     const companyRepresentative = e => { setRepresentativeCompany(e.target.value) };
@@ -149,38 +111,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
     return (
         <div>
             <div className="row m-5 ">
-                <div className="m-3 d-flex flex-column bd-highlight">
-                    <p>Datos de la Empresa</p>
-                    <label htmlFor="">
-                        Nombre de la empresa Stakraft
-                        <input type="text" onChange={nameCompany} />
-                    </label>
-                    <label htmlFor="">
-                        RUC <input type="text" onChange={rucCompany} />
-                    </label>
-                    <label htmlFor="">
-                        Direccion <input type="text" onChange={addressCompany} />
-                    </label>
-                    <p>¿Por quién está representada la empresa?</p>
-                    <label htmlFor="">
-                        Nombre Completo
-                        <input type="text" placeholder="Ej: Juan Antonio Rozas Mory"
-                            onChange={representativeOneNameCompany} />
-                    </label>
-                    <label htmlFor="">
-                        DNI
-                        <input type="text" placeholder="Ej: 07867123" onChange={representativeOneDniCompany} />
-                    </label>
-                    <p>Datos de representante dos</p>
-                    <label htmlFor="">
-                        Nombre Completo
-                        <input type="text" placeholder="Ej: Álvaro Antonio Porturas Ingunza" onChange={representativeTwoNameCompany} />
-                    </label>
-                    <label htmlFor="">
-                        DNI
-                        <input type="text" placeholder="Ej: 09340737" onChange={representativeTwoDniCompany} />
-                    </label>
-                </div>
+
                 <div className="m-3 d-flex flex-column bd-highlight">
                     <p>Datos de la empresa con la que estás contratando</p>
                     <label htmlFor="">
@@ -210,9 +141,9 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         />
                     </label>
                 </div>
-                <button
+                <button className="mb-5 btn btn-primary"
                     onClick={() => {
-                        search(companyData, providerData);
+                        search(providerData);
                     }}
                 >
                     CONTINUAR
@@ -228,7 +159,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             onChange={product}></textarea>
                     </label>
                 </div>
-                <button
+                <button className="mb-5 btn btn-primary"
                     onClick={() => {
                         searchDataAntecedentes(inputRequieres);
                     }}
@@ -243,7 +174,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     Los bienes adquiridos se van a usar en:
                     <textarea type="text" onChange={sell} placeholder="Escribir aquí" />
                 </label>
-                <button
+                <button className="mb-5 btn btn-primary"
                 // onClick={() => {
 
                 // }}
@@ -277,7 +208,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         2.3 (Cláusula Intencionalmente dejada en blanco por las partes)
                     </div>
                 </div>
-                <button
+                <button className="mb-5 btn btn-primary"
                     onClick={() => {
                         searchSellOption(sells, options);
                         setOption("");
@@ -317,7 +248,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         3.5 (Cláusula Intencionalmente dejada en blanco por las partes)
                     </div>
                 </div>
-                <button
+                <button className="mb-5 btn btn-primary"
                     onClick={() => {
                         searchPrice(clause35, moneys);
                     }}
@@ -335,7 +266,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         <input className="m-3 radio" type="radio" value="soles" name="gender" />Soles
                     </div>
                 </div>
-                <button
+                <button className="mb-5 btn btn-primary"
                     onClick={() => {
                         searchPaymentMethod(typeMoneys);
                     }}
@@ -353,7 +284,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
 
                     </label>
                 </div>
-                <button
+                <button className="mb-5 btn btn-primary"
                     onClick={() => {
                         searchTermPay(deadlineDay);
                     }}
@@ -370,26 +301,9 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         <input type="text" onChange={site} placeholder="Escribir aquí" />
                     </label>
                 </div>
-                <button
+                <button className="mb-5 btn btn-primary"
                     onClick={() => {
                         searchSite(deliveryPlace);
-                    }}
-                >
-                    Siguiente
-                </button>
-            </div>
-
-            <div className="row m-5">
-                <div className="m-3 d-flex flex-column bd-highlight">
-                    <p>10- Liquidacion del Contrato</p>
-                    <label htmlFor="">
-                        numero de anexo
-            <input type="text" onChange={numAnexoTenth} />
-                    </label>
-                </div>
-                <button
-                    onClick={() => {
-                        searchAnexoTench(numberAnexoTenth);
                     }}
                 >
                     Siguiente
@@ -409,7 +323,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
             <input type="text" onChange={supplierRepresentative} />
                     </label>
                 </div>
-                <button
+                <button className="mb-5 btn btn-primary"
                     onClick={() => {
                         searchRepresentative(representativeCompany, representativeSupplier);
                     }}
@@ -438,7 +352,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
             <input type="text" onChange={timeAfterDeliveryFecha} />
                     </label>
                 </div>
-                <button
+                <button className="mb-5 btn btn-primary"
                     onClick={() => {
                         searchHoursTime(
                             numberHoursRepairLima,
@@ -466,7 +380,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         2.3 wiwiwiwiwiw
           </div>
                 </div>
-                <button
+                <button className="mb-5 btn btn-primary"
                     onClick={() => {
                         searchoClauseThirteenth(optionClauseThirteenth);
                         setOption("");
@@ -492,7 +406,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
             <input type="text" onChange={moneyPoliza} />
                     </label>
                 </div>
-                <button
+                <button className="mb-5 btn btn-primary"
                     onClick={() => {
                         searchClauseFourteenth(optionClauseFourteenth, moneysPoliza);
                         setOption("");
@@ -511,7 +425,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
             <input type="text" onChange={timeDays} />
                     </label>
                 </div>
-                <button
+                <button className="mb-5 btn btn-primary"
                     onClick={() => {
                         searchTimeDayFifteenth(timeDay);
                     }}
@@ -542,7 +456,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
 
 
                 </div>
-                <button
+                <button className="mb-5 btn btn-primary"
                     onClick={() => {
                         searchClauseSixteenth(optionClausesSixteenth, name, ruc, servicio);
                     }}
@@ -565,7 +479,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         16.1 clasuraCTwentient <br />
                     </div>
                     <p>FALTA UN PARAMETRO PARA UNA CLAUSULA revisar como llamarlo</p>
-                    <button onClick={() => { searchClauseTwentienth(optionClausesTwentieth); }}>
+                    <button className="mb-5 btn btn-primary" onClick={() => { searchClauseTwentienth(optionClausesTwentieth); }}>
                         Siguiente
                      </button>
                 </div>

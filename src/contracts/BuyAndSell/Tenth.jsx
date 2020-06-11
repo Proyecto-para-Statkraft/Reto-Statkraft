@@ -38,8 +38,8 @@ const Tenth = ({ data, Tenth }) => {
             de <span>{companyData.name}</span>
                         toda la documentación exigida en los Documentos del Contrato. Sin
             perjuicio de esta documentación, el <span>PROVEEDOR</span> deberá
-                        entregar los planos y manuales de operación, configuración y
-                        mantenimiento de todos los Bienes.
+                                    entregar los planos y manuales de operación, configuración y
+                                    mantenimiento de todos los Bienes.
           </p>
                     <p>
                         10.2.3 Haber efectuado las pruebas que se mencionan en la cláusula
@@ -52,13 +52,13 @@ const Tenth = ({ data, Tenth }) => {
                     <p>
                         10.3 Una vez suscrita el acta, se autorizará el pago de las sumas
             que puedan resultar a favor del <span>PROVEEDOR</span>. El acta de
-                        la Liquidación del Contrato se suscribirá entre el Coordinador del
+                                    la Liquidación del Contrato se suscribirá entre el Coordinador del
             Contrato de <span>{companyData.name}</span> y el representante de el
             <span>PROVEEDOR</span> designado según la cláusula décima primera.
           </p>
                     <p>
                         Asimismo, a la finalización del servicio el PROVEEDOR debe presentar
-            el formato que obra en el Anexo {deadlineDay} en el que consta las
+            el formato que obra en el Anexo N° en el que consta las
                         características de los activos entregados materia del contrato.
           </p>
                 </section>

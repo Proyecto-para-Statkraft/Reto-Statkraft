@@ -1,11 +1,13 @@
 import React from 'react';
 
 
-const Introduction = ({ data }) => {
+const Introduction = ({ data, provider }) => {
 
-    const { companyData, providerData } = data;
 
-    if (data !== '') {
+    const { companyData } = data;
+    const { providerData } = provider;
+
+    if (provider !== '') {
         return (
             <section className="m-5">
                 <h2 className="text-center">CONTRATO DE COMPRAVENTA</h2>
