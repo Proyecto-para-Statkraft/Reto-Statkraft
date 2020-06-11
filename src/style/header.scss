@@ -1,0 +1,22 @@
+@import './meassures';
+
+header {
+  border-bottom: 3px solid #00b0dc;
+  width: 100%;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    
+    .navbar-nav {
+        a {
+          color:#7A6F69 !important;
+          font-weight: 600;
+        }
+
+        @media (max-width: $notebook) {
+          width: 100%;
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { HashRouter, Switch, Route } from "react-router-dom";
 import Home from "./componentes/Home";
 import ReviewContracts from "./componentes/choosecontract/ChooseContracts";
@@ -10,6 +10,8 @@ import NumberContracts from "./componentes/adenda/NumberContracts";
 import MakeContract from "./contracts/MakeContract";
 
 const Routes = () => {
+  const [showContract, setShowContract] = useState(false);
+
   return (
     <HashRouter>
       <Switch>
@@ -23,9 +25,11 @@ const Routes = () => {
         <Route path="/questions" component={QuestionsOne} />
         <Route path="/contractsgoods" component={ContrractsGoods} />
         <Route path="/numbercontracts" component={NumberContracts} />
-        <Route path="/makecontract" component={MakeContract} />
+        <Route path="/makecontract" component={MakeContract}/>} />
       </Switch>
     </HashRouter>
   );
 };
+
+
 export default Routes;
