@@ -12,6 +12,11 @@ import Sixth from './BuyAndSell/Sixth';
 import Tenth from './BuyAndSell/Tenth';
 import Eleventh from './BuyAndSell/Eleventh';
 import Twelfth from './BuyAndSell/Twelfth';
+import Thirteenth from './BuyAndSell/Thirteenth';
+import Fourteenth from './BuyAndSell/Fourteenth';
+import Fifteenth from './BuyAndSell/Fifteenth';
+import Sixteenth from './BuyAndSell/Sixteenth';
+import Twentieth from './BuyAndSell/Twentieth';
 
 
 const MakeContract = () => {
@@ -37,6 +42,21 @@ const MakeContract = () => {
         setSectionThird({ moneys })
     }
 
+    const [sectionQuarter, setSectionQuarter] = useState('');
+    const searchPaymentMethod = (type) => {
+        setSectionQuarter({ type })
+    }
+
+    const [sectionFifth, setSectionFifth] = useState('');
+    const searchTermPay = (deadlineDay) => {
+        setSectionFifth({ deadlineDay })
+    }
+
+    const [sectionSixth, setSectionSixth] = useState('');
+    const searchSite = (deadlineDay) => {
+        setSectionSixth({ deadlineDay })
+    }
+
     const [sectionTenth, setSectionTenth] = useState('');
     const searchAnexoTench = (deadlineDay) => {
         setSectionTenth({ deadlineDay })
@@ -52,20 +72,45 @@ const MakeContract = () => {
         setSectionTwelfth({ numberHoursRepairLima, numberHoursRepairProvincia, timeAfterDeliveryFechayHora })
     }
 
+    const [sectionThirteenth, setSectionThirteenth] = useState('');
+    const searchoClauseThirteenth = (numberHoursRepairLima, numberHoursRepairProvincia, timeAfterDeliveryFechayHora) => {
+        setSectionThirteenth({ numberHoursRepairLima, numberHoursRepairProvincia, timeAfterDeliveryFechayHora })
+    }
+
+    const [sectionFourteenth, setSectionFourteenth] = useState('');
+    const searchClauseFourteenth = (optionClauseFourteenth, moneysPoliza) => {
+        setSectionFourteenth({ optionClauseFourteenth, moneysPoliza })
+    }
+
+    const [sectionFifteenth, setSectionFifteenth] = useState('');
+    const searchTimeDayFifteenth = (timeDay) => {
+        setSectionFifteenth({ timeDay })
+    }
+
+    const [sectionSixteenth, setSectionSixteenth] = useState('');
+    const searchClauseSixteenth = (optionClausesSixteenth, name, ruc, servicio) => {
+        setSectionSixteenth({ optionClausesSixteenth, name, ruc, servicio })
+    }
+
+    const [sectionTwentienth, setSectionTwentienth] = useState('');
+    const searchClauseTwentieth = (optionClausesTwentieth) => {
+        setSectionTwentienth({ optionClausesTwentieth })
+    }
+/* 
     const DocumentGenerate = () => (
         <div id="document-word">
             <Introduction data={data} />
             <First data={data} First={antecedente} />
             <Second data={data} Second={sectionSecond} />
             <Third data={data} Third={sectionThird} />
-     {/*        <Quarter data={data} Quarter={sectionQuarter} />
+            <Quarter data={data} Quarter={sectionQuarter} />
             <Fifth data={data} Fifth={sectionFifth} />
             <Sixth data={data} Sixth={sectionSixth} />
-            <Tenth data={data} Tenth={sectionTenth} /> */}
+            <Tenth data={data} Tenth={sectionTenth} />
             <Eleventh data={data} Eleventh={sectionEleventh} />
             <Twelfth data={data} Twelfth={sectionTwelfth} />
         </div>
-    );
+    ); */
 
     return (
         <div id="source-html" className="view-contract">
@@ -74,13 +119,29 @@ const MakeContract = () => {
                 <div className="row">
                     <section className="section-question col-sm-12 col-md-6">
                         <ContractData search={searchData} searchDataAntecedentes={searchAntecedente} searchSellOption={searchObjeto}
-                            searchPrice={searchPrice} /* searchPaymentMethod={searchPaymentMethod} searchTermPay={searchTermPay}
-                            searchSite={searchSite} */ searchAnexoTench={searchAnexoTench} searchRepresentative={searchRepresentative}
-                            searchHoursTime={searchHoursTime}
+                            searchPrice={searchPrice} searchPaymentMethod={searchPaymentMethod} searchTermPay={searchTermPay}
+                            searchSite={searchSite} searchAnexoTench={searchAnexoTench} searchRepresentative={searchRepresentative}
+                            searchHoursTime={searchHoursTime} searchoClauseThirteenth={searchoClauseThirteenth}
+                            searchClauseFourteenth={searchClauseFourteenth} searchTimeDayFifteenth={searchTimeDayFifteenth}
+                            searchClauseSixteenth={searchClauseSixteenth} searchClauseTwentienth={searchClauseTwentieth}
                         />
                     </section>
-                    <section className="section-create-contract col-sm-12 col-md-6 bg-secondary">
-                        <DocumentGenerate />
+                    <section className="col-sm-12 col-md-6 bg-secondary">
+                        <Introduction data={data} />
+                        <First data={data} First={antecedente} />
+                        <Second data={data} Second={sectionSecond} />
+                        <Third data={data} Third={sectionThird} />
+                        <Quarter data={data} Quarter={sectionQuarter} />
+                        <Fifth data={data} Fifth={sectionFifth} />
+                        <Sixth data={data} Sixth={sectionSixth} />
+                        <Tenth data={data} Tenth={sectionTenth} />
+                        <Eleventh data={data} Eleventh={sectionEleventh} />
+                        <Twelfth data={data} Twelfth={sectionTwelfth} />
+                        <Thirteenth data={data} Thirteenth={sectionThirteenth} />
+                        <Fourteenth data={data} Fourteenth={sectionFourteenth} />
+                        <Fifteenth Fifteenth={sectionFifteenth} />
+                        <Sixteenth data={data} Sixteenth={sectionSixteenth} />
+                        {/* <Twentieth Thirteenth={sectionTwentienth} /> */}
                     </section>
                 </div>
             </div>

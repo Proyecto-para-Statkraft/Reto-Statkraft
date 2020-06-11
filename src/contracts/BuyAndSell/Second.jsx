@@ -9,7 +9,7 @@ const Second = ({ data, Second }) => {
     if (Second !== "") {
         return (
             <section>
-                <h3>SEGUNDA:         OBJETO</h3>
+                <h3>SEGUNDA: OBJETO</h3>
                 <p>
                     2.1 Por el Contrato, el <span>PROVEEDOR</span> vende a <span>{companyData.name}</span> el
                         conjunto de bienes que se mencionan en el Anexo N° 2(en adelante, el conjunto, los
@@ -43,7 +43,7 @@ const Second = ({ data, Second }) => {
                     elementos al momento de tomar la decisión de celebrar este Contrato.
                 </p>
             </section>
-        )
+        );
     }
     return (
         <div>

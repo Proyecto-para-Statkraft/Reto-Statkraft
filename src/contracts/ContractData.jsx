@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-const ContractData = ({ search, searchDataAntecedentes, searchSellOption, searchPrice,
-    searchPaymentMethod, searchTermPay, searchSite, searchAnexoTench, searchRepresentative,
-    searchHoursTime }) => {
+const ContractData = ({ search, searchDataAntecedentes, searchSellOption, searchPrice, searchPaymentMethod,
+    searchTermPay, searchSite, searchAnexoTench, searchRepresentative, searchHoursTime, searchoClauseThirteenth,
+    searchClauseFourteenth, searchTimeDayFifteenth, searchClauseSixteenth, searchClauseTwentienth }) => {
 
     const [questionIntro, setQuestionIntro] = useState(true);
     const [questionFirst, setQuestionFirst] = useState(false);
@@ -32,82 +32,45 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
 
     const [companyData, setCompanyData] = useState({});
     const [providerData, setProviderData] = useState({});
+
     const [nameCompanyData, setNameCompanyData] = useState("");
+    const nameCompany = e => { setNameCompanyData(e.target.value) };
 
-    const nameCompany = e => {
-        setNameCompanyData(e.target.value);
-    };
     const [rucCompanyData, setRucCompanyData] = useState("");
+    const rucCompany = e => { setRucCompanyData(e.target.value) };
 
-    const rucCompany = e => {
-        setRucCompanyData(e.target.value);
-    };
     const [addressCompanyData, setAddressCompanyData] = useState("");
-    const addressCompany = e => {
-        setAddressCompanyData(e.target.value);
-    };
-    const [
-        representativesOneNameCompanyData,
-        setRepresentativesOneNameCompanyData
-    ] = useState("");
-    const representativeOneNameCompany = e => {
-        setRepresentativesOneNameCompanyData(e.target.value);
-    };
-    const [
-        representativesOneDniCompanyData,
-        setRepresentativesOneDniCompanyData
-    ] = useState("");
-    const representativeOneDniCompany = e => {
-        setRepresentativesOneDniCompanyData(e.target.value);
-    };
+    const addressCompany = e => { setAddressCompanyData(e.target.value) };
 
-    const [
-        representativesTwoNameCompanyData,
-        setRepresentativesTwoNameCompanyData
-    ] = useState("");
-    const representativeTwoNameCompany = e => {
-        setRepresentativesTwoNameCompanyData(e.target.value);
-    };
-    const [
-        representativesTwoDniCompanyData,
-        setRepresentativesTwoDniCompanyData
-    ] = useState("");
-    const representativeTwoDniCompany = e => {
-        setRepresentativesTwoDniCompanyData(e.target.value);
-    };
+    const [representativesOneNameCompanyData, setRepresentativesOneNameCompanyData] = useState("");
+    const representativeOneNameCompany = e => { setRepresentativesOneNameCompanyData(e.target.value) };
+
+    const [representativesOneDniCompanyData, setRepresentativesOneDniCompanyData] = useState("");
+    const representativeOneDniCompany = e => { setRepresentativesOneDniCompanyData(e.target.value) };
+
+    const [representativesTwoNameCompanyData, setRepresentativesTwoNameCompanyData] = useState("");
+    const representativeTwoNameCompany = e => { setRepresentativesTwoNameCompanyData(e.target.value) };
+
+    const [representativesTwoDniCompanyData, setRepresentativesTwoDniCompanyData] = useState("");
+    const representativeTwoDniCompany = e => { setRepresentativesTwoDniCompanyData(e.target.value) };
+
     const [nameProviderData, setNameProviderData] = useState("");
-    const nameProvider = e => {
-        setNameProviderData(e.target.value);
-    };
+    const nameProvider = e => { setNameProviderData(e.target.value) };
+
     const [rucProviderData, setRucProviderData] = useState("");
-    const rucProvider = e => {
-        setRucProviderData(e.target.value);
-    };
+    const rucProvider = e => { setRucProviderData(e.target.value) };
+
     const [addressProviderData, setAddressProviderData] = useState("");
-    const addressProvider = e => {
-        setAddressProviderData(e.target.value);
-    };
-    const [
-        representativesNameProviderData,
-        setRepresentativesNameProviderData
-    ] = useState("");
-    const representativeNameProvider = e => {
-        setRepresentativesNameProviderData(e.target.value);
-    };
-    const [
-        representativesDniProviderData,
-        setRepresentativesDniProviderData
-    ] = useState("");
-    const representativeDniProvider = e => {
-        setRepresentativesDniProviderData(e.target.value);
-    };
-    const [
-        representativesNumberRegistryProviderData,
-        setRepresentativesNumberRegistryProviderData
-    ] = useState("");
-    const representativeNumberRegistryProvider = e => {
-        setRepresentativesNumberRegistryProviderData(e.target.value);
-    };
+    const addressProvider = e => { setAddressProviderData(e.target.value) };
+
+    const [representativesNameProviderData, setRepresentativesNameProviderData] = useState("");
+    const representativeNameProvider = e => { setRepresentativesNameProviderData(e.target.value) };
+
+    const [representativesDniProviderData, setRepresentativesDniProviderData] = useState("");
+    const representativeDniProvider = e => { setRepresentativesDniProviderData(e.target.value) };
+
+    const [representativesNumberRegistryProviderData, setRepresentativesNumberRegistryProviderData] = useState("");
+    const representativeNumberRegistryProvider = e => { setRepresentativesNumberRegistryProviderData(e.target.value) };
 
     const [inputRequieres, setInputRequiere] = useState("");
     const product = e => {
@@ -152,70 +115,66 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
             });
         };
         data();
-    }, [
-        addressCompanyData,
-        addressProviderData,
-        nameCompanyData,
-        nameProviderData,
-        representativesDniProviderData,
-        representativesNameProviderData,
-        representativesNumberRegistryProviderData,
-        representativesOneDniCompanyData,
-        representativesOneNameCompanyData,
-        representativesTwoDniCompanyData,
-        representativesTwoNameCompanyData,
-        rucCompanyData,
-        rucProviderData
+    }, [addressCompanyData, addressProviderData, nameCompanyData, nameProviderData,
+        representativesDniProviderData, representativesNameProviderData, representativesNumberRegistryProviderData,
+        representativesOneDniCompanyData, representativesOneNameCompanyData, representativesTwoDniCompanyData,
+        representativesTwoNameCompanyData, rucCompanyData, rucProviderData
     ]);
 
 
     const [typeMoneys, setTypeMoneys] = useState("");
-    const TypeMoney = e => {
-        setTypeMoneys(e.target.value);
-    };
+    const TypeMoney = e => { setTypeMoneys(e.target.value) };
 
     const [deadlineDay, SetDeadlineDay] = useState("");
-    const deadlineDays = e => {
-        SetDeadlineDay(e.target.value);
-    };
+    const deadlineDays = e => { SetDeadlineDay(e.target.value) };
 
     const [deliveryPlace, setDeliveryPlace] = useState("");
-    const site = e => {
-        setDeliveryPlace(e.target.value);
-    };
+    const site = e => { setDeliveryPlace(e.target.value) };
 
     const [numberAnexoTenth, setNumberAnexoTent] = useState("");
-    const numAnexoTenth = e => {
-        setNumberAnexoTent(e.target.value);
-    };
-
+    const numAnexoTenth = e => { setNumberAnexoTent(e.target.value) };
 
     const [representativeCompany, setRepresentativeCompany] = useState("");
-    const companyRepresentative = e => {
-        setRepresentativeCompany(e.target.value);
-    };
-
+    const companyRepresentative = e => { setRepresentativeCompany(e.target.value) };
 
     const [representativeSupplier, setRepresentativeSupplier] = useState("");
-    const supplierRepresentative = e => {
-        setRepresentativeSupplier(e.target.value);
-    };
+    const supplierRepresentative = e => { setRepresentativeSupplier(e.target.value) };
 
     const [numberHoursRepairLima, setNumberHoursRepairLima] = useState("");
-    const numberHoursRepairLim = e => {
-        setNumberHoursRepairLima(e.target.value);
-    };
+    const numberHoursRepairLim = e => { setNumberHoursRepairLima(e.target.value) };
 
     const [numberHoursRepairProvincia, setNumberHoursRepairProvincia] = useState("");
-    const numberHoursRepairProv = e => {
-        setNumberHoursRepairProvincia(e.target.value);
-    };
+    const numberHoursRepairProv = e => { setNumberHoursRepairProvincia(e.target.value) };
 
     const [timeAfterDeliveryFechayHora, settimeAfterDeliveryFechayHora] = useState("");
-    const timeAfterDeliveryFecha = e => {
-        settimeAfterDeliveryFechayHora(e.target.value);
-    };
+    const timeAfterDeliveryFecha = e => { settimeAfterDeliveryFechayHora(e.target.value) };
 
+    const [optionClauseThirteenth, setOptionClauseThirteenth] = useState("");
+    const optionClausesThirteenth = e => { setOptionClauseThirteenth(e.target.value) };
+
+    const [optionClauseFourteenth, setOptionClauseFourteenth] = useState("");
+    const optionClausesFourteenth = e => { setOptionClauseFourteenth(e.target.value) };
+
+    const [moneysPoliza, setMoneysPoliza] = useState("");
+    const moneyPoliza = e => { setMoneysPoliza(e.target.value) }
+
+    const [timeDay, settimeDay] = useState("");
+    const timeDays = e => { settimeDay(e.target.value) }
+
+    const [optionClausesSixteenth, setOptionClauseSixteenth] = useState("");
+    const optionClauseSixteenth = e => { setOptionClauseSixteenth(e.target.value) };
+
+    const [name, setname] = useState("");
+    const clauseName = e => { setname(e.target.value) };
+
+    const [ruc, setRuc] = useState("");
+    const clauseRuc = e => { setRuc(e.target.value) };
+
+    const [servicio, setServicio] = useState("");
+    const clauseServicio = e => { setServicio(e.target.value) };
+
+    const [optionClausesTwentieth, setOptionClauseTwentieth] = useState("");
+    const optionClauseTwentieth = e => { setOptionClauseTwentieth(e.target.value) };
     return (
         <div>
             {
@@ -236,8 +195,8 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     <p>¿Por quién está representada la empresa?</p>
                     <label htmlFor="">
                         Nombre Completo
-                        <input type="text" placeholder="Ej: Juan Antonio Rozas Mory" 
-                               onChange={representativeOneNameCompany} />
+                        <input type="text" placeholder="Ej: Juan Antonio Rozas Mory"
+                            onChange={representativeOneNameCompany} />
                     </label>
                     <label htmlFor="">
                         DNI
@@ -258,7 +217,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     <label htmlFor="">
                         Nombre de la empresa <input
                             type="text"
-                            onChange={nameProvider}/>
+                            onChange={nameProvider} />
                     </label>
                     <label htmlFor="">
                         RUC <input type="text" onChange={rucProvider} />
@@ -302,7 +261,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         Nuestra empresa esta dedicada a la generación y comercialización de
                         energía eléctrica, que requiere:
                         <textarea placeholder="Detallar Servicio..."
-                                  onChange={product}></textarea>
+                            onChange={product}></textarea>
                     </label>
                 </div>
                 <button
@@ -312,7 +271,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         setQuestionFirst(false);
                     }}
                 >
-                    
+
                     Siguiente
                 </button>
             </div>
@@ -367,7 +326,9 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     </div>
                 </div>
                 <button
-                    onClick={() => { searchPaymentMethod(typeMoneys); }}
+                    onClick={() => {
+                        searchPaymentMethod(typeMoneys);
+                    }}
                 >
                     Siguiente
                 </button>
@@ -378,11 +339,14 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     <p>5. Plazo de entrega de los bienes</p>
                     <label htmlFor="">
                         El plazo de entrega de los bienes adquiridos es:
-                        <input type="text" onChange={deadlineDays} placeholder="Ejm: 10 semanas"/>
+                        <input type="text" onChange={deadlineDays} placeholder="Ejm: 10 semanas" />
+
                     </label>
                 </div>
                 <button
-                    onClick={() => { searchTermPay(deadlineDay); }}
+                    onClick={() => {
+                        searchTermPay(deadlineDay);
+                    }}
                 >
                     Siguiente
                 </button>
@@ -393,11 +357,13 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     <p>6. Gastos, transporte y entrega</p>
                     <label htmlFor="">
                         El lugar de entrega de los bienes adquiridos es:
-                        <input type="text" onChange={site} placeholder="Escribir aquí"/>
+                        <input type="text" onChange={site} placeholder="Escribir aquí" />
                     </label>
                 </div>
                 <button
-                    onClick={() => { searchSite(deliveryPlace); }}
+                    onClick={() => {
+                        searchSite(deliveryPlace);
+                    }}
                 >
                     Siguiente
                 </button>
@@ -408,12 +374,13 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     <p>10- Liquidacion del Contrato</p>
                     <label htmlFor="">
                         numero de anexo
-                        <input type="text" onChange={numAnexoTenth} />
+            <input type="text" onChange={numAnexoTenth} />
                     </label>
-
                 </div>
                 <button
-                    onClick={() => { searchAnexoTench(numberAnexoTenth); }}
+                    onClick={() => {
+                        searchAnexoTench(numberAnexoTenth);
+                    }}
                 >
                     Siguiente
                 </button>
@@ -425,16 +392,17 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
 
                     <label htmlFor="">
                         Representante Compañia
-                        <input type="text" onChange={companyRepresentative} />
+            <input type="text" onChange={companyRepresentative} />
                     </label>
                     <label htmlFor="">
                         Representante Proveedor
-                        <input type="text" onChange={supplierRepresentative} />
+            <input type="text" onChange={supplierRepresentative} />
                     </label>
-
                 </div>
                 <button
-                    onClick={() => { searchRepresentative(representativeCompany, representativeSupplier); }}
+                    onClick={() => {
+                        searchRepresentative(representativeCompany, representativeSupplier);
+                    }}
                 >
                     Siguiente
                 </button>
@@ -445,27 +413,150 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     <p>12- Exclusion de daño Existentess </p>
 
                     <label htmlFor="">
-                        Será responsable de reparar cualquier
-              error en el funcionamiento de los Bienes en un plazo no mayor
-                        <input type="text" onChange={numberHoursRepairLim} />
+                        Será responsable de reparar cualquier error en el funcionamiento de
+                        los Bienes en un plazo no mayor
+            <input type="text" onChange={numberHoursRepairLim} />
                     </label>
                     <label htmlFor="">
                         horas para Lima y a
-                        <input type="text" onChange={numberHoursRepairProv} />
+            <input type="text" onChange={numberHoursRepairProv} />
                     </label>
 
                     <label htmlFor="">
-                        aun cuando no sea el fabricante de los mismos, durante el plazo de vigencia de
-              este Contrato, así como durante los
-                        <input type="text" onChange={timeAfterDeliveryFecha} />
+                        aun cuando no sea el fabricante de los mismos, durante el plazo de
+                        vigencia de este Contrato, así como durante los
+            <input type="text" onChange={timeAfterDeliveryFecha} />
                     </label>
-
                 </div>
                 <button
-                    onClick={() => { searchHoursTime(numberHoursRepairLima, numberHoursRepairProvincia, timeAfterDeliveryFechayHora) }}
+                    onClick={() => {
+                        searchHoursTime(
+                            numberHoursRepairLima,
+                            numberHoursRepairProvincia,
+                            timeAfterDeliveryFechayHora
+                        );
+                    }}
                 >
                     Siguiente
         </button>
+
+            </div>
+
+            <div className="row m-5">
+                <div className="m-3 d-flex flex-column bd-highlight">
+                    <p>13- Penalidades</p>
+                    <p>una penalidad
+                    ascendente a uno por ciento (1%) del valor del Contrato por cada día de atraso</p>
+
+                    <h1>ESCOGE CLAUSULA</h1>
+                    <div className="m-3" onChange={optionClausesThirteenth}>
+                        <input className="m-3 radio" type="radio" value="true" name="gender" />
+                        13.2 wawawa <br />
+                        <input className="m-3 radio" type="radio" value="false" name="gender" />
+                        2.3 wiwiwiwiwiw
+          </div>
+                </div>
+                <button
+                    onClick={() => {
+                        searchoClauseThirteenth(optionClauseThirteenth);
+                    }}
+                >
+                    Siguiente
+        </button>
+            </div>
+
+            <div className="row m-5">
+                <div className="m-3 d-flex flex-column bd-highlight">
+                    <p>14- Garantias</p>
+
+                    <h1>ESCOGE CLAUSULA</h1>
+                    <div className="m-3" onChange={optionClausesFourteenth}>
+                        <input className="m-3 radio" type="radio" value="true" name="gender" />
+                        14.2 clasura14 <br />
+                        <input className="m-3 radio" type="radio" value="false" name="gender" />
+                        14.2  vacio
+          </div>
+                    <label htmlFor="">
+                        14.1.2 Póliza de Responsabilidad Civil Extracontractual por un monto no menor a US$
+            <input type="text" onChange={moneyPoliza} />
+                    </label>
+                </div>
+                <button
+                    onClick={() => {
+                        searchClauseFourteenth(optionClauseFourteenth, moneysPoliza);
+                    }}
+                >
+                    Siguiente
+        </button>
+            </div>
+
+            <div className="row m-5">
+                <div className="m-3 d-flex flex-column bd-highlight">
+                    <p>15- Caso Fortuito</p>
+                    <label htmlFor="">
+                        cualquiera de las Partes podrá dar por
+                resuelto el Contrato mediante comunicación cursada con
+            <input type="text" onChange={timeDays} />
+                    </label>
+                </div>
+                <button
+                    onClick={() => {
+                        searchTimeDayFifteenth(timeDay);
+                    }}
+                >
+                    Siguiente
+        </button>
+            </div>
+
+            <div className="row m-5">
+                <div className="m-3 d-flex flex-column bd-highlight">
+                    <p>16- Subcontratacion y cesion</p>
+
+                    <h1>ESCOGE CLAUSULA</h1>
+                    <div className="m-3" onChange={optionClauseSixteenth}>
+                        <input className="m-3 radio" type="radio" value="true" name="gender" />
+                        16.1 clasuraASixteenth <br />
+                        <input className="m-3 radio" type="radio" value="false" name="gender" />
+                        16.1 clasuraBSixteenth
+          </div>
+                    <p>si escoges clauseB completar campo</p>
+                    <label htmlFor="">
+                        salvo el
+                      servicio de
+            <input type="text" placeholder="servicio" onChange={clauseServicio} />
+                        <input type="text" placeholder="nombre" onChange={clauseName} />
+                        <input type="text" placeholder="ruc" onChange={clauseRuc} />
+                    </label>
+
+
+                </div>
+                <button
+                    onClick={() => {
+                        searchClauseSixteenth(optionClausesSixteenth, name, ruc, servicio);
+                    }}
+                >
+                    Siguiente
+        </button>
+            </div>
+
+            <div className="row m-5">
+                <div className="m-3 d-flex flex-column bd-highlight">
+                    <p>20- Regulacion Anticorrupcion</p>
+
+                    <h1>ESCOGE CLAUSULA</h1>
+                    <div className="m-3" onChange={optionClauseTwentieth}>
+                        <input className="m-3 radio" type="radio" value="clausulaA" name="gender" />
+                        16.1 clasuraATwentient <br />
+                        <input className="m-3 radio" type="radio" value="clausulaB" name="gender" />
+                        16.1 clasurabTwentient <br />
+                        <input className="m-3 radio" type="radio" value="clausulaC" name="gender" />
+                        16.1 clasuraCTwentient <br />
+                    </div>
+                    <p>FALTA UN PARAMETRO PARA UNA CLAUSULA revisar como llamarlo</p>
+                    <button onClick={() => { searchClauseTwentienth(optionClausesTwentieth); }}>
+                        Siguiente
+                     </button>
+                </div>
             </div>
         </div>
     );
