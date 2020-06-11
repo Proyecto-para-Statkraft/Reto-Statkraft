@@ -1,0 +1,52 @@
+.view-contract {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.view-contract .row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.view-contract .row .section-question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+}
+
+.view-contract .row .section-question .clause-question {
+  background: gray;
+}
+
+.view-contract .row .section-create-contract {
+  width: 30%;
+  background: yellow;
+}
+
+.view-contract .row .section-create-contract div {
+  width: 90%;
+  height: 500px;
+  background: yellowgreen;
+  overflow: scroll;
+}
+
+.view-contract .row .hide {
+  display: none;
+}
+
+.view-contract .row .show {
+  visibility: visible;
+}
+/*# sourceMappingURL=makecontract.css.map */

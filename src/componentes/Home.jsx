@@ -1,15 +1,14 @@
 import React from "react";
 import Header from "./Header";
 import { Link } from 'react-router-dom';
-import './style/home.css'
+import '../style/home.css'
 
 const Home = () => {
     return (
-
-        <div>
+        <div className="view-home">
             <Header />
-            <div className="m-5 d-flex justify-content-center ">
-                <div className="borde col-sm-5">
+            <div className="m-5 d-flex justify-content-center banner-contract">
+                <div className="borde col-sm-5 banner-text">
                     <div className="text-center">
                         <h3 className="m-5">Empieza a crear tu contrato</h3>
                     </div>
@@ -18,10 +17,10 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div>
+            <div className="section-types-contracts">
                 <p className="text-center contract-subtitle">Conoce nuestros 6 tipos de contratos</p>
-                <div className="m-3 d-flex justify-content-center ">
-                    <div className="card-deck">
+                <div className="m-3 d-flex justify-content-center cards-type-contracts">
+                    <div className="card-deck justify-content-center">
                         <div className="borde card style">
                             <img src="https://img.icons8.com/ios/100/000000/ground-transportation.png" className="card-img-top" alt="..." />
                             <div className="card-body text-center">

@@ -36,4 +36,5 @@ const Routes = () => {
     </HashRouter>
   );
 };
+
 export default Routes;
