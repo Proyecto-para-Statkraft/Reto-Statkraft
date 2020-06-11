@@ -11,6 +11,10 @@ import Sixth from './BuyAndSell/Sixth';
 import Tenth from './BuyAndSell/Tenth';
 import Eleventh from './BuyAndSell/Eleventh';
 import Twelfth from './BuyAndSell/Twelfth';
+import Thirteenth from './BuyAndSell/Thirteenth';
+import Fourteenth from './BuyAndSell/Fourteenth';
+import Fifteenth from './BuyAndSell/Fifteenth';
+import Sixteenth from './BuyAndSell/Sixteenth';
 
 const MakeContract = () => {
 
@@ -65,6 +69,27 @@ const MakeContract = () => {
         setSectionTwelfth({ numberHoursRepairLima, numberHoursRepairProvincia, timeAfterDeliveryFechayHora })
     }
 
+    const [sectionThirteenth, setSectionThirteenth] = useState('');
+    const searchoClauseThirteenth = (numberHoursRepairLima, numberHoursRepairProvincia, timeAfterDeliveryFechayHora) => {
+        setSectionThirteenth({ numberHoursRepairLima, numberHoursRepairProvincia, timeAfterDeliveryFechayHora })
+    }
+
+    const [sectionFourteenth, setSectionFourteenth] = useState('');
+    const searchClauseFourteenth = (optionClauseFourteenth, moneysPoliza) => {
+        setSectionFourteenth({ optionClauseFourteenth, moneysPoliza })
+    }
+
+    const [sectionFifteenth, setSectionFifteenth] = useState('');
+    const searchTimeDayFifteenth = (timeDay) => {
+        setSectionFifteenth({ timeDay })
+    }
+
+    const [sectionSixteenth, setSectionSixteenth] = useState('');
+
+    const searchClauseSixteenth = (optionClausesSixteenth, name, ruc, servicio) => {
+        setSectionSixteenth({ optionClausesSixteenth, name, ruc, servicio })
+    }
+
     return (
         <div className="">
             <Header />
@@ -74,7 +99,9 @@ const MakeContract = () => {
                         <ContractData search={searchData} searchDataAntecedentes={searchAntecedente} searchSellOption={searchObjeto}
                             searchPrice={searchPrice} searchPaymentMethod={searchPaymentMethod} searchTermPay={searchTermPay}
                             searchSite={searchSite} searchAnexoTench={searchAnexoTench} searchRepresentative={searchRepresentative}
-                            searchHoursTime={searchHoursTime}
+                            searchHoursTime={searchHoursTime} searchoClauseThirteenth={searchoClauseThirteenth}
+                            searchClauseFourteenth={searchClauseFourteenth} searchTimeDayFifteenth={searchTimeDayFifteenth}
+                            searchClauseSixteenth={searchClauseSixteenth}
                         />
                     </section>
                     <section className="col-sm-12 col-md-6 bg-secondary">
@@ -88,6 +115,11 @@ const MakeContract = () => {
                         <Tenth data={data} Tenth={sectionTenth} />
                         <Eleventh data={data} Eleventh={sectionEleventh} />
                         <Twelfth data={data} Twelfth={sectionTwelfth} />
+                        <Thirteenth data={data} Thirteenth={sectionThirteenth} />
+                        <Fourteenth data={data} Fourteenth={sectionFourteenth} />
+                        <Fifteenth Fifteenth={sectionFifteenth} />
+                        <Sixteenth data={data} Sixteenth={sectionSixteenth} />
+
                     </section>
                 </div>
             </div>
