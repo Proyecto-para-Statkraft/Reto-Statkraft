@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 const ContractData = ({ search, searchDataAntecedentes, searchSellOption, searchPrice,
-    searchPaymentMethod, searchTermPay, searchSite }) => {
+    searchPaymentMethod, searchTermPay, searchSite, searchAnexoTench, searchRepresentative,
+    searchHoursTime }) => {
 
     const [companyData, setCompanyData] = useState({});
     const [providerData, setProviderData] = useState({});
@@ -163,6 +164,37 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
         setDeliveryPlace(e.target.value);
     };
 
+    const [numberAnexoTenth, setNumberAnexoTent] = useState("");
+    const numAnexoTenth = e => {
+        setNumberAnexoTent(e.target.value);
+    };
+
+
+    const [representativeCompany, setRepresentativeCompany] = useState("");
+    const companyRepresentative = e => {
+        setRepresentativeCompany(e.target.value);
+    };
+
+
+    const [representativeSupplier, setRepresentativeSupplier] = useState("");
+    const supplierRepresentative = e => {
+        setRepresentativeSupplier(e.target.value);
+    };
+
+    const [numberHoursRepairLima, setNumberHoursRepairLima] = useState("");
+    const numberHoursRepairLim = e => {
+        setNumberHoursRepairLima(e.target.value);
+    };
+
+    const [numberHoursRepairProvincia, setNumberHoursRepairProvincia] = useState("");
+    const numberHoursRepairProv = e => {
+        setNumberHoursRepairProvincia(e.target.value);
+    };
+
+    const [timeAfterDeliveryFechayHora, settimeAfterDeliveryFechayHora] = useState("");
+    const timeAfterDeliveryFecha = e => {
+        settimeAfterDeliveryFechayHora(e.target.value);
+    };
 
     return (
         <div>
@@ -407,10 +439,71 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
         </button>
             </div>
 
+            <div className="row m-5">
+                <div className="m-3 d-flex flex-column bd-highlight">
+                    <p>10- Liquidacion del Contrato</p>
 
+                    <label htmlFor="">
+                        numero de anexo
+                        <input type="text" onChange={numAnexoTenth} />
+                    </label>
 
+                </div>
+                <button
+                    onClick={() => { searchAnexoTench(numberAnexoTenth); }}
+                >
+                    Siguiente
+        </button>
+            </div>
 
+            <div className="row m-5">
+                <div className="m-3 d-flex flex-column bd-highlight">
+                    <p>11- Representantes </p>
 
+                    <label htmlFor="">
+                        Representante Compañia
+                        <input type="text" onChange={companyRepresentative} />
+                    </label>
+                    <label htmlFor="">
+                        Representante Proveedor
+                        <input type="text" onChange={supplierRepresentative} />
+                    </label>
+
+                </div>
+                <button
+                    onClick={() => { searchRepresentative(representativeCompany, representativeSupplier); }}
+                >
+                    Siguiente
+        </button>
+            </div>
+
+            <div className="row m-5">
+                <div className="m-3 d-flex flex-column bd-highlight">
+                    <p>12- Exclusion de daño Existentess </p>
+
+                    <label htmlFor="">
+                        Será responsable de reparar cualquier
+              error en el funcionamiento de los Bienes en un plazo no mayor
+                        <input type="text" onChange={numberHoursRepairLim} />
+                    </label>
+                    <label htmlFor="">
+                        horas para Lima y a
+                        <input type="text" onChange={numberHoursRepairProv} />
+                    </label>
+
+                    <label htmlFor="">
+                        aun cuando no sea el fabricante de los mismos, durante el plazo de vigencia de
+              este Contrato, así como durante los
+                        <input type="text" onChange={timeAfterDeliveryFecha} />
+                    </label>
+
+                </div>
+                <button
+                    onClick={() => { searchHoursTime(numberHoursRepairLima, numberHoursRepairProvincia, timeAfterDeliveryFechayHora) }}
+                >
+                    Siguiente
+        </button>
+            </div>
         </div>
     );
 };

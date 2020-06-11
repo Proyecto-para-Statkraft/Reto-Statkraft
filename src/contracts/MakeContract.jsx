@@ -8,6 +8,9 @@ import Third from './BuyAndSell/Third'
 import Quarter from './BuyAndSell/Quarter';
 import Fifth from './BuyAndSell/Fifth';
 import Sixth from './BuyAndSell/Sixth';
+import Tenth from './BuyAndSell/Tenth';
+import Eleventh from './BuyAndSell/Eleventh';
+import Twelfth from './BuyAndSell/Twelfth';
 
 
 // function exportHTML(){
@@ -65,6 +68,20 @@ const MakeContract = () => {
         setSectionSixth({ deadlineDay })
     }
 
+    const [sectionTenth, setSectionTenth] = useState('');
+    const searchAnexoTench = (deadlineDay) => {
+        setSectionTenth({ deadlineDay })
+    }
+
+    const [sectionEleventh, setSectionEleventh] = useState('');
+    const searchRepresentative = (representativeCompany, representativeSupplier) => {
+        setSectionEleventh({ representativeCompany, representativeSupplier })
+    }
+
+    const [sectionTwelfth, setSectionTwelfth] = useState('');
+    const searchHoursTime = (numberHoursRepairLima, numberHoursRepairProvincia, timeAfterDeliveryFechayHora) => {
+        setSectionTwelfth({ numberHoursRepairLima, numberHoursRepairProvincia, timeAfterDeliveryFechayHora })
+    }
 
     return (
         <div id="source-html" className="">
@@ -74,11 +91,11 @@ const MakeContract = () => {
                     <section className="col-sm-12 col-md-6">
                         <ContractData search={searchData} searchDataAntecedentes={searchAntecedente} searchSellOption={searchObjeto}
                             searchPrice={searchPrice} searchPaymentMethod={searchPaymentMethod} searchTermPay={searchTermPay}
-                            searchSite={searchSite}
-
+                            searchSite={searchSite} searchAnexoTench={searchAnexoTench} searchRepresentative={searchRepresentative}
+                            searchHoursTime={searchHoursTime}
                         />
                     </section>
-                    <section className="col-sm-12 col-md-6">
+                    <section className="col-sm-12 col-md-6 bg-secondary">
                         <Introduction data={data} />
                         <First data={data} First={antecedente} />
                         <Second data={data} Second={sectionSecond} />
@@ -86,7 +103,9 @@ const MakeContract = () => {
                         <Quarter data={data} Quarter={sectionQuarter} />
                         <Fifth data={data} Fifth={sectionFifth} />
                         <Sixth data={data} Sixth={sectionSixth} />
-
+                        <Tenth data={data} Tenth={sectionTenth} />
+                        <Eleventh data={data} Eleventh={sectionEleventh} />
+                        <Twelfth data={data} Twelfth={sectionTwelfth} />
                     </section>
                 </div>
             </div>
