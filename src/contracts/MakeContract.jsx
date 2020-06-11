@@ -8,7 +8,6 @@ import Third from './BuyAndSell/Third'
 import Quarter from './BuyAndSell/Quarter';
 import Fifth from './BuyAndSell/Fifth';
 import Sixth from './BuyAndSell/Sixth';
-import Tenth from './BuyAndSell/Tenth';
 import Eleventh from './BuyAndSell/Eleventh';
 import Twelfth from './BuyAndSell/Twelfth';
 import Thirteenth from './BuyAndSell/Thirteenth';
@@ -135,7 +134,6 @@ const MakeContract = () => {
                         <Quarter data={data} Quarter={sectionQuarter} />
                         <Fifth data={data} Fifth={sectionFifth} />
                         <Sixth data={data} Sixth={sectionSixth} />
-                        <Tenth data={data} Tenth={sectionTenth} />
                         <Eleventh data={data} Eleventh={sectionEleventh} />
                         <Twelfth data={data} Twelfth={sectionTwelfth} />
                         <Thirteenth data={data} Thirteenth={sectionThirteenth} />

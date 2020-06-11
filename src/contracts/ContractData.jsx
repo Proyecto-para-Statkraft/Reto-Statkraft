@@ -102,9 +102,6 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
     const [deliveryPlace, setDeliveryPlace] = useState("");
     const site = e => { setDeliveryPlace(e.target.value) };
 
-    const [numberAnexoTenth, setNumberAnexoTent] = useState("");
-    const numAnexoTenth = e => { setNumberAnexoTent(e.target.value) };
-
     const [representativeCompany, setRepresentativeCompany] = useState("");
     const companyRepresentative = e => { setRepresentativeCompany(e.target.value) };
 
@@ -373,23 +370,6 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 <button
                     onClick={() => {
                         searchSite(deliveryPlace);
-                    }}
-                >
-                    Siguiente
-                </button>
-            </div>
-
-            <div className="row m-5">
-                <div className="m-3 d-flex flex-column bd-highlight">
-                    <p>10- Liquidacion del Contrato</p>
-                    <label htmlFor="">
-                        numero de anexo
-            <input type="text" onChange={numAnexoTenth} />
-                    </label>
-                </div>
-                <button
-                    onClick={() => {
-                        searchAnexoTench(numberAnexoTenth);
                     }}
                 >
                     Siguiente
