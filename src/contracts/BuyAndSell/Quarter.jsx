@@ -37,7 +37,7 @@ const Quarter = ({ data, Quarter }) => {
                         la facturación se considerará, a elección de STATKRAFT, el pago en dicha moneda en
                         moneda nacional, Nuevo Sol, al tipo de cambio compra que tenga vigente la SBS para
                         esa fecha.
-        </p>
+                    </p>
                 }
                 <p>
                     Tratándose de pagos con títulos valores, las Partes acuerdan que la sola entrega del

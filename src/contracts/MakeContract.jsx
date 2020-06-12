@@ -9,7 +9,6 @@ import Third from './BuyAndSell/Third'
 import Quarter from './BuyAndSell/Quarter';
 import Fifth from './BuyAndSell/Fifth';
 import Sixth from './BuyAndSell/Sixth';
-import Tenth from './BuyAndSell/Tenth';
 import Eleventh from './BuyAndSell/Eleventh';
 import Twelfth from './BuyAndSell/Twelfth';
 import Thirteenth from './BuyAndSell/Thirteenth';
@@ -19,16 +18,18 @@ import Sixteenth from './BuyAndSell/Sixteenth';
 import Twentieth from './BuyAndSell/Twentieth';
 
 
-const MakeContract = () => {
+const MakeContract = (data) => {
 
-    const [data, setData] = useState('')
+    const [provider, setProvider] = useState('')
+    const searchProvider = (providerData) => {
+        setProvider({ providerData })
+    }
+
     const [antecedente, setAntecedente] = useState('');
     const [sectionSecond, setSectionSecond] = useState('');
     const [sectionThird, setSectionThird] = useState('');
 
-    const searchData = (companyData, providerData) => {
-        setData({ companyData, providerData });
-    }
+
 
     const searchAntecedente = (product) => {
         setAntecedente({ product })
@@ -73,8 +74,10 @@ const MakeContract = () => {
     }
 
     const [sectionThirteenth, setSectionThirteenth] = useState('');
-    const searchoClauseThirteenth = (numberHoursRepairLima, numberHoursRepairProvincia, timeAfterDeliveryFechayHora) => {
-        setSectionThirteenth({ numberHoursRepairLima, numberHoursRepairProvincia, timeAfterDeliveryFechayHora })
+    const searchoClauseThirteenth = (optionClauseThirteenth) => {
+        console.log(optionClauseThirteenth)
+        setSectionThirteenth({ optionClauseThirteenth })
+        
     }
 
     const [sectionFourteenth, setSectionFourteenth] = useState('');
@@ -117,7 +120,7 @@ const MakeContract = () => {
             <Header />
             <div className="generator-contract">
                 <section className="section-question">
-                    <ContractData search={searchData} searchDataAntecedentes={searchAntecedente} searchSellOption={searchObjeto}
+                    <ContractData search={searchProvider} searchDataAntecedentes={searchAntecedente} searchSellOption={searchObjeto}
                         searchPrice={searchPrice} searchPaymentMethod={searchPaymentMethod} searchTermPay={searchTermPay}
                         searchSite={searchSite} searchAnexoTench={searchAnexoTench} searchRepresentative={searchRepresentative}
                         searchHoursTime={searchHoursTime} searchoClauseThirteenth={searchoClauseThirteenth}
@@ -126,14 +129,13 @@ const MakeContract = () => {
                     />
                 </section>
                 <section className="section-contract">
-                    <Introduction data={data} />
+                    <Introduction  data={data} provider={provider} />
                     <First data={data} First={antecedente} />
                     <Second data={data} Second={sectionSecond} />
                     <Third data={data} Third={sectionThird} />
                     <Quarter data={data} Quarter={sectionQuarter} />
                     <Fifth data={data} Fifth={sectionFifth} />
                     <Sixth data={data} Sixth={sectionSixth} />
-                    <Tenth data={data} Tenth={sectionTenth} />
                     <Eleventh data={data} Eleventh={sectionEleventh} />
                     <Twelfth data={data} Twelfth={sectionTwelfth} />
                     <Thirteenth data={data} Thirteenth={sectionThirteenth} />

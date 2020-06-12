@@ -8,21 +8,6 @@
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0;
-  /*  .generator-contract {
-        width: 100%;
-        display: flex;
-        padding-top: 50px;
-
-        .section-question {
-            display: flex;
-            background: red;
-            
-            .clause-question {
-                background: gray;
-            }
-
-
-        }*/
 }
 
 .view-contract .section-question .container-question {

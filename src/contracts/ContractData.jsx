@@ -12,7 +12,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
     const [questionFifth, setQuestionFifth] = useState(false);
     const [questionSixth, setQuestionSixth] = useState(false);
     const [questionSeventh, setQuestionSeventh] = useState(false);
-    const [questionEighth, setQuestionEighth] = useState(false);
+    const [questionEighth, setQuestionEighth] = useState(false);s
     const [questionNineth, setQuestionNineth] = useState(false);
     const [questionTenth, setQuestionTenth] = useState(false);
     const [questionEleventh, setQuestionEleventh] = useState(false);
@@ -30,29 +30,9 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
     const [questionTwentyThird, setQuestionTwentyThird] = useState(false);
 
 
-    const [companyData, setCompanyData] = useState({});
+
+
     const [providerData, setProviderData] = useState({});
-
-    const [nameCompanyData, setNameCompanyData] = useState("");
-    const nameCompany = e => { setNameCompanyData(e.target.value) };
-
-    const [rucCompanyData, setRucCompanyData] = useState("");
-    const rucCompany = e => { setRucCompanyData(e.target.value) };
-
-    const [addressCompanyData, setAddressCompanyData] = useState("");
-    const addressCompany = e => { setAddressCompanyData(e.target.value) };
-
-    const [representativesOneNameCompanyData, setRepresentativesOneNameCompanyData] = useState("");
-    const representativeOneNameCompany = e => { setRepresentativesOneNameCompanyData(e.target.value) };
-
-    const [representativesOneDniCompanyData, setRepresentativesOneDniCompanyData] = useState("");
-    const representativeOneDniCompany = e => { setRepresentativesOneDniCompanyData(e.target.value) };
-
-    const [representativesTwoNameCompanyData, setRepresentativesTwoNameCompanyData] = useState("");
-    const representativeTwoNameCompany = e => { setRepresentativesTwoNameCompanyData(e.target.value) };
-
-    const [representativesTwoDniCompanyData, setRepresentativesTwoDniCompanyData] = useState("");
-    const representativeTwoDniCompany = e => { setRepresentativesTwoDniCompanyData(e.target.value) };
 
     const [nameProviderData, setNameProviderData] = useState("");
     const nameProvider = e => { setNameProviderData(e.target.value) };
@@ -95,16 +75,6 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
 
     useEffect(() => {
         const data = () => {
-            setCompanyData({
-                name: nameCompanyData,
-                ruc: rucCompanyData,
-                address: addressCompanyData,
-                representativeOneName: representativesOneNameCompanyData,
-                representativeOneDni: representativesOneDniCompanyData,
-                representativeTwoName: representativesTwoNameCompanyData,
-                representativeTwoDni: representativesTwoDniCompanyData
-            });
-
             setProviderData({
                 name: nameProviderData,
                 ruc: rucProviderData,
@@ -115,11 +85,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
             });
         };
         data();
-    }, [addressCompanyData, addressProviderData, nameCompanyData, nameProviderData,
-        representativesDniProviderData, representativesNameProviderData, representativesNumberRegistryProviderData,
-        representativesOneDniCompanyData, representativesOneNameCompanyData, representativesTwoDniCompanyData,
-        representativesTwoNameCompanyData, rucCompanyData, rucProviderData
-    ]);
+    }, [addressProviderData, nameProviderData, representativesDniProviderData, representativesNameProviderData, representativesNumberRegistryProviderData, rucProviderData]);
 
 
     const [typeMoneys, setTypeMoneys] = useState("");
@@ -130,9 +96,6 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
 
     const [deliveryPlace, setDeliveryPlace] = useState("");
     const site = e => { setDeliveryPlace(e.target.value) };
-
-    const [numberAnexoTenth, setNumberAnexoTent] = useState("");
-    const numAnexoTenth = e => { setNumberAnexoTent(e.target.value) };
 
     const [representativeCompany, setRepresentativeCompany] = useState("");
     const companyRepresentative = e => { setRepresentativeCompany(e.target.value) };
@@ -180,46 +143,17 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
         <div id="contract-data">
             {
                 (questionIntro) &&
-                <div className=" flex-column clause-question question-intro">
-                    <div className="flex-column bd-highlight center container-question">
-                        <p className="text-center font-weight-bold">Datos de la Empresa</p>
+                <div className="row m-5 clause-question question-intro">
+                    <div className="m-3 d-flex flex-column bd-highlight">
+                        <p>Datos de la empresa con la que estás contratando</p>
                         <label htmlFor="">
-                            Nombre de la empresa:
+                            Nombre de la empresa <input
+                                type="text"
+                                onChange={nameProvider} />
                         </label>
-                        <input type="text" onChange={nameCompany} />
                         <label htmlFor="">
-                            RUC 
+                            RUC <input type="text" onChange={rucProvider} />
                         </label>
-                        <input type="text" onChange={rucCompany} />
-                        <label htmlFor="">
-                            Dirección 
-                        </label>
-                        <input type="text" onChange={addressCompany} />
-                        <p></p>
-                        <p className="text-center">¿Por quién o quiénes está representada la empresa?</p>
-                        <p className="font-weight-bold">Representante N°1</p>
-                        <label htmlFor="">
-                            Nombre Completo
-                        </label>
-                        <input type="text" placeholder="Ej: Juan Antonio Rozas Mory"
-                                onChange={representativeOneNameCompany} />
-                        <label htmlFor="">
-                            DNI
-                        </label>
-                        <input type="text" placeholder="Ej: 07867123" onChange={representativeOneDniCompany} />
-                        <p className="font-weight-bold">Representante N°2</p>
-                        <label htmlFor="">
-                            Nombre Completo
-                        </label>
-                        <input type="text" placeholder="Ej: Álvaro Antonio Porturas Ingunza" onChange={representativeTwoNameCompany} />
-                        <label htmlFor="">
-                            DNI
-                        </label>
-                        <input type="text" placeholder="Ej: 09340737" onChange={representativeTwoDniCompany} />
-                    </div>
-                    <div className="flex-column bd-highlight center container-question">
-                        <br /><br />
-                        <p className="text-center font-weight-bold">Datos de la empresa proveedora</p>
                         <label htmlFor="">
                             Nombre de la empresa
                         </label>
@@ -250,7 +184,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     <div className="button-continue">
                     <button
                         onClick={() => {
-                            search(companyData, providerData);
+                            search(providerData);
                             setQuestionIntro(false);
                             setQuestionFirst(true);
                         }}
@@ -290,13 +224,10 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 (questionSecond) &&
                 <div className="row m-5 clause-question" id="question-2">
                     <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>2-Objeto</p>
+                        <p>2. Objeto</p>
                         <label htmlFor="">
-                            Por el Contrato, el <span>PROVEEDOR</span> vende a{" "}
-                            <span>EMPRESA</span> el conjunto de bienes que se mencionan en el
-                       Anexo N° 2(en adelante, el conjunto, los “Bienes”), libres de carga
-                       y gravámenes, los cuales serán destinados a <br />
-                            <textarea type="text" onChange={sell} />{" "}
+                            Los bienes adquiridos se van a usar en:
+                            <textarea type="text" onChange={sell} />
                         </label>
                     </div>
                     <button
@@ -316,8 +247,12 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 (questionThird) &&
                 <div className="row m-5 clause-question" id="question-3">
                     <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>3- Precio</p>
-                        <textarea type="text" placeholder="Ejm: US$ 67,274.36 (Sesenta y Siete Mil Doscientos Setenta y Cuatro con 36/100 Dólares de los Estados Unidos de América) " onChange={money} />
+                        <p>3. Precio</p>
+                        <label htmlFor="">
+                            El precio a pagar por los bienes adquiridos es :
+                            <textarea type="text" placeholder="Ejm: US$ 67,274.36 (Sesenta y Siete Mil Doscientos Setenta y Cuatro con 36/100 Dólares de los Estados Unidos de América) " onChange={money} />
+                        </label>
+                        
                     </div>
                     <button
                         onClick={() => {
@@ -338,13 +273,14 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         <p>4. Formas y Condiciones de pago</p>
                         <div className="m-3" onChange={TypeMoney}>
                             <p>La moneda pactada para el precio es : </p>
-                            <input className="m-3 radio" type="radio" value="dolares" name="gender" />Dolares <br />
-                            <input className="m-3 radio" type="radio" value="soles" name="gender" />Soles
+                            <input className="m-3 radio" type="radio" value="soles" name="gender" />Nuevos Soles <br />
+                            <input className="m-3 radio" type="radio" value="dolares" name="gender" />Dólares de los Estados Unidos de América                
                     </div>
                     </div>
                     <button
                         onClick={() => {
                             searchPaymentMethod(typeMoneys);
+                            
                             setQuestionFifth(true);
                             setQuestionQuarter(false);
                         }}
@@ -400,43 +336,25 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 </div>
             }
             {
-                (questionQuarter) &&
-                <div className="row m-5">
-                    <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>10- Liquidacion del Contrato</p>
-                        <label htmlFor="">
-                            numero de anexo
-                            <input type="text" onChange={numAnexoTenth} />
-                        </label>
-                    </div>
-                    <button
-                        onClick={() => {
-                            searchAnexoTench(numberAnexoTenth);
-                        }}
-                        class="btn btn-info center"
-                    >
-                        Siguiente
-                </button>
-                </div>
-            }
-            {
-                (questionQuarter) &&
+                (questionSeventh) &&
                 <div className="row m-5 clause-question" id="question-6">
                     <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>11- Representantes </p>
-
+                        <p>7. Administradores del Contrato </p>
+                        <p>Los administradores del Contrato son:</p>
                         <label htmlFor="">
-                            Representante Compañia
-            <input type="text" onChange={companyRepresentative} />
+                        De Statkraft
+                            <input type="text" onChange={companyRepresentative} />
                         </label>
                         <label htmlFor="">
-                            Representante Proveedor
-            <input type="text" onChange={supplierRepresentative} />
+                        De la empresa contratada
+                            <input type="text" onChange={supplierRepresentative} />
                         </label>
                     </div>
                     <button
                         onClick={() => {
                             searchRepresentative(representativeCompany, representativeSupplier);
+                            setQuestionEighth(true);
+                            setQuestionSeventh(false);
                         }}
                         class="btn btn-info center"
                     >
@@ -445,25 +363,22 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 </div>
             }
             {
-                (questionQuarter) &&
+                (questionEighth) &&
                 <div className="row m-5">
                     <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>12- Exclusion de daño Existentess </p>
-
+                        <p>8. Exclusión de daños indirectos y responsabilidad</p>
+                        <p>En caso de mal funcionamiento de los bienes adquiridos, el Proveedor deberá repararlos en un plazo no mayor a:</p>
                         <label htmlFor="">
-                            Será responsable de reparar cualquier error en el funcionamiento de
-                            los Bienes en un plazo no mayor
-            <input type="text" onChange={numberHoursRepairLim} />
+                        Horas para Lima
+                            <input type="text" onChange={numberHoursRepairLim} />
                         </label>
                         <label htmlFor="">
-                            horas para Lima y a
-            <input type="text" onChange={numberHoursRepairProv} />
+                        Horas para Provincia
+                            <input type="text" onChange={numberHoursRepairProv} />
                         </label>
-
                         <label htmlFor="">
-                            aun cuando no sea el fabricante de los mismos, durante el plazo de
-                            vigencia de este Contrato, así como durante los
-                    <input type="text" onChange={timeAfterDeliveryFecha} />
+                        El plazo de garantía de los bienes es de:
+                        <input type="text" onChange={timeAfterDeliveryFecha} />
                         </label>
                     </div>
                     <button
@@ -473,6 +388,8 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                                 numberHoursRepairProvincia,
                                 timeAfterDeliveryFechayHora
                             );
+                            setQuestionNineth(true);
+                            setQuestionEighth(false);
                         }}
                         class="btn btn-info center"
                     >
@@ -481,48 +398,52 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 </div>
             }
             {
-                (questionQuarter) &&
+                (questionNineth) &&
                 <div className="row m-5">
                     <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>13- Penalidades</p>
-                        <p>una penalidad
-                    ascendente a uno por ciento (1%) del valor del Contrato por cada día de atraso</p>
-
-                        <h1>ESCOGE CLAUSULA</h1>
-                        <div className="m-3" onChange={optionClausesThirteenth}>
-                            <input className="m-3 radio" type="radio" value="true" name="gender" />
-                        13.2 wawawa <br />
-                            <input className="m-3 radio" type="radio" value="false" name="gender" />
-                        2.3 wiwiwiwiwiw
-                </div>
+                        <p>9. Penalidades</p>
+                        <p>El nivel de riesgo de seguridad es:</p>
+                        <div className="m-3" onChange={optionClausesThirteenth}> 
+                            <label htmlFor="">
+                                Bajo 13.2 (opcion1)
+                                <input className="m-3 radio" type="radio" value="bajo" name="gender" />
+                            </label>
+                            <label htmlFor="">
+                                Alto 13.2 (opcion2)
+                                 <input className="m-3 radio" type="radio" value="alto" name="gender" />
+                            </label>
+                        </div>
                     </div>
                     <button
                         onClick={() => {
                             searchoClauseThirteenth(optionClauseThirteenth);
+                            setQuestionNineth(false);
+                            setQuestionTenth(true);
                         }}
                         class="btn btn-info center"
                     >
                         Siguiente
-                </button>
+                    </button>
                 </div>
             }
             {
-                (questionQuarter) &&
+                (questionTenth) &&
                 <div className="row m-5">
                     <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>14- Garantias</p>
-
-                        <h1>ESCOGE CLAUSULA</h1>
+                        <p>10. Garantías</p>
+                        <p>¿Los bienes van a ser entregados en una de las centrales?</p>
                         <div className="m-3" onChange={optionClausesFourteenth}>
                             <input className="m-3 radio" type="radio" value="true" name="gender" />
-                        14.2 clasura14 <br />
+                            Si<br />
                             <input className="m-3 radio" type="radio" value="false" name="gender" />
-                        14.2  vacio
-          </div>
+                            No
+                        </div>
                         <label htmlFor="">
-                            14.1.2 Póliza de Responsabilidad Civil Extracontractual por un monto no menor a US$
-            <input type="text" onChange={moneyPoliza} />
+                        Si su respuesta anterior es Si, rellene este campo.El monto de la póliza de responsabilidad civil extra contractual es:
+                        <textarea name="" onChange={moneyPoliza}
+                        placeholder="Ejm: US$ 67,274.36 (Sesenta y Siete Mil Doscientos Setenta y Cuatro con 36/100 Dólares de los Estados Unidos de América) "></textarea>
                         </label>
+                        
                     </div>
                     <button
                         onClick={() => {
@@ -531,7 +452,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         class="btn btn-info center"
                     >
                         Siguiente
-        </button>
+                    </button>
                 </div>
             }
             {
@@ -542,7 +463,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         <label htmlFor="">
                             cualquiera de las Partes podrá dar por
                             resuelto el Contrato mediante comunicación cursada con
-            <input type="text" onChange={timeDays} />
+                            <input type="text" onChange={timeDays} />
                         </label>
                     </div>
                     <button
@@ -552,7 +473,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         class="btn btn-info center"
                     >
                         Siguiente
-        </button>
+                    </button>
                 </div>
             }
             {
@@ -564,15 +485,15 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         <h1>ESCOGE CLAUSULA</h1>
                         <div className="m-3" onChange={optionClauseSixteenth}>
                             <input className="m-3 radio" type="radio" value="true" name="gender" />
-                        16.1 clasuraASixteenth <br />
+                            16.1 clasuraASixteenth <br />
                             <input className="m-3 radio" type="radio" value="false" name="gender" />
-                        16.1 clasuraBSixteenth
+                            16.1 clasuraBSixteenth
                     </div>
                         <p>si escoges clauseB completar campo</p>
                         <label htmlFor="">
                             salvo el
                             servicio de
-            <input type="text" placeholder="servicio" onChange={clauseServicio} />
+                            <input type="text" placeholder="servicio" onChange={clauseServicio} />
                             <input type="text" placeholder="nombre" onChange={clauseName} />
                             <input type="text" placeholder="ruc" onChange={clauseRuc} />
                         </label>
@@ -598,11 +519,11 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         <h1>ESCOGE CLAUSULA</h1>
                         <div className="m-3" onChange={optionClauseTwentieth}>
                             <input className="m-3 radio" type="radio" value="clausulaA" name="gender" />
-                        16.1 clasuraATwentient <br />
+                            16.1 clasuraATwentient <br />
                             <input className="m-3 radio" type="radio" value="clausulaB" name="gender" />
-                        16.1 clasurabTwentient <br />
+                            16.1 clasurabTwentient <br />
                             <input className="m-3 radio" type="radio" value="clausulaC" name="gender" />
-                        16.1 clasuraCTwentient <br />
+                            16.1 clasuraCTwentient <br />
                         </div>
                         <p>FALTA UN PARAMETRO PARA UNA CLAUSULA revisar como llamarlo</p>
                         <button onClick={() => { searchClauseTwentienth(optionClausesTwentieth); }}  class="btn btn-info center">
@@ -616,3 +537,4 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
 };
 
 export default ContractData;
+
