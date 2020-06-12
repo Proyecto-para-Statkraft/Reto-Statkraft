@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import img from '../img/image14.png';
+import firebase from "../componentes/firebase.js";
 
 const ContractData = ({ search, searchDataAntecedentes, searchSellOption, searchPrice, searchPaymentMethod,
     searchTermPay, searchSite, searchRepresentative, searchHoursTime, searchoClauseThirteenth,
@@ -125,6 +126,25 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
     const [years, setYears] = useState("");
     const year = e => { setYears(e.target.value) };
 
+    const storageName = JSON.parse(localStorage.getItem('Usariocomprador'))
+
+    const storageTipo = JSON.parse(localStorage.getItem('Tipo'))
+    // const nameServices = storageName.nameServices;
+    // console.log('nombrede serveces', nameServices)
+    // const requieresServices = storageName.requieresServices
+
+
+    const onCreate = () => {
+        const db = firebase.firestore();
+        db.collection("resumenContrato").add({
+            tipo: storageTipo,
+            descripcion: inputRequieres,
+            monto: moneys,
+            plazo: timeAfterDeliveryFechayHora,
+            usuyser: storageName
+        })
+    };
+
     return (
         <div id="contract-data">
             {
@@ -166,7 +186,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                                 setQuestionIntro(false);
                                 setQuestionFirst(true);
                             }}
-                            class="btn btn-info"
+                            className="btn btn-info"
                         >
                             CONTINUAR
                     </button>
@@ -513,7 +533,6 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         <div className="col-sm-6"><button id="btn-export" className="btn btn-info">FINALIZAR</button></div>
                     </div>
                 </div>
-
             }
         </div >
     );

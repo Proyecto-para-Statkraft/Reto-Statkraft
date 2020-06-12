@@ -11,6 +11,15 @@ const Questions = (props) => {
         setGoods(e.target.value);
     };
 
+    const type = '';
+
+    // const [type, setType] = useState('');
+
+    // const typeContracts = [
+    //     type
+    // ];
+
+    // localStorage.setItem('Tipo', JSON.stringify(typeContracts));
 
     // console.log('contrato selecionado', props.location.selectedOption)
     // console.log('respuesta', goods)
@@ -31,6 +40,7 @@ const Questions = (props) => {
                                 to={{
                                     pathname: "/contractsgoods",
                                     goods,
+                                    props
                                 }}>Siguiente</Link>
                         </div>
                     </div>
@@ -63,14 +73,18 @@ const Questions = (props) => {
                     <br />
                     <div className="m-5 d-flex justify-content-around">
                         <Link className="col-sm-3 btn btn-outline-primary " to="/reviewcontracts">Anterior</Link>
-                        <Link className="col-sm-3  btn btn-primary " to="/optioncompany">Siguiente</Link>
+                        <Link className="btn btn-primary m-3 "
+                            to={{
+                                pathname: "/optioncompany",
+                                props
+                            }}>Siguiente</Link>
                     </div>
                 </div>
             </div >
         )
     }
     if (props.location.selectedOption === 'vigilancia') {
-
+        // setType('Intermediacion Laboral')
         return (
             <div>
                 <Header />
@@ -94,14 +108,17 @@ const Questions = (props) => {
                     <br />
                     <div className="m-5 d-flex justify-content-around">
                         <Link className="col-sm-3 btn btn-outline-primary " to="/reviewcontracts">Anterior</Link>
-                        <Link className="col-sm-3  btn btn-primary " to="/optioncompany">Siguiente</Link>
+                        <Link className="btn btn-primary m-3 "
+                            to={{
+                                pathname: "/optioncompany",
+                                props
+                            }}>Siguiente</Link>
                     </div>
                 </div>
             </div >
         )
     }
     if (props.location.selectedOption === 'alquiler') {
-
         return (
             <div>
                 <Header />
@@ -132,7 +149,7 @@ const Questions = (props) => {
         )
     }
     if (props.location.selectedOption === 'construccion') {
-
+        // setType('Obra')
         return (
             <div>
                 <Header />
@@ -156,14 +173,19 @@ const Questions = (props) => {
                     <br />
                     <div className="m-5 d-flex justify-content-around">
                         <Link className="col-sm-3 btn btn-outline-primary " to="/reviewcontracts">Anterior</Link>
-                        <Link className="col-sm-3  btn btn-primary " to="/optioncompany">Siguiente</Link>
+                        <Link className="btn btn-primary m-3 "
+                            to={{
+                                pathname: "/optioncompany",
+                                props
+                            }}>Siguiente</Link>
                     </div>
                 </div>
             </div >
         )
     }
+    // setType('Locación y Servicios')
     return (
-        <div>
+        < div >
             <Header />
             <div className="m-5">
                 <div className="m-5 col-sm-10">
@@ -185,7 +207,11 @@ const Questions = (props) => {
                 <br />
                 <div className="m-5 d-flex justify-content-around">
                     <Link className="col-sm-3 btn btn-outline-primary " to="/reviewcontracts">Anterior</Link>
-                    <Link className="col-sm-3  btn btn-primary " to="/optioncompany">Siguiente</Link>
+                    <Link className="btn btn-primary m-3 "
+                        to={{
+                            pathname: "/optioncompany",
+                            props
+                        }}>Siguiente</Link>
                 </div>
             </div>
         </div >

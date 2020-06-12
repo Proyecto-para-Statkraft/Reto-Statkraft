@@ -11,6 +11,11 @@ const Welcome = () => {
     const [requiresServices, setRequiresServices] = useState("");
     const RequiresService = e => { setRequiresServices(e.target.value) };
 
+    const usariocomprador = [
+        nameServices,
+        requiresServices
+    ];
+    localStorage.setItem('Usariocomprador', JSON.stringify(usariocomprador));
 
     return (
         <div>
@@ -32,8 +37,7 @@ const Welcome = () => {
                     <Link className="btn btn-primary m-3 "
                         to={{
                             pathname: "/chooseContract",
-                            nameServices,
-                            requiresServices
+                            usariocomprador
                         }}>Siguiente</Link>
                 </div>
             </div>

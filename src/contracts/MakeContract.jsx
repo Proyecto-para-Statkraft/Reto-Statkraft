@@ -19,7 +19,9 @@ import Twentieth from './BuyAndSell/Twentieth';
 import Firms from './BuyAndSell/Firms';
 
 
-const MakeContract = (data) => {
+const MakeContract = (data, props) => {
+
+    console.log('nombre usuario', props)
 
     const [provider, setProvider] = useState('')
     const searchProvider = (providerData) => {
@@ -100,14 +102,14 @@ const MakeContract = (data) => {
         setSectionTwentyThird({ days, months, years })
     }
 
-    function exportHTML(){
-        var header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' "+
-             "xmlns:w='urn:schemas-microsoft-com:office:word' "+
-             "xmlns='http://www.w3.org/TR/REC-html40'>"+
-             "<head><meta charset='utf-8'><title>Export HTML to Word Document with JavaScript</title></head><body>";
+    function exportHTML() {
+        var header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' " +
+            "xmlns:w='urn:schemas-microsoft-com:office:word' " +
+            "xmlns='http://www.w3.org/TR/REC-html40'>" +
+            "<head><meta charset='utf-8'><title>Export HTML to Word Document with JavaScript</title></head><body>";
         var footer = "</body></html>";
-        var sourceHTML = header+document.getElementById("source-html").innerHTML+footer;
-        
+        var sourceHTML = header + document.getElementById("source-html").innerHTML + footer;
+
         var source = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(sourceHTML);
         var fileDownload = document.createElement("a");
         document.body.appendChild(fileDownload);
@@ -115,29 +117,31 @@ const MakeContract = (data) => {
         fileDownload.download = 'document.doc';
         fileDownload.click();
         document.body.removeChild(fileDownload);
-      }
+    }
+
+
 
     return (
 
-        <div  className="view-contract">
+        <div className="view-contract">
             <Header />
             <div className="container-view-contract">
                 <div className="row generator-contract">
-                    <div  className="section-question "> 
+                    <div className="section-question ">
                         <section>
                             <div className="row">
-                                    <ContractData search={searchProvider} searchDataAntecedentes={searchAntecedente} searchSellOption={searchObjeto}
+                                <ContractData search={searchProvider} searchDataAntecedentes={searchAntecedente} searchSellOption={searchObjeto}
                                     searchPrice={searchPrice} searchPaymentMethod={searchPaymentMethod} searchTermPay={searchTermPay}
                                     searchSite={searchSite} searchRepresentative={searchRepresentative}
                                     searchHoursTime={searchHoursTime} searchoClauseThirteenth={searchoClauseThirteenth}
                                     searchClauseFourteenth={searchClauseFourteenth} searchTimeDayFifteenth={searchTimeDayFifteenth}
                                     searchClauseSixteenth={searchClauseSixteenth} searchClauseTwentienth={searchClauseTwentieth}
                                     searchDate={searchDate} generateWord={exportHTML}
-                                />               
+                                />
                             </div>
                         </section>
                     </div>
-                
+
                     <section id="source-html" className="section-contract">
                         <Introduction data={data} provider={provider} />
                         <First data={data} First={antecedente} />
