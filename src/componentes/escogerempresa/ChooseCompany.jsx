@@ -8,7 +8,7 @@ const OptionCompany = (props) => {
     const optionEmpresa = e => {
         setSelectedOption(e.target.value);
     };
-    // console.log(selectedOption)
+    
     return (
 
         <div>

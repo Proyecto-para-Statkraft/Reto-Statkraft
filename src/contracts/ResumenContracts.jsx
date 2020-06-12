@@ -1,13 +1,16 @@
 import React from 'react';
 
-const ResumenContracts = ({ data }) => {
+const ResumenContracts = ({ data, index }) => {
 
-    const { id, tipo, descripcion, monto, plazo, usuyser } = data;
+    const { tipo, descripcion, monto, plazo, usuyser } = data;
+
+    console.log(index);
+    console.log(typeof index);
 
 
     return (
         <tr className="border border-info">
-            <td>{id}</td>
+            <td>{index + 1}</td>
             <td>{tipo}</td>
             <td>{descripcion}</td>
             <td>{monto}</td>

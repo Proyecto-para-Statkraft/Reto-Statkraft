@@ -15,6 +15,7 @@ const Welcome = () => {
         nameServices,
         requiresServices
     ];
+
     localStorage.setItem('Usariocomprador', JSON.stringify(usariocomprador));
 
     return (
@@ -40,7 +41,6 @@ const Welcome = () => {
                                     requiresServices
                                 }}>Continuar</Link>
                         </div>
-
                     </div>
                 </div>
             </div>

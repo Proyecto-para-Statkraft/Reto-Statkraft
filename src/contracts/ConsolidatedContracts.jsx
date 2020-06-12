@@ -31,7 +31,7 @@ const ConsolidatedContracts = () => {
                 <Table striped bordered hover>
                     <thead className="m-5 border border-info ">
                         <tr className="m-5 table-info" >
-                            <th>N.</th>
+                            <th>N° Contrato</th>
                             <th>Tipo de Contrato</th>
                             <th>Descripcion del Servicio</th>
                             <th>Monto del Contrato</th>
@@ -42,8 +42,8 @@ const ConsolidatedContracts = () => {
                     </thead>
                     <tbody>
 
-                        {spells.map(doc =>
-                            <ResumenContracts key={doc.id} data={doc} />
+                        {spells.map((doc, index) =>
+                            <ResumenContracts key={doc.id} data={doc} index={index}/>
                         )
                         }
 
