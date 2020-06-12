@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import img from '../img/image14.png';
 
 const ContractData = ({ search, searchDataAntecedentes, searchSellOption, searchPrice, searchPaymentMethod,
     searchTermPay, searchSite, searchAnexoTench, searchRepresentative, searchHoursTime, searchoClauseThirteenth,
@@ -514,6 +515,22 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     <button onClick={() => { searchDate(days, months, years) }}>
                         Siguiente
                      </button>
+                </div>
+
+            }
+            {
+                // (questionQuarter) &&
+                <div className="row m-5">
+                    <div className="m-3 d-flex flex-column bd-highlight">
+                        <p>¡Haz terminado de realizar tu contrato!</p>
+
+                        <p>Si quieres tener el contrato que acabar de realizar puedes descargarlo en formato Word.</p>
+
+
+                        <img src={img} alt="imagen" />
+                        <button>Descargarlo</button>
+                        <button>Finalizar</button>
+                    </div>
                 </div>
 
             }
