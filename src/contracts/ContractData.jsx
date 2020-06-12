@@ -175,82 +175,90 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
 
     const [optionClausesTwentieth, setOptionClauseTwentieth] = useState("");
     const optionClauseTwentieth = e => { setOptionClauseTwentieth(e.target.value) };
-    
+
     return (
-        <div>
+        <div id="contract-data">
             {
                 (questionIntro) &&
-                <div className="row m-5 clause-question question-intro">
-                    <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>Datos de la Empresa</p>
+                <div className=" flex-column clause-question question-intro">
+                    <div className="flex-column bd-highlight center container-question">
+                        <p className="text-center font-weight-bold">Datos de la Empresa</p>
                         <label htmlFor="">
-                            Nombre de la empresa Stakraft
+                            Nombre de la empresa:
+                        </label>
                         <input type="text" onChange={nameCompany} />
-                        </label>
                         <label htmlFor="">
-                            RUC <input type="text" onChange={rucCompany} />
+                            RUC 
                         </label>
+                        <input type="text" onChange={rucCompany} />
                         <label htmlFor="">
-                            Direccion <input type="text" onChange={addressCompany} />
+                            Dirección 
                         </label>
-                        <p>¿Por quién está representada la empresa?</p>
+                        <input type="text" onChange={addressCompany} />
+                        <p></p>
+                        <p className="text-center">¿Por quién o quiénes está representada la empresa?</p>
+                        <p className="font-weight-bold">Representante N°1</p>
                         <label htmlFor="">
                             Nombre Completo
+                        </label>
                         <input type="text" placeholder="Ej: Juan Antonio Rozas Mory"
                                 onChange={representativeOneNameCompany} />
-                        </label>
                         <label htmlFor="">
                             DNI
-                        <input type="text" placeholder="Ej: 07867123" onChange={representativeOneDniCompany} />
                         </label>
-                        <p>Datos de representante dos</p>
+                        <input type="text" placeholder="Ej: 07867123" onChange={representativeOneDniCompany} />
+                        <p className="font-weight-bold">Representante N°2</p>
                         <label htmlFor="">
                             Nombre Completo
+                        </label>
                         <input type="text" placeholder="Ej: Álvaro Antonio Porturas Ingunza" onChange={representativeTwoNameCompany} />
-                        </label>
                         <label htmlFor="">
                             DNI
+                        </label>
                         <input type="text" placeholder="Ej: 09340737" onChange={representativeTwoDniCompany} />
-                        </label>
                     </div>
-                    <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>Datos de la empresa con la que estás contratando</p>
+                    <div className="flex-column bd-highlight center container-question">
+                        <br /><br />
+                        <p className="text-center font-weight-bold">Datos de la empresa proveedora</p>
                         <label htmlFor="">
-                            Nombre de la empresa <input
-                                type="text"
-                                onChange={nameProvider} />
+                            Nombre de la empresa
                         </label>
+                        <input type="text" onChange={nameProvider} />
+                        <label htmlFor=""> RUC </label>
+                        <input type="text" onChange={rucProvider} />
+                        <label htmlFor="">Dirección </label>
+                        <input type="text" onChange={addressProvider} />
+                        <br />
+                        <p>Datos del representante de la empresa</p>
                         <label htmlFor="">
-                            RUC <input type="text" onChange={rucProvider} />
+                            Nombre completo
                         </label>
-                        <label htmlFor="">
-                            Domicilio <input type="text" onChange={addressProvider} />
-                        </label>
-                        <label htmlFor="">
-                            Nombre Representante de la Empresa
-                    <input type="text" onChange={representativeNameProvider} />
-                        </label>
+                        <input type="text" onChange={representativeNameProvider} />
                         <label htmlFor="">
                             DNI
-                        <input type="text" onChange={representativeDniProvider} />
                         </label>
+                        <input type="text" onChange={representativeDniProvider} />
                         <label htmlFor="">
                             Partida Electrónica N° (SUNARP)
+                        </label>
                         <input
                                 type="text"
                                 onChange={representativeNumberRegistryProvider}
                             />
-                        </label>
                     </div>
+                    
+                    <div className="button-continue">
                     <button
                         onClick={() => {
                             search(companyData, providerData);
                             setQuestionIntro(false);
                             setQuestionFirst(true);
                         }}
+                        class="btn btn-info center"
                     >
                         CONTINUAR
-                </button>
+                    </button>
+                    </div>
                 </div>
             }
             {
@@ -271,6 +279,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             setQuestionSecond(true);
                             setQuestionFirst(false);
                         }}
+                        class="btn btn-info center"
                     >
 
                         Siguiente
@@ -296,6 +305,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             setQuestionThird(true);
                             setQuestionSecond(false);
                         }}
+                        class="btn btn-info center"
                     >
                         Siguiente
                </button>
@@ -315,6 +325,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             setQuestionQuarter(true);
                             setQuestionThird(false);
                         }}
+                        class="btn btn-info center"
                     >
                         Siguiente
                 </button>
@@ -337,6 +348,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             setQuestionFifth(true);
                             setQuestionQuarter(false);
                         }}
+                        class="btn btn-info center"
                     >
                         Siguiente
                 </button>
@@ -359,6 +371,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             setQuestionSixth(true);
                             setQuestionFifth(false);
                         }}
+                        class="btn btn-info center"
                     >
                         Siguiente
                 </button>
@@ -380,6 +393,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             setQuestionSeventh(true);
                             setQuestionSixth(false);
                         }}
+                        class="btn btn-info center"
                     >
                         Siguiente
                 </button>
@@ -399,6 +413,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         onClick={() => {
                             searchAnexoTench(numberAnexoTenth);
                         }}
+                        class="btn btn-info center"
                     >
                         Siguiente
                 </button>
@@ -423,6 +438,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         onClick={() => {
                             searchRepresentative(representativeCompany, representativeSupplier);
                         }}
+                        class="btn btn-info center"
                     >
                         Siguiente
                 </button>
@@ -458,6 +474,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                                 timeAfterDeliveryFechayHora
                             );
                         }}
+                        class="btn btn-info center"
                     >
                         Siguiente
                 </button>
@@ -483,6 +500,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         onClick={() => {
                             searchoClauseThirteenth(optionClauseThirteenth);
                         }}
+                        class="btn btn-info center"
                     >
                         Siguiente
                 </button>
@@ -510,6 +528,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         onClick={() => {
                             searchClauseFourteenth(optionClauseFourteenth, moneysPoliza);
                         }}
+                        class="btn btn-info center"
                     >
                         Siguiente
         </button>
@@ -530,6 +549,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         onClick={() => {
                             searchTimeDayFifteenth(timeDay);
                         }}
+                        class="btn btn-info center"
                     >
                         Siguiente
         </button>
@@ -563,6 +583,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         onClick={() => {
                             searchClauseSixteenth(optionClausesSixteenth, name, ruc, servicio);
                         }}
+                        class="btn btn-info center"
                     >
                         Siguiente
                 </button>
@@ -584,7 +605,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         16.1 clasuraCTwentient <br />
                         </div>
                         <p>FALTA UN PARAMETRO PARA UNA CLAUSULA revisar como llamarlo</p>
-                        <button onClick={() => { searchClauseTwentienth(optionClausesTwentieth); }}>
+                        <button onClick={() => { searchClauseTwentienth(optionClausesTwentieth); }}  class="btn btn-info center">
                             Siguiente
                      </button>
                     </div>
