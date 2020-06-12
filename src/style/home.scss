@@ -17,6 +17,11 @@
   border: none;
 }
 
+.btn-primary:hover {
+  background-color: #00b0dce1;
+  border: none;
+}
+
 .card {
   min-width: 150px;
   max-width: 200px;
@@ -72,5 +77,11 @@
     }
   }
 }
+.titleWelcome{
+  font-size: 24px;
+}
 
+.input-class{
+  width: 100%;
+}
 
