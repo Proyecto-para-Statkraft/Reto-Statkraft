@@ -60,6 +60,31 @@
             justify-content: center;
     margin-top: 5px;
   }
+  .view-contract .generator-contract .section-question #contract-data .container-question {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .view-contract .generator-contract .section-question #contract-data .container-question #textarea {
+    width: 90%;
+    height: 100px;
+    padding: 0;
+    margin: 10px 10px;
+    border-radius: 5px;
+  }
+  .view-contract .generator-contract .section-question #contract-data .container-question .button-continue {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 5px;
+  }
   .view-contract .generator-contract .section-contract {
     width: 80%;
     height: 300px;
@@ -98,6 +123,31 @@
     width: 100%;
   }
   .view-contract .generator-contract .section-question #contract-data .button-continue {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 12px;
+  }
+  .view-contract .generator-contract .section-question #contract-data .container-question {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .view-contract .generator-contract .section-question #contract-data .container-question #textarea {
+    width: 85%;
+    height: 120px;
+    padding: 0;
+    margin: 10px 10px;
+    border-radius: 5px;
+  }
+  .view-contract .generator-contract .section-question #contract-data .container-question .button-continue {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -152,6 +202,31 @@
             justify-content: center;
     margin-top: 10px;
   }
+  .view-contract .generator-contract .section-question #contract-data .container-question {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .view-contract .generator-contract .section-question #contract-data .container-question #textarea {
+    width: 80%;
+    height: 130px;
+    padding: 0;
+    margin: 13px 13px;
+    border-radius: 5px;
+  }
+  .view-contract .generator-contract .section-question #contract-data .container-question .button-continue {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 10px;
+  }
   .view-contract .generator-contract .section-contract {
     width: 60%;
     height: 500px;
@@ -188,6 +263,31 @@
     width: 100%;
   }
   .view-contract .generator-contract .section-question #contract-data .button-continue {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 15px;
+  }
+  .view-contract .generator-contract .section-question #contract-data .container-question {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .view-contract .generator-contract .section-question #contract-data .container-question #textarea {
+    width: 90%;
+    height: 130px;
+    padding: 0;
+    margin: 13px 13px;
+    border-radius: 5px;
+  }
+  .view-contract .generator-contract .section-question #contract-data .container-question .button-continue {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -240,10 +340,35 @@
             justify-content: center;
     margin-top: 18px;
   }
+  .view-contract .generator-contract .section-question #contract-data .container-question {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .view-contract .generator-contract .section-question #contract-data .container-question #textarea {
+    width: 90%;
+    height: 130px;
+    padding: 0;
+    margin: 13px 13px;
+    border-radius: 5px;
+  }
+  .view-contract .generator-contract .section-question #contract-data .container-question .button-continue {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 18px;
+  }
   .view-contract .generator-contract .section-contract {
     width: 40%;
     height: 600px;
-    padding: 15px;
+    padding: 10px;
     margin: 50px 70px;
   }
   .view-contract .generator-contract .section-contract h2 {
@@ -283,10 +408,35 @@
             justify-content: center;
     margin-top: 20px;
   }
+  .view-contract .generator-contract .section-question #contract-data .container-question {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .view-contract .generator-contract .section-question #contract-data .container-question #textarea {
+    width: 90%;
+    height: 130px;
+    padding: 0;
+    margin: 13px 13px;
+    border-radius: 5px;
+  }
+  .view-contract .generator-contract .section-question #contract-data .container-question .button-continue {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 20px;
+  }
   .view-contract .generator-contract .section-contract {
     width: 40%;
-    height: 700px;
-    padding: 15px;
+    height: 600px;
+    padding: 10px;
     margin: 70px 40px;
   }
   .view-contract .generator-contract .section-contract h2 {

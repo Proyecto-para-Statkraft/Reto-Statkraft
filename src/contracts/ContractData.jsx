@@ -111,7 +111,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
     const [optionClausesSixteenth, setOptionClauseSixteenth] = useState("");
     const optionClauseSixteenth = e => { setOptionClauseSixteenth(e.target.value) };
 
-  
+
 
     const [optionClausesTwentieth, setOptionClauseTwentieth] = useState("");
     const optionClauseTwentieth = e => { setOptionClauseTwentieth(e.target.value) };
@@ -156,48 +156,47 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             Partida Electrónica N° (SUNARP)
                         </label>
                         <input
-                                type="text"
-                                onChange={representativeNumberRegistryProvider}
-                            />
+                            type="text"
+                            onChange={representativeNumberRegistryProvider}
+                        />
                     </div>
-                    
+
                     <div className="button-continue">
-                    <button
-                        onClick={() => {
-                            search(providerData);
-                            setQuestionIntro(false);
-                            setQuestionFirst(true);
-                        }}
-                        class="btn btn-info"
-                    >
-                        CONTINUAR
+                        <button
+                            onClick={() => {
+                                search(providerData);
+                                setQuestionIntro(false);
+                                setQuestionFirst(true);
+                            }}
+                            class="btn btn-info"
+                        >
+                            CONTINUAR
                     </button>
                     </div>
                 </div>
             }
             {
                 (questionFirst) &&
-                <div className="row m-5 clause-question" id="question-1">
-                    <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>1. Antecendente</p>
-                        <label htmlFor="">
-                            Nuestra empresa esta dedicada a la generación y comercialización de
-                            energía eléctrica, que requiere:
-                        <textarea placeholder="Detallar Servicio..."
-                                onChange={product}></textarea>
-                        </label>
+                <div className="container-question">
+                    <p className="text-center font-weight-bold">1. Antecendente</p>
+                    <label htmlFor="" className="text-center">
+                        Nuestra empresa esta dedicada a la generación y comercialización de
+                        energía eléctrica, que requiere:
+                    </label>
+                    <textarea placeholder="Detallar Servicio..."
+                            onChange={product} id="textarea"></textarea>
+                    <div className="button-continue">
+                        <button
+                            onClick={() => {
+                                searchDataAntecedentes(inputRequieres);
+                                setQuestionSecond(true);
+                                setQuestionFirst(false);
+                            }}
+                            class="btn btn-info"
+                        >
+                            CONTINUAR
+                        </button>
                     </div>
-                    <button
-                        onClick={() => {
-                            searchDataAntecedentes(inputRequieres);
-                            setQuestionSecond(true);
-                            setQuestionFirst(false);
-                        }}
-                        class="btn btn-info"
-                    >
-
-                        Siguiente
-                </button>
                 </div>
             }
             {
@@ -444,7 +443,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         <p>11. Subcontratación</p>
 
                         <p>¿La empresa contratada va a subcontratar y tiene el nombre de la empresa
-                            con la que haria el subcontrato?
+                        con la que haria el subcontrato?
                         </p>
                         <div className="m-3" onChange={optionClauseSixteenth}>
                             <input className="m-3 radio" type="radio" value="true" name="gender" /> Si<br />
@@ -476,11 +475,11 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             <input className="m-3 radio" type="radio" value="medio" name="gender" />Medio <br />
                             <input className="m-3 radio" type="radio" value="alto" name="gender" /> Muy alto <br />
                         </div>
-                        <button onClick={() => { 
-                            searchClauseTwentienth(optionClausesTwentieth); 
+                        <button onClick={() => {
+                            searchClauseTwentienth(optionClausesTwentieth);
                             setQuestionTwelfth(false);
                             setQuestionThirteenth(true);
-                            }} 
+                        }}
                             class="btn btn-info">
                             Siguiente
                      </button>
@@ -488,7 +487,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 </div>
             }
             {
-            (questionThirteenth) &&
+                (questionThirteenth) &&
                 <div className="row m-5">
                     <div className="m-3 d-flex flex-column bd-highlight">
                         <p>13. Varios</p>
@@ -507,11 +506,11 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         <input type="text" placeholder="2020" onChange={year} />
                         </label>
                     </div>
-                    <button onClick={() => { 
+                    <button onClick={() => {
                         searchDate(days, months, years);
                         setQuestionThirteenth(false);
                         setQuestionEnd(true);
-                        }}
+                    }}
                         class="btn btn-info">
                         Siguiente
                      </button>
@@ -519,7 +518,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
 
             }
             {
-            (questionEnd) &&
+                (questionEnd) &&
                 <div className="row m-5">
                     <div className="m-3 d-flex flex-column bd-highlight">
                         <p>¡Haz terminado de realizar tu contrato!</p>
@@ -528,7 +527,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
 
 
                         <img src={img} alt="imagen" />
-                        <button  class="btn btn-info">Descargarlo</button>
+                        <button class="btn btn-info">Descargarlo</button>
                         <button>Finalizar</button>
                     </div>
                 </div>

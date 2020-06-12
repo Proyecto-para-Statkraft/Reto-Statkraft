@@ -49,6 +49,23 @@
                             justify-content: center;
                             margin-top: 5px;
                         }
+
+                        .container-question {
+                            display: flex;
+                            flex-direction: column;
+
+                            #textarea {
+                                @include size(90%, 100px);
+                                @include paddingMargin(0, 10px 10px);
+                                border-radius: 5px;
+                            }
+    
+                            .button-continue {
+                                display: flex;
+                                justify-content: center;
+                                margin-top: 5px;
+                            }
+                        }
                     }
                 }
                 .section-contract {
@@ -81,8 +98,26 @@
                             justify-content: center;
                             margin-top: 12px;
                         }
+
+                        .container-question {
+                            display: flex;
+                            flex-direction: column;
+
+                            #textarea {
+                                @include size(85%, 120px);
+                                @include paddingMargin(0, 10px 10px);
+                                border-radius: 5px;
+                            }
+
+                            .button-continue {
+                                display: flex;
+                                justify-content: center;
+                                margin-top: 12px;
+                            }
+                        }
                     }
                 }
+
                 .section-contract {
                     @include size(70%, 400px);
                     @include paddingMargin(6px, 25px 45px);
@@ -113,8 +148,26 @@
                         justify-content: center;
                         margin-top: 10px;
                     }
+
+                    .container-question {
+                        display: flex;
+                        flex-direction: column;
+
+                        #textarea {
+                            @include size(80%, 130px);
+                            @include paddingMargin(0, 13px 13px);
+                            border-radius: 5px;
+                        }
+
+                        .button-continue {
+                            display: flex;
+                            justify-content: center;
+                            margin-top: 10px;
+                        }
+                    }
                 }
             }
+
             .section-contract {
                 @include size(60%, 500px);
                 @include paddingMargin(10px, 25px 60px);
@@ -124,7 +177,7 @@
                 }
             }
         }
-        }
+    }
 
         @media (min-width: $tablet) and (max-width: $notebook) {
             .generator-contract {
@@ -147,8 +200,27 @@
                             justify-content: center;
                             margin-top: 15px;
                         }
+
+                        .container-question {
+                            display: flex;
+                            flex-direction: column;
+    
+                            #textarea {
+                                @include size(90%, 130px);
+                                @include paddingMargin(0, 13px 13px);
+                                border-radius: 5px;
+                            }
+    
+                            .button-continue {
+                                display: flex;
+                                justify-content: center;
+                                margin-top: 15px;
+                            }
+                        }
                     }
                 }
+
+
                 .section-contract {
                     @include size(50%, 550px);
                     @include paddingMargin(10px, 60px 35px);
@@ -165,7 +237,6 @@
                 flex-direction: row;
                 justify-content: center;
                 padding: 0 5% 0 5%;
-             
                 width: 100%;
     
                 .section-question {
@@ -180,11 +251,29 @@
                             justify-content: center;
                             margin-top: 18px;
                         }
+
+                        .container-question {
+                            display: flex;
+                            flex-direction: column;
+    
+                            #textarea {
+                                @include size(90%, 130px);
+                                @include paddingMargin(0, 13px 13px);
+                                border-radius: 5px;
+                            }
+    
+                            .button-continue {
+                                display: flex;
+                                justify-content: center;
+                                margin-top: 18px;
+                            }
+                        }
                     }
                 }
+
                 .section-contract {
                     @include size(40%, 600px);
-                    @include paddingMargin(15px, 50px 70px);
+                    @include paddingMargin(10px, 50px 70px);
     
                     h2 {
                         font-size: 18px;
@@ -212,11 +301,29 @@
                             justify-content: center;
                             margin-top: 20px;
                         }
+
+                        .container-question {
+                            display: flex;
+                            flex-direction: column;
+    
+                            #textarea {
+                                @include size(90%, 130px);
+                                @include paddingMargin(0, 13px 13px);
+                                border-radius: 5px;
+                            }
+    
+                            .button-continue {
+                                display: flex;
+                                justify-content: center;
+                                margin-top: 20px;
+                            }
+                        }
                     }
                 }
+
                 .section-contract {
-                    @include size(40%, 700px);
-                    @include paddingMargin(15px, 70px 40px);
+                    @include size(40%, 600px);
+                    @include paddingMargin(10px, 70px 40px);
     
                     h2 {
                         font-size: 20px;
