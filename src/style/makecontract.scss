@@ -30,6 +30,20 @@
             .div-radio-button {
                 display: flex;
                 flex-direction: column;
+                justify-content: center;
+            }
+
+            .button-section-end {
+                display: flex;
+                width: 100%;
+                justify-content: space-around;
+                padding: 5px;
+                margin: 10px;
+                font-size: 12px;
+
+                button {
+                    width: 35%;
+                }
             }
         }
 

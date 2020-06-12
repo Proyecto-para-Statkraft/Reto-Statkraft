@@ -37,6 +37,25 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.view-contract .container-view-contract .section-question .container-question .button-section-end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 5px;
+  margin: 10px;
+  font-size: 12px;
+}
+
+.view-contract .container-view-contract .section-question .container-question .button-section-end button {
+  width: 35%;
 }
 
 .view-contract .container-view-contract .section-contract {
