@@ -29,7 +29,7 @@ const ConsolidatedContracts = () => {
             <div className="m-2">
                 <h3>Contratos</h3>
                 <div className="table-responsive-sm">
-                    <Table className="" clstriped bordered hover>
+                    <Table className="table-bordered">
                         <thead className="m-5 border border-info ">
                             <tr className="m-5 table-info" >
                                 <th>N.</th>
