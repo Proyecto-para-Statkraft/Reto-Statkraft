@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,0BAA0B,CAAC;EACvB,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,eAAe,EAAE,MAAM;CAM1B;;AATD,AAKI,0BALsB,CAKtB,iBAAiB,CAAC;EACd,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;CAC1B",
+    "sources": [
+        "consolidatedcontracts.scss"
+    ],
+    "names": [],
+    "file": "consolidatedcontracts.css"
+}
