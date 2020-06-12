@@ -76,8 +76,10 @@ const MakeContract = (data) => {
     }
 
     const [sectionThirteenth, setSectionThirteenth] = useState('');
-    const searchoClauseThirteenth = (numberHoursRepairLima, numberHoursRepairProvincia, timeAfterDeliveryFechayHora) => {
-        setSectionThirteenth({ numberHoursRepairLima, numberHoursRepairProvincia, timeAfterDeliveryFechayHora })
+    const searchoClauseThirteenth = (optionClauseThirteenth) => {
+        console.log(optionClauseThirteenth)
+        setSectionThirteenth({ optionClauseThirteenth })
+        
     }
 
     const [sectionFourteenth, setSectionFourteenth] = useState('');
@@ -114,7 +116,7 @@ const MakeContract = (data) => {
                 <Twelfth data={data} Twelfth={sectionTwelfth} />
             </div>
         ); */
-
+            console.log(sectionThirteenth,'Funcionaaa')
     return (
         <div id="source-html" className="view-contract">
             <Header />

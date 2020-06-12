@@ -266,6 +266,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     <button
                         onClick={() => {
                             searchPaymentMethod(typeMoneys);
+                            
                             setQuestionFifth(true);
                             setQuestionQuarter(false);
                         }}
@@ -386,11 +387,11 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         <div className="m-3" onChange={optionClausesThirteenth}> 
                             <label htmlFor="">
                                 Bajo 13.2 (opcion1)
-                                <input className="m-3 radio" type="radio" value="true" name="gender" />
+                                <input className="m-3 radio" type="radio" value="bajo" name="gender" />
                             </label>
                             <label htmlFor="">
                                 Alto 13.2 (opcion2)
-                                 <input className="m-3 radio" type="radio" value="false" name="gender" />
+                                 <input className="m-3 radio" type="radio" value="alto" name="gender" />
                             </label>
                         </div>
                     </div>
@@ -419,7 +420,8 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         </div>
                         <label htmlFor="">
                              El monto de la póliza de responsabilidad civil extra contractual es:
-                             <textarea name="" onChange={moneyPoliza}></textarea>
+                             <textarea name="" onChange={moneyPoliza}
+                             placeholder="Ejm: US$ 67,274.36 (Sesenta y Siete Mil Doscientos Setenta y Cuatro con 36/100 Dólares de los Estados Unidos de América) "></textarea>
                         </label>
                     </div>
                     <button
