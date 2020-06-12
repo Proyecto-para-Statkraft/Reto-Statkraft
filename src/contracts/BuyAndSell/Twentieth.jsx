@@ -24,16 +24,16 @@ const Twentieth = ({ data, Twentieth }) => {
                         <p>
                             <span>{companyData.name}</span>, como empresa subsidiaria del grupo
                   noruego <span>{companyData.name}</span>, tiene una política definida
-                                                                              y concreta de responsabilidad social corporativa que aplica en todas
+                                                                                        y concreta de responsabilidad social corporativa que aplica en todas
                   sus actividades. En tal sentido, <span>{companyData.name}</span>{" "}
                             pone en conocimiento del
                   <span>PROVEEDOR</span> y a través de este a sus contratistas,
-                                                                              subcontratistas, proveedores de servicios y obras, y demás terceros
-                                                                              relacionados, sobre la existencia de dicha política con el objetivo
-                                                                              que la misma sea respetada y considerada en las actividades
-                                                                              relacionadas con la prestación materia del presente contrato. El
+                                                                                        subcontratistas, proveedores de servicios y obras, y demás terceros
+                                                                                        relacionados, sobre la existencia de dicha política con el objetivo
+                                                                                        que la misma sea respetada y considerada en las actividades
+                                                                                        relacionadas con la prestación materia del presente contrato. El
                   <span>PROVEEDOR</span> declara que tiene conocimiento de esta
-                                                                              política.
+                                                                                        política.
                 </p>
                     </section>
 
@@ -64,8 +64,8 @@ const Twentieth = ({ data, Twentieth }) => {
                             a la que las partes tengan acceso como consecuencia de su relación
                             laboral o contractual, con el objeto que el
                   <span>LOCADOR</span> cuente con la información necesaria para llevar
-                                                                              a cabo el Servicio y cumplir con las demás obligaciones del
-                                                                              Contrato.
+                                                                                        a cabo el Servicio y cumplir con las demás obligaciones del
+                                                                                        Contrato.
                 </p>
                         <p>
                             22.3 Las partes se obligan a no utilizar los datos proporcionados
@@ -160,7 +160,7 @@ const Twentieth = ({ data, Twentieth }) => {
                 <div>
                     <section>
                         <h3>VIGESIMA: REGULACION ANTICORRUPCION</h3>
-                        <ClauseB />
+                        <ClauseB companyData={companyData} />
                     </section>
 
                     <section>
@@ -168,16 +168,16 @@ const Twentieth = ({ data, Twentieth }) => {
                         <p>
                             <span>{companyData.name}</span>, como empresa subsidiaria del grupo
                       noruego <span>{companyData.name}</span>, tiene una política definida
-                                                          y concreta de responsabilidad social corporativa que aplica en todas
+                                                                y concreta de responsabilidad social corporativa que aplica en todas
                       sus actividades. En tal sentido, <span>{companyData.name}</span>{" "}
                             pone en conocimiento del
                       <span>PROVEEDOR</span> y a través de este a sus contratistas,
-                                                          subcontratistas, proveedores de servicios y obras, y demás terceros
-                                                          relacionados, sobre la existencia de dicha política con el objetivo
-                                                          que la misma sea respetada y considerada en las actividades
-                                                          relacionadas con la prestación materia del presente contrato. El
+                                                                subcontratistas, proveedores de servicios y obras, y demás terceros
+                                                                relacionados, sobre la existencia de dicha política con el objetivo
+                                                                que la misma sea respetada y considerada en las actividades
+                                                                relacionadas con la prestación materia del presente contrato. El
                       <span>PROVEEDOR</span> declara que tiene conocimiento de esta
-                                                          política.
+                                                                política.
                     </p>
                     </section>
 
@@ -208,8 +208,8 @@ const Twentieth = ({ data, Twentieth }) => {
                             a la que las partes tengan acceso como consecuencia de su relación
                             laboral o contractual, con el objeto que el
                       <span>LOCADOR</span> cuente con la información necesaria para llevar
-                                                          a cabo el Servicio y cumplir con las demás obligaciones del
-                                                          Contrato.
+                                                                a cabo el Servicio y cumplir con las demás obligaciones del
+                                                                Contrato.
                     </p>
                         <p>
                             22.3 Las partes se obligan a no utilizar los datos proporcionados
@@ -270,7 +270,7 @@ const Twentieth = ({ data, Twentieth }) => {
                 <div>
                     <section>
                         <h3>VIGESIMA: REGULACION ANTICORRUPCION</h3>
-                        <ClauseC />
+                        <ClauseC companyData={companyData} />
                     </section>
 
                     <section>
@@ -278,16 +278,16 @@ const Twentieth = ({ data, Twentieth }) => {
                         <p>
                             <span>{companyData.name}</span>, como empresa subsidiaria del grupo
                           noruego <span>{companyData.name}</span>, tiene una política definida
-                                      y concreta de responsabilidad social corporativa que aplica en todas
+                                        y concreta de responsabilidad social corporativa que aplica en todas
                           sus actividades. En tal sentido, <span>{companyData.name}</span>{" "}
                             pone en conocimiento del
                           <span>PROVEEDOR</span> y a través de este a sus contratistas,
-                                      subcontratistas, proveedores de servicios y obras, y demás terceros
-                                      relacionados, sobre la existencia de dicha política con el objetivo
-                                      que la misma sea respetada y considerada en las actividades
-                                      relacionadas con la prestación materia del presente contrato. El
+                                        subcontratistas, proveedores de servicios y obras, y demás terceros
+                                        relacionados, sobre la existencia de dicha política con el objetivo
+                                        que la misma sea respetada y considerada en las actividades
+                                        relacionadas con la prestación materia del presente contrato. El
                           <span>PROVEEDOR</span> declara que tiene conocimiento de esta
-                                      política.
+                                        política.
                         </p>
                     </section>
 
@@ -318,8 +318,8 @@ const Twentieth = ({ data, Twentieth }) => {
                             a la que las partes tengan acceso como consecuencia de su relación
                             laboral o contractual, con el objeto que el
                           <span>LOCADOR</span> cuente con la información necesaria para llevar
-                                      a cabo el Servicio y cumplir con las demás obligaciones del
-                                      Contrato.
+                                        a cabo el Servicio y cumplir con las demás obligaciones del
+                                        Contrato.
                         </p>
                         <p>
                             22.3 Las partes se obligan a no utilizar los datos proporcionados

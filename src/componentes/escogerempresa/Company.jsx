@@ -5,6 +5,7 @@ import MakeContract from '../../contracts/MakeContract';
 
 const Company = (props) => {
 
+    // console.log('datos tipo y nombre', props)
 
     const [data, setData] = useState('');
     const selection = e => { setData(e.target.value) };

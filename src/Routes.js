@@ -2,7 +2,7 @@ import React from "react";
 import { HashRouter, Switch, Route } from "react-router-dom";
 import Home from "./componentes/Home";
 import ChooseContract from "./componentes/choosecontract/ChooseContracts";
-import ConsolidatedContracts from "./componentes/ConsolidatedContracts";
+import ConsolidatedContracts from "./contracts/ConsolidatedContracts";
 import Adenda from "./componentes/adenda/Adenda";
 import QuestionsOne from "./componentes/choosecontract/Questions";
 import ContrractsGoods from "./componentes/choosecontract/ContractsGoods";
