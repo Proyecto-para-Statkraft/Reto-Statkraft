@@ -39,10 +39,9 @@ const Fifteenth = ({ Fifteenth }) => {
                     objeto del Contrato a satisfacción de STATKRAFT, luego de transcurrido
                     el plazo de quince (15) días antes mencionado, cualquiera de las
                     Partes podrá dar por resuelto el Contrato mediante comunicación
-          cursada con {timeDay}
-                    días calendario de anticipación, sin que esto genere obligación alguna
-                    de la Parte que resuelve a favor de la otra Parte, salvo el pago de
-                    las obligaciones efectivamente ejecutadas a la fecha de resolución.
+          cursada con {timeDay} días calendario de anticipación, sin que esto genere obligación alguna
+                              de la Parte que resuelve a favor de la otra Parte, salvo el pago de
+                              las obligaciones efectivamente ejecutadas a la fecha de resolución.
         </p>
             </section>
         );

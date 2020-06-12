@@ -1,11 +1,6 @@
 import React from 'react';
 
-
-
-
-
 const TwentyThird = ({ sectionTwentyThird, data, provider }) => {
-
 
     const { companyData } = data;
     const { providerData } = provider;
@@ -16,8 +11,7 @@ const TwentyThird = ({ sectionTwentyThird, data, provider }) => {
             <section>
                 <p>
                     En señal de conformidad, se suscribe el presente documento, en dos (2) originales
-            de igual forma y tenor, en la ciudad de Lima a los {days} días del mes de
-            {months} de {years}.
+            de igual forma y tenor, en la ciudad de Lima a los {days} días del mes de {months} de {years}.
         </p>
                 <div>
                     <h5>{companyData.name}</h5>

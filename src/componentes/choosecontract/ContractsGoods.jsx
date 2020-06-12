@@ -16,7 +16,7 @@ const ContrractsGoods = (props) => {
             <div>
                 <Header />
                 <div className="container">
-                    <div className="m-5 col-sm-10">
+                    <div className=" col-sm-10 justify-content-center ">
                         <div>
                             <h5 className="m-3">El contrato que debes utilizar es:</h5>
                         </div>
@@ -49,7 +49,7 @@ const ContrractsGoods = (props) => {
             <div>
                 <Header />
                 <div className="container">
-                    <div className="m-5 col-sm-10">
+                    <div className="col-sm-10">
                         <div>
                             <h5 className="m-3">El contrato que debes utilizar es:</h5>
                         </div>
