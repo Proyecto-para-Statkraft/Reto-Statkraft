@@ -33,6 +33,18 @@
                 justify-content: center;
             }
 
+            .div-end-buttons {
+                display: flex;
+                width: 100%;
+                justify-content: space-around;
+                margin: 10px;
+
+                button {
+                    width: 35%;
+                    padding: 5px;
+                }
+            }
+
             .button-section-end {
                 display: flex;
                 width: 100%;

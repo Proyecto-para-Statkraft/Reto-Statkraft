@@ -122,7 +122,6 @@ const MakeContract = (data, props) => {
 
 
     return (
-
         <div className="view-contract">
             <Header />
             <div className="container-view-contract">

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import img from '../img/image14.png';
 import firebase from "../componentes/firebase.js";
 import { Link } from 'react-router-dom';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
 const ContractData = ({ search, searchDataAntecedentes, searchSellOption, searchPrice, searchPaymentMethod,
     searchTermPay, searchSite, searchRepresentative, searchHoursTime, searchoClauseThirteenth,
@@ -140,6 +142,8 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
             usuyser: storageName
         })
     };
+
+    const [showModal, setShowModal] = useState(false);
 
     return (
         <div id="contract-data">
@@ -522,19 +526,66 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 (questionEnd) &&
                 <div className="container-question">
                     <p className="text-center">¡Haz terminado de realizar tu contrato!</p>
-                    <p className="text-center">Si desea puede descargarlo en formato Word.</p>
+                    <p className="text-center">
+                        Si desea puede descargarlo en formato Word, pero antes de ello sírvase a
+                        registrar el contrato generado en nuestra base de datos.
+                    </p>
                     <img src={img} alt="imagen" />
-                    <div className="row mt-3">
-                        <div className="col-sm-6"><button id="btn-export" className="btn btn-info" onClick={generateWord}>DESCARGAR EN WORD</button></div>
-                        <div className="col-sm-6"><button id="btn-export" className="btn btn-info" onClick={onCreate}> GUARDAR</button></div>
-                        <div className="col-sm-6"><Link id="btn-export" className="btn btn-info" to="/" >FINALIZAR</Link></div>
-
+                    <div className="div-end-buttons">
+                        <button id="btn-export" className="btn btn-info" onClick={generateWord}>DESCARGAR EN WORD</button>
+                        <button id="btn-export" className="btn btn-info" onClick={() => {
+                            onCreate();
+                            setShowModal(true);
+                        }}> GUARDAR</button>
                     </div>
                 </div>
+            }
+            {
+                (showModal) &&
+                <Modal show={showModal} onHide={() => setShowModal(false)}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Solicitud procesada</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>El contrato ha sido registrado en la base de datos.</Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={() => setShowModal(false)}>
+                            Regresar
+                        </Button>
+                        <Link id="btn-export" className="btn btn-info" to="/" onClick={() => setShowModal(false)}>Crear nuevo contrato</Link>             
+                    </Modal.Footer>
+                </Modal>
             }
         </div >
     );
 };
 
 export default ContractData;
+
+
+/* unction AlertDismissible() {
+    const [show, setShow] = useState(true);
+
+    return (
+      <>
+        <Alert show={showAlert} variant="success">
+          <Alert.Heading>How's it going?!</Alert.Heading>
+          <p>
+            Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+            lacinia odio sem nec elit. Cras mattis consectetur purus sit amet
+            fermentum.
+          </p>
+          <hr />
+          <div className="d-flex justify-content-end">
+            <Button onClick={() => setShowAlert(false)} variant="outline-success">
+              Close me ya'll!
+            </Button>
+          </div>
+        </Alert>
+
+        {!show && <Button onClick={() => setShowAlert(true)}>Show Alert</Button>}
+      </>
+    );
+  }
+
+  render(<AlertDismissible />); */
 
