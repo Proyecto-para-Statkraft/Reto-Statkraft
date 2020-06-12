@@ -26,6 +26,11 @@
         .section-question .container-question {
             display: flex;
             align-items: center;
+
+            .div-radio-button {
+                display: flex;
+                flex-direction: column;
+            }
         }
 
         .section-contract {

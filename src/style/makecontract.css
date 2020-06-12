@@ -29,6 +29,16 @@
           align-items: center;
 }
 
+.view-contract .container-view-contract .section-question .container-question .div-radio-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .view-contract .container-view-contract .section-contract {
   overflow: scroll;
   border: 1px solid #000000;

@@ -214,7 +214,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             }}
                             class="btn btn-info"
                         >
-                            Siguiente
+                            CONTINUAR
                         </button>
                     </div>
                 </div>
@@ -237,7 +237,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             }}
                             class="btn btn-info"
                         >
-                            Siguiente
+                            CONTINUAR
                         </button>
                     </div>
                 </div>
@@ -260,7 +260,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             }}
                             class="btn btn-info"
                         >
-                            Siguiente
+                            CONTINUAR
                     </button>
                     </div>
                 </div>
@@ -282,248 +282,235 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             }}
                             class="btn btn-info"
                         >
-                            Siguiente
+                            CONTINUAR
                         </button>
                     </div>
                 </div>
             }
             {
                 (questionSixth) &&
-                <div className="row m-5">
-                    <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>6. Gastos, transporte y entrega</p>
-                        <label htmlFor="">
-                            El lugar de entrega de los bienes adquiridos es:
-                        <input type="text" onChange={site} placeholder="Escribir aquí" />
-                        </label>
+                <div className="container-question">
+                    <p className="text-center font-weight-bold">6. Gastos, transporte y entrega</p>
+                    <label htmlFor="" className="text-center">
+                        El lugar de entrega de los bienes adquiridos es:
+                    </label>
+                    <input type="text" onChange={site} placeholder="Escribir aquí" />
+                    <div className="button-continue">
+                        <button
+                            onClick={() => {
+                                searchSite(deliveryPlace);
+                                setQuestionSeventh(true);
+                                setQuestionSixth(false);
+                            }}
+                            class="btn btn-info"
+                        >
+                            CONTINUAR
+                    </button>
                     </div>
-                    <button
-                        onClick={() => {
-                            searchSite(deliveryPlace);
-                            setQuestionSeventh(true);
-                            setQuestionSixth(false);
-                        }}
-                        class="btn btn-info"
-                    >
-                        Siguiente
-                </button>
                 </div>
             }
             {
                 (questionSeventh) &&
-                <div className="row m-5 clause-question" id="question-6">
-                    <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>7. Administradores del Contrato </p>
-                        <p>Los administradores del Contrato son:</p>
-                        <label htmlFor="">
-                            De Statkraft
-                            <input type="text" onChange={companyRepresentative} />
-                        </label>
-                        <label htmlFor="">
-                            De la empresa contratada
-                            <input type="text" onChange={supplierRepresentative} />
-                        </label>
+                <div className="container-question">
+                    <p className="text-center font-weight-bold">7. Administradores del Contrato </p>
+                    <p className="text-center">Los administradores del Contrato son:</p>
+                    <label htmlFor="" className="text-center">
+                        De Statkraft o subsidiaria
+                    </label>
+                    <input type="text" onChange={companyRepresentative} />
+                    <label htmlFor="" className="text-center">
+                        De la empresa contratada
+                    </label>
+                    <input type="text" onChange={supplierRepresentative} />
+                    <div className="button-continue">
+                        <button
+                            onClick={() => {
+                                searchRepresentative(representativeCompany, representativeSupplier);
+                                setQuestionEighth(true);
+                                setQuestionSeventh(false);
+                            }}
+                            class="btn btn-info"
+                        >
+                            CONTINUAR
+                        </button>
                     </div>
-                    <button
-                        onClick={() => {
-                            searchRepresentative(representativeCompany, representativeSupplier);
-                            setQuestionEighth(true);
-                            setQuestionSeventh(false);
-                        }}
-                        class="btn btn-info"
-                    >
-                        Siguiente
-                </button>
                 </div>
             }
             {
                 (questionEighth) &&
-                <div className="row m-5">
-                    <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>8. Exclusión de daños indirectos y responsabilidad</p>
-                        <p>En caso de mal funcionamiento de los bienes adquiridos, el Proveedor deberá repararlos en un plazo no mayor a:</p>
-                        <label htmlFor="">
-                            Horas para Lima
-                            <input type="text" onChange={numberHoursRepairLim} />
-                        </label>
-                        <label htmlFor="">
-                            Horas para Provincia
-                            <input type="text" onChange={numberHoursRepairProv} />
-                        </label>
-                        <label htmlFor="">
-                            El plazo de garantía de los bienes es de:
-                        <input type="text" onChange={timeAfterDeliveryFecha} />
-                        </label>
+                <div className="container-question">
+                    <p className="text-center font-weight-bold">8. Exclusión de daños indirectos y responsabilidad</p>
+                    <p className="text-center">
+                        En caso de mal funcionamiento de los bienes adquiridos, el Proveedor deberá
+                        repararlos en un plazo no mayor a:
+                    </p>
+                    <label htmlFor="" className="text-center">Horas para Lima</label>
+                    <input type="text" onChange={numberHoursRepairLim} />
+                    <label htmlFor="" className="text-center">Horas para Provincia</label>
+                    <input type="text" onChange={numberHoursRepairProv} />
+                    <label htmlFor="" className="text-center">El plazo de garantía de los bienes es de:</label>
+                    <input type="text" onChange={timeAfterDeliveryFecha} />
+                    <div className="button-continue">
+                        <button
+                            onClick={() => {
+                                searchHoursTime(
+                                    numberHoursRepairLima,
+                                    numberHoursRepairProvincia,
+                                    timeAfterDeliveryFechayHora
+                                );
+                                setQuestionNineth(true);
+                                setQuestionEighth(false);
+                            }}
+                            class="btn btn-info"
+                        >
+                            CONTINUAR
+                        </button>
                     </div>
-                    <button
-                        onClick={() => {
-                            searchHoursTime(
-                                numberHoursRepairLima,
-                                numberHoursRepairProvincia,
-                                timeAfterDeliveryFechayHora
-                            );
-                            setQuestionNineth(true);
-                            setQuestionEighth(false);
-                        }}
-                        class="btn btn-info"
-                    >
-                        Siguiente
-                </button>
                 </div>
             }
             {
                 (questionNineth) &&
-                <div className="row m-5">
-                    <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>9. Penalidades</p>
-                        <p>El nivel de riesgo de seguridad es:</p>
-                        <div className="m-3" onChange={optionClausesThirteenth}>
-                            <label htmlFor="">
-                                Bajo 13.2 (opcion1)
-                                <input className="m-3 radio" type="radio" value="bajo" name="gender" />
-                            </label>
-                            <label htmlFor="">
-                                Alto 13.2 (opcion2)
-                                 <input className="m-3 radio" type="radio" value="alto" name="gender" />
-                            </label>
+                <div className="container-question">
+                    <p className="text-center font-weight-bold">9. Penalidades</p>
+                    <p className="text-center">El nivel de riesgo de seguridad es:</p>
+                    <div className="div-radio-button" onChange={optionClausesThirteenth}>
+                        <div>
+                            <input className="m-3 radio" type="radio" value="bajo" name="gender" />
+                            <label htmlFor="" className="text-center">Bajo 13.2 (opcion1)</label>
+                        </div>
+                        <div>
+                            <input className="m-3 radio" type="radio" value="alto" name="gender" />
+                            <label htmlFor="" className="text-center">Alto 13.2 (opcion2)</label>
+                        </div>
+                        <div className="button-continue">
+                            <button
+                                onClick={() => {
+                                    searchoClauseThirteenth(optionClauseThirteenth);
+                                    setQuestionNineth(false);
+                                    setQuestionTenth(true);
+                                }}
+                                class="btn btn-info"
+                            >
+                                CONTINUAR
+                            </button>
                         </div>
                     </div>
-                    <button
-                        onClick={() => {
-                            searchoClauseThirteenth(optionClauseThirteenth);
-                            setQuestionNineth(false);
-                            setQuestionTenth(true);
-                        }}
-                        class="btn btn-info"
-                    >
-                        Siguiente
-                    </button>
                 </div>
             }
             {
                 (questionTenth) &&
-                <div className="row m-5">
-                    <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>10. Garantías</p>
-                        <p>¿Los bienes van a ser entregados en una de las centrales?</p>
-                        <div className="m-3" onChange={optionClausesFourteenth}>
-                            <input className="m-3 radio" type="radio" value="true" name="gender" />
-                            Si<br />
-                            <input className="m-3 radio" type="radio" value="false" name="gender" />
-                            No
-                        </div>
-                        <label htmlFor="">
-                            Si su respuesta anterior es Si, rellene este campo.El monto de la póliza de responsabilidad civil extra contractual es:
-                        <textarea name="" onChange={moneyPoliza}
-                                placeholder="Ejm: US$ 67,274.36 (Sesenta y Siete Mil Doscientos Setenta y Cuatro con 36/100 Dólares de los Estados Unidos de América) "></textarea>
-                        </label>
-
+                <div className="container-question">
+                    <p className="text-center font-weight-bold">10. Garantías</p>
+                    <p className="text-center">¿Los bienes van a ser entregados en una de las centrales?</p>
+                    <div onChange={optionClausesFourteenth}>
+                        <input className="m-3 radio" type="radio" value="true" name="gender" />
+                        <label htmlFor="" className="text-center">Sí</label>
+                        <input className="m-3 radio" type="radio" value="false" name="gender" />
+                        <label htmlFor="" className="text-center">No</label>
                     </div>
-                    <button
-                        onClick={() => {
-                            searchClauseFourteenth(optionClauseFourteenth, moneysPoliza);
-                            setQuestionEleventh(true);
-                            setQuestionTenth(false);
-                        }}
-                        class="btn btn-info"
-                    >
-                        Siguiente
+                    <label htmlFor="" className="text-center">
+                        Si su respuesta anterior es "Sí", rellene el siguiente campo con la respuesta a la
+                        siguiente interrogante: ¿El monto de la póliza de responsabilidad civil extra contractual 
+                        es?
+                    </label>
+                    <textarea name="" onChange={moneyPoliza} id="textarea"
+                        placeholder="Ejm: US$ 67,274.36 (Sesenta y Siete Mil Doscientos Setenta y Cuatro con 36/100 Dólares de los Estados Unidos de América) ">
+                    </textarea>
+                    <div className="button-continue">
+                        <button
+                            onClick={() => {
+                                searchClauseFourteenth(optionClauseFourteenth, moneysPoliza);
+                                setQuestionEleventh(true);
+                                setQuestionTenth(false);
+                            }}
+                            class="btn btn-info"
+                        >
+                            CONTINUAR
                     </button>
+                    </div>
                 </div>
             }
             {
                 (questionEleventh) &&
-                <div className="row m-5">
-                    <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>11. Subcontratación</p>
-
-                        <p>¿La empresa contratada va a subcontratar y tiene el nombre de la empresa
-                        con la que haria el subcontrato?
-                        </p>
-                        <div className="m-3" onChange={optionClauseSixteenth}>
-                            <input className="m-3 radio" type="radio" value="true" name="gender" /> Si<br />
-                            <input className="m-3 radio" type="radio" value="false" name="gender" /> Si, pero no tiene el nombre <br />
-                            <input className="m-3 radio" type="radio" value="false" name="gender" /> No<br />
-                        </div>
+                <div className="container-question">
+                    <p className="text-center font-weight-bold">11. Subcontratación</p>
+                    <p className="text-center">
+                        ¿La empresa contratada va a subcontratar? De ser así, ¿Conoce el nombre de la empresa
+                        con la que haría el subcontrato?
+                    </p>
+                    <div className="m-3" onChange={optionClauseSixteenth}>
+                        <input className="m-3 radio" type="radio" value="true" name="gender" /> Sí<br />
+                        <input className="m-3 radio" type="radio" value="false" name="gender" /> Sí, pero no tiene el nombre.<br />
+                        <input className="m-3 radio" type="radio" value="false" name="gender" /> No<br />
                     </div>
-                    <button
-                        onClick={() => {
-                            searchClauseSixteenth(optionClausesSixteenth);
-                            setQuestionEleventh(false);
-                            setQuestionTwelfth(true);
-                        }}
-                        class="btn btn-info"
-                    >
-                        Siguiente
-                </button>
+                    <div className="button-continue">
+                        <button
+                            onClick={() => {
+                                searchClauseSixteenth(optionClausesSixteenth);
+                                setQuestionEleventh(false);
+                                setQuestionTwelfth(true);
+                            }}
+                            class="btn btn-info"
+                        >
+                            CONTINUAR
+                        </button>
+                    </div>
                 </div>
             }
             {
                 (questionTwelfth) &&
-                <div className="row m-5">
-                    <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>12. Ética en los negocios</p>
-
-                        <p>Riesgo de Compliance es</p>
-                        <div className="m-3" onChange={optionClauseTwentieth}>
-                            <input className="m-3 radio" type="radio" value="bajo" name="gender" /> Muy bajo<br />
-                            <input className="m-3 radio" type="radio" value="medio" name="gender" />Medio <br />
-                            <input className="m-3 radio" type="radio" value="alto" name="gender" /> Muy alto <br />
-                        </div>
+                <div className="container-question">
+                    <p className="text-center font-weight-bold">12. Ética en los negocios</p>
+                    <p className="text-center">Riesgo de Compliance es</p>
+                    <div className="m-3" onChange={optionClauseTwentieth}>
+                        <input className="m-3 radio" type="radio" value="bajo" name="gender" /> Muy bajo<br />
+                        <input className="m-3 radio" type="radio" value="medio" name="gender" />Medio <br />
+                        <input className="m-3 radio" type="radio" value="alto" name="gender" /> Muy alto <br />
+                    </div>
+                    <div className="button-continue">
                         <button onClick={() => {
                             searchClauseTwentienth(optionClausesTwentieth);
                             setQuestionTwelfth(false);
                             setQuestionThirteenth(true);
                         }}
                             class="btn btn-info">
-                            Siguiente
-                     </button>
+                            CONTINUAR
+                        </button>
                     </div>
                 </div>
             }
             {
                 (questionThirteenth) &&
-                <div className="row m-5">
-                    <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>13. Varios</p>
-
-                        <p>Fecha en la que se suscribe el documento</p>
-                        <label htmlFor="">
-                            Dia
-                        <input type="text" placeholder="23" onChange={day} />
-                        </label>
-                        <label htmlFor="">
-                            Mes
-                        <input type="text" placeholder="Junio" onChange={month} />
-                        </label>
-                        <label htmlFor="">
-                            Mes
-                        <input type="text" placeholder="2020" onChange={year} />
-                        </label>
-                    </div>
-                    <button onClick={() => {
-                        searchDate(days, months, years);
-                        setQuestionThirteenth(false);
-                        setQuestionEnd(true);
-                    }}
-                        class="btn btn-info">
-                        Siguiente
+                <div className="container-question">
+                    <p className="text-center font-weight-bold">13. Varios</p>
+                    <p className="text-center">Indique la fecha en la que se suscribe el documento</p>
+                    <label htmlFor="" className="text-center">Día</label>
+                    <input type="text" placeholder="23" onChange={day} />
+                    <label htmlFor="" className="text-center">Mes</label>
+                    <input type="text" placeholder="Junio" onChange={month} />
+                    <label htmlFor="" className="text-center">Año</label>
+                    <input type="text" placeholder="2020" onChange={year} />
+                    <div className="button-continue">
+                        <button onClick={() => {
+                            searchDate(days, months, years);
+                            setQuestionThirteenth(false);
+                            setQuestionEnd(true);
+                        }}
+                            class="btn btn-info">
+                            CONTINUAR
                      </button>
+                    </div>
                 </div>
-
             }
             {
                 (questionEnd) &&
-                <div className="row m-5">
-                    <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>¡Haz terminado de realizar tu contrato!</p>
-
-                        <p>Si quieres tener el contrato que acabar de realizar puedes descargarlo en formato Word.</p>
-                        <img src={img} alt="imagen" />
-                    </div>
+                <div className="container-question">
+                    <p className="text-center">¡Haz terminado de realizar tu contrato!</p>
+                    <p className="text-center">Si desea puede descargar el contrato en formato Word.</p>
+                    <img src={img} alt="imagen" />
                     <div className="row mt-3">
-                        <div className="col-sm-6"><button id="btn-export" className="btn btn-info" onClick={generateWord}>Export to word doc</button></div>
-                        <div className="col-sm-6"><button id="btn-export" className="btn btn-info">Finalizar</button></div>
+                        <div className="col-sm-6"><button id="btn-export" className="btn btn-info" onClick={generateWord}>DESCARGAR EN WORD</button></div>
+                        <div className="col-sm-6"><button id="btn-export" className="btn btn-info">FINALIZAR</button></div>
                     </div>
                 </div>
 
