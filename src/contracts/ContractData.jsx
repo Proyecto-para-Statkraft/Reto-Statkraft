@@ -151,6 +151,12 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
     const [years, setYears] = useState("");
     const year = e => { setYears(e.target.value) };
 
+
+    const handleClick = e => {
+        e.preventDefault()
+        editUpdate(producto)
+    }
+
     return (
         <div>
             {
@@ -534,8 +540,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
 
 
                         <img src={img} alt="imagen" />
-                        <button>Descargarlo</button>
-                        <button>Finalizar</button>
+                        
                     </div>
                 </div>
 
