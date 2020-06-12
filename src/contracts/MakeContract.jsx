@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import firebase from "../componentes/firebase.js";
 import '../style/makecontract.css';
 import ContractData from './ContractData';
 import Introduction from './BuyAndSell/Introduction';
@@ -114,6 +115,8 @@ const MakeContract = (data) => {
                 <Twelfth data={data} Twelfth={sectionTwelfth} />
             </div>
         ); */
+
+
 
     return (
         <div id="source-html" className="view-contract">

@@ -127,6 +127,21 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
     const [years, setYears] = useState("");
     const year = e => { setYears(e.target.value) };
 
+
+    // const onCreate = () => {
+    //     const db = firebase.firestore();
+    //     db.collection("productos").add({
+    //         tipo: category,
+    //         descripcion: name,
+    //         monto: sectionThird,
+    //         plazo: price,
+    //         comprador: image,
+    //         usuario: usuario
+    //     })
+    // };
+
+
+
     return (
         <div id="contract-data">
             {
@@ -526,13 +541,10 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
 
                         <p>Si quieres tener el contrato que acabar de realizar puedes descargarlo en formato Word.</p>
 
-
                         <img src={img} alt="imagen" />
-                        <button class="btn btn-info">Descargarlo</button>
-                        <button>Finalizar</button>
+                        <button type="button" className="btn btn-primary" onClick={'onCreate'} >Finalizar</button>
                     </div>
                 </div>
-
             }
         </div >
     );
