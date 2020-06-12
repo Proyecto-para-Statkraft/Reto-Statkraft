@@ -521,7 +521,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
             {
                 (questionEnd) &&
                 <div className="container-question">
-                    <p className="text-center">¡Haz terminado de realizar tu contrato!</p>
+                    <p className="text-center titleWelcome">¡Haz terminado de realizar tu contrato!</p>
                     <p className="text-center">Si desea puede descargarlo en formato Word.</p>
                     <img src={img} alt="imagen" />
                     <div className="row mt-3">
