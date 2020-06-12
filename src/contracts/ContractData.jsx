@@ -560,32 +560,3 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
 };
 
 export default ContractData;
-
-
-/* unction AlertDismissible() {
-    const [show, setShow] = useState(true);
-
-    return (
-      <>
-        <Alert show={showAlert} variant="success">
-          <Alert.Heading>How's it going?!</Alert.Heading>
-          <p>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
-            lacinia odio sem nec elit. Cras mattis consectetur purus sit amet
-            fermentum.
-          </p>
-          <hr />
-          <div className="d-flex justify-content-end">
-            <Button onClick={() => setShowAlert(false)} variant="outline-success">
-              Close me ya'll!
-            </Button>
-          </div>
-        </Alert>
-
-        {!show && <Button onClick={() => setShowAlert(true)}>Show Alert</Button>}
-      </>
-    );
-  }
-
-  render(<AlertDismissible />); */
-
