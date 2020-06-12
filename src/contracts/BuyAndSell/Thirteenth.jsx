@@ -8,7 +8,7 @@ const Thirteenth = ({ data, Thirteenth }) => {
     const { optionClauseThirteenth } = Thirteenth;
 
     if (Thirteenth !== "") {
-        if(optionClauseThirteenth == 'bajo') {
+        if (optionClauseThirteenth === 'bajo') {
             return (
                 <section>
                     <h3>DÉCIMA TERCERA: PENALIDADES</h3>
@@ -24,10 +24,10 @@ const Thirteenth = ({ data, Thirteenth }) => {
                         <span>{companyData.name}</span> una penalidad ascendente a uno por
                         ciento (1%) del valor del Contrato por cada día de atraso.
                     </p>
-    
-                    
+
+
                     <ClauseA companyData={companyData} />
-                
+
                     <p>13.3 Por resolución del Contrato:</p>
                     <p>
                         En caso se resuelva el Contrato por causa imputable al{" "}
@@ -43,7 +43,7 @@ const Thirteenth = ({ data, Thirteenth }) => {
                     </p>
                 </section>
             );
-            }
+        }
         else {
             return (
                 <section>
@@ -60,8 +60,8 @@ const Thirteenth = ({ data, Thirteenth }) => {
                         <span>{companyData.name}</span> una penalidad ascendente a uno por
                         ciento (1%) del valor del Contrato por cada día de atraso.
                     </p>
-    
-                    
+
+
                     <ClauseB companyData={companyData} />
                     <p>13.3 Por resolución del Contrato:</p>
                     <p>

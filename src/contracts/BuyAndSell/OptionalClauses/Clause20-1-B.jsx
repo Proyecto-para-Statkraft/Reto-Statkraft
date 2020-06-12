@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Clause = ({ companyData, numberAnexo }) => (
+const Clause = ({ companyData }) => (
     <section>
         <p>1.1 REQUISITOS DE LA ETICA EN LOS NEGOCIOS Y ANTICORRUPCION</p>
         <p>
@@ -45,7 +45,7 @@ const Clause = ({ companyData, numberAnexo }) => (
             </li>
             <li>
                 (vi) El Código de conducta de el <span>PROVEEDOR</span> de {companyData.name} adjunto como Anexo
-                {numberAnexo} al Contrato.
+                al Contrato.
             </li>
         </ul>
         <p>
@@ -69,7 +69,7 @@ const Clause = ({ companyData, numberAnexo }) => (
             correspondiente a la supuesta violación del <span>PROVEEDOR</span>.
         </p>
         <p>
-            1.4 Si {companyData} sospecha razonablemente que el <span>PROVEEDOR</span> ha violado alguno de los requisitos
+            1.4 Si {companyData.name} sospecha razonablemente que el <span>PROVEEDOR</span> ha violado alguno de los requisitos
             establecidos en la Cláusula 1.1, {companyData.name} tendrá derecho a, previa notificación por escrito,
             suspender el cumplimiento del Contrato. Si la sospecha no se soluciona dentro de los 30 días
             posteriores a la recepción de la notificación por escrito de parte de {companyData.name}, {companyData.name}

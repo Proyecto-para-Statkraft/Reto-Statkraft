@@ -58,11 +58,6 @@ const MakeContract = (data) => {
         setSectionSixth({ deadlineDay })
     }
 
-    const [sectionTenth, setSectionTenth] = useState('');
-    const searchAnexoTench = (deadlineDay) => {
-        setSectionTenth({ deadlineDay })
-    }
-
     const [sectionEleventh, setSectionEleventh] = useState('');
     const searchRepresentative = (representativeCompany, representativeSupplier) => {
         setSectionEleventh({ representativeCompany, representativeSupplier })
@@ -75,9 +70,8 @@ const MakeContract = (data) => {
 
     const [sectionThirteenth, setSectionThirteenth] = useState('');
     const searchoClauseThirteenth = (optionClauseThirteenth) => {
-        console.log(optionClauseThirteenth)
         setSectionThirteenth({ optionClauseThirteenth })
-        
+
     }
 
     const [sectionFourteenth, setSectionFourteenth] = useState('');
@@ -122,14 +116,14 @@ const MakeContract = (data) => {
                 <section className="section-question">
                     <ContractData search={searchProvider} searchDataAntecedentes={searchAntecedente} searchSellOption={searchObjeto}
                         searchPrice={searchPrice} searchPaymentMethod={searchPaymentMethod} searchTermPay={searchTermPay}
-                        searchSite={searchSite} searchAnexoTench={searchAnexoTench} searchRepresentative={searchRepresentative}
+                        searchSite={searchSite} searchRepresentative={searchRepresentative}
                         searchHoursTime={searchHoursTime} searchoClauseThirteenth={searchoClauseThirteenth}
                         searchClauseFourteenth={searchClauseFourteenth} searchTimeDayFifteenth={searchTimeDayFifteenth}
                         searchClauseSixteenth={searchClauseSixteenth} searchClauseTwentienth={searchClauseTwentieth}
                     />
                 </section>
                 <section className="section-contract">
-                    <Introduction  data={data} provider={provider} />
+                    <Introduction data={data} provider={provider} />
                     <First data={data} First={antecedente} />
                     <Second data={data} Second={sectionSecond} />
                     <Third data={data} Third={sectionThird} />
@@ -142,7 +136,7 @@ const MakeContract = (data) => {
                     <Fourteenth data={data} Fourteenth={sectionFourteenth} />
                     <Fifteenth Fifteenth={sectionFifteenth} />
                     <Sixteenth data={data} Sixteenth={sectionSixteenth} />
-                    {/* <Twentieth Thirteenth={sectionTwentienth} /> */}
+                    <Twentieth data={data} Twentieth={sectionTwentienth} />
                 </section>
             </div>
         </div>

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 const ContractData = ({ search, searchDataAntecedentes, searchSellOption, searchPrice, searchPaymentMethod,
-    searchTermPay, searchSite, searchAnexoTench, searchRepresentative, searchHoursTime, searchoClauseThirteenth,
-    searchClauseFourteenth, searchTimeDayFifteenth, searchClauseSixteenth, searchClauseTwentienth }) => {
+    searchTermPay, searchSite, searchRepresentative, searchHoursTime, searchoClauseThirteenth,
+    searchClauseFourteenth,  searchClauseSixteenth, searchClauseTwentienth }) => {
 
     const [questionIntro, setQuestionIntro] = useState(true);
     const [questionFirst, setQuestionFirst] = useState(false);
@@ -12,7 +12,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
     const [questionFifth, setQuestionFifth] = useState(false);
     const [questionSixth, setQuestionSixth] = useState(false);
     const [questionSeventh, setQuestionSeventh] = useState(false);
-    const [questionEighth, setQuestionEighth] = useState(false);s
+    const [questionEighth, setQuestionEighth] = useState(false);
     const [questionNineth, setQuestionNineth] = useState(false);
     const [questionTenth, setQuestionTenth] = useState(false);
     const [questionEleventh, setQuestionEleventh] = useState(false);
@@ -56,10 +56,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
     const product = e => {
         setInputRequiere(e.target.value);
     };
-    const [inputRequieresen, setInputRequiereEn] = useState("");
-    const place = e => {
-        setInputRequiereEn(e.target.value);
-    };
+
 
     const [sells, setSells] = useState("");
     const sell = e => {
@@ -121,20 +118,10 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
     const [moneysPoliza, setMoneysPoliza] = useState("");
     const moneyPoliza = e => { setMoneysPoliza(e.target.value) }
 
-    const [timeDay, settimeDay] = useState("");
-    const timeDays = e => { settimeDay(e.target.value) }
-
     const [optionClausesSixteenth, setOptionClauseSixteenth] = useState("");
     const optionClauseSixteenth = e => { setOptionClauseSixteenth(e.target.value) };
 
-    const [name, setname] = useState("");
-    const clauseName = e => { setname(e.target.value) };
-
-    const [ruc, setRuc] = useState("");
-    const clauseRuc = e => { setRuc(e.target.value) };
-
-    const [servicio, setServicio] = useState("");
-    const clauseServicio = e => { setServicio(e.target.value) };
+  
 
     const [optionClausesTwentieth, setOptionClauseTwentieth] = useState("");
     const optionClauseTwentieth = e => { setOptionClauseTwentieth(e.target.value) };
@@ -209,7 +196,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     </div>
                     <button
                         onClick={() => {
-                            searchDataAntecedentes(inputRequieres, inputRequieresen);
+                            searchDataAntecedentes(inputRequieres);
                             setQuestionSecond(true);
                             setQuestionFirst(false);
                         }}
@@ -252,7 +239,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             El precio a pagar por los bienes adquiridos es :
                             <textarea type="text" placeholder="Ejm: US$ 67,274.36 (Sesenta y Siete Mil Doscientos Setenta y Cuatro con 36/100 Dólares de los Estados Unidos de América) " onChange={money} />
                         </label>
-                        
+
                     </div>
                     <button
                         onClick={() => {
@@ -274,13 +261,13 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         <div className="m-3" onChange={TypeMoney}>
                             <p>La moneda pactada para el precio es : </p>
                             <input className="m-3 radio" type="radio" value="soles" name="gender" />Nuevos Soles <br />
-                            <input className="m-3 radio" type="radio" value="dolares" name="gender" />Dólares de los Estados Unidos de América                
+                            <input className="m-3 radio" type="radio" value="dolares" name="gender" />Dólares de los Estados Unidos de América
                     </div>
                     </div>
                     <button
                         onClick={() => {
                             searchPaymentMethod(typeMoneys);
-                            
+
                             setQuestionFifth(true);
                             setQuestionQuarter(false);
                         }}
@@ -342,11 +329,11 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         <p>7. Administradores del Contrato </p>
                         <p>Los administradores del Contrato son:</p>
                         <label htmlFor="">
-                        De Statkraft
+                            De Statkraft
                             <input type="text" onChange={companyRepresentative} />
                         </label>
                         <label htmlFor="">
-                        De la empresa contratada
+                            De la empresa contratada
                             <input type="text" onChange={supplierRepresentative} />
                         </label>
                     </div>
@@ -369,15 +356,15 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         <p>8. Exclusión de daños indirectos y responsabilidad</p>
                         <p>En caso de mal funcionamiento de los bienes adquiridos, el Proveedor deberá repararlos en un plazo no mayor a:</p>
                         <label htmlFor="">
-                        Horas para Lima
+                            Horas para Lima
                             <input type="text" onChange={numberHoursRepairLim} />
                         </label>
                         <label htmlFor="">
-                        Horas para Provincia
+                            Horas para Provincia
                             <input type="text" onChange={numberHoursRepairProv} />
                         </label>
                         <label htmlFor="">
-                        El plazo de garantía de los bienes es de:
+                            El plazo de garantía de los bienes es de:
                         <input type="text" onChange={timeAfterDeliveryFecha} />
                         </label>
                     </div>
@@ -403,7 +390,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     <div className="m-3 d-flex flex-column bd-highlight">
                         <p>9. Penalidades</p>
                         <p>El nivel de riesgo de seguridad es:</p>
-                        <div className="m-3" onChange={optionClausesThirteenth}> 
+                        <div className="m-3" onChange={optionClausesThirteenth}>
                             <label htmlFor="">
                                 Bajo 13.2 (opcion1)
                                 <input className="m-3 radio" type="radio" value="bajo" name="gender" />
@@ -439,11 +426,11 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             No
                         </div>
                         <label htmlFor="">
-                        Si su respuesta anterior es Si, rellene este campo.El monto de la póliza de responsabilidad civil extra contractual es:
+                            Si su respuesta anterior es Si, rellene este campo.El monto de la póliza de responsabilidad civil extra contractual es:
                         <textarea name="" onChange={moneyPoliza}
-                        placeholder="Ejm: US$ 67,274.36 (Sesenta y Siete Mil Doscientos Setenta y Cuatro con 36/100 Dólares de los Estados Unidos de América) "></textarea>
+                                placeholder="Ejm: US$ 67,274.36 (Sesenta y Siete Mil Doscientos Setenta y Cuatro con 36/100 Dólares de los Estados Unidos de América) "></textarea>
                         </label>
-                        
+
                     </div>
                     <button
                         onClick={() => {
@@ -459,50 +446,20 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 (questionQuarter) &&
                 <div className="row m-5">
                     <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>15- Caso Fortuito</p>
-                        <label htmlFor="">
-                            cualquiera de las Partes podrá dar por
-                            resuelto el Contrato mediante comunicación cursada con
-                            <input type="text" onChange={timeDays} />
-                        </label>
-                    </div>
-                    <button
-                        onClick={() => {
-                            searchTimeDayFifteenth(timeDay);
-                        }}
-                        class="btn btn-info center"
-                    >
-                        Siguiente
-                    </button>
-                </div>
-            }
-            {
-                (questionQuarter) &&
-                <div className="row m-5">
-                    <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>16- Subcontratacion y cesion</p>
+                        <p>11. Subcontratación</p>
 
-                        <h1>ESCOGE CLAUSULA</h1>
+                        <p>¿La empresa contratada va a subcontratar y tiene el nombre de la empresa
+                            con la que haria el subcontrato?
+                        </p>
                         <div className="m-3" onChange={optionClauseSixteenth}>
-                            <input className="m-3 radio" type="radio" value="true" name="gender" />
-                            16.1 clasuraASixteenth <br />
-                            <input className="m-3 radio" type="radio" value="false" name="gender" />
-                            16.1 clasuraBSixteenth
-                    </div>
-                        <p>si escoges clauseB completar campo</p>
-                        <label htmlFor="">
-                            salvo el
-                            servicio de
-                            <input type="text" placeholder="servicio" onChange={clauseServicio} />
-                            <input type="text" placeholder="nombre" onChange={clauseName} />
-                            <input type="text" placeholder="ruc" onChange={clauseRuc} />
-                        </label>
-
-
+                            <input className="m-3 radio" type="radio" value="true" name="gender" /> Si<br />
+                            <input className="m-3 radio" type="radio" value="false" name="gender" /> Si, pero no tiene el nombre <br />
+                            <input className="m-3 radio" type="radio" value="false" name="gender" /> No<br />
+                        </div>
                     </div>
                     <button
                         onClick={() => {
-                            searchClauseSixteenth(optionClausesSixteenth, name, ruc, servicio);
+                            searchClauseSixteenth(optionClausesSixteenth);
                         }}
                         class="btn btn-info center"
                     >
@@ -514,19 +471,15 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 (questionQuarter) &&
                 <div className="row m-5">
                     <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>20- Regulacion Anticorrupcion</p>
+                        <p>12. Ética en los negocios</p>
 
-                        <h1>ESCOGE CLAUSULA</h1>
+                        <p>Riesgo de Compliance es</p>
                         <div className="m-3" onChange={optionClauseTwentieth}>
-                            <input className="m-3 radio" type="radio" value="clausulaA" name="gender" />
-                            16.1 clasuraATwentient <br />
-                            <input className="m-3 radio" type="radio" value="clausulaB" name="gender" />
-                            16.1 clasurabTwentient <br />
-                            <input className="m-3 radio" type="radio" value="clausulaC" name="gender" />
-                            16.1 clasuraCTwentient <br />
+                            <input className="m-3 radio" type="radio" value="bajo" name="gender" /> Muy bajo<br />
+                            <input className="m-3 radio" type="radio" value="medio" name="gender" />Medio <br />
+                            <input className="m-3 radio" type="radio" value="alto" name="gender" /> Muy alto <br />
                         </div>
-                        <p>FALTA UN PARAMETRO PARA UNA CLAUSULA revisar como llamarlo</p>
-                        <button onClick={() => { searchClauseTwentienth(optionClausesTwentieth); }}  class="btn btn-info center">
+                        <button onClick={() => { searchClauseTwentienth(optionClausesTwentieth); }} class="btn btn-info center">
                             Siguiente
                      </button>
                     </div>
