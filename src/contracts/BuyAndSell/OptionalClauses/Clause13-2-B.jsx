@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Clause = ({ companyData }) => (
+const ClauseB = ({ companyData }) => (
     <div>
         <p>
             13.2 Por incumplimiento en las normas de seguridad y salud o por contar con
@@ -53,4 +53,4 @@ const Clause = ({ companyData }) => (
 );
 
 
-export default Clause;
+export default ClauseB;

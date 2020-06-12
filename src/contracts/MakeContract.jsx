@@ -76,9 +76,12 @@ const MakeContract = (data) => {
     }
 
     const [sectionThirteenth, setSectionThirteenth] = useState('');
-    const searchoClauseThirteenth = (numberHoursRepairLima, numberHoursRepairProvincia, timeAfterDeliveryFechayHora) => {
-        setSectionThirteenth({ numberHoursRepairLima, numberHoursRepairProvincia, timeAfterDeliveryFechayHora })
+    const searchoClauseThirteenth = (optionClauseThirteenth) => {
+        setSectionThirteenth({ optionClauseThirteenth })
+
     }
+
+    console.log(sectionThirteenth, 'Funcionaaa')
 
     const [sectionFourteenth, setSectionFourteenth] = useState('');
     const searchClauseFourteenth = (optionClauseFourteenth, moneysPoliza) => {
