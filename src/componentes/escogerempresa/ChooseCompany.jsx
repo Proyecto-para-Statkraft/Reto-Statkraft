@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import Header from "../Header";
 import { Link } from 'react-router-dom';
-import '../style/chosecontracts.css'
 
-const OptionCompany = () => {
+const OptionCompany = (props) => {
+
+    console.log('nombre del solicitante', props)
+
     const [selectedOption, setSelectedOption] = useState('');
-
-
     const optionEmpresa = e => {
         setSelectedOption(e.target.value);
     };

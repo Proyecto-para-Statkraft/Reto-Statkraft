@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+body {
+    padding: 0;
+        
+    #root {
+        margin: 0;
+        width: 100%;
+        font-family: 'Franklin Gothic Book', arial;
+
+        span {
+            font-weight: bold;
+        }
+    }
+}

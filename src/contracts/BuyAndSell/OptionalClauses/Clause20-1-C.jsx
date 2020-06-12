@@ -52,13 +52,13 @@ const Clause = ({ companyData, annexed }) => (
                 o cuyo gobierno es, objeto de sanciones por sanciones relevantes autoridad;
             </li>
             <li>
-                vi. El Código de conducta de el <span>PROVEEDOR</span> de <span>{companyData.name}</span> 
-                adjunto como Anexo {annexed.codeConduct} al Contrato; y
+                vi. El Código de conducta de el <span>PROVEEDOR</span> de <span>{companyData.name}</span>
+                adjunto como Anexo al Contrato; y
             </li>
             <li>
-                vii. normas que sean consistentes con el requisito de <span>{companyData.name}</span> para 
+                vii. normas que sean consistentes con el requisito de <span>{companyData.name}</span> para
                 la ética empresarial, la lucha contra la corrupción y otros delitos económicos adjuntos
-                como Anexo {annexed.codeEtic} al presente, cuando actúen en nombre de <span>{companyData.name}</span>.
+                como Anexo al presente, cuando actúen en nombre de <span>{companyData.name}</span>.
             </li>
         </ul>
         <p>
@@ -67,12 +67,12 @@ const Clause = ({ companyData, annexed }) => (
             en nombre de el <span>PROVEEDOR</span> cumplan con todos los requisitos mencionados anteriormente.
         </p>
         <p>
-            El <span>PROVEEDOR</span> garantiza, salvo haya comunicado lo contrario a <span>{companyData.name}</span> antes 
+            El <span>PROVEEDOR</span> garantiza, salvo haya comunicado lo contrario a <span>{companyData.name}</span> antes
             de la suscripción del Contrato, que según su leal saber y entender, ni el <span>PROVEEDOR</span>,
             sus empleados, gerentes o directores, representantes o afiliados han sido en los
-            últimos tres años i) condenados por cualquier delito penal que implique corrupción,
+            últimos tres años i condenados por cualquier delito penal que implique corrupción,
             lavado de dinero u otro delito económico o delito en contra de los Derechos Humanos,
-            o ii) son o han sido sujeto de cualquier investigación o procedimiento de ejecución
+            o ii son o han sido sujeto de cualquier investigación o procedimiento de ejecución
             por parte de cualquier organismo gubernamental, administrativo o regulador con
             respecto a cualquier delito o presunto delito, que haya sido a notificado, haya
             sido presentado como una amenaza o esté pendiente de ser investigado, este en
@@ -105,12 +105,12 @@ const Clause = ({ companyData, annexed }) => (
         </p>
         <p>
             Si el <span>PROVEEDOR</span> tiene conocimiento de un posible incumplimiento de los requisitos
-            de la Cláusula [1.1], el <span>PROVEEDOR</span> deberá informarlo de inmediato a 
+            de la Cláusula [1.1], el <span>PROVEEDOR</span> deberá informarlo de inmediato a
             <span>{companyData.name}</span> por escrito.
         </p>
         <p>
-            Si el <span>PROVEEDOR</span> ha informado de un posible incumplimiento a <span>{companyData.name}</span> o 
-            si <span>{companyData.name}</span> sospecha razonablemente que puede haberse producido un 
+            Si el <span>PROVEEDOR</span> ha informado de un posible incumplimiento a <span>{companyData.name}</span> o
+            si <span>{companyData.name}</span> sospecha razonablemente que puede haberse producido un
             incumplimiento de los requisitos de la Cláusula 1.1, entonces:
         </p>
         <ul>
@@ -122,7 +122,7 @@ const Clause = ({ companyData, annexed }) => (
                 elección del representante externo corresponde única y exclusivamente a <span>{companyData.name}</span>.
             </li>
             <li>
-                (ii) El <span>PROVEEDOR</span> otorgará a <span>{companyData.name}</span> o su representante externo 
+                (ii) El <span>PROVEEDOR</span> otorgará a <span>{companyData.name}</span> o su representante externo
                 mediante un aviso en horario normal de trabajo, acceso completo y sin restricciones a cualquier
                 local y personas que sean relevantes para el propósito de investigar el posible
                 incumplimiento. Asimismo, proporcionará información relevante, así como la asistencia
@@ -142,52 +142,52 @@ const Clause = ({ companyData, annexed }) => (
                 cualquier información de carácter confidencial recibida de parte de el <span>PROVEEDOR</span>, a
                 excepción de los resultados de su auditoría y toda la información y documentación
                 subyacente que respalde o relacionado con tal incumplimiento, lo que deberá ser
-                comunicado y entregado a <span>{companyData.name}</span>. <span>{companyData.name}</span> tendrá la facultad 
+                comunicado y entregado a <span>{companyData.name}</span>. <span>{companyData.name}</span> tendrá la facultad
                 de auditar a el <span>PROVEEDOR</span> hasta después de (2) dos años de terminado el Contrato
             </li>
             <li>
-                (iv) <span>{companyData.name}</span> puede requerir una suspensión de los Servicios a el <span>PROVEEDOR</span>, 
-                durante un período razonable mientras se realicen las investigaciones y auditorías, sin que 
-                ello implique la ampliación del plazo para que el <span>PROVEEDOR</span> realice los Servicios o solicite 
-                el aumento de la contraprestación a <span>{companyData.name}</span>. Durante el período de investigaciones 
-                y auditorías, <span>{companyData.name}</span> puede solicitar se retengan los pagos adeudados que podrían 
+                (iv) <span>{companyData.name}</span> puede requerir una suspensión de los Servicios a el <span>PROVEEDOR</span>,
+                durante un período razonable mientras se realicen las investigaciones y auditorías, sin que
+                ello implique la ampliación del plazo para que el <span>PROVEEDOR</span> realice los Servicios o solicite
+                el aumento de la contraprestación a <span>{companyData.name}</span>. Durante el período de investigaciones
+                y auditorías, <span>{companyData.name}</span> puede solicitar se retengan los pagos adeudados que podrían
                 estar relacionados con la posible infracción; y
             </li>
             <li>
-                (v) <span>{companyData.name}</span> puede exigir al <span>PROVEEDOR</span> que implemente acciones correctivas 
-                razonables identificadas por <span>{companyData.name}</span> o su representante externo, que incluyen, 
-                pero no se limitan a, establecer nuevos procedimientos, resolver contratos con terceros y no 
-                realizar pagos o remover a personas que hayan actuado en incumplimiento de los requisitos de 
+                (v) <span>{companyData.name}</span> puede exigir al <span>PROVEEDOR</span> que implemente acciones correctivas
+                razonables identificadas por <span>{companyData.name}</span> o su representante externo, que incluyen,
+                pero no se limitan a, establecer nuevos procedimientos, resolver contratos con terceros y no
+                realizar pagos o remover a personas que hayan actuado en incumplimiento de los requisitos de
                 la Cláusula [1.1.]
             </li>
         </ul>
         <p>1.3 TERMINACIÓN E INDEMNIZACIÓN</p>
         <p>
-            En caso de incumplimiento por parte de el <span>PROVEEDOR</span> de las disposiciones de la Cláusula [1.1], 
-            o si el <span>PROVEEDOR</span> o cualquiera de sus Afiliados, Representantes o Subcontratistas se convierte 
-            en sujeto o propiedad de una o empresa controlada o de titularidad de una empresa sujeta a las 
-            regulaciones relacionadas con las sanciones económicas y el control de exportaciones, como se 
+            En caso de incumplimiento por parte de el <span>PROVEEDOR</span> de las disposiciones de la Cláusula [1.1],
+            o si el <span>PROVEEDOR</span> o cualquiera de sus Afiliados, Representantes o Subcontratistas se convierte
+            en sujeto o propiedad de una o empresa controlada o de titularidad de una empresa sujeta a las
+            regulaciones relacionadas con las sanciones económicas y el control de exportaciones, como se
             menciona en la Cláusula [1.1] , entonces:
         </p>
         <ul>
             <li>
-                (i) si el incumplimiento es de una naturaleza que no se puede remediar o si el incumplimiento 
-                se puede remediar pero el <span>PROVEEDOR</span> no ha solucionado el incumplimiento dentro de un período 
-                de tiempo razonable estipulado por <span>{companyData.name}</span>, <span>{companyData.name}</span> 
+                (i) si el incumplimiento es de una naturaleza que no se puede remediar o si el incumplimiento
+                se puede remediar pero el <span>PROVEEDOR</span> no ha solucionado el incumplimiento dentro de un período
+                de tiempo razonable estipulado por <span>{companyData.name}</span>, <span>{companyData.name}</span>
                 puede resolver este Contrato con efecto inmediato; y
             </li>
             <li>
-                (ii) El <span>PROVEEDOR</span> deberá indemnizar a <span>{companyData.name}</span> contra 
-                cualquier pérdida, daños, costos y gastos (incluidos los honorarios legales) incurridos o 
+                (ii) El <span>PROVEEDOR</span> deberá indemnizar a <span>{companyData.name}</span> contra
+                cualquier pérdida, daños, costos y gastos (incluidos los honorarios legales) incurridos o
                 sufridos por <span>{companyData.name}</span> como consecuencia de dicho incumplimiento.
             </li>
         </ul>
         <p>1.4 REPRESENTANTES Y SUBCONTRATISTAS</p>
         <p>
-            Antes de celebrar cualquier subcontrato, el <span>PROVEEDOR</span> llevará a cabo una debida diligencia 
-            de integridad para garantizar que los Subcontratistas potenciales estén debidamente calificados 
-            para realizar las tareas requeridas, que tengan buena reputación y que de acuerdo a la evaluación, 
-            no presentarían ningún riesgo o responsabilidad de cumplimiento relacionado con la corrupción u 
+            Antes de celebrar cualquier subcontrato, el <span>PROVEEDOR</span> llevará a cabo una debida diligencia
+            de integridad para garantizar que los Subcontratistas potenciales estén debidamente calificados
+            para realizar las tareas requeridas, que tengan buena reputación y que de acuerdo a la evaluación,
+            no presentarían ningún riesgo o responsabilidad de cumplimiento relacionado con la corrupción u
             otro para el <span>PROVEEDOR</span> o <span>{companyData.name}</span>;
         </p>
         <p>
@@ -195,27 +195,27 @@ const Clause = ({ companyData, annexed }) => (
         </p>
         <ul>
             <li>
-                (i) se obliguen a cumplir con todos los aspectos sustanciales, compromisos y garantías 
+                (i) se obliguen a cumplir con todos los aspectos sustanciales, compromisos y garantías
                 establecidos en la Cláusula [1.1];
             </li>
             <li>
-                (ii) garanticen el derecho de acceso de los terceros representantes de <span>{companyData.name}</span> a 
-                los locales, personas, libros, cuentas, registros y otra información de los Subcontratistas de 
+                (ii) garanticen el derecho de acceso de los terceros representantes de <span>{companyData.name}</span> a
+                los locales, personas, libros, cuentas, registros y otra información de los Subcontratistas de
                 acuerdo con los principios de la Cláusula [1.2.] anterior; y
             </li>
             <li>
-                (iii) asegurar que los subcontratistas implementen las medidas correctivas razonables 
-                identificadas por <span>{companyData.name}</span> o su representante externo de acuerdo a lo 
+                (iii) asegurar que los subcontratistas implementen las medidas correctivas razonables
+                identificadas por <span>{companyData.name}</span> o su representante externo de acuerdo a lo
                 señalado en la cláusula [1.2]
             </li>
         </ul>
         <p>
-            El <span>PROVEEDOR</span> revisará la efectividad del sistema y programa de control interno de los 
+            El <span>PROVEEDOR</span> revisará la efectividad del sistema y programa de control interno de los
             Subcontratistas para cumplir con los requisitos establecidos en la Cláusula [1.1.]
         </p>
         <p>
-            La subcontratación no eximirá al <span>PROVEEDOR</span> de sus responsabilidades según la Cláusula [1.1.]. 
-            El <span>PROVEEDOR</span> será responsable de los actos, incumplimientos y negligencias de sus 
+            La subcontratación no eximirá al <span>PROVEEDOR</span> de sus responsabilidades según la Cláusula [1.1.].
+            El <span>PROVEEDOR</span> será responsable de los actos, incumplimientos y negligencias de sus
             ubcontratistas como si fueran los actos, incumplimientos y negligencias de el <span>PROVEEDOR</span>.
         </p>
     </section>
