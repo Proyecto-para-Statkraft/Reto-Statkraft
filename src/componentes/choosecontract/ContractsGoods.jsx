@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../Header';
 import { Link } from 'react-router-dom';
 import '../../style/chosecontracts.css'
@@ -6,9 +6,18 @@ import '../../style/chosecontracts.css'
 const ContrractsGoods = (props) => {
 
 
-    // console.log('contrato selecionado', props.location.goods)
+    const [type, setType] = useState('');
 
+    const typeContracts = [
+        type
+    ];
+
+    localStorage.setItem('Tipo', JSON.stringify(typeContracts));
+
+
+    // console.log('contrato selecionado', props.location.goods)
     if (props.location.goods === 'si') {
+        setType('Compra Venta e Instalacion')
         return (
             <div>
                 <Header />
@@ -32,13 +41,18 @@ const ContrractsGoods = (props) => {
                     <br />
                     <div className="m-5 d-flex justify-content-around">
                         <Link className="col-sm-3 btn btn-outline-primary " to="/reviewcontracts">Anterior</Link>
-                        <Link className="col-sm-3  btn btn-primary " to="/optioncompany">Siguiente</Link>
+                        <Link className="btn btn-primary m-3 "
+                            to={{
+                                pathname: "/optioncompany",
+                            }}>Siguiente</Link>
+
                     </div>
                 </div>
             </div >
         )
     }
     if (props.location.goods === 'no') {
+        // setType('Compra Venta')
         return (
             <div>
                 <Header />
@@ -62,7 +76,10 @@ const ContrractsGoods = (props) => {
                     <br />
                     <div className="m-5 d-flex justify-content-around">
                         <Link className="col-sm-3 btn btn-outline-primary " to="/reviewcontracts">Anterior</Link>
-                        <Link className="col-sm-3  btn btn-primary " to="/optioncompany">Siguiente</Link>
+                        <Link className="btn btn-primary m-3 "
+                            to={{
+                                pathname: "/optioncompany",
+                            }}>Siguiente</Link>
                     </div>
                 </div>
             </div >

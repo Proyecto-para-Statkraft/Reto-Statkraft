@@ -25,27 +25,31 @@ const ConsolidatedContracts = () => {
     return (
         <Fragment>
             <Header />
-            <Table striped bordered hover>
-                <thead>
-                    <tr>
-                        <th>N°</th>
-                        <th>Tipo de Contrato</th>
-                        <th>Descripcion del Servicio</th>
-                        <th>Monto del Contrato</th>
-                        <th>Plazo</th>
-                        <th>comprador</th>
-                        <th>Usuario</th>
-                    </tr>
-                </thead>
-                <tbody>
+            <div className="m-5"></div>
+            <div className="m-5">
+                <h3>Contratos</h3>
+                <Table striped bordered hover>
+                    <thead className="m-5 border border-info ">
+                        <tr className="m-5 table-info" >
+                            <th>N°</th>
+                            <th>Tipo de Contrato</th>
+                            <th>Descripcion del Servicio</th>
+                            <th>Monto del Contrato</th>
+                            <th>Plazo</th>
+                            <th>comprador</th>
+                            <th>Usuario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-                    {spells.map(doc =>
-                        <ResumenContracts key={doc.id} data={doc} />
-                    )
-                    }
+                        {spells.map(doc =>
+                            <ResumenContracts key={doc.id} data={doc} />
+                        )
+                        }
 
-                </tbody>
-            </Table>
+                    </tbody>
+                </Table>
+            </div>
         </Fragment>
     )
 }

@@ -3,7 +3,7 @@ import Header from "../Header";
 import { Link } from 'react-router-dom';
 import '../../style/chosecontracts.css'
 
-const ReviewContracts = () => {
+const ReviewContracts = (props) => {
     const [selectedOption, setSelectedOption] = useState('');
 
 
@@ -32,6 +32,7 @@ const ReviewContracts = () => {
                             to={{
                                 pathname: "/questions",
                                 selectedOption,
+                                props
                             }}>Siguiente</Link>
                     </div>
                 </div>

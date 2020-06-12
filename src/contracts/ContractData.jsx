@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import img from '../img/image14.png';
+import firebase from "../componentes/firebase.js";
 
 const ContractData = ({ search, searchDataAntecedentes, searchSellOption, searchPrice, searchPaymentMethod,
     searchTermPay, searchSite, searchRepresentative, searchHoursTime, searchoClauseThirteenth,
@@ -127,20 +128,24 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
     const [years, setYears] = useState("");
     const year = e => { setYears(e.target.value) };
 
+    const storageName = JSON.parse(localStorage.getItem('Usariocomprador'))
 
-    // const onCreate = () => {
-    //     const db = firebase.firestore();
-    //     db.collection("productos").add({
-    //         tipo: category,
-    //         descripcion: name,
-    //         monto: sectionThird,
-    //         plazo: price,
-    //         comprador: image,
-    //         usuario: usuario
-    //     })
-    // };
+    const storageTipo = JSON.parse(localStorage.getItem('Tipo'))
+    // const nameServices = storageName.nameServices;
+    // console.log('nombrede serveces', nameServices)
+    // const requieresServices = storageName.requieresServices
 
 
+    const onCreate = () => {
+        const db = firebase.firestore();
+        db.collection("resumenContrato").add({
+            tipo: storageTipo,
+            descripcion: inputRequieres,
+            monto: moneys,
+            plazo: timeAfterDeliveryFechayHora,
+            usuyser: storageName
+        })
+    };
 
     return (
         <div id="contract-data">
@@ -183,7 +188,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                                 setQuestionIntro(false);
                                 setQuestionFirst(true);
                             }}
-                            class="btn btn-info"
+                            className="btn btn-info"
                         >
                             CONTINUAR
                     </button>
@@ -208,7 +213,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             setQuestionSecond(true);
                             setQuestionFirst(false);
                         }}
-                        class="btn btn-info"
+                        className="btn btn-info"
                     >
 
                         Siguiente
@@ -231,7 +236,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             setQuestionThird(true);
                             setQuestionSecond(false);
                         }}
-                        class="btn btn-info"
+                        className="btn btn-info"
                     >
                         Siguiente
                </button>
@@ -255,7 +260,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             setQuestionQuarter(true);
                             setQuestionThird(false);
                         }}
-                        class="btn btn-info"
+                        className="btn btn-info"
                     >
                         Siguiente
                 </button>
@@ -279,7 +284,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             setQuestionFifth(true);
                             setQuestionQuarter(false);
                         }}
-                        class="btn btn-info"
+                        className="btn btn-info"
                     >
                         Siguiente
                 </button>
@@ -302,7 +307,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             setQuestionSixth(true);
                             setQuestionFifth(false);
                         }}
-                        class="btn btn-info"
+                        className="btn btn-info"
                     >
                         Siguiente
                 </button>
@@ -324,7 +329,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             setQuestionSeventh(true);
                             setQuestionSixth(false);
                         }}
-                        class="btn btn-info"
+                        className="btn btn-info"
                     >
                         Siguiente
                 </button>
@@ -351,7 +356,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             setQuestionEighth(true);
                             setQuestionSeventh(false);
                         }}
-                        class="btn btn-info"
+                        className="btn btn-info"
                     >
                         Siguiente
                 </button>
@@ -386,7 +391,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             setQuestionNineth(true);
                             setQuestionEighth(false);
                         }}
-                        class="btn btn-info"
+                        className="btn btn-info"
                     >
                         Siguiente
                 </button>
@@ -415,7 +420,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             setQuestionNineth(false);
                             setQuestionTenth(true);
                         }}
-                        class="btn btn-info"
+                        className="btn btn-info"
                     >
                         Siguiente
                     </button>
@@ -446,7 +451,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             setQuestionEleventh(true);
                             setQuestionTenth(false);
                         }}
-                        class="btn btn-info"
+                        className="btn btn-info"
                     >
                         Siguiente
                     </button>
@@ -473,7 +478,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             setQuestionEleventh(false);
                             setQuestionTwelfth(true);
                         }}
-                        class="btn btn-info"
+                        className="btn btn-info"
                     >
                         Siguiente
                 </button>
@@ -495,8 +500,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             searchClauseTwentienth(optionClausesTwentieth);
                             setQuestionTwelfth(false);
                             setQuestionThirteenth(true);
-                        }}
-                            class="btn btn-info">
+                        }} className="btn btn-info">
                             Siguiente
                      </button>
                     </div>
@@ -523,11 +527,10 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         </label>
                     </div>
                     <button onClick={() => {
-                        searchDate(days, months, years);
+                        searchDate(days, months, years)
                         setQuestionThirteenth(false);
                         setQuestionEnd(true);
-                    }}
-                        class="btn btn-info">
+                    }} class="btn btn-info">
                         Siguiente
                      </button>
                 </div>
@@ -542,7 +545,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         <p>Si quieres tener el contrato que acabar de realizar puedes descargarlo en formato Word.</p>
 
                         <img src={img} alt="imagen" />
-                        <button type="button" className="btn btn-primary" onClick={'onCreate'} >Finalizar</button>
+                        <button type="button" className="btn btn-primary" onClick={onCreate} >Finalizar</button>
                     </div>
                 </div>
             }
