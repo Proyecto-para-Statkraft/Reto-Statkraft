@@ -63,7 +63,7 @@ const Questions = (props) => {
                     <br />
                     <div className="m-5 d-flex justify-content-around">
                         <Link className="col-sm-3 btn btn-outline-primary " to="/reviewcontracts">Anterior</Link>
-                        <Link className="col-sm-3  btn btn-primary " to="/">Crear Contrato</Link>
+                        <Link className="col-sm-3  btn btn-primary " to="/optioncompany">Siguiente</Link>
                     </div>
                 </div>
             </div >
@@ -94,7 +94,7 @@ const Questions = (props) => {
                     <br />
                     <div className="m-5 d-flex justify-content-around">
                         <Link className="col-sm-3 btn btn-outline-primary " to="/reviewcontracts">Anterior</Link>
-                        <Link className="col-sm-3  btn btn-primary " to="/">Crear Contrato</Link>
+                        <Link className="col-sm-3  btn btn-primary " to="/optioncompany">Siguiente</Link>
                     </div>
                 </div>
             </div >
@@ -124,8 +124,8 @@ const Questions = (props) => {
                     <br />
                     <br />
                     <div className="m-5 d-flex justify-content-around">
-                        <Link className="col-sm-3 btn btn-outline-primary " to="/reviewcontracts">Anterior</Link>
-                        <Link className="col-sm-3  btn btn-primary " to="/">Crear Contrato</Link>
+                        <Link className="col-sm-3 btn btn-outline-primary " to="/">Anterior</Link>
+                        <Link className="col-sm-3  btn btn-primary " to="/">Finalizar</Link>
                     </div>
                 </div>
             </div >
@@ -156,7 +156,7 @@ const Questions = (props) => {
                     <br />
                     <div className="m-5 d-flex justify-content-around">
                         <Link className="col-sm-3 btn btn-outline-primary " to="/reviewcontracts">Anterior</Link>
-                        <Link className="col-sm-3  btn btn-primary " to="/">Crear Contrato</Link>
+                        <Link className="col-sm-3  btn btn-primary " to="/optioncompany">Siguiente</Link>
                     </div>
                 </div>
             </div >
@@ -164,31 +164,31 @@ const Questions = (props) => {
     }
     return (
         <div>
-                <Header />
-                <div className="m-5">
-                    <div className="m-5 col-sm-10">
-                        <div>
-                            <h5 className="m-3">El contrato que debes utilizar es:</h5>
-                        </div>
-                        <br />
-                        <div className="d-flex justify-content-center">
-                            <div className="borde fondo col-sm-5">
-                                <div className="row mt-5 mb-4 ml-5">
-                                    <h4 className=" col-sm-6">Contrato de Locación y Servicios </h4>
-                                    <img src="https://img.icons8.com/ios/100/000000/crane.png" className=" col-sm-6 card-img-top" alt="..." />
-                                </div>
+            <Header />
+            <div className="m-5">
+                <div className="m-5 col-sm-10">
+                    <div>
+                        <h5 className="m-3">El contrato que debes utilizar es:</h5>
+                    </div>
+                    <br />
+                    <div className="d-flex justify-content-center">
+                        <div className="borde fondo col-sm-5">
+                            <div className="row mt-5 mb-4 ml-5">
+                                <h4 className=" col-sm-6">Contrato de Locación y Servicios </h4>
+                                <img src="https://img.icons8.com/ios/100/000000/crane.png" className=" col-sm-6 card-img-top" alt="..." />
                             </div>
                         </div>
                     </div>
-                    <br />
-                    <br />
-                    <br />
-                    <div className="m-5 d-flex justify-content-around">
-                        <Link className="col-sm-3 btn btn-outline-primary " to="/reviewcontracts">Anterior</Link>
-                        <Link className="col-sm-3  btn btn-primary " to="/">Crear Contrato</Link>
-                    </div>
                 </div>
-            </div >
+                <br />
+                <br />
+                <br />
+                <div className="m-5 d-flex justify-content-around">
+                    <Link className="col-sm-3 btn btn-outline-primary " to="/reviewcontracts">Anterior</Link>
+                    <Link className="col-sm-3  btn btn-primary " to="/optioncompany">Siguiente</Link>
+                </div>
+            </div>
+        </div >
 
     )
 }

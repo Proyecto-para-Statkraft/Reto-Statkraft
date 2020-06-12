@@ -31,7 +31,7 @@ const Welcome = () => {
                 <div className="d-flex justify-content-end ">
                     <Link className="btn btn-primary m-3 "
                         to={{
-                            pathname: "/optioncompany",
+                            pathname: "/chooseContract",
                             nameServices,
                             requiresServices
                         }}>Siguiente</Link>

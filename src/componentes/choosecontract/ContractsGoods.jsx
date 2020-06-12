@@ -32,7 +32,7 @@ const ContrractsGoods = (props) => {
                     <br />
                     <div className="m-5 d-flex justify-content-around">
                         <Link className="col-sm-3 btn btn-outline-primary " to="/reviewcontracts">Anterior</Link>
-                        <Link className="col-sm-3  btn btn-primary " to="/">Crear Contrato</Link>
+                        <Link className="col-sm-3  btn btn-primary " to="/optioncompany">Siguiente</Link>
                     </div>
                 </div>
             </div >
@@ -62,7 +62,7 @@ const ContrractsGoods = (props) => {
                     <br />
                     <div className="m-5 d-flex justify-content-around">
                         <Link className="col-sm-3 btn btn-outline-primary " to="/reviewcontracts">Anterior</Link>
-                        <Link className="col-sm-3  btn btn-primary " to="/">Crear Contrato</Link>
+                        <Link className="col-sm-3  btn btn-primary " to="/optioncompany">Siguiente</Link>
                     </div>
                 </div>
             </div >

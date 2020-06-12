@@ -143,7 +143,7 @@ const MakeContract = (data) => {
                         <Fourteenth data={data} Fourteenth={sectionFourteenth} />
                         <Fifteenth Fifteenth={sectionFifteenth} />
                         <Sixteenth data={data} Sixteenth={sectionSixteenth} />
-                        {/* <Twentieth Thirteenth={sectionTwentienth} /> */}
+                        <Twentieth data={data} Twentieth={sectionTwentienth} />
                     </section>
                 </div>
             </div>

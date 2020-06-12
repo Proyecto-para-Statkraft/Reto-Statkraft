@@ -451,25 +451,16 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 (questionQuarter) &&
                 <div className="row m-5">
                     <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>16- Subcontratacion y cesion</p>
+                        <p>11. Subcontratación</p>
 
-                        <h1>ESCOGE CLAUSULA</h1>
+                        <p>¿La empresa contratada va a subcontratar y tiene el nombre de la empresa
+                            con la que haria el subcontrato?
+                        </p>
                         <div className="m-3" onChange={optionClauseSixteenth}>
-                            <input className="m-3 radio" type="radio" value="true" name="gender" />
-                            16.1 clasuraASixteenth <br />
-                            <input className="m-3 radio" type="radio" value="false" name="gender" />
-                            16.1 clasuraBSixteenth
-                    </div>
-                        <p>si escoges clauseB completar campo</p>
-                        <label htmlFor="">
-                            salvo el
-                            servicio de
-            <input type="text" placeholder="servicio" onChange={clauseServicio} />
-                            <input type="text" placeholder="nombre" onChange={clauseName} />
-                            <input type="text" placeholder="ruc" onChange={clauseRuc} />
-                        </label>
-
-
+                            <input className="m-3 radio" type="radio" value="true" name="gender" /> Si<br />
+                            <input className="m-3 radio" type="radio" value="false" name="gender" /> Si, pero no tiene el nombre <br />
+                            <input className="m-3 radio" type="radio" value="false" name="gender" /> No<br />
+                        </div>
                     </div>
                     <button
                         onClick={() => {
@@ -484,18 +475,14 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 (questionQuarter) &&
                 <div className="row m-5">
                     <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>20- Regulacion Anticorrupcion</p>
+                        <p>12. Ética en los negocios</p>
 
-                        <h1>ESCOGE CLAUSULA</h1>
+                        <p>Riesgo de Compliance es</p>
                         <div className="m-3" onChange={optionClauseTwentieth}>
-                            <input className="m-3 radio" type="radio" value="clausulaA" name="gender" />
-                            16.1 clasuraATwentient <br />
-                            <input className="m-3 radio" type="radio" value="clausulaB" name="gender" />
-                            16.1 clasurabTwentient <br />
-                            <input className="m-3 radio" type="radio" value="clausulaC" name="gender" />
-                            16.1 clasuraCTwentient <br />
+                            <input className="m-3 radio" type="radio" value="bajo" name="gender" /> Muy bajo<br />
+                            <input className="m-3 radio" type="radio" value="medio" name="gender" />Medio <br />
+                            <input className="m-3 radio" type="radio" value="alto" name="gender" /> Muy alto <br />
                         </div>
-                        <p>FALTA UN PARAMETRO PARA UNA CLAUSULA revisar como llamarlo</p>
                         <button onClick={() => { searchClauseTwentienth(optionClausesTwentieth); }}>
                             Siguiente
                      </button>
