@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import img from '../img/image14.png';
 import firebase from "../componentes/firebase.js";
+import { Link } from 'react-router-dom';
 
 const ContractData = ({ search, searchDataAntecedentes, searchSellOption, searchPrice, searchPaymentMethod,
     searchTermPay, searchSite, searchRepresentative, searchHoursTime, searchoClauseThirteenth,
@@ -128,16 +129,11 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
 
     const storageName = JSON.parse(localStorage.getItem('Usariocomprador'))
 
-    const storageTipo = JSON.parse(localStorage.getItem('Tipo'))
-    // const nameServices = storageName.nameServices;
-    // console.log('nombrede serveces', nameServices)
-    // const requieresServices = storageName.requieresServices
-
-
     const onCreate = () => {
+        console.log('aqui toy')
         const db = firebase.firestore();
         db.collection("resumenContrato").add({
-            tipo: storageTipo,
+            tipo: 'Compra Venta',
             descripcion: inputRequieres,
             monto: moneys,
             plazo: timeAfterDeliveryFechayHora,
@@ -430,7 +426,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     </div>
                     <label htmlFor="" className="text-center">
                         Si su respuesta anterior es "Sí", rellene el siguiente campo con la respuesta al
-                        siguiente enunciado: El monto de la póliza de responsabilidad civil extra contractual 
+                        siguiente enunciado: El monto de la póliza de responsabilidad civil extra contractual
                         es...
                     </label>
                     <textarea name="" onChange={moneyPoliza} id="textarea"
@@ -528,9 +524,11 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     <p className="text-center">¡Haz terminado de realizar tu contrato!</p>
                     <p className="text-center">Si desea puede descargarlo en formato Word.</p>
                     <img src={img} alt="imagen" />
-                    <div className="button-section-end">
-                        <button id="btn-export" className="btn btn-info" onClick={generateWord}>DESCARGAR EN WORD</button>
-                        <button id="btn-export" className="btn btn-info">FINALIZAR</button>
+                    <div className="row mt-3">
+                        <div className="col-sm-6"><button id="btn-export" className="btn btn-info" onClick={generateWord}>DESCARGAR EN WORD</button></div>
+                        <div className="col-sm-6"><button id="btn-export" className="btn btn-info" onClick={onCreate}> GUARDAR</button></div>
+                        <div className="col-sm-6"><Link id="btn-export" className="btn btn-info" to="/" >FINALIZAR</Link></div>
+
                     </div>
                 </div>
             }

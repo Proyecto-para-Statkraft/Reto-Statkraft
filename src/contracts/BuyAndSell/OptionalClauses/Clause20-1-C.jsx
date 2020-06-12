@@ -1,12 +1,8 @@
 import React from 'react';
 
-const annexed = {
-    codeConduct: 34,
-    codeEtic: 34,
-};
 
 
-const Clause = ({ companyData, annexed }) => (
+const Clause = ({ companyData }) => (
     <section>
         <h4>1. ETICA EN LOS NEGOCIOS Y ANTICORRUPCION</h4>
         <p>1.1 REQUISITOS DE LA ETICA EN LOS NEGOCIOS Y ANTICORRUPCION</p>
