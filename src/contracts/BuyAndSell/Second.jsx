@@ -17,9 +17,9 @@ const Second = ({ data, Second }) => {
                         Por su parte, <span>{companyData.name}</span> se obliga a pagar a el
                         <span>PROVEEDOR</span> el precio total pactado en la Cláusula tercera del Contrato.
                         La decisión de compra de <span>{companyData.name}</span> se ha basado en la transferencia de
-                        la totalidad de los Bienes en su conjunto, y no de los Bienes individualmente
+                    la totalidad de los Bienes en su conjunto, y no de los Bienes individualmente
                         considerados, razón por la cual ha sido causa determinante para que <span>{companyData.name}</span>
-                        suscriba este Contrato, la adquisición de todos los Bienes que se detallan en el Anexo N° 2.
+                    suscriba este Contrato, la adquisición de todos los Bienes que se detallan en el Anexo N° 2.
                 </p>
                 <p>
                     2.2 El detalle y especificaciones técnicas de los Bienes constan en las Especificaciones

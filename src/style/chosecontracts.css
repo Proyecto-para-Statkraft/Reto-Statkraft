@@ -6,6 +6,9 @@
     font-size: 0em;
     margin: 0em;
   }
+  .m-5 {
+    margin: 0em !important;
+  }
 }
 
 .fondo {

@@ -30,9 +30,8 @@ const Thirteenth = ({ data, Thirteenth }) => {
 
                     <p>13.3 Por resolución del Contrato:</p>
                     <p>
-                        En caso se resuelva el Contrato por causa imputable al{" "}
-                        <span>PROVEEDOR</span>, éste deberá pagar a{" "}
-                        <span>{companyData.name}</span> una penalidad ascendente al diez por
+                        En caso se resuelva el Contrato por causa imputable al <span>PROVEEDOR</span>, éste deberá
+                        pagar a <span>{companyData.name}</span> una penalidad ascendente al diez por
                         ciento (10%) del valor del Contrato.
                    </p>
                     <p>

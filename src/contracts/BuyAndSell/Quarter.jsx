@@ -19,7 +19,7 @@ const Quarter = ({ data, Quarter }) => {
                     correspondiente. El pago se efectuará a los treinta (30) días calendario contados
                     desde que(i) factura haya sido correctamente emitida y recibida en el domicilio de
             <span>{companyData.name}</span> y (ii) el Coordinador del Contrato que designe
-                                        STATKRAFT (el Coordinador del Contrato”) confirme por escrito que se ha cumplido
+                                                STATKRAFT (el Coordinador del Contrato”) confirme por escrito que se ha cumplido
             con la entrega de los Bienes a satisfacción de <span>{companyData.name}</span>
                     en el procedimiento de liquidación a que se refiere la cláusula décima.
         </p>
@@ -50,8 +50,8 @@ const Quarter = ({ data, Quarter }) => {
                     contribuciones derivadas del pago que perciba por la venta de los Bienes y deberá
                     abonarlos oportunamente en la forma establecida por las normas legales en vigencia.
             Por lo tanto, exonera a <span>{companyData.name}</span> de toda responsabilidad por estos
-                                        conceptos y se compromete a salir en su defensa en caso que exista algún reclamo por
-                                        estas obligaciones.
+                                                conceptos y se compromete a salir en su defensa en caso que exista algún reclamo por
+                                                estas obligaciones.
         </p>
                 <p>
                     4.4 <span>{companyData.name}</span> efectuará las deducciones contractuales o retenciones
@@ -60,13 +60,13 @@ const Quarter = ({ data, Quarter }) => {
                     está facultado para exigir al mismo, antes de efectuar el pago de sus facturas, los
                     documentos que acrediten el cumplimiento oportuno de aquellas obligaciones cuyo
             incumplimiento pudiera afectar a <span>{companyData.name}</span>, sea directa o
-                                        indirectamente.
+                                                indirectamente.
         </p>
                 <p>
                     4.5 <span>{companyData.name}</span> se reserva el derecho de retener, descontar o compensar
             cualquier monto que le adeude el <span>PROVEEDOR</span> por cualquier concepto contra
             cualquier monto que adeude <span>{companyData.name}</span> al <span>PROVEEDOR</span> por
-                                        cualquier concepto, de conformidad con los artículos 1288° y siguientes del Código Civil.
+                                                cualquier concepto, de conformidad con los artículos 1288° y siguientes del Código Civil.
         </p>
             </section>
         )

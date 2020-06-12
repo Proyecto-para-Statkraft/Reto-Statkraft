@@ -157,6 +157,9 @@
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
+  .view-contract .container-view-contract table {
+    font-size: 6px;
+  }
   .view-contract .container-view-contract .generator-contract {
     display: -webkit-box;
     display: -ms-flexbox;
