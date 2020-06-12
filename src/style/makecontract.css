@@ -20,9 +20,6 @@
 }
 
 .view-contract .section-contract {
-  /* display: flex;
-            flex-direction: column;
-            justify-content: center; */
   overflow: scroll;
   border: 1px solid #000000;
   border-radius: 10px;
@@ -95,7 +92,7 @@
     width: 80%;
     height: auto;
     padding: 0;
-    margin: 25px 15px;
+    margin: 40px 15px;
   }
   .view-contract .generator-contract .section-question #contract-data {
     width: 100%;
@@ -107,13 +104,13 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-top: 8px;
+    margin-top: 12px;
   }
   .view-contract .generator-contract .section-contract {
-    width: 80%;
+    width: 70%;
     height: 400px;
     padding: 6px;
-    margin: 25px 35px;
+    margin: 25px 45px;
   }
   .view-contract .generator-contract .section-contract h2 {
     font-size: 16px;
@@ -141,7 +138,7 @@
     width: 70%;
     height: auto;
     padding: 0;
-    margin: 40px 15px;
+    margin: 70px 15px;
   }
   .view-contract .generator-contract .section-question #contract-data {
     width: 100%;
@@ -156,10 +153,10 @@
     margin-top: 10px;
   }
   .view-contract .generator-contract .section-contract {
-    width: 70%;
+    width: 60%;
     height: 500px;
     padding: 10px;
-    margin: 25px 35px;
+    margin: 25px 60px;
   }
   .view-contract .generator-contract .section-contract h2 {
     font-size: 17px;
@@ -201,7 +198,7 @@
   }
   .view-contract .generator-contract .section-contract {
     width: 50%;
-    height: 700px;
+    height: 550px;
     padding: 10px;
     margin: 60px 35px;
   }
@@ -229,7 +226,7 @@
     width: 40%;
     height: auto;
     padding: 0;
-    margin: 60px 15px;
+    margin: 80px 15px;
   }
   .view-contract .generator-contract .section-question #contract-data {
     width: 100%;
@@ -245,9 +242,9 @@
   }
   .view-contract .generator-contract .section-contract {
     width: 40%;
-    height: 700px;
+    height: 600px;
     padding: 15px;
-    margin: 70px 35px;
+    margin: 50px 70px;
   }
   .view-contract .generator-contract .section-contract h2 {
     font-size: 18px;

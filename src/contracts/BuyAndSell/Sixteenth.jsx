@@ -21,7 +21,7 @@ const Sixteenth = ({ data, Sixteenth, }) => {
                 <section>
                     <h3>DECIMO SEXTA: SUBCONTRATACION Y CESION</h3>
 
-                    {(optionClausesSixteenth) ? <ClauseA companyData={companyData} /> : <ClauseB companyData={companyData} subcontractorCompany={subcontractorCompany} />}
+                    {(optionClausesSixteenth) ? <ClauseB companyData={companyData} subcontractorCompany={subcontractorCompany} /> : <ClauseA companyData={companyData} />}
 
                     <p>
                         16.2 Toda cesión o subcontratación del Contrato que haya sido efectuada conforme al numeral

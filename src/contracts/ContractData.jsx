@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
+import img from '../img/image14.png';
 
 const ContractData = ({ search, searchDataAntecedentes, searchSellOption, searchPrice, searchPaymentMethod,
     searchTermPay, searchSite, searchRepresentative, searchHoursTime, searchoClauseThirteenth,
-    searchClauseFourteenth,  searchClauseSixteenth, searchClauseTwentienth }) => {
+    searchClauseFourteenth, searchClauseSixteenth, searchClauseTwentienth, searchDate }) => {
 
     const [questionIntro, setQuestionIntro] = useState(true);
     const [questionFirst, setQuestionFirst] = useState(false);
@@ -18,18 +19,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
     const [questionEleventh, setQuestionEleventh] = useState(false);
     const [questionTwelfth, setQuestionTwelfth] = useState(false);
     const [questionThirteenth, setQuestionThirteenth] = useState(false);
-    const [questionFourteenth, setQuestionFourteenth] = useState(false);
-    const [questionFifteenth, setQuestionFifteenth] = useState(false);
-    const [questionSixteenth, setQuestionSixteenth] = useState(false);
-    const [questionSeventeenth, setQuestionSeventeenth] = useState(false);
-    const [questionEighteenth, setQuestionEighteenth] = useState(false);
-    const [questionNineteenth, setQuestionNineteenth] = useState(false);
-    const [questionTwentieth, setQuestionTwentieth] = useState(false);
-    const [questionTwentyFirst, setQuestionTwentyFirst] = useState(false);
-    const [questionTwentySecond, setQuestionTwentySecond] = useState(false);
-    const [questionTwentyThird, setQuestionTwentyThird] = useState(false);
-
-
+    const [questionEnd, setQuestionEnd] = useState(false);
 
 
     const [providerData, setProviderData] = useState({});
@@ -126,21 +116,24 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
     const [optionClausesTwentieth, setOptionClauseTwentieth] = useState("");
     const optionClauseTwentieth = e => { setOptionClauseTwentieth(e.target.value) };
 
+
+    const [days, setDays] = useState("");
+    const day = e => { setDays(e.target.value) };
+
+    const [months, setMonths] = useState("");
+    const month = e => { setMonths(e.target.value) };
+
+
+    const [years, setYears] = useState("");
+    const year = e => { setYears(e.target.value) };
+
     return (
         <div id="contract-data">
             {
                 (questionIntro) &&
-                <div className="row m-5 clause-question question-intro">
-                    <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>Datos de la empresa con la que estás contratando</p>
-                        <label htmlFor="">
-                            Nombre de la empresa <input
-                                type="text"
-                                onChange={nameProvider} />
-                        </label>
-                        <label htmlFor="">
-                            RUC <input type="text" onChange={rucProvider} />
-                        </label>
+                <div className="question-intro">
+                    <div className="flex-column bd-highlight container-question">
+                        <p className="text-center font-weight-bold">Datos de la empresa con la que estás contratando</p>
                         <label htmlFor="">
                             Nombre de la empresa
                         </label>
@@ -150,7 +143,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         <label htmlFor="">Dirección </label>
                         <input type="text" onChange={addressProvider} />
                         <br />
-                        <p>Datos del representante de la empresa</p>
+                        <p className="text-center font-weight-bold">Datos del representante de la empresa</p>
                         <label htmlFor="">
                             Nombre completo
                         </label>
@@ -175,7 +168,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             setQuestionIntro(false);
                             setQuestionFirst(true);
                         }}
-                        class="btn btn-info center"
+                        class="btn btn-info"
                     >
                         CONTINUAR
                     </button>
@@ -200,7 +193,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             setQuestionSecond(true);
                             setQuestionFirst(false);
                         }}
-                        class="btn btn-info center"
+                        class="btn btn-info"
                     >
 
                         Siguiente
@@ -223,7 +216,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             setQuestionThird(true);
                             setQuestionSecond(false);
                         }}
-                        class="btn btn-info center"
+                        class="btn btn-info"
                     >
                         Siguiente
                </button>
@@ -247,7 +240,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             setQuestionQuarter(true);
                             setQuestionThird(false);
                         }}
-                        class="btn btn-info center"
+                        class="btn btn-info"
                     >
                         Siguiente
                 </button>
@@ -271,7 +264,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             setQuestionFifth(true);
                             setQuestionQuarter(false);
                         }}
-                        class="btn btn-info center"
+                        class="btn btn-info"
                     >
                         Siguiente
                 </button>
@@ -294,7 +287,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             setQuestionSixth(true);
                             setQuestionFifth(false);
                         }}
-                        class="btn btn-info center"
+                        class="btn btn-info"
                     >
                         Siguiente
                 </button>
@@ -316,7 +309,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             setQuestionSeventh(true);
                             setQuestionSixth(false);
                         }}
-                        class="btn btn-info center"
+                        class="btn btn-info"
                     >
                         Siguiente
                 </button>
@@ -343,7 +336,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             setQuestionEighth(true);
                             setQuestionSeventh(false);
                         }}
-                        class="btn btn-info center"
+                        class="btn btn-info"
                     >
                         Siguiente
                 </button>
@@ -378,7 +371,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             setQuestionNineth(true);
                             setQuestionEighth(false);
                         }}
-                        class="btn btn-info center"
+                        class="btn btn-info"
                     >
                         Siguiente
                 </button>
@@ -407,7 +400,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             setQuestionNineth(false);
                             setQuestionTenth(true);
                         }}
-                        class="btn btn-info center"
+                        class="btn btn-info"
                     >
                         Siguiente
                     </button>
@@ -435,15 +428,17 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     <button
                         onClick={() => {
                             searchClauseFourteenth(optionClauseFourteenth, moneysPoliza);
+                            setQuestionEleventh(true);
+                            setQuestionTenth(false);
                         }}
-                        class="btn btn-info center"
+                        class="btn btn-info"
                     >
                         Siguiente
                     </button>
                 </div>
             }
             {
-                (questionQuarter) &&
+                (questionEleventh) &&
                 <div className="row m-5">
                     <div className="m-3 d-flex flex-column bd-highlight">
                         <p>11. Subcontratación</p>
@@ -460,15 +455,17 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     <button
                         onClick={() => {
                             searchClauseSixteenth(optionClausesSixteenth);
+                            setQuestionEleventh(false);
+                            setQuestionTwelfth(true);
                         }}
-                        class="btn btn-info center"
+                        class="btn btn-info"
                     >
                         Siguiente
                 </button>
                 </div>
             }
             {
-                (questionQuarter) &&
+                (questionTwelfth) &&
                 <div className="row m-5">
                     <div className="m-3 d-flex flex-column bd-highlight">
                         <p>12. Ética en los negocios</p>
@@ -479,13 +476,65 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             <input className="m-3 radio" type="radio" value="medio" name="gender" />Medio <br />
                             <input className="m-3 radio" type="radio" value="alto" name="gender" /> Muy alto <br />
                         </div>
-                        <button onClick={() => { searchClauseTwentienth(optionClausesTwentieth); }} class="btn btn-info center">
+                        <button onClick={() => { 
+                            searchClauseTwentienth(optionClausesTwentieth); 
+                            setQuestionTwelfth(false);
+                            setQuestionThirteenth(true);
+                            }} 
+                            class="btn btn-info">
                             Siguiente
                      </button>
                     </div>
                 </div>
             }
-        </div>
+            {
+            (questionThirteenth) &&
+                <div className="row m-5">
+                    <div className="m-3 d-flex flex-column bd-highlight">
+                        <p>13. Varios</p>
+
+                        <p>Fecha en la que se suscribe el documento</p>
+                        <label htmlFor="">
+                            Dia
+                        <input type="text" placeholder="23" onChange={day} />
+                        </label>
+                        <label htmlFor="">
+                            Mes
+                        <input type="text" placeholder="Junio" onChange={month} />
+                        </label>
+                        <label htmlFor="">
+                            Mes
+                        <input type="text" placeholder="2020" onChange={year} />
+                        </label>
+                    </div>
+                    <button onClick={() => { 
+                        searchDate(days, months, years);
+                        setQuestionThirteenth(false);
+                        setQuestionEnd(true);
+                        }}
+                        class="btn btn-info">
+                        Siguiente
+                     </button>
+                </div>
+
+            }
+            {
+            (questionEnd) &&
+                <div className="row m-5">
+                    <div className="m-3 d-flex flex-column bd-highlight">
+                        <p>¡Haz terminado de realizar tu contrato!</p>
+
+                        <p>Si quieres tener el contrato que acabar de realizar puedes descargarlo en formato Word.</p>
+
+
+                        <img src={img} alt="imagen" />
+                        <button  class="btn btn-info">Descargarlo</button>
+                        <button>Finalizar</button>
+                    </div>
+                </div>
+
+            }
+        </div >
     );
 };
 
