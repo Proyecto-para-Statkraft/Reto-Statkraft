@@ -139,7 +139,8 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
             descripcion: inputRequieres,
             monto: moneys,
             plazo: timeAfterDeliveryFechayHora,
-            usuyser: storageName
+            usuyser: storageName,
+            fecha: new Date()
         })
     };
 
@@ -151,7 +152,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 (questionIntro) &&
                 <div className="question-intro">
                     <div className="flex-column bd-highlight container-question">
-                        <p className="text-center font-weight-bold">Datos de la empresa proveedora</p>
+                        <p className="text-center font-weight-bold">Datos de la empresa con la que estas contratando</p>
                         <label htmlFor="">
                             Nombre de la empresa
                         </label>
@@ -161,9 +162,8 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         <label htmlFor="">Dirección </label>
                         <input type="text" onChange={addressProvider} />
                         <br />
-                        <p className="text-center font-weight-bold">Datos del representante de la empresa</p>
                         <label htmlFor="">
-                            Nombre completo
+                            Nombre del representante de la empresa
                         </label>
                         <input type="text" onChange={representativeNameProvider} />
                         <label htmlFor="">
@@ -196,7 +196,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
             {
                 (questionFirst) &&
                 <div className="container-question">
-                    <p className="text-center font-weight-bold">1. Antecendente</p>
+                    <p className="text-center font-weight-bold">1. Antecendentes</p>
                     <label htmlFor="" className="text-center">
                         Nuestra empresa esta dedicada a la generación y comercialización de
                         energía eléctrica, que requiere:
@@ -396,11 +396,11 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     <div className="div-radio-button" onChange={optionClausesThirteenth}>
                         <div>
                             <input className="m-3 radio" type="radio" value="bajo" name="gender" />
-                            <label htmlFor="" className="text-center">Bajo 13.2 (opcion1)</label>
+                            <label htmlFor="" className="text-center">Bajo</label>
                         </div>
                         <div>
                             <input className="m-3 radio" type="radio" value="alto" name="gender" />
-                            <label htmlFor="" className="text-center">Alto 13.2 (opcion2)</label>
+                            <label htmlFor="" className="text-center">Alto</label>
                         </div>
                         <div className="button-continue">
                             <button
@@ -551,7 +551,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         <Button variant="secondary" onClick={() => setShowModal(false)}>
                             Regresar
                         </Button>
-                        <Link id="btn-export" className="btn btn-info" to="/" onClick={() => setShowModal(false)}>Crear nuevo contrato</Link>             
+                        <Link id="btn-export" className="btn btn-info" to="/" onClick={() => setShowModal(false)}>Crear nuevo contrato</Link>
                     </Modal.Footer>
                 </Modal>
             }
