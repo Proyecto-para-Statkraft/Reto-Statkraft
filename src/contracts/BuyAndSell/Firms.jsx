@@ -1,11 +1,6 @@
 import React from 'react';
 
-
-
-
-
 const TwentyThird = ({ sectionTwentyThird, data, provider }) => {
-
 
     const { companyData } = data;
     const { providerData } = provider;

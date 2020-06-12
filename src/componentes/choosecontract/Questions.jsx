@@ -54,7 +54,7 @@ const Questions = (props) => {
             <div>
                 <Header />
                 <div className="container">
-                    <div className="m-5 col-sm-10">
+                    <div className="margin-d  col-sm-10">
                         <div>
                             <h5 className="m-3">El contrato que debes utilizar es:</h5>
                         </div>
@@ -88,7 +88,7 @@ const Questions = (props) => {
             <div>
                 <Header />
                 <div className="container">
-                    <div className="m-5 col-sm-10">
+                    <div className="margin-d  col-sm-10">
                         <div>
                             <h5 className="m-3">El contrato que debes utilizar es:</h5>
                         </div>
@@ -121,7 +121,7 @@ const Questions = (props) => {
             <div>
                 <Header />
                 <div className="container">
-                    <div className="m-5 col-sm-10">
+                    <div className="margin-d col-sm-10">
                         <div>
                             <h5 className="m-3">El contrato que debes utilizar es:</h5>
                         </div>
@@ -138,7 +138,7 @@ const Questions = (props) => {
                     <br />
                     <br />
                     <br />
-                    <div className="m-5 d-flex justify-content-end">
+                    <div className="d-flex justify-content-end">
                         <Link className="col-sm-3  btn btn-primary" to="/">Finalizar</Link>
                     </div>
                 </div>
@@ -151,7 +151,7 @@ const Questions = (props) => {
             <div>
                 <Header />
                 <div className="container">
-                    <div className="m-5 col-sm-10">
+                    <div className="margin-d col-sm-10">
                         <div>
                             <h5 className="m-3">El contrato que debes utilizar es:</h5>
                         </div>
@@ -184,7 +184,7 @@ const Questions = (props) => {
         < div >
             <Header />
             <div className="container">
-                <div className="m-5 col-sm-10">
+                <div className="margin-d col-sm-10">
                     <div>
                         <h5 className="m-3">El contrato que debes utilizar es:</h5>
                     </div>

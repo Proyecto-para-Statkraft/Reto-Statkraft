@@ -21,7 +21,7 @@ const ReviewContracts = (props) => {
                     <h5 className="mb-5">1. ¿Qué es lo que vas a contratar?</h5>
                     <div className="m-3 vista-radios" onChange={optionContracts}>
                         <input className="mb-3 radio" type="radio" value="bienes" name="gender" /> <span className="ml-3">Adquisición de Bienes</span> <br />
-                        <input className="mb-3 radio" type="radio" value="transporte" name="gender" /> <span className="ml-3">Trasporte Personal</span><br />
+                        <input className="mb-3 radio" type="radio" value="transporte" name="gender" /> <span className="ml-3">Transporte Personal</span><br />
                         <input className="mb-3 radio" type="radio" value="vigilancia" name="gender" /><span className="ml-3">Vigilancia, limpieza o jardineria en nuestras instalaciones </span> <br />
                         <input className="mb-3 radio" type="radio" value="alquiler" name="gender" /> <span className="ml-3">Alquiler </span><br />
                         <input className="mb-3 radio" type="radio" value="construccion" name="gender" /> <span className="ml-3">Construcción de una infrastructura</span> <br />

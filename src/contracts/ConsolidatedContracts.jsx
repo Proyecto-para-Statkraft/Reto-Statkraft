@@ -36,7 +36,7 @@ const ConsolidatedContracts = () => {
                             <th>Descripcion del Servicio</th>
                             <th>Monto del Contrato</th>
                             <th>Plazo</th>
-                            <th>comprador</th>
+                            <th>Comprador</th>
                             <th>Usuario</th>
                         </tr>
                     </thead>

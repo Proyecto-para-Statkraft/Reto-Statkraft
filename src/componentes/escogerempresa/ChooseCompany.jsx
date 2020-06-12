@@ -23,7 +23,7 @@ const OptionCompany = (props) => {
 
                     </div>
                     <div className=" d-flex justify-content-end ">
-                        <Link className="btn btn-primary m-3 "
+                        <Link className="col-sm-3  btn btn-primary "
                             to={{
                                 pathname: "/empresa",
                                 selectedOption,

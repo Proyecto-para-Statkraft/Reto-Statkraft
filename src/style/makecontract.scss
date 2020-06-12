@@ -73,18 +73,19 @@
               margin-top: 5px;
             }
 
-            .container-question {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
+            .div-end-buttons {
+                display: flex;
+                width: 100%;
+                justify-content: space-around;
+                margin: 10px;
 
-              #textarea {
-                @include size(90%, 100px);
-                @include paddingMargin(2px, 10px 10px);
-                border-radius: 5px;
-              }
+                button {
+                    width: 35%;
+                    padding: 5px;
+                }
+            }
 
-              .button-continue {
+            .button-section-end {
                 display: flex;
                 justify-content: center;
                 margin-top: 5px;
