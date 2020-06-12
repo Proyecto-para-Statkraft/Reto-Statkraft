@@ -32,7 +32,7 @@ const Welcome = () => {
                             <p>¿Cuál es el nombre de la persona que requiere el servicio? </p>
                             <input className="input-class" type="text" onChange={RequiresService} />
                         </div>
-                        <div className="row justify-content-end mt-5">
+                        <div className="row justify-content-end mt-5 mx-1">
                             <Link className="col-sm-3  btn btn-primary"
                                 to={{
                                     pathname: "/chooseContract",
