@@ -42,9 +42,8 @@ const ConsolidatedContracts = () => {
                             </tr>
                         </thead>
                         <tbody>
-
                             {spells.map(doc =>
-                                <ResumenContracts key={doc.id} data={doc} />
+                                <ResumenContracts index={doc.index} key={doc.id} data={doc} />
                             )
                             }
 
