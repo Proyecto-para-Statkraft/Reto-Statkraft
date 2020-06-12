@@ -31,7 +31,7 @@ const ConsolidatedContracts = () => {
                 <Table striped bordered hover>
                     <thead className="m-5 border border-info ">
                         <tr className="m-5 table-info" >
-                            <th>N°</th>
+                            <th>N.</th>
                             <th>Tipo de Contrato</th>
                             <th>Descripcion del Servicio</th>
                             <th>Monto del Contrato</th>

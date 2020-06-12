@@ -4,7 +4,7 @@ import firebase from "../componentes/firebase.js";
 
 const ContractData = ({ search, searchDataAntecedentes, searchSellOption, searchPrice, searchPaymentMethod,
     searchTermPay, searchSite, searchRepresentative, searchHoursTime, searchoClauseThirteenth,
-    searchClauseFourteenth, searchClauseSixteenth, searchClauseTwentienth, searchDate }) => {
+    searchClauseFourteenth, searchClauseSixteenth, searchClauseTwentienth, searchDate, generateWord }) => {
 
     const [questionIntro, setQuestionIntro] = useState(true);
     const [questionFirst, setQuestionFirst] = useState(false);
@@ -112,8 +112,6 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
     const [optionClausesSixteenth, setOptionClauseSixteenth] = useState("");
     const optionClauseSixteenth = e => { setOptionClauseSixteenth(e.target.value) };
 
-
-
     const [optionClausesTwentieth, setOptionClauseTwentieth] = useState("");
     const optionClauseTwentieth = e => { setOptionClauseTwentieth(e.target.value) };
 
@@ -197,120 +195,116 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
             }
             {
                 (questionFirst) &&
-                <div className="row m-5 clause-question" id="question-1">
-                    <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>1. Antecendente</p>
-                        <label htmlFor="">
-                            Nuestra empresa esta dedicada a la generación y comercialización de
-                            energía eléctrica, que requiere:
-                        <textarea placeholder="Detallar Servicio..."
-                                onChange={product}></textarea>
-                        </label>
+                <div className="container-question">
+                    <p className="text-center font-weight-bold">1. Antecendente</p>
+                    <label htmlFor="" className="text-center">
+                        Nuestra empresa esta dedicada a la generación y comercialización de
+                        energía eléctrica, que requiere:
+                    </label>
+                    <textarea placeholder="Detallar Servicio..."
+                        onChange={product} id="textarea"></textarea>
+                    <div className="button-continue">
+                        <button
+                            onClick={() => {
+                                searchDataAntecedentes(inputRequieres);
+                                setQuestionSecond(true);
+                                setQuestionFirst(false);
+                            }}
+                            class="btn btn-info"
+                        >
+                            CONTINUAR
+                        </button>
                     </div>
-                    <button
-                        onClick={() => {
-                            searchDataAntecedentes(inputRequieres);
-                            setQuestionSecond(true);
-                            setQuestionFirst(false);
-                        }}
-                        className="btn btn-info"
-                    >
-
-                        Siguiente
-                </button>
                 </div>
             }
             {
                 (questionSecond) &&
-                <div className="row m-5 clause-question" id="question-2">
-                    <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>2. Objeto</p>
-                        <label htmlFor="">
-                            Los bienes adquiridos se van a usar en:
-                            <textarea type="text" onChange={sell} />
+                <div className="container-question">
+                    <p className="text-center font-weight-bold">2. Objeto</p>
+                    <label htmlFor="" className="text-center">
+                        Los bienes adquiridos se van a usar en:
                         </label>
+                    <textarea type="text" onChange={sell} id="textarea" />
+                    <div className="button-continue">
+                        <button
+                            onClick={() => {
+                                searchSellOption(sells);
+                                setQuestionThird(true);
+                                setQuestionSecond(false);
+                            }}
+                            class="btn btn-info"
+                        >
+                            Siguiente
+                        </button>
                     </div>
-                    <button
-                        onClick={() => {
-                            searchSellOption(sells);
-                            setQuestionThird(true);
-                            setQuestionSecond(false);
-                        }}
-                        className="btn btn-info"
-                    >
-                        Siguiente
-               </button>
                 </div>
             }
 
             {
                 (questionThird) &&
-                <div className="row m-5 clause-question" id="question-3">
-                    <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>3. Precio</p>
-                        <label htmlFor="">
-                            El precio a pagar por los bienes adquiridos es :
-                            <textarea type="text" placeholder="Ejm: US$ 67,274.36 (Sesenta y Siete Mil Doscientos Setenta y Cuatro con 36/100 Dólares de los Estados Unidos de América) " onChange={money} />
+                <div className="container-question">
+                    <p className="text-center font-weight-bold">3. Precio</p>
+                    <label htmlFor="" className="text-center">
+                        El precio a pagar por los bienes adquiridos es :
                         </label>
-
+                    <textarea type="text" id="textarea" placeholder="Ejm: US$ 67,274.36 (Sesenta y Siete Mil Doscientos Setenta y Cuatro con 36/100 Dólares de los Estados Unidos de América) " onChange={money} />
+                    <div className="button-continue">
+                        <button
+                            onClick={() => {
+                                searchPrice(moneys);
+                                setQuestionQuarter(true);
+                                setQuestionThird(false);
+                            }}
+                            class="btn btn-info"
+                        >
+                            Siguiente
+                        </button>
                     </div>
-                    <button
-                        onClick={() => {
-                            searchPrice(moneys);
-                            setQuestionQuarter(true);
-                            setQuestionThird(false);
-                        }}
-                        className="btn btn-info"
-                    >
-                        Siguiente
-                </button>
                 </div>
             }
             {
                 (questionQuarter) &&
-                <div className="row m-5 clause-question" id="question-4">
-                    <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>4. Formas y Condiciones de pago</p>
-                        <div className="m-3" onChange={TypeMoney}>
-                            <p>La moneda pactada para el precio es : </p>
-                            <input className="m-3 radio" type="radio" value="soles" name="gender" />Nuevos Soles <br />
-                            <input className="m-3 radio" type="radio" value="dolares" name="gender" />Dólares de los Estados Unidos de América
+                <div className="container-question">
+                    <p className="text-center font-weight-bold">4. Formas y Condiciones de pago</p>
+                    <div onChange={TypeMoney}>
+                        <p className="text-center">La moneda pactada para el precio es : </p>
+                        <input className="m-3 radio" type="radio" value="soles" name="gender" />Nuevos Soles <br />
+                        <input className="m-3 radio" type="radio" value="dolares" name="gender" />Dólares de los Estados Unidos de América
                     </div>
+                    <div className="button-continue">
+                        <button
+                            onClick={() => {
+                                searchPaymentMethod(typeMoneys);
+                                setQuestionFifth(true);
+                                setQuestionQuarter(false);
+                            }}
+                            class="btn btn-info"
+                        >
+                            Siguiente
+                    </button>
                     </div>
-                    <button
-                        onClick={() => {
-                            searchPaymentMethod(typeMoneys);
-
-                            setQuestionFifth(true);
-                            setQuestionQuarter(false);
-                        }}
-                        className="btn btn-info"
-                    >
-                        Siguiente
-                </button>
                 </div>
             }
             {
                 (questionFifth) &&
-                <div className="row m-5 clause-question" id="question-5">
-                    <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>5. Plazo de entrega de los bienes</p>
-                        <label htmlFor="">
-                            El plazo de entrega de los bienes adquiridos es:
-                        <input type="text" onChange={deadlineDays} placeholder="Ejm: 10 semanas" />
-
-                        </label>
+                <div className="container-question">
+                    <p className="text-center font-weight-bold">5. Plazo de entrega de los bienes</p>
+                    <label htmlFor="" className="text-center">
+                        El plazo de entrega de los bienes adquiridos es:
+                    </label>
+                    <input type="text" onChange={deadlineDays} placeholder="Ejm: 10 semanas" />
+                    <div className="button-continue">
+                        <button
+                            onClick={() => {
+                                searchTermPay(deadlineDay);
+                                setQuestionSixth(true);
+                                setQuestionFifth(false);
+                            }}
+                            class="btn btn-info"
+                        >
+                            Siguiente
+                        </button>
                     </div>
-                    <button
-                        onClick={() => {
-                            searchTermPay(deadlineDay);
-                            setQuestionSixth(true);
-                            setQuestionFifth(false);
-                        }}
-                        className="btn btn-info"
-                    >
-                        Siguiente
-                </button>
                 </div>
             }
             {
@@ -464,7 +458,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         <p>11. Subcontratación</p>
 
                         <p>¿La empresa contratada va a subcontratar y tiene el nombre de la empresa
-                            con la que haria el subcontrato?
+                        con la que haria el subcontrato?
                         </p>
                         <div className="m-3" onChange={optionClauseSixteenth}>
                             <input className="m-3 radio" type="radio" value="true" name="gender" /> Si<br />
@@ -500,7 +494,8 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             searchClauseTwentienth(optionClausesTwentieth);
                             setQuestionTwelfth(false);
                             setQuestionThirteenth(true);
-                        }} className="btn btn-info">
+                        }}
+                            class="btn btn-info">
                             Siguiente
                      </button>
                     </div>
@@ -527,10 +522,11 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         </label>
                     </div>
                     <button onClick={() => {
-                        searchDate(days, months, years)
+                        searchDate(days, months, years);
                         setQuestionThirteenth(false);
                         setQuestionEnd(true);
-                    }} class="btn btn-info">
+                    }}
+                        class="btn btn-info">
                         Siguiente
                      </button>
                 </div>

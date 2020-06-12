@@ -101,11 +101,10 @@ const MakeContract = (data, props) => {
     const searchDate = (days, months, years) => {
         setSectionTwentyThird({ days, months, years })
     }
+
     function exportHTML() {
-        var header = "html xmlns:v='urn:schemas-microsoft-com:vml'" +
-            "xmlns:o='urn:schemas-microsoft-com:office:office'" +
-            "xmlns:w='urn:schemas-microsoft-com:office:word'" +
-            "xmlns:m='http://schemas.microsoft.com/office/2004/12/omml'" +
+        var header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' " +
+            "xmlns:w='urn:schemas-microsoft-com:office:word' " +
             "xmlns='http://www.w3.org/TR/REC-html40'>" +
             "<head><meta charset='utf-8'><title>Export HTML to Word Document with JavaScript</title></head><body>";
         var footer = "</body></html>";
@@ -126,7 +125,7 @@ const MakeContract = (data, props) => {
 
         <div className="view-contract">
             <Header />
-            <div className="">
+            <div className="container-view-contract">
                 <div className="row generator-contract">
                     <div className="section-question ">
                         <section>
@@ -137,11 +136,8 @@ const MakeContract = (data, props) => {
                                     searchHoursTime={searchHoursTime} searchoClauseThirteenth={searchoClauseThirteenth}
                                     searchClauseFourteenth={searchClauseFourteenth} searchTimeDayFifteenth={searchTimeDayFifteenth}
                                     searchClauseSixteenth={searchClauseSixteenth} searchClauseTwentienth={searchClauseTwentieth}
-                                    searchDate={searchDate}
+                                    searchDate={searchDate} generateWord={exportHTML}
                                 />
-                            </div>
-                            <div className="row mt-3">
-                                <div className="col-sm-6"><button id="btn-export" className="btn btn-info" onClick={exportHTML}>Export to word doc</button></div>
                             </div>
                         </section>
                     </div>

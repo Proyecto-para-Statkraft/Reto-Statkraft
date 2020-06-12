@@ -18,6 +18,11 @@
     flex-direction: column;
     margin: 0;
 
+    .container-view-contract {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
         .section-question .container-question {
             display: flex;
             align-items: center;
@@ -34,7 +39,6 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                align-items: center;
                 width: 100%;
 
                 .section-question {
@@ -43,11 +47,31 @@
 
                     #contract-data {
                         width: 100%;
+                        display: flex;
+                        justify-content: center;
 
                         .button-continue {
                             display: flex;
                             justify-content: center;
                             margin-top: 5px;
+                        }
+
+                        .container-question {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+
+                            #textarea {
+                                @include size(90%, 100px);
+                                @include paddingMargin(2px, 10px 10px);
+                                border-radius: 5px;
+                            }
+    
+                            .button-continue {
+                                display: flex;
+                                justify-content: center;
+                                margin-top: 5px;
+                            }
                         }
                     }
                 }
@@ -81,8 +105,27 @@
                             justify-content: center;
                             margin-top: 12px;
                         }
+
+                        .container-question {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+
+                            #textarea {
+                                @include size(85%, 120px);
+                                @include paddingMargin(3px, 10px 10px);
+                                border-radius: 5px;
+                            }
+
+                            .button-continue {
+                                display: flex;
+                                justify-content: center;
+                                margin-top: 12px;
+                            }
+                        }
                     }
                 }
+
                 .section-contract {
                     @include size(70%, 400px);
                     @include paddingMargin(6px, 25px 45px);
@@ -113,8 +156,27 @@
                         justify-content: center;
                         margin-top: 10px;
                     }
+
+                    .container-question {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        #textarea {
+                            @include size(80%, 130px);
+                            @include paddingMargin(3px, 13px 13px);
+                            border-radius: 5px;
+                        }
+
+                        .button-continue {
+                            display: flex;
+                            justify-content: center;
+                            margin-top: 10px;
+                        }
+                    }
                 }
             }
+
             .section-contract {
                 @include size(60%, 500px);
                 @include paddingMargin(10px, 25px 60px);
@@ -124,7 +186,7 @@
                 }
             }
         }
-        }
+    }
 
         @media (min-width: $tablet) and (max-width: $notebook) {
             .generator-contract {
@@ -147,8 +209,28 @@
                             justify-content: center;
                             margin-top: 15px;
                         }
+
+                        .container-question {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+    
+                            #textarea {
+                                @include size(90%, 130px);
+                                @include paddingMargin(4px, 13px 13px);
+                                border-radius: 5px;
+                            }
+    
+                            .button-continue {
+                                display: flex;
+                                justify-content: center;
+                                margin-top: 15px;
+                            }
+                        }
                     }
                 }
+
+
                 .section-contract {
                     @include size(50%, 550px);
                     @include paddingMargin(10px, 60px 35px);
@@ -165,7 +247,6 @@
                 flex-direction: row;
                 justify-content: center;
                 padding: 0 5% 0 5%;
-             
                 width: 100%;
     
                 .section-question {
@@ -180,11 +261,30 @@
                             justify-content: center;
                             margin-top: 18px;
                         }
+
+                        .container-question {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+    
+                            #textarea {
+                                @include size(90%, 130px);
+                                @include paddingMargin(5px, 13px 13px);
+                                border-radius: 5px;
+                            }
+    
+                            .button-continue {
+                                display: flex;
+                                justify-content: center;
+                                margin-top: 18px;
+                            }
+                        }
                     }
                 }
+
                 .section-contract {
                     @include size(40%, 600px);
-                    @include paddingMargin(15px, 50px 70px);
+                    @include paddingMargin(10px, 50px 70px);
     
                     h2 {
                         font-size: 18px;
@@ -202,7 +302,7 @@
     
                 .section-question {
                     @include size(40%, auto);
-                    @include paddingMargin(0, 60px 15px);
+                    @include paddingMargin(0, 70px 15px);
     
                     #contract-data {
                         width: 100%;
@@ -212,11 +312,30 @@
                             justify-content: center;
                             margin-top: 20px;
                         }
+
+                        .container-question {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+    
+                            #textarea {
+                                @include size(90%, 130px);
+                                @include paddingMargin(7px, 13px 13px);
+                                border-radius: 5px;
+                            }
+    
+                            .button-continue {
+                                display: flex;
+                                justify-content: center;
+                                margin-top: 20px;
+                            }
+                        }
                     }
                 }
+
                 .section-contract {
-                    @include size(40%, 700px);
-                    @include paddingMargin(15px, 70px 40px);
+                    @include size(38%, 600px);
+                    @include paddingMargin(10px, 70px 40px);
     
                     h2 {
                         font-size: 20px;
@@ -224,4 +343,5 @@
                 }
             }
         }
+    }
 }
