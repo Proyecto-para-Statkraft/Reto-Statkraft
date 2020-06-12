@@ -419,34 +419,15 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             No
                         </div>
                         <label htmlFor="">
-                            El monto de la póliza de responsabilidad civil extra contractual es:
-                             <textarea name="" onChange={moneyPoliza}
+                            Si su respuesta anterior es Si, rellene este campo.El monto de la póliza de responsabilidad civil extra contractual es:
+                        <textarea name="" onChange={moneyPoliza}
                                 placeholder="Ejm: US$ 67,274.36 (Sesenta y Siete Mil Doscientos Setenta y Cuatro con 36/100 Dólares de los Estados Unidos de América) "></textarea>
                         </label>
+
                     </div>
                     <button
                         onClick={() => {
                             searchClauseFourteenth(optionClauseFourteenth, moneysPoliza);
-                        }}
-                    >
-                        Siguiente
-                    </button>
-                </div>
-            }
-            {
-                (questionQuarter) &&
-                <div className="row m-5">
-                    <div className="m-3 d-flex flex-column bd-highlight">
-                        <p>15- Caso Fortuito</p>
-                        <label htmlFor="">
-                            cualquiera de las Partes podrá dar por
-                            resuelto el Contrato mediante comunicación cursada con
-                            <input type="text" onChange={timeDays} />
-                        </label>
-                    </div>
-                    <button
-                        onClick={() => {
-                            searchTimeDayFifteenth(timeDay);
                         }}
                     >
                         Siguiente

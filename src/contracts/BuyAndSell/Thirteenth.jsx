@@ -3,10 +3,9 @@ import ClauseA from "./OptionalClauses/Clause13-2-A";
 import ClauseB from "./OptionalClauses/Clause13-2-B";
 
 const Thirteenth = ({ data, Thirteenth }) => {
-    console.log('llegue', Thirteenth)
+    console.log(Thirteenth, 'inicio de thirteenn')
     const { companyData } = data;
     const { optionClauseThirteenth } = Thirteenth;
-
 
     if (Thirteenth !== "") {
         if (optionClauseThirteenth === 'bajo') {
