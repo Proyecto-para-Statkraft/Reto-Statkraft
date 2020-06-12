@@ -9,7 +9,7 @@ const Introduction = ({ data, provider }) => {
 
     if (provider !== '') {
         return (
-            <section className="m-5 clause-question">
+            <section>
                 <h2 className="text-center">CONTRATO DE COMPRAVENTA</h2>
                 <p>
                     Conste por el presente documento el Contrato de Compraventa (en adelante

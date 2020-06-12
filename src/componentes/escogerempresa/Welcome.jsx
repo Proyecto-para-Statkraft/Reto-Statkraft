@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import Header from '../Header';
 
-const Welcome = () => {
 
+const Welcome = () => {
 
     const [nameServices, setnameServices] = useState("");
     const nameService = e => { setnameServices(e.target.value) };

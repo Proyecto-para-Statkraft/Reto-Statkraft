@@ -42,6 +42,21 @@
           justify-content: center;
 }
 
+.view-contract .container-view-contract .section-question .container-question .div-end-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 10px;
+}
+
+.view-contract .container-view-contract .section-question .container-question .div-end-buttons button {
+  width: 35%;
+  padding: 5px;
+}
+
 .view-contract .container-view-contract .section-question .container-question .button-section-end {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -142,6 +157,9 @@
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
+  .view-contract .container-view-contract table {
+    font-size: 6px;
+  }
   .view-contract .container-view-contract .generator-contract {
     display: -webkit-box;
     display: -ms-flexbox;
