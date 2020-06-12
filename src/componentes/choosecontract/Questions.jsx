@@ -28,15 +28,15 @@ const Questions = (props) => {
         return (
             <div>
                 <Header />
-                <div className="m-4 d-flex justify-content-center">
+                <div className="mt-5 d-flex justify-content-center">
                     <div className="m-sm-1 col-sm-7">
                         <h5 className="mb-5">2. ¿También incluye instalación de bienes?</h5>
-                        <div className="m-3" onChange={optionGoods}>
+                        <div className="m-3 vista-radios" onChange={optionGoods}>
                             <input className="m-3 radio" type="radio" value="si" name="gender" /> Si <br />
                             <input className="m-3 radio" type="radio" value="no" name="gender" /> No
-                    </div>
+                        </div>
                         <div className=" d-flex justify-content-end ">
-                            <Link className="btn btn-primary m-3 "
+                            <Link className="col-sm-3  btn btn-primary"
                                 to={{
                                     pathname: "/contractsgoods",
                                     goods,
@@ -53,7 +53,7 @@ const Questions = (props) => {
         return (
             <div>
                 <Header />
-                <div className="m-5">
+                <div className="">
                     <div className="m-5 col-sm-10">
                         <div>
                             <h5 className="m-3">El contrato que debes utilizar es:</h5>
@@ -72,8 +72,7 @@ const Questions = (props) => {
                     <br />
                     <br />
                     <div className="m-5 d-flex justify-content-around">
-                        <Link className="col-sm-3 btn btn-outline-primary " to="/reviewcontracts">Anterior</Link>
-                        <Link className="btn btn-primary m-3 "
+                        <Link className="col-sm-3  btn btn-primary"
                             to={{
                                 pathname: "/optioncompany",
                                 props
@@ -107,8 +106,7 @@ const Questions = (props) => {
                     <br />
                     <br />
                     <div className="m-5 d-flex justify-content-around">
-                        <Link className="col-sm-3 btn btn-outline-primary " to="/reviewcontracts">Anterior</Link>
-                        <Link className="btn btn-primary m-3 "
+                        <Link className="col-sm-3  btn btn-primary"
                             to={{
                                 pathname: "/optioncompany",
                                 props
@@ -141,8 +139,7 @@ const Questions = (props) => {
                     <br />
                     <br />
                     <div className="m-5 d-flex justify-content-around">
-                        <Link className="col-sm-3 btn btn-outline-primary " to="/">Anterior</Link>
-                        <Link className="col-sm-3  btn btn-primary " to="/">Finalizar</Link>
+                        <Link className="col-sm-3  btn btn-primary" to="/">Finalizar</Link>
                     </div>
                 </div>
             </div >
@@ -172,8 +169,7 @@ const Questions = (props) => {
                     <br />
                     <br />
                     <div className="m-5 d-flex justify-content-around">
-                        <Link className="col-sm-3 btn btn-outline-primary " to="/reviewcontracts">Anterior</Link>
-                        <Link className="btn btn-primary m-3 "
+                        <Link className="col-sm-3  btn btn-primary"
                             to={{
                                 pathname: "/optioncompany",
                                 props
@@ -206,8 +202,7 @@ const Questions = (props) => {
                 <br />
                 <br />
                 <div className="m-5 d-flex justify-content-around">
-                    <Link className="col-sm-3 btn btn-outline-primary " to="/reviewcontracts">Anterior</Link>
-                    <Link className="btn btn-primary m-3 "
+                    <Link className="col-sm-3  btn btn-primary"
                         to={{
                             pathname: "/optioncompany",
                             props
