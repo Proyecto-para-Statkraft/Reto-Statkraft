@@ -53,7 +53,7 @@ const Questions = (props) => {
         return (
             <div>
                 <Header />
-                <div className="">
+                <div className="container">
                     <div className="m-5 col-sm-10">
                         <div>
                             <h5 className="m-3">El contrato que debes utilizar es:</h5>
@@ -71,7 +71,7 @@ const Questions = (props) => {
                     <br />
                     <br />
                     <br />
-                    <div className="m-5 d-flex justify-content-around">
+                    <div className="m-5 d-flex justify-content-end">
                         <Link className="col-sm-3  btn btn-primary"
                             to={{
                                 pathname: "/optioncompany",
@@ -87,7 +87,7 @@ const Questions = (props) => {
         return (
             <div>
                 <Header />
-                <div className="m-5">
+                <div className="container">
                     <div className="m-5 col-sm-10">
                         <div>
                             <h5 className="m-3">El contrato que debes utilizar es:</h5>
@@ -105,7 +105,7 @@ const Questions = (props) => {
                     <br />
                     <br />
                     <br />
-                    <div className="m-5 d-flex justify-content-around">
+                    <div className="m-5 d-flex justify-content-end">
                         <Link className="col-sm-3  btn btn-primary"
                             to={{
                                 pathname: "/optioncompany",
@@ -120,7 +120,7 @@ const Questions = (props) => {
         return (
             <div>
                 <Header />
-                <div className="m-5">
+                <div className="container">
                     <div className="m-5 col-sm-10">
                         <div>
                             <h5 className="m-3">El contrato que debes utilizar es:</h5>
@@ -138,7 +138,7 @@ const Questions = (props) => {
                     <br />
                     <br />
                     <br />
-                    <div className="m-5 d-flex justify-content-around">
+                    <div className="m-5 d-flex justify-content-end">
                         <Link className="col-sm-3  btn btn-primary" to="/">Finalizar</Link>
                     </div>
                 </div>
@@ -150,7 +150,7 @@ const Questions = (props) => {
         return (
             <div>
                 <Header />
-                <div className="m-5">
+                <div className="container">
                     <div className="m-5 col-sm-10">
                         <div>
                             <h5 className="m-3">El contrato que debes utilizar es:</h5>
@@ -168,7 +168,7 @@ const Questions = (props) => {
                     <br />
                     <br />
                     <br />
-                    <div className="m-5 d-flex justify-content-around">
+                    <div className="m-5 d-flex justify-content-end">
                         <Link className="col-sm-3  btn btn-primary"
                             to={{
                                 pathname: "/optioncompany",
@@ -183,7 +183,7 @@ const Questions = (props) => {
     return (
         < div >
             <Header />
-            <div className="m-5">
+            <div className="container">
                 <div className="m-5 col-sm-10">
                     <div>
                         <h5 className="m-3">El contrato que debes utilizar es:</h5>
@@ -201,7 +201,7 @@ const Questions = (props) => {
                 <br />
                 <br />
                 <br />
-                <div className="m-5 d-flex justify-content-around">
+                <div className="m-5 d-flex justify-content-end">
                     <Link className="col-sm-3  btn btn-primary"
                         to={{
                             pathname: "/optioncompany",
