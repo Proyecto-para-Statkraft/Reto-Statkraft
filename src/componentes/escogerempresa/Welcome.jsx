@@ -25,7 +25,7 @@ const Welcome = () => {
                     <div className="col-sm-8">
                         <p className="text-center mb-5 titleWelcome">¡Bienvenido a +Lett! </p>
                         <div>
-                            <p>Vamos a empezar, pero primero ¿cuál es tu nombre? </p>
+                            <p className="mb-2">Vamos a empezar, pero primero ¿cuál es tu nombre? </p>
                             <input className="input-class" type="text" onChange={nameService} />
                         </div>
                         <div className="mt-4">
