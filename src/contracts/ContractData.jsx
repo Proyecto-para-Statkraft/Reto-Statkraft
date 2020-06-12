@@ -439,6 +439,8 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     <button
                         onClick={() => {
                             searchClauseFourteenth(optionClauseFourteenth, moneysPoliza);
+                            setQuestionEleventh(true);
+                            setQuestionTenth(false);
                         }}
                     >
                         Siguiente
@@ -446,7 +448,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 </div>
             }
             {
-                (questionQuarter) &&
+                (questionEleventh) &&
                 <div className="row m-5">
                     <div className="m-3 d-flex flex-column bd-highlight">
                         <p>11. Subcontratación</p>
@@ -463,6 +465,8 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     <button
                         onClick={() => {
                             searchClauseSixteenth(optionClausesSixteenth, name, ruc, servicio);
+                            setQuestionEleventh(false);
+                            setQuestionThirteenth(true);
                         }}
                     >
                         Siguiente
@@ -470,7 +474,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 </div>
             }
             {
-                (questionQuarter) &&
+                (questionThirteenth) &&
                 <div className="row m-5">
                     <div className="m-3 d-flex flex-column bd-highlight">
                         <p>12. Ética en los negocios</p>
