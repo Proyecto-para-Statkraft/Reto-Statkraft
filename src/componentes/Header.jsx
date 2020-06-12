@@ -14,9 +14,7 @@ const Header = () => {
                 <div className="collapse navbar-collapse flex-row-reverse " id="navbarNavAltMarkup">
                     <div className="navbar-nav font">
                         <Link className="nav-item nav-link active m-3 text-center font" to="/">Inicio</Link>
-                        <Link className="nav-item nav-link active m-3 text-center font" to="/reviewcontracts">Revisar Contratos</Link>
                         <Link className="nav-item nav-link active m-3 btn-yellow text-center font " to="/consolidatedcontracts">Consolidado de Contratos</Link>
-                        <Link className="nav-item nav-link active m-3 btn-yellow text-center font " to="/numbercontracts">Adendas</Link>
                     </div>
                 </div>
             </nav>
