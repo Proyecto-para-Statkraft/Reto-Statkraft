@@ -99,6 +99,7 @@ const MakeContract = (data) => {
     const searchDate = (days, months, years) => {
         setSectionTwentyThird({ days, months, years })
     }
+
     function exportHTML(){
         var header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' "+
              "xmlns:w='urn:schemas-microsoft-com:office:word' "+
@@ -120,7 +121,7 @@ const MakeContract = (data) => {
 
         <div  className="view-contract">
             <Header />
-            <div className="">
+            <div className="container-view-contract">
                 <div className="row generator-contract">
                     <div  className="section-question "> 
                         <section>
@@ -131,14 +132,8 @@ const MakeContract = (data) => {
                                     searchHoursTime={searchHoursTime} searchoClauseThirteenth={searchoClauseThirteenth}
                                     searchClauseFourteenth={searchClauseFourteenth} searchTimeDayFifteenth={searchTimeDayFifteenth}
                                     searchClauseSixteenth={searchClauseSixteenth} searchClauseTwentienth={searchClauseTwentieth}
-                                    searchDate={searchDate}
+                                    searchDate={searchDate} generateWord={exportHTML}
                                 />               
-                            </div>
-                            <div className="row mt-3">
-                                <div className="col-sm-6"><button id="btn-export" className="btn btn-info" onClick={exportHTML}>Export to word doc</button></div>
-                                <div className="col-sm-6"><button id="btn-export" className="btn btn-info">Finalizar</button></div>
-                               
-                               
                             </div>
                         </section>
                     </div>
