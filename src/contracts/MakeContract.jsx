@@ -13,7 +13,6 @@ import Eleventh from './BuyAndSell/Eleventh';
 import Twelfth from './BuyAndSell/Twelfth';
 import Thirteenth from './BuyAndSell/Thirteenth';
 import Fourteenth from './BuyAndSell/Fourteenth';
-import Fifteenth from './BuyAndSell/Fifteenth';
 import Sixteenth from './BuyAndSell/Sixteenth';
 import Twentieth from './BuyAndSell/Twentieth';
 import Firms from './BuyAndSell/Firms';
@@ -153,7 +152,6 @@ const MakeContract = (data, props) => {
                         <Twelfth data={data} Twelfth={sectionTwelfth} />
                         <Thirteenth data={data} Thirteenth={sectionThirteenth} />
                         <Fourteenth data={data} Fourteenth={sectionFourteenth} />
-                        <Fifteenth Fifteenth={sectionFifteenth} />
                         <Sixteenth data={data} Sixteenth={sectionSixteenth} />
                         <Twentieth data={data} Twentieth={sectionTwentienth} />
                         <Firms data={data} provider={provider} sectionTwentyThird={sectionTwentyThird} />
