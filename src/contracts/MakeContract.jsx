@@ -16,6 +16,7 @@ import Fourteenth from './BuyAndSell/Fourteenth';
 import Fifteenth from './BuyAndSell/Fifteenth';
 import Sixteenth from './BuyAndSell/Sixteenth';
 import Twentieth from './BuyAndSell/Twentieth';
+import Firms from './BuyAndSell/Firms';
 
 
 
@@ -102,6 +103,11 @@ const MakeContract = (data) => {
     const searchClauseTwentieth = (optionClausesTwentieth) => {
         setSectionTwentienth({ optionClausesTwentieth })
     }
+
+    const [sectionTwentyThird, setSectionTwentyThird] = useState('');
+    const searchDate = (days, months, years) => {
+        setSectionTwentyThird({ days, months, years })
+    }
     /* 
         const DocumentGenerate = () => (
             <div id="document-word">
@@ -130,6 +136,7 @@ const MakeContract = (data) => {
                             searchHoursTime={searchHoursTime} searchoClauseThirteenth={searchoClauseThirteenth}
                             searchClauseFourteenth={searchClauseFourteenth} searchTimeDayFifteenth={searchTimeDayFifteenth}
                             searchClauseSixteenth={searchClauseSixteenth} searchClauseTwentienth={searchClauseTwentieth}
+                            searchDate={searchDate}
                         />
                     </section>
                     <section className="col-sm-12 col-md-6 bg-secondary">
@@ -147,6 +154,8 @@ const MakeContract = (data) => {
                         <Fifteenth Fifteenth={sectionFifteenth} />
                         <Sixteenth data={data} Sixteenth={sectionSixteenth} />
                         <Twentieth data={data} Twentieth={sectionTwentienth} />
+                        <Firms data={data} provider={provider} sectionTwentyThird={sectionTwentyThird} />
+
                     </section>
                 </div>
             </div>

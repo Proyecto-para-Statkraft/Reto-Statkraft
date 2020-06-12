@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
+import img from '../img/image14.png';
 
 const ContractData = ({ search, searchDataAntecedentes, searchSellOption, searchPrice, searchPaymentMethod,
     searchTermPay, searchSite, searchAnexoTench, searchRepresentative, searchHoursTime, searchoClauseThirteenth,
-    searchClauseFourteenth, searchTimeDayFifteenth, searchClauseSixteenth, searchClauseTwentienth }) => {
+    searchClauseFourteenth, searchTimeDayFifteenth, searchClauseSixteenth, searchClauseTwentienth, searchDate }) => {
 
     const [questionIntro, setQuestionIntro] = useState(true);
     const [questionFirst, setQuestionFirst] = useState(false);
@@ -138,6 +139,17 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
 
     const [optionClausesTwentieth, setOptionClauseTwentieth] = useState("");
     const optionClauseTwentieth = e => { setOptionClauseTwentieth(e.target.value) };
+
+
+    const [days, setDays] = useState("");
+    const day = e => { setDays(e.target.value) };
+
+    const [months, setMonths] = useState("");
+    const month = e => { setMonths(e.target.value) };
+
+
+    const [years, setYears] = useState("");
+    const year = e => { setYears(e.target.value) };
 
     return (
         <div>
@@ -480,7 +492,49 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     </div>
                 </div>
             }
-        </div>
+            {
+                // (questionQuarter) &&
+                <div className="row m-5">
+                    <div className="m-3 d-flex flex-column bd-highlight">
+                        <p>13. Varios</p>
+
+                        <p>Fecha en la que se suscribe el documento</p>
+                        <label htmlFor="">
+                            Dia
+                        <input type="text" placeholder="23" onChange={day} />
+                        </label>
+                        <label htmlFor="">
+                            Mes
+                        <input type="text" placeholder="Junio" onChange={month} />
+                        </label>
+                        <label htmlFor="">
+                            Mes
+                        <input type="text" placeholder="2020" onChange={year} />
+                        </label>
+                    </div>
+                    <button onClick={() => { searchDate(days, months, years) }}>
+                        Siguiente
+                     </button>
+                </div>
+
+            }
+            {
+                // (questionQuarter) &&
+                <div className="row m-5">
+                    <div className="m-3 d-flex flex-column bd-highlight">
+                        <p>¡Haz terminado de realizar tu contrato!</p>
+
+                        <p>Si quieres tener el contrato que acabar de realizar puedes descargarlo en formato Word.</p>
+
+
+                        <img src={img} alt="imagen" />
+                        <button>Descargarlo</button>
+                        <button>Finalizar</button>
+                    </div>
+                </div>
+
+            }
+        </div >
     );
 };
 
