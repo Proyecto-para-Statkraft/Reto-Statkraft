@@ -18,7 +18,6 @@ const Routes = () => {
     <HashRouter>
       <Switch>
         <Route exact path="/" component={Home} />
-        {/* <Route path="/reviewcontracts" component={ReviewContracts} /> */}
         <Route
           path="/consolidatedcontracts"
           component={ConsolidatedContracts}
