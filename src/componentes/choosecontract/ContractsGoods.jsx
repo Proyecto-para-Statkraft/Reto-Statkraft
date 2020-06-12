@@ -12,7 +12,7 @@ const ContrractsGoods = (props) => {
         type
     ];
 
-    localStorage.setItem('Tipo', JSON.stringify(typeContracts));
+    // localStorage.setItem('Tipo', JSON.stringify(typeContracts));
 
 
     // console.log('contrato selecionado', props.location.goods)
@@ -21,8 +21,8 @@ const ContrractsGoods = (props) => {
         return (
             <div>
                 <Header />
-                <div className="m-5">
-                    <div className="m-5 col-sm-10">
+                <div className="row justify-content-center">
+                    <div className="mt-5 col-sm-9">
                         <div>
                             <h5 className="m-3">El contrato que debes utilizar es:</h5>
                         </div>
@@ -35,18 +35,19 @@ const ContrractsGoods = (props) => {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <br />
-                    <br />
-                    <br />
-                    <div className="m-5 d-flex justify-content-around">
-                        <Link className="col-sm-3 btn btn-outline-primary " to="/reviewcontracts">Anterior</Link>
-                        <Link className="btn btn-primary m-3 "
-                            to={{
-                                pathname: "/optioncompany",
-                            }}>Siguiente</Link>
+                        <br />
+                        <br />
+                        <br />
+                        <div className="m-5 d-flex justify-content-end">
+                        
+                            <Link className="col-sm-3  btn btn-primary"
+                                to={{
+                                    pathname: "/optioncompany",
+                                }}>Siguiente</Link>
 
+                        </div>
                     </div>
+                   
                 </div>
             </div >
         )
@@ -56,8 +57,8 @@ const ContrractsGoods = (props) => {
         return (
             <div>
                 <Header />
-                <div className="m-5">
-                    <div className="m-5 col-sm-10">
+                <div className="row justify-content-center">
+                    <div className="mt-5 col-sm-9">
                         <div>
                             <h5 className="m-3">El contrato que debes utilizar es:</h5>
                         </div>
@@ -70,17 +71,16 @@ const ContrractsGoods = (props) => {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <br />
-                    <br />
-                    <br />
-                    <div className="m-5 d-flex justify-content-around">
-                        <Link className="col-sm-3 btn btn-outline-primary " to="/reviewcontracts">Anterior</Link>
-                        <Link className="btn btn-primary m-3 "
-                            to={{
-                                pathname: "/optioncompany",
-                            }}>Siguiente</Link>
-                    </div>
+                        <br />
+                        <br />
+                        <br />
+                        <div className="m-5 d-flex justify-content-end">
+                            <Link className="col-sm-3  btn btn-primary"
+                                to={{
+                                    pathname: "/optioncompany",
+                                }}>Siguiente</Link>
+                        </div>
+                    </div> 
                 </div>
             </div >
         )
