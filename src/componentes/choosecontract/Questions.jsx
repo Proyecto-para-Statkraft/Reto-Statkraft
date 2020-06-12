@@ -11,13 +11,6 @@ const Questions = (props) => {
         setGoods(e.target.value);
     };
 
-    const type = '';
-
-    // const [type, setType] = useState('');
-
-    // const typeContracts = [
-    //     type
-    // ];
 
     // localStorage.setItem('Tipo', JSON.stringify(typeContracts));
 
