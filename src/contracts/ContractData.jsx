@@ -467,7 +467,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         onClick={() => {
                             searchClauseSixteenth(optionClausesSixteenth, name, ruc, servicio);
                             setQuestionEleventh(false);
-                            setQuestionThirteenth(true);
+                            setQuestionTwelfth(true);
                         }}
                     >
                         Siguiente
@@ -475,7 +475,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 </div>
             }
             {
-                (questionThirteenth) &&
+                (questionTwelfth) &&
                 <div className="row m-5">
                     <div className="m-3 d-flex flex-column bd-highlight">
                         <p>12. Ética en los negocios</p>
@@ -486,14 +486,17 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             <input className="m-3 radio" type="radio" value="medio" name="gender" />Medio <br />
                             <input className="m-3 radio" type="radio" value="alto" name="gender" /> Muy alto <br />
                         </div>
-                        <button onClick={() => { searchClauseTwentienth(optionClausesTwentieth); }}>
+                        <button onClick={() => { searchClauseTwentienth(optionClausesTwentieth); 
+                            setQuestionTwelfth(false);
+                            setQuestionThirteenth(true);
+                        }}>
                             Siguiente
                      </button>
                     </div>
                 </div>
             }
             {
-                // (questionQuarter) &&
+                (questionThirteenth) &&
                 <div className="row m-5">
                     <div className="m-3 d-flex flex-column bd-highlight">
                         <p>13. Varios</p>
@@ -512,14 +515,17 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         <input type="text" placeholder="2020" onChange={year} />
                         </label>
                     </div>
-                    <button onClick={() => { searchDate(days, months, years) }}>
+                    <button onClick={() => { searchDate(days, months, years) 
+                        setQuestionThirteenth(false);
+                        setQuestionFourteenth(true);
+                    }}>
                         Siguiente
                      </button>
                 </div>
 
             }
             {
-                // (questionQuarter) &&
+                (questionFourteenth) &&
                 <div className="row m-5">
                     <div className="m-3 d-flex flex-column bd-highlight">
                         <p>¡Haz terminado de realizar tu contrato!</p>
