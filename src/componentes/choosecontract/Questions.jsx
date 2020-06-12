@@ -21,7 +21,7 @@ const Questions = (props) => {
                 <Header />
                 <div className="m-4 d-flex justify-content-center">
                     <div className="m-sm-1 col-sm-7">
-                        <h5 className="mb-5">2- ¿También incluye instalación de bienes?</h5>
+                        <h5 className="mb-5">2. ¿También incluye instalación de bienes?</h5>
                         <div className="m-3" onChange={optionGoods}>
                             <input className="m-3 radio" type="radio" value="si" name="gender" /> Si <br />
                             <input className="m-3 radio" type="radio" value="no" name="gender" /> No
