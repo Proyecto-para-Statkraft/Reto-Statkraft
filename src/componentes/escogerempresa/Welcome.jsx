@@ -20,25 +20,28 @@ const Welcome = () => {
     return (
         <div>
             <Header />
-            <div className="mt-5 d-flex justify-content-center">
-                <div className="m-sm-1 col-sm-7">
-                    <p>¡Bienvenido a Contratos! </p>
-                    <div>
-                        <label htmlFor="">
-                            Vamos a empezar, pero primero ¿cuál es tu nombre? </label>
-                        <input type="text" onChange={nameService} />
+            <div className="pt-5 container">
+                <div className="row justify-content-center">
+                    <div className="col-sm-8">
+                        <p className="text-center mb-5 titleWelcome">¡Bienvenido a +Lett! </p>
+                        <div>
+                            <p>Vamos a empezar, pero primero ¿cuál es tu nombre? </p>
+                            <input className="input-class" type="text" onChange={nameService} />
+                        </div>
+                        <div className="mt-4">
+                            <p>¿Cuál es el nombre de la persona que requiere el servicio? </p>
+                            <input className="input-class" type="text" onChange={RequiresService} />
+                        </div>
+                        <div className="row justify-content-end mt-5">
+                            <Link className="col-sm-3  btn btn-primary"
+                                to={{
+                                    pathname: "/chooseContract",
+                                    nameServices,
+                                    requiresServices
+                                }}>Continuar</Link>
+                        </div>
 
-                        <label htmlFor="">
-                            ¿Cuál es el nombre de la persona que requiere el servicio?</label>
-                        <input type="text" onChange={RequiresService} />
                     </div>
-                </div>
-                <div className="d-flex justify-content-end ">
-                    <Link className="btn btn-primary m-3 "
-                        to={{
-                            pathname: "/chooseContract",
-                            usariocomprador
-                        }}>Siguiente</Link>
                 </div>
             </div>
         </div>

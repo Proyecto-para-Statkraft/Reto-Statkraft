@@ -17,7 +17,7 @@ const ContrractsGoods = (props) => {
 
     // console.log('contrato selecionado', props.location.goods)
     if (props.location.goods === 'si') {
-        setType('Compra Venta e Instalacion')
+        // setType('Compra Venta e Instalacion')
         return (
             <div>
                 <Header />
