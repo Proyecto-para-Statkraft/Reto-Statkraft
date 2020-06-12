@@ -100,10 +100,16 @@ const MakeContract = (data) => {
         setSectionTwentyThird({ days, months, years })
     }
     function exportHTML(){
-        var header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' "+
-             "xmlns:w='urn:schemas-microsoft-com:office:word' "+
-             "xmlns='http://www.w3.org/TR/REC-html40'>"+
-             "<head><meta charset='utf-8'><title>Export HTML to Word Document with JavaScript</title></head><body>";
+
+         // var header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' "+
+        //      "xmlns:w='urn:schemas-microsoft-com:office:word' "+
+        //      "xmlns='http://www.w3.org/TR/REC-html40'>"+
+        var header ="html xmlns:v='urn:schemas-microsoft-com:vml'"+
+        "xmlns:o='urn:schemas-microsoft-com:office:office'"+
+        "xmlns:w='urn:schemas-microsoft-com:office:word'"+
+        "xmlns:m='http://schemas.microsoft.com/office/2004/12/omml'"+
+        "xmlns='http://www.w3.org/TR/REC-html40'>"+
+        "<head><meta charset='utf-8'><title>Export HTML to Word Document with JavaScript</title></head><body>";
         var footer = "</body></html>";
         var sourceHTML = header+document.getElementById("source-html").innerHTML+footer;
         
@@ -137,8 +143,6 @@ const MakeContract = (data) => {
                             <div className="row mt-3">
                                 <div className="col-sm-6"><button id="btn-export" className="btn btn-info" onClick={exportHTML}>Export to word doc</button></div>
                                 <div className="col-sm-6"><button id="btn-export" className="btn btn-info">Finalizar</button></div>
-                               
-                               
                             </div>
                         </section>
                     </div>
