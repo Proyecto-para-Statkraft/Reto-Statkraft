@@ -26,29 +26,31 @@ const ConsolidatedContracts = () => {
         <Fragment>
             <Header />
             <div className="m-5"></div>
-            <div className="m-5">
+            <div className="m-2">
                 <h3>Contratos</h3>
-                <Table striped bordered hover>
-                    <thead className="m-5 border border-info ">
-                        <tr className="m-5 table-info" >
-                            <th>N.</th>
-                            <th>Tipo de Contrato</th>
-                            <th>Descripcion del Servicio</th>
-                            <th>Monto del Contrato</th>
-                            <th>Plazo</th>
-                            <th>Comprador</th>
-                            <th>Usuario</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+                <div className="table-responsive-sm">
+                    <Table className="" clstriped bordered hover>
+                        <thead className="m-5 border border-info ">
+                            <tr className="m-5 table-info" >
+                                <th>N.</th>
+                                <th>Tipo de Contrato</th>
+                                <th>Descripcion del Servicio</th>
+                                <th>Monto del Contrato</th>
+                                <th>Plazo</th>
+                                <th>Comprador</th>
+                                <th>Usuario</th>
+                            </tr>
+                        </thead>
+                        <tbody>
 
-                        {spells.map(doc =>
-                            <ResumenContracts key={doc.id} data={doc} />
-                        )
-                        }
+                            {spells.map(doc =>
+                                <ResumenContracts key={doc.id} data={doc} />
+                            )
+                            }
 
-                    </tbody>
-                </Table>
+                        </tbody>
+                    </Table>
+                </div>
             </div>
         </Fragment>
     )
