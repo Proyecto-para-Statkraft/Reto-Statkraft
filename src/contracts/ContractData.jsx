@@ -419,10 +419,11 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                             No
                         </div>
                         <label htmlFor="">
-                             El monto de la póliza de responsabilidad civil extra contractual es:
-                             <textarea name="" onChange={moneyPoliza}
-                             placeholder="Ejm: US$ 67,274.36 (Sesenta y Siete Mil Doscientos Setenta y Cuatro con 36/100 Dólares de los Estados Unidos de América) "></textarea>
+                        Si su respuesta anterior es Si, rellene este campo.El monto de la póliza de responsabilidad civil extra contractual es:
+                        <textarea name="" onChange={moneyPoliza}
+                        placeholder="Ejm: US$ 67,274.36 (Sesenta y Siete Mil Doscientos Setenta y Cuatro con 36/100 Dólares de los Estados Unidos de América) "></textarea>
                         </label>
+                        
                     </div>
                     <button
                         onClick={() => {
