@@ -19,8 +19,6 @@ import Twentieth from './BuyAndSell/Twentieth';
 import Firms from './BuyAndSell/Firms';
 
 
-
-
 const MakeContract = (data) => {
 
     const [provider, setProvider] = useState('')
@@ -61,11 +59,6 @@ const MakeContract = (data) => {
         setSectionSixth({ deadlineDay })
     }
 
-    const [sectionTenth, setSectionTenth] = useState('');
-    const searchAnexoTench = (deadlineDay) => {
-        setSectionTenth({ deadlineDay })
-    }
-
     const [sectionEleventh, setSectionEleventh] = useState('');
     const searchRepresentative = (representativeCompany, representativeSupplier) => {
         setSectionEleventh({ representativeCompany, representativeSupplier })
@@ -81,8 +74,6 @@ const MakeContract = (data) => {
         setSectionThirteenth({ optionClauseThirteenth })
 
     }
-
-    console.log(sectionThirteenth, 'Funcionaaa')
 
     const [sectionFourteenth, setSectionFourteenth] = useState('');
     const searchClauseFourteenth = (optionClauseFourteenth, moneysPoliza) => {
@@ -127,44 +118,34 @@ const MakeContract = (data) => {
     return (
         <div id="source-html" className="view-contract">
             <Header />
-            <div className="">
-                <div className="row">
-                    <div className="section-question col-sm-12 col-md-6">
-                        <section className="">
-                            <div className="row">
-                                <ContractData search={searchProvider} searchDataAntecedentes={searchAntecedente} searchSellOption={searchObjeto}
-                                    searchPrice={searchPrice} searchPaymentMethod={searchPaymentMethod} searchTermPay={searchTermPay}
-                                    searchSite={searchSite} searchAnexoTench={searchAnexoTench} searchRepresentative={searchRepresentative}
-                                    searchHoursTime={searchHoursTime} searchoClauseThirteenth={searchoClauseThirteenth}
-                                    searchClauseFourteenth={searchClauseFourteenth} searchTimeDayFifteenth={searchTimeDayFifteenth}
-                                    searchClauseSixteenth={searchClauseSixteenth} searchClauseTwentienth={searchClauseTwentieth}
-                                    searchDate={searchDate}
-                                />
-                            </div>
-                            <div className="row">
-                                <button id="">boton</button>
-                            </div>
-                        </section>
-                    </div>
-                    <section className="col-sm-12 col-md-6 bg-secondary">
-                        <Introduction data={data} provider={provider} />
-                        <First data={data} First={antecedente} />
-                        <Second data={data} Second={sectionSecond} />
-                        <Third data={data} Third={sectionThird} />
-                        <Quarter data={data} Quarter={sectionQuarter} />
-                        <Fifth data={data} Fifth={sectionFifth} />
-                        <Sixth data={data} Sixth={sectionSixth} />
-                        <Eleventh data={data} Eleventh={sectionEleventh} />
-                        <Twelfth data={data} Twelfth={sectionTwelfth} />
-                        <Thirteenth data={data} Thirteenth={sectionThirteenth} />
-                        <Fourteenth data={data} Fourteenth={sectionFourteenth} />
-                        <Fifteenth Fifteenth={sectionFifteenth} />
-                        <Sixteenth data={data} Sixteenth={sectionSixteenth} />
-                        <Twentieth data={data} Twentieth={sectionTwentienth} />
-                        <Firms data={data} provider={provider} sectionTwentyThird={sectionTwentyThird} />
-
-                    </section>
-                </div>
+            <div className="generator-contract">
+                <section className="section-question">
+                    <ContractData search={searchProvider} searchDataAntecedentes={searchAntecedente} searchSellOption={searchObjeto}
+                        searchPrice={searchPrice} searchPaymentMethod={searchPaymentMethod} searchTermPay={searchTermPay}
+                        searchSite={searchSite} searchRepresentative={searchRepresentative}
+                        searchHoursTime={searchHoursTime} searchoClauseThirteenth={searchoClauseThirteenth}
+                        searchClauseFourteenth={searchClauseFourteenth} searchTimeDayFifteenth={searchTimeDayFifteenth}
+                        searchClauseSixteenth={searchClauseSixteenth} searchClauseTwentienth={searchClauseTwentieth}
+                        searchDate={searchDate}
+                    />
+                </section>
+                <section className="section-contract">
+                    <Introduction data={data} provider={provider} />
+                    <First data={data} First={antecedente} />
+                    <Second data={data} Second={sectionSecond} />
+                    <Third data={data} Third={sectionThird} />
+                    <Quarter data={data} Quarter={sectionQuarter} />
+                    <Fifth data={data} Fifth={sectionFifth} />
+                    <Sixth data={data} Sixth={sectionSixth} />
+                    <Eleventh data={data} Eleventh={sectionEleventh} />
+                    <Twelfth data={data} Twelfth={sectionTwelfth} />
+                    <Thirteenth data={data} Thirteenth={sectionThirteenth} />
+                    <Fourteenth data={data} Fourteenth={sectionFourteenth} />
+                    <Fifteenth Fifteenth={sectionFifteenth} />
+                    <Sixteenth data={data} Sixteenth={sectionSixteenth} />
+                    <Twentieth data={data} Twentieth={sectionTwentienth} />
+                    <Firms data={data} provider={provider} sectionTwentyThird={sectionTwentyThird} />
+                </section>
             </div>
         </div>
     )

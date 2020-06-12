@@ -52,9 +52,10 @@ const Home = () => {
                                     </Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
-                                    <h5 className="text-center">Concepto</h5>
                                     <p className="text-center">
-                                        Más conceptos
+                                        Mediante este contrato Statkraft contrata y paga por el servicio de traslado 
+                                        de personas o bienes. El tercero contratado (proveedor) se encarga del medio 
+                                        de transporte, conductores y demás medios necesarios para prestar el servicio.
                                     </p>
                                 </Modal.Body>
                                 <Modal.Footer>
@@ -83,9 +84,10 @@ const Home = () => {
                                     </Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
-                                    <h5 className="text-center">Concepto</h5>
                                     <p className="text-center">
-                                        Más conceptos
+                                        Mediante este contrato Statkraft contrata y le paga a un tercero para la 
+                                        construcción de una obra civil, lo que incluye el personal, la ingeniería 
+                                        y los materiales necesarios.
                                     </p>
                                 </Modal.Body>
                                 <Modal.Footer>
@@ -114,9 +116,9 @@ const Home = () => {
                                     </Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
-                                    <h5 className="text-center">Concepto</h5>
                                     <p className="text-center">
-                                        Más conceptos
+                                        Mediante este contrato Statkraft compra un bien y le paga el precio al
+                                        vendedor (proveedor).
                                     </p>
                                 </Modal.Body>
                                 <Modal.Footer>
@@ -145,9 +147,10 @@ const Home = () => {
                                     </Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
-                                    <h5 className="text-center">Concepto</h5>
                                     <p className="text-center">
-                                        Más conceptos
+                                        Mediante este contrato Statkraft compra un bien, le paga el precio al vendedor
+                                        (proveedor) y este último además debe instalar el bien en el lugar indicado por
+                                        Statkraft.
                                     </p>
                                 </Modal.Body>
                                 <Modal.Footer>
@@ -176,9 +179,11 @@ const Home = () => {
                                     </Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
-                                    <h5 className="text-center">Concepto</h5>
                                     <p className="text-center">
-                                        Más conceptos
+                                        Este contrato se utiliza cuando se requiere que una empresa intermediadora 
+                                        preste servicios mediante el destaque de personal a las instalaciones de 
+                                        Statkraft. Estos servicios solo pueden ser temporales, complementarios o 
+                                        especializados.
                                     </p>
                                 </Modal.Body>
                                 <Modal.Footer>
@@ -207,9 +212,11 @@ const Home = () => {
                                     </Modal.Title>
                                 </Modal.Header>
                                 <Modal.Body>
-                                    <h5 className="text-center">Concepto</h5>
                                     <p className="text-center">
-                                        Más conceptos
+                                        Mediante este contrato Statkraft puede contratar otros servicios, 
+                                        no incluidos en las definiciones anteriores, por un determinado 
+                                        tiempo y a cambio del pago de una contraprestación al tercero que 
+                                        presta el servicio (proveedor).
                                     </p>
                                 </Modal.Body>
                                 <Modal.Footer>

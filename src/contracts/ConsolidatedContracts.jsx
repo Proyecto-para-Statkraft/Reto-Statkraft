@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import Header from "../componentes/Header";
 import Table from 'react-bootstrap/Table';
 import firebase from '../componentes/firebase.js';
@@ -23,7 +23,7 @@ const ConsolidatedContracts = () => {
     }, []);
 
     return (
-        <div>
+        <Fragment>
             <Header />
             <Table striped bordered hover>
                 <thead>
@@ -46,7 +46,7 @@ const ConsolidatedContracts = () => {
 
                 </tbody>
             </Table>
-        </div>
+        </Fragment>
     )
 }
 

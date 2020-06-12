@@ -1,23 +1,22 @@
 import React from 'react';
 
-const ResumenContracts = (props) => {
+const ResumenContracts = ({ data }) => {
 
-    console.log('info firebase', props)
+    const { id, tipo, descripcion, monto, plazo, comprador, usuario } = data;
+
+    console.log('info firebase', data)
+
     return (
-        <div>holaa</div>
-    )
-
-
-    // return (
-    //     <tr className="bg-white font border border-warning">
-    //         <td><img src={image} className="imagen img-fluid" alt="banco" /></td>
-    //         <td>{quota}</td>
-    //         <td>{props.month}</td>
-    //         <td>{tcea}</td>
-    //         <td>{interes}</td>
-    //         <td>{total}</td>
-    //     </tr>
-    // );
+        <tr className="bg-white font border border-warning">
+            <td>{id}</td>
+            <td>{tipo}</td>
+            <td>{descripcion}</td>
+            <td>{monto}</td>
+            <td>{plazo}</td>
+            <td>{comprador}</td>
+            <td>{usuario}</td>
+        </tr>
+    );
 }
 
 export default ResumenContracts;

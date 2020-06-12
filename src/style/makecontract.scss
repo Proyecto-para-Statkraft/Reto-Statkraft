@@ -1,41 +1,227 @@
+@import '_meassures.scss';
+
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin paddingMargin($padding, $margin) {
+    padding: $padding;
+    margin: $margin;
+}
+
+
 .view-contract {
     width: 100%;
     display: flex;
     flex-direction: column;
+    margin: 0;
 
-    .row {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-
-        .section-question {
+        .section-question .container-question {
             display: flex;
-            width: 30%;
-            // background: red;
+            align-items: center;
+        }
 
-            .clause-question {
-                background: gray;
+        .section-contract {
+            overflow: scroll;
+            border: 1px solid #000000;
+            border-radius: 10px;
+        }
+
+        @media (max-width: $blackberry) {
+            .generator-contract {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+
+                .section-question {
+                    @include size(80%, auto);
+                    @include paddingMargin(0, 25px 15px);
+
+                    #contract-data {
+                        width: 100%;
+
+                        .button-continue {
+                            display: flex;
+                            justify-content: center;
+                            margin-top: 5px;
+                        }
+                    }
+                }
+                .section-contract {
+                    @include size(80%, 300px);
+                    @include paddingMargin(6px, 25px 35px);
+
+                    h2 {
+                        font-size: 15px;
+                    }
+                }
             }
         }
+        @media (min-width: $blackberry) and (max-width: $smartphone) {
+            .generator-contract {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+
+                .section-question {
+                    @include size(80%, auto);
+                    @include paddingMargin(0, 40px 15px);
+
+                    #contract-data {
+                        width: 100%;
+
+                        .button-continue {
+                            display: flex;
+                            justify-content: center;
+                            margin-top: 12px;
+                        }
+                    }
+                }
+                .section-contract {
+                    @include size(70%, 400px);
+                    @include paddingMargin(6px, 25px 45px);
+
+                    h2 {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+       @media (min-width: $smartphone) and (max-width: $tablet) {
+        .generator-contract {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            .section-question {
+                @include size(70%, auto);
+                @include paddingMargin(0, 70px 15px);
+
+                #contract-data {
+                    width: 100%;
+
+                    .button-continue {
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 10px;
+                    }
+                }
+            }
+            .section-contract {
+                @include size(60%, 500px);
+                @include paddingMargin(10px, 25px 60px);
+
+                h2 {
+                    font-size: 17px;
+                }
+            }
+        }
+        }
+
+        @media (min-width: $tablet) and (max-width: $notebook) {
+            .generator-contract {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                padding: 0 5% 0 5%;
+             
+                width: 100%;
     
-        .section-create-contract {
-            width: 30%;
-            background: yellow;
-
-            div {
-                width: 90%;
-                height: 500px;
-                background: yellowgreen;
-                overflow: scroll;
+                .section-question {
+                    @include size(50%, auto);
+                    @include paddingMargin(0, 60px 15px);
+    
+                    #contract-data {
+                        width: 100%;
+    
+                        .button-continue {
+                            display: flex;
+                            justify-content: center;
+                            margin-top: 15px;
+                        }
+                    }
+                }
+                .section-contract {
+                    @include size(50%, 550px);
+                    @include paddingMargin(10px, 60px 35px);
+    
+                    h2 {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+        @media (min-width: $notebook) and (max-width: $desktop) {
+            .generator-contract {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                padding: 0 5% 0 5%;
+             
+                width: 100%;
+    
+                .section-question {
+                    @include size(40%, auto);
+                    @include paddingMargin(0, 80px 15px);
+    
+                    #contract-data {
+                        width: 100%;
+    
+                        .button-continue {
+                            display: flex;
+                            justify-content: center;
+                            margin-top: 18px;
+                        }
+                    }
+                }
+                .section-contract {
+                    @include size(40%, 600px);
+                    @include paddingMargin(15px, 50px 70px);
+    
+                    h2 {
+                        font-size: 18px;
+                    }
+                }
             }
         }
 
-        .hide {
-            display: none;
+        @media (min-width: $desktop) {
+            .generator-contract {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;             
+                width: 100%;
+    
+                .section-question {
+                    @include size(40%, auto);
+                    @include paddingMargin(0, 60px 15px);
+    
+                    #contract-data {
+                        width: 100%;
+    
+                        .button-continue {
+                            display: flex;
+                            justify-content: center;
+                            margin-top: 20px;
+                        }
+                    }
+                }
+                .section-contract {
+                    @include size(40%, 700px);
+                    @include paddingMargin(15px, 70px 40px);
+    
+                    h2 {
+                        font-size: 20px;
+                    }
+                }
+            }
         }
-
-        .show {
-            visibility: visible;
-        }
-    }
 }
