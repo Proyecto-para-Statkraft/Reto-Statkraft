@@ -41,11 +41,11 @@ const Sixteenth = ({ data, Sixteenth, }) => {
                         17.1 El <span>PROVEEDOR</span> se obliga a guardar absoluta reserva y confidencialidad de cualquier
                         información que hubiese obtenido en la ejecución del presente Contrato, ya sea de forma escrita, oral
             o visual, de manera directa o indirecta, relacionada con <span>{companyData.name}</span>, sus afiliadas,
-                                                subsidiarias o empresas relacionadas o asociadas, accionistas, socios y accionistas o socios de sus
-                                                afiliadas, subsidiarias y empresas relacionadas o asociadas, sus clientes y los clientes de las
-                                                empresas antes mencionadas, no estando facultado a revelar dicha información a terceros. La obligación
-                                                antes mencionada se extenderá incluso con posterioridad a la terminación del presente Contrato o de
-                                                sus renovaciones o prórrogas, cualquiera que fuera la causal de terminación.
+                                    subsidiarias o empresas relacionadas o asociadas, accionistas, socios y accionistas o socios de sus
+                                    afiliadas, subsidiarias y empresas relacionadas o asociadas, sus clientes y los clientes de las
+                                    empresas antes mencionadas, no estando facultado a revelar dicha información a terceros. La obligación
+                                    antes mencionada se extenderá incluso con posterioridad a la terminación del presente Contrato o de
+                                    sus renovaciones o prórrogas, cualquiera que fuera la causal de terminación.
         </p>
                     <p>
                         17.2 Las obligaciones de confidencialidad alcanzan tanto al <span>PROVEEDOR</span> como al personal a
@@ -57,20 +57,20 @@ const Sixteenth = ({ data, Sixteenth, }) => {
                     <p>
                         17.3 En caso el <span>PROVEEDOR</span>, su personal, sus asesores o subcontratistas sean legal o
                         judicialmente requeridos a revelar cualquier información confidencial relacionada a este contrato, el
-            <span>PROVEEDOR</span> deberá de forma previa notificar esta circunstancia a <span>{companyData.name}</span>
-                        inmediatamente para que ésta pueda tomar las medidas necesarias para cautelar su derecho a la privacidad. El
+            <span>PROVEEDOR</span> deberá de forma previa notificar esta circunstancia a <span>{companyData.name}</span> inmediatamente
+                                    para que ésta pueda tomar las medidas necesarias para cautelar su derecho a la privacidad. El
             <span>PROVEEDOR</span> deberá informar formalmente a la autoridad competente que reciba dicha información
-                                                sobre la naturaleza confidencial de la misma, y deberá requerir a dicha autoridad que impida que dicha
+                                    sobre la naturaleza confidencial de la misma, y deberá requerir a dicha autoridad que impida que dicha
             información sea divulgada a otros. Las obligaciones del <span>PROVEEDOR</span> conforme al presente Contrato
-                                                continuarán vigentes sobre la Información Confidencial divulgada a cualquier autoridad gubernamental, no
-                                                obstante dicha divulgación.
+                                    continuarán vigentes sobre la Información Confidencial divulgada a cualquier autoridad gubernamental, no
+                                    obstante dicha divulgación.
         </p>
                     <p>
                         17.4 En cualquier caso o supuesto de término o resolución de este Contrato, el <span>PROVEEDOR</span> se
             obliga a devolver a <span>{companyData.name}</span> toda la información y datos que éste le haya proporcionado,
-                                                así como cualquier copia de la misma que pueda estar en su poder o de su personal, sus asesores o
+                                    así como cualquier copia de la misma que pueda estar en su poder o de su personal, sus asesores o
             subcontratistas, o preparada por el <span>PROVEEDOR</span> o su personal, sus asesores o subcontratistas
-                                                en base a la información confidencial.
+                                                            en base a la información confidencial.
         </p>
                     <p>
                         17.5 El incumplimiento de esta cláusula califica como causal de resolución del Contrato, sin
@@ -129,8 +129,8 @@ const Sixteenth = ({ data, Sixteenth, }) => {
                     <p>
                         18.4 Asimismo, <span>{companyData.name}</span> podrá resolver unilateralmente el presente Contrato sin
             expresión de causa, previa comunicación por escrito al <span>PROVEEDOR</span> con una anticipación
-                                    no mayor de quince (15) días calendario, no habiendo lugar a responsabilidad ni indemnización
-                                    alguna.
+                                                no mayor de quince (15) días calendario, no habiendo lugar a responsabilidad ni indemnización
+                                                alguna.
         </p>
                     <p>
                         18.5 En el supuesto de caso fortuito o fuerza mayor, cualquiera de las Partes podrá resolver el

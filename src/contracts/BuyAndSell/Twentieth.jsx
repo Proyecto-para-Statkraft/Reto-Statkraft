@@ -23,25 +23,21 @@ const Twentieth = ({ data, Twentieth }) => {
                         <h3>VIGÉSIMA PRIMERA: RESPONSABILIDAD SOCIAL CORPORATIVA</h3>
                         <p>
                             <span>{companyData.name}</span>, como empresa subsidiaria del grupo
-                  noruego <span>{companyData.name}</span>, tiene una política definida
-                                                                                        y concreta de responsabilidad social corporativa que aplica en todas
+                     noruego <span>{companyData.name}</span>, tiene una política definida
+                                  y concreta de responsabilidad social corporativa que aplica en todas
                   sus actividades. En tal sentido, <span>{companyData.name}</span>{" "}
-                            pone en conocimiento del
-                  <span>PROVEEDOR</span> y a través de este a sus contratistas,
-                                                                                        subcontratistas, proveedores de servicios y obras, y demás terceros
-                                                                                        relacionados, sobre la existencia de dicha política con el objetivo
-                                                                                        que la misma sea respetada y considerada en las actividades
-                                                                                        relacionadas con la prestación materia del presente contrato. El
-                  <span>PROVEEDOR</span> declara que tiene conocimiento de esta
-                                                                                        política.
+                            pone en conocimiento del <span>PROVEEDOR</span> y a través de este a sus contratistas,
+                            subcontratistas, proveedores de servicios y obras, y demás terceros
+                            relacionados, sobre la existencia de dicha política con el objetivo
+                            que la misma sea respetada y considerada en las actividades
+                    relacionadas con la prestación materia del presente contrato. El <span>PROVEEDOR</span> declara que tiene conocimiento de esta política.
                 </p>
                     </section>
 
                     <section>
                         <h3>VIGÉSIMA SEGUNDA: PROTECCIÓN DE DATOS PERSONALES</h3>
                         <p>
-                            22.1 En el contexto de la prestación de Servicios encargada por{" "}
-                            <span>{companyData.name}</span> y con la finalidad de la correcta
+                            22.1 En el contexto de la prestación de Servicios encargada por <span>{companyData.name}</span> y con la finalidad de la correcta
                             ejecución de los Servicios, las partes podrían entregar o
                             intercambiar datos de carácter personal de sus respectivos
                             trabajadores, representantes, socios, accionistas, prestadores de
@@ -62,10 +58,9 @@ const Twentieth = ({ data, Twentieth }) => {
                             cualquier información pública o que pudiera recoger cualquiera de
                             las partes a través de fuentes de acceso público, incluyendo aquella
                             a la que las partes tengan acceso como consecuencia de su relación
-                            laboral o contractual, con el objeto que el
-                  <span>LOCADOR</span> cuente con la información necesaria para llevar
-                                                                                        a cabo el Servicio y cumplir con las demás obligaciones del
-                                                                                        Contrato.
+                            laboral o contractual, con el objeto que el <span>LOCADOR</span> cuente con
+                  la información necesaria para llevar
+                        a cabo el Servicio y cumplir con las demás obligaciones del Contrato.
                 </p>
                         <p>
                             22.3 Las partes se obligan a no utilizar los datos proporcionados
@@ -110,12 +105,12 @@ const Twentieth = ({ data, Twentieth }) => {
                         <p>
                             22.7 El <span>LOCADOR</span> y/o <span>{companyData.name}</span> se
                             obligan a brindar información, actualizar, incluir, rectificar,
-                  suprimir y oponerse a la información y o tratamiento de datos que el{" "}
-                            <span>LOCADOR</span> y/o <span>{companyData.name}</span> soliciten,
-                            por efecto del ejercicio de los derechos de los titulares de los
-                            datos personales enviando una comunicación escrita a la otra parte,
-                            estando obligados a atender la solicitud de acuerdo a lo señalado en
-                            las normas vigentes.
+                  suprimir y oponerse a la información y o tratamiento de datos
+                  que el<span>LOCADOR</span> y/o <span>{companyData.name}</span> soliciten,
+                                                por efecto del ejercicio de los derechos de los titulares de los
+                                                datos personales enviando una comunicación escrita a la otra parte,
+                                                estando obligados a atender la solicitud de acuerdo a lo señalado en
+                                                las normas vigentes.
                 </p>
                     </section>
 
@@ -168,24 +163,20 @@ const Twentieth = ({ data, Twentieth }) => {
                         <p>
                             <span>{companyData.name}</span>, como empresa subsidiaria del grupo
                       noruego <span>{companyData.name}</span>, tiene una política definida
-                                                                y concreta de responsabilidad social corporativa que aplica en todas
-                      sus actividades. En tal sentido, <span>{companyData.name}</span>{" "}
-                            pone en conocimiento del
-                      <span>PROVEEDOR</span> y a través de este a sus contratistas,
-                                                                subcontratistas, proveedores de servicios y obras, y demás terceros
-                                                                relacionados, sobre la existencia de dicha política con el objetivo
-                                                                que la misma sea respetada y considerada en las actividades
-                                                                relacionadas con la prestación materia del presente contrato. El
-                      <span>PROVEEDOR</span> declara que tiene conocimiento de esta
-                                                                política.
+                                                                            y concreta de responsabilidad social corporativa que aplica en todas
+                      sus actividades. En tal sentido, <span>{companyData.name}</span> pone en conocimiento del <span>PROVEEDOR</span> y a través de este a sus contratistas,
+                                subcontratistas, proveedores de servicios y obras, y demás terceros
+                                relacionados, sobre la existencia de dicha política con el objetivo
+                                que la misma sea respetada y considerada en las actividades
+                                relacionadas con la prestación materia del presente contrato. El
+                      <span>PROVEEDOR</span> declara que tiene conocimiento de esta política.
                     </p>
                     </section>
 
                     <section>
                         <h3>VIGÉSIMA SEGUNDA: PROTECCIÓN DE DATOS PERSONALES</h3>
                         <p>
-                            22.1 En el contexto de la prestación de Servicios encargada por{" "}
-                            <span>{companyData.name}</span> y con la finalidad de la correcta
+                            22.1 En el contexto de la prestación de Servicios encargada por <span>{companyData.name}</span> y con la finalidad de la correcta
                             ejecución de los Servicios, las partes podrían entregar o
                             intercambiar datos de carácter personal de sus respectivos
                             trabajadores, representantes, socios, accionistas, prestadores de
@@ -206,10 +197,8 @@ const Twentieth = ({ data, Twentieth }) => {
                             cualquier información pública o que pudiera recoger cualquiera de
                             las partes a través de fuentes de acceso público, incluyendo aquella
                             a la que las partes tengan acceso como consecuencia de su relación
-                            laboral o contractual, con el objeto que el
-                      <span>LOCADOR</span> cuente con la información necesaria para llevar
-                                                                a cabo el Servicio y cumplir con las demás obligaciones del
-                                                                Contrato.
+                            laboral o contractual, con el objeto que el <span>LOCADOR</span> cuente con la información necesaria para llevar
+                            a cabo el Servicio y cumplir con las demás obligaciones del Contrato.
                     </p>
                         <p>
                             22.3 Las partes se obligan a no utilizar los datos proporcionados
@@ -254,12 +243,12 @@ const Twentieth = ({ data, Twentieth }) => {
                         <p>
                             22.7 El <span>LOCADOR</span> y/o <span>{companyData.name}</span> se
                             obligan a brindar información, actualizar, incluir, rectificar,
-                      suprimir y oponerse a la información y o tratamiento de datos que el{" "}
-                            <span>LOCADOR</span> y/o <span>{companyData.name}</span> soliciten,
-                            por efecto del ejercicio de los derechos de los titulares de los
-                            datos personales enviando una comunicación escrita a la otra parte,
-                            estando obligados a atender la solicitud de acuerdo a lo señalado en
-                            las normas vigentes.
+                      suprimir y oponerse a la información y o tratamiento de datos que
+                      el <span>LOCADOR</span> y/o <span>{companyData.name}</span> soliciten,
+                                  por efecto del ejercicio de los derechos de los titulares de los
+                                  datos personales enviando una comunicación escrita a la otra parte,
+                                  estando obligados a atender la solicitud de acuerdo a lo señalado en
+                                  las normas vigentes.
                     </p>
                     </section>
                 </div>
@@ -278,24 +267,22 @@ const Twentieth = ({ data, Twentieth }) => {
                         <p>
                             <span>{companyData.name}</span>, como empresa subsidiaria del grupo
                           noruego <span>{companyData.name}</span>, tiene una política definida
-                                        y concreta de responsabilidad social corporativa que aplica en todas
-                          sus actividades. En tal sentido, <span>{companyData.name}</span>{" "}
-                            pone en conocimiento del
+                                            y concreta de responsabilidad social corporativa que aplica en todas
+                          sus actividades. En tal sentido, <span>{companyData.name}</span> pone en conocimiento del
                           <span>PROVEEDOR</span> y a través de este a sus contratistas,
-                                        subcontratistas, proveedores de servicios y obras, y demás terceros
-                                        relacionados, sobre la existencia de dicha política con el objetivo
-                                        que la misma sea respetada y considerada en las actividades
-                                        relacionadas con la prestación materia del presente contrato. El
-                          <span>PROVEEDOR</span> declara que tiene conocimiento de esta
-                                        política.
+                              subcontratistas, proveedores de servicios y obras, y demás terceros
+                              relacionados, sobre la existencia de dicha política con el objetivo
+                             que la misma sea respetada y considerada en las actividades
+                              relacionadas con la prestación materia del presente contrato. El
+                          <span>PROVEEDOR</span> declara que tiene conocimiento de esta política.
                         </p>
                     </section>
 
                     <section>
                         <h3>VIGÉSIMA SEGUNDA: PROTECCIÓN DE DATOS PERSONALES</h3>
                         <p>
-                            22.1 En el contexto de la prestación de Servicios encargada por{" "}
-                            <span>{companyData.name}</span> y con la finalidad de la correcta
+                            22.1 En el contexto de la prestación de Servicios encargada
+                            por <span>{companyData.name}</span> y con la finalidad de la correcta
                             ejecución de los Servicios, las partes podrían entregar o
                             intercambiar datos de carácter personal de sus respectivos
                             trabajadores, representantes, socios, accionistas, prestadores de
@@ -316,10 +303,8 @@ const Twentieth = ({ data, Twentieth }) => {
                             cualquier información pública o que pudiera recoger cualquiera de
                             las partes a través de fuentes de acceso público, incluyendo aquella
                             a la que las partes tengan acceso como consecuencia de su relación
-                            laboral o contractual, con el objeto que el
-                          <span>LOCADOR</span> cuente con la información necesaria para llevar
-                                        a cabo el Servicio y cumplir con las demás obligaciones del
-                                        Contrato.
+                            laboral o contractual, con el objeto que el <span>LOCADOR</span> cuente
+                          con la información necesaria para llevar a cabo el Servicio y cumplir con las demás obligaciones del Contrato.
                         </p>
                         <p>
                             22.3 Las partes se obligan a no utilizar los datos proporcionados
@@ -364,12 +349,12 @@ const Twentieth = ({ data, Twentieth }) => {
                         <p>
                             22.7 El <span>LOCADOR</span> y/o <span>{companyData.name}</span> se
                             obligan a brindar información, actualizar, incluir, rectificar,
-                          suprimir y oponerse a la información y o tratamiento de datos que el{" "}
-                            <span>LOCADOR</span> y/o <span>{companyData.name}</span> soliciten,
-                            por efecto del ejercicio de los derechos de los titulares de los
-                            datos personales enviando una comunicación escrita a la otra parte,
-                            estando obligados a atender la solicitud de acuerdo a lo señalado en
-                            las normas vigentes.
+                          suprimir y oponerse a la información y o tratamiento de datos que
+                          el <span>LOCADOR</span> y/o <span>{companyData.name}</span> soliciten,
+                              por efecto del ejercicio de los derechos de los titulares de los
+                              datos personales enviando una comunicación escrita a la otra parte,
+                              estando obligados a atender la solicitud de acuerdo a lo señalado en
+                              las normas vigentes.
                         </p>
                     </section>
                 </div>
