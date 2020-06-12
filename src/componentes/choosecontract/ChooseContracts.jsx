@@ -24,8 +24,8 @@ const ReviewContracts = (props) => {
                         <input className="mb-3 radio" type="radio" value="transporte" name="gender" /> <span className="ml-3">Transporte Personal</span><br />
                         <input className="mb-3 radio" type="radio" value="vigilancia" name="gender" /><span className="ml-3">Vigilancia, limpieza o jardineria en nuestras instalaciones </span> <br />
                         <input className="mb-3 radio" type="radio" value="alquiler" name="gender" /> <span className="ml-3">Alquiler </span><br />
-                        <input className="mb-3 radio" type="radio" value="construccion" name="gender" /> <span className="ml-3">Construcción de una infrastructura</span> <br />
-                        <input className=" radio" type="radio" value="otro" name="gender" /><span className="ml-3">Otro tipo no descrito antes</span> 
+                        <input className="mb-3 radio" type="radio" value="construccion" name="gender" /> <span className="ml-3">Obra Civil</span> <br />
+                        <input className=" radio" type="radio" value="otro" name="gender" /><span className="ml-3">Otro tipo no descrito antes</span>
                     </div>
                     <div className=" d-flex justify-content-end ">
                         <Link className="col-sm-3  btn btn-primary"

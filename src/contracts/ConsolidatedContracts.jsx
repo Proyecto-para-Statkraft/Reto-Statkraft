@@ -12,7 +12,7 @@ const ConsolidatedContracts = () => {
     useEffect(() => {
         const fetchData = async () => {
             const db = firebase.firestore();
-            await db.collection("resumenContrato")
+            await db.collection("resumenContrato").orderBy('fecha', 'desc')
                 .onSnapshot(
                     snapShots => {
                         setSpells(snapShots.docs.map(doc => ({ ...doc.data(), id: doc.id })))

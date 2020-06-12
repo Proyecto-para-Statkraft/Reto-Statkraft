@@ -38,7 +38,7 @@ const SelectCompany = (props) => {
             <MakeContract companyData={Shaqsha} />
         )
     }
-    if (props.location.data === 'shaqsha') {
+    if (props.location.data === 'solo') {
         return (
             <MakeContract companyData={Stakraft} />
         )
