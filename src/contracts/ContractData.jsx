@@ -151,7 +151,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 (questionIntro) &&
                 <div className="question-intro">
                     <div className="flex-column bd-highlight container-question">
-                        <p className="text-center font-weight-bold">Datos de la empresa con la que estás contratando</p>
+                        <p className="text-center font-weight-bold">Datos de la empresa proveedora</p>
                         <label htmlFor="">
                             Nombre de la empresa
                         </label>
@@ -247,7 +247,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     <label htmlFor="" className="text-center">
                         El precio a pagar por los bienes adquiridos es :
                         </label>
-                    <textarea type="text" id="textarea" placeholder="Ejm: US$ 67,274.36 (Sesenta y Siete Mil Doscientos Setenta y Cuatro con 36/100 Dólares de los Estados Unidos de América) " onChange={money} />
+                    <textarea type="text" id="textarea" placeholder="Ejemplo: US$ 67,274.36 (Sesenta y Siete Mil Doscientos Setenta y Cuatro con 36/100 Dólares de los Estados Unidos de América) " onChange={money} />
                     <div className="button-continue">
                         <button
                             onClick={() => {
@@ -292,7 +292,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     <label htmlFor="" className="text-center">
                         El plazo de entrega de los bienes adquiridos es:
                     </label>
-                    <input type="text" onChange={deadlineDays} placeholder="Ejm: 10 semanas" />
+                    <input type="text" onChange={deadlineDays} placeholder="Ejemplo: 10 semanas" />
                     <div className="button-continue">
                         <button
                             onClick={() => {
@@ -335,11 +335,11 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     <p className="text-center font-weight-bold">7. Administradores del Contrato </p>
                     <p className="text-center">Los administradores del Contrato son:</p>
                     <label htmlFor="" className="text-center">
-                        De Statkraft o subsidiaria
+                        De Statkraft o subsidiaria:
                     </label>
                     <input type="text" onChange={companyRepresentative} />
                     <label htmlFor="" className="text-center">
-                        De la empresa contratada
+                        De la empresa proveedora:
                     </label>
                     <input type="text" onChange={supplierRepresentative} />
                     <div className="button-continue">
@@ -429,12 +429,12 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         <label htmlFor="" className="text-center">No</label>
                     </div>
                     <label htmlFor="" className="text-center">
-                        Si su respuesta anterior es "Sí", rellene el siguiente campo con la respuesta a la
-                        siguiente interrogante: ¿El monto de la póliza de responsabilidad civil extra contractual 
-                        es?
+                        Si su respuesta anterior es "Sí", rellene el siguiente campo con la respuesta al
+                        siguiente enunciado: El monto de la póliza de responsabilidad civil extra contractual 
+                        es...
                     </label>
                     <textarea name="" onChange={moneyPoliza} id="textarea"
-                        placeholder="Ejm: US$ 67,274.36 (Sesenta y Siete Mil Doscientos Setenta y Cuatro con 36/100 Dólares de los Estados Unidos de América) ">
+                        placeholder="Ejemplo: US$ 67,274.36 (Sesenta y Siete Mil Doscientos Setenta y Cuatro con 36/100 Dólares de los Estados Unidos de América) ">
                     </textarea>
                     <div className="button-continue">
                         <button
@@ -460,7 +460,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                     </p>
                     <div className="m-3" onChange={optionClauseSixteenth}>
                         <input className="m-3 radio" type="radio" value="true" name="gender" /> Sí<br />
-                        <input className="m-3 radio" type="radio" value="false" name="gender" /> Sí, pero no tiene el nombre.<br />
+                        <input className="m-3 radio" type="radio" value="false" name="gender" /> Sí, pero desconoce el nombre.<br />
                         <input className="m-3 radio" type="radio" value="false" name="gender" /> No<br />
                     </div>
                     <div className="button-continue">
@@ -526,11 +526,11 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                 (questionEnd) &&
                 <div className="container-question">
                     <p className="text-center">¡Haz terminado de realizar tu contrato!</p>
-                    <p className="text-center">Si desea puede descargar el contrato en formato Word.</p>
+                    <p className="text-center">Si desea puede descargarlo en formato Word.</p>
                     <img src={img} alt="imagen" />
-                    <div className="row mt-3">
-                        <div className="col-sm-6"><button id="btn-export" className="btn btn-info" onClick={generateWord}>DESCARGAR EN WORD</button></div>
-                        <div className="col-sm-6"><button id="btn-export" className="btn btn-info">FINALIZAR</button></div>
+                    <div className="button-section-end">
+                        <button id="btn-export" className="btn btn-info" onClick={generateWord}>DESCARGAR EN WORD</button>
+                        <button id="btn-export" className="btn btn-info">FINALIZAR</button>
                     </div>
                 </div>
             }
