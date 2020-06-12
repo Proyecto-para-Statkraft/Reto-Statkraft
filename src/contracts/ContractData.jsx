@@ -127,6 +127,8 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
     const [years, setYears] = useState("");
     const year = e => { setYears(e.target.value) };
 
+
+
     return (
         <div id="contract-data">
             {
@@ -524,11 +526,7 @@ const ContractData = ({ search, searchDataAntecedentes, searchSellOption, search
                         <p>¡Haz terminado de realizar tu contrato!</p>
 
                         <p>Si quieres tener el contrato que acabar de realizar puedes descargarlo en formato Word.</p>
-
-
                         <img src={img} alt="imagen" />
-                        <button class="btn btn-info">Descargarlo</button>
-                        <button>Finalizar</button>
                     </div>
                 </div>
 
