@@ -129,16 +129,23 @@ const MakeContract = (data) => {
             <Header />
             <div className="">
                 <div className="row">
-                    <section className="section-question col-sm-12 col-md-6">
-                        <ContractData search={searchProvider} searchDataAntecedentes={searchAntecedente} searchSellOption={searchObjeto}
-                            searchPrice={searchPrice} searchPaymentMethod={searchPaymentMethod} searchTermPay={searchTermPay}
-                            searchSite={searchSite} searchAnexoTench={searchAnexoTench} searchRepresentative={searchRepresentative}
-                            searchHoursTime={searchHoursTime} searchoClauseThirteenth={searchoClauseThirteenth}
-                            searchClauseFourteenth={searchClauseFourteenth} searchTimeDayFifteenth={searchTimeDayFifteenth}
-                            searchClauseSixteenth={searchClauseSixteenth} searchClauseTwentienth={searchClauseTwentieth}
-                            searchDate={searchDate}
-                        />
-                    </section>
+                    <div className="section-question col-sm-12 col-md-6">
+                        <section className="">
+                            <div className="row">
+                                <ContractData search={searchProvider} searchDataAntecedentes={searchAntecedente} searchSellOption={searchObjeto}
+                                    searchPrice={searchPrice} searchPaymentMethod={searchPaymentMethod} searchTermPay={searchTermPay}
+                                    searchSite={searchSite} searchAnexoTench={searchAnexoTench} searchRepresentative={searchRepresentative}
+                                    searchHoursTime={searchHoursTime} searchoClauseThirteenth={searchoClauseThirteenth}
+                                    searchClauseFourteenth={searchClauseFourteenth} searchTimeDayFifteenth={searchTimeDayFifteenth}
+                                    searchClauseSixteenth={searchClauseSixteenth} searchClauseTwentienth={searchClauseTwentieth}
+                                    searchDate={searchDate}
+                                />
+                            </div>
+                            <div className="row">
+                                <button id="">boton</button>
+                            </div>
+                        </section>
+                    </div>
                     <section className="col-sm-12 col-md-6 bg-secondary">
                         <Introduction data={data} provider={provider} />
                         <First data={data} First={antecedente} />
