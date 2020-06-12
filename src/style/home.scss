@@ -1,11 +1,9 @@
-@import '_meassures.scss';
-
+@import "_meassures.scss";
 
 @mixin size($width, $height) {
   width: $width;
   height: $height;
 }
-
 
 .borde {
   border: 2px solid #80daf3;
@@ -26,7 +24,7 @@
   min-width: 150px;
   max-width: 200px;
   margin: 2em;
-  padding:1em 0;
+  padding: 1em 0;
   height: 230px;
   cursor: pointer;
 }
@@ -41,8 +39,8 @@
   max-width: 100px;
 }
 
-.contract-subtitle{
-  font-size:20px;
+.contract-subtitle {
+  font-size: 20px;
 }
 
 .view-home {
@@ -77,20 +75,24 @@
     }
   }
 }
-.titleWelcome{
+.titleWelcome {
   font-size: 24px;
 }
 
-.input-class{
+.input-class {
   width: 100%;
 }
-.vista-radios{
-  span{
+.vista-radios {
+  span {
     font-weight: 500 !important;
   }
 }
-@media only screen and (min-width: 700px){
-  .margin-d{
-    margin:3rem!important;
+
+@media only screen and (min-width: 700px) {
+  .margin-d {
+    margin: 3rem !important;
+  }
+  table {
+    font-size: 16px;
   }
 }

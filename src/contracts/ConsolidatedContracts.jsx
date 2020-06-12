@@ -12,7 +12,7 @@ const ConsolidatedContracts = () => {
     useEffect(() => {
         const fetchData = async () => {
             const db = firebase.firestore();
-            await db.collection("resumenContrato")
+            await db.collection("resumenContrato").orderBy('fecha', 'desc')
                 .onSnapshot(
                     snapShots => {
                         setSpells(snapShots.docs.map(doc => ({ ...doc.data(), id: doc.id })))
@@ -26,7 +26,7 @@ const ConsolidatedContracts = () => {
         <Fragment>
             <Header />
             <div className="m-5"></div>
-            <div className="m-5">
+            <div className="m-2">
                 <h3>Contratos</h3>
                 <Table striped bordered hover>
                     <thead className="m-5 border border-info ">

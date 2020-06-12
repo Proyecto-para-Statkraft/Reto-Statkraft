@@ -81,11 +81,6 @@ const MakeContract = (data, props) => {
         setSectionFourteenth({ optionClauseFourteenth, moneysPoliza })
     }
 
-    const [sectionFifteenth, setSectionFifteenth] = useState('');
-    const searchTimeDayFifteenth = (timeDay) => {
-        setSectionFifteenth({ timeDay })
-    }
-
     const [sectionSixteenth, setSectionSixteenth] = useState('');
     const searchClauseSixteenth = (optionClausesSixteenth, name, ruc, servicio) => {
         setSectionSixteenth({ optionClausesSixteenth, name, ruc, servicio })
@@ -132,8 +127,7 @@ const MakeContract = (data, props) => {
                                     searchPrice={searchPrice} searchPaymentMethod={searchPaymentMethod} searchTermPay={searchTermPay}
                                     searchSite={searchSite} searchRepresentative={searchRepresentative}
                                     searchHoursTime={searchHoursTime} searchoClauseThirteenth={searchoClauseThirteenth}
-                                    searchClauseFourteenth={searchClauseFourteenth} searchTimeDayFifteenth={searchTimeDayFifteenth}
-                                    searchClauseSixteenth={searchClauseSixteenth} searchClauseTwentienth={searchClauseTwentieth}
+                                    searchClauseFourteenth={searchClauseFourteenth} searchClauseSixteenth={searchClauseSixteenth} searchClauseTwentienth={searchClauseTwentieth}
                                     searchDate={searchDate} generateWord={exportHTML}
                                 />
                             </div>

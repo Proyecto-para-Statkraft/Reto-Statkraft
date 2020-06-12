@@ -4,9 +4,6 @@ const ResumenContracts = ({ data, index }) => {
 
     const { tipo, descripcion, monto, plazo, usuyser } = data;
 
-    console.log(index);
-    console.log(typeof index);
-
 
     return (
         <tr className="border border-info">
